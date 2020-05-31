@@ -1311,6 +1311,7 @@ Parallax
 	background-image: url(../img/parallax/fondo-brunos2.png);
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
     display:block;
     position:relative;
     z-index:120;
@@ -1916,7 +1917,7 @@ a.btn:focus{
 	}
 
 	form#contact-form {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 	}
 
 	.xs-marginbot-20 {
