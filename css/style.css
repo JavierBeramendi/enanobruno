@@ -1288,7 +1288,7 @@ Parallax
 #parallax1{
 	background-image: url(../img/parallax/fondo-brunos.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     display:block;
     position:relative;
     z-index:120;
