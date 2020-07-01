@@ -36,9 +36,9 @@
 
     h1 {
       font-size: 2.4em;
-      margin-top: 7%;
+      margin-top: 4%;
       margin-left: 0.2em;
-      margin-bottom: 7%;
+      margin-bottom: 3%;
       max-width: 100%;
       font-family: 'Bangers', cursive;
       color:#f74785;
@@ -46,16 +46,23 @@
 
     }
     h2 {
-      margin-bottom: 2.5%;
-      margin-top: 7%;
-      font-size: 1.3em;
-    }
+          margin-bottom: 2.5%;
+          margin-top: 7%;
+          font-size: 1.3em;
+        }
+        .lead {color:grey; font-family: sans-serif; font-size: 1.1em; margin-top:0%; margin-bottom: 1em;}
+        .audio {width: 90%;}
 
-    /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-    @media (min-width: 768px) {
-      body {font-size: 110%;}
-    }
-
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+        @media (min-width: 768px) {
+          body {font-size: 110%;}
+                  }
+@media (max-width: 768px) {
+          
+          h1 {display: none;} .lead {margin-top: 0.9em; font-size: 1.15em; margin-bottom: 0.7em;}
+          .audio {width: 100%;}
+        
+        }
 
     .centrado, h2 {
       margin: 2em 0 2em 0;
@@ -147,17 +154,29 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-8" style="margin: 0 auto;">
-        <img src="tapas/pasajeTapa.jpg" class="highlight-dark wow bounceInDown" data-wow-delay="0.6s"  alt="">
-
-
-       <div class="Marco-de-texto-b-sico">
-
-        <!--<h1><span class="Bold">El pasaje</span></h1>-->
-        <br> <audio style="width: 100%;" controls>  
+        <h1>El pasaje</h1>
+        <hr style="color:grey; margin-bottom: 1em; margin-top: 1em;">
+        <div class="row featurette">
+           
+               <div class="col-md-5 col-12">
+        <img class="tapa" style="width: 100%; margin-top: 0em;" src="tapas/pasajeTapa.jpg" alt="">
+          
+       </div>
+        <div class="col-md-7 col-12">
+        <p class="lead">Dos amigos, dos historias. <br>Una noche, una muerte.</p><p class="lead">Un experimento enigmático leído por Lourdes Pingeon (<a href="https://www.instagram.com/louredss/" target="_blank">@louredss</a>)</p>
+         
+        <audio class="audio" controls>  
   <source src="audiocuentoPasaje.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-  <p style="color:grey; font-family: sans-serif; font-size: 1.2em; margin-top: 0.7em; margin-bottom: 0.7em;">Un texto del franchute beodo leído por Lourdes Pingeon (<a href="https://www.instagram.com/louredss/" target="_blank">@louredss</a>) <hr style="color:grey; margin-bottom: 3em;"></p>
+    
+      </div>
+     </div>
+    
+<hr style="color:grey; margin-bottom: 2em; margin-top: 1em;">
+
+
+       
 
         <p>Él se mató esa noche en la que, como tantas otras, hablaron de lo difícil que era encontrar el pasaje Dellepiane, un oasis dentro de Buenos Aires. Fumados, caminando por ahí, hablaron de sus hermanos, la falopa y el vacío.</p>
 <p>Una noche en la que hablaron de la gratitud, de los ex, de qué al pedo era preocuparse por planes a largo plazo. Él dijo que ese había sido su tema de terapia. Ella comentó que estaba aprendiendo a estar sola para vincularse desde la elección y no desde la necesidad. Él se puso nervioso, y cambiaron de tema, hablaron de enanitos de crochet. Caminaron borrachos mirando carteles de neón por Corrientes. Pasaron por Sorrento, y ella pidió un cucurucho de chocolate con almendras y sambayón.</p>
