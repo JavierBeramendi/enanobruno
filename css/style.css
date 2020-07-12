@@ -1310,7 +1310,7 @@ Parallax
 #parallax2{
 	background-image: url(../img/parallax/fondo-brunos2.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     text-align: center;
     display:block;
     position:relative;
