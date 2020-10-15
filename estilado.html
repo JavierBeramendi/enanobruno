@@ -153,16 +153,63 @@
           
         }
         a {color:inherit;}
+
+        .jumbotron {
+   background: url(img/SinCodigo.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+   -o-background-size: cover;
+   opacity: 0.95;
+   position: relative;
+   box-shadow:  0px 2px 15px grey;
+}
+.fondoNegro { 
+  background-color: rgba(15, 15, 15, 0.65);
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 1.1em;
+  text-align: center;
+  max-width: 600px;
+  }
+
+.display-3, .lead {color:white; opacity: 1; font-family: sans-serif;}
+.my-4, .jumbotron  p {color:white; opacity: 1;}
+.lead {font-size: 1.5em; opacity: 0.8;}
+.navegacion{background-color: rgba(255,255,255,0.5) !important;}
+
+.img30 {
+  width: 45%;
+  height: auto;
+  margin:1% auto;
+  font-size: 1em;
+  opacity: 0.98;
+}
+.ocre {background-color:#f2af3f; margin-top: -0.5em;
+border-color: #f2af3f; opacity: 0.85;}
+.ocre:hover {background-color:black;
+border-color: black;}
       </style>
     </head>
     <body>
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" a href="index.html">Epubs Universitarios Argentinos</a>
+     <!-- <nav class="navbar navbar-light bg-light navegacion">
+        <a class="navbar-brand" a href="index.html"><img src="img/sinCodigoLogo.png" alt="Sin Código" width="200"></a>
 
-      </nav>
-      <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7kiT6Bj91u0?playsinline=1" allowfullscreen></iframe>
-  </div>
+      </nav> -->
+
+<div class="jumbotron">
+  <div class="fondoNegro">
+
+  <p class="lead">Nosotros te damos los estilos, vos los vinculás. Nunca fue tan fácil hacer epubs</p>
+  
+  <a class="btn btn-primary btn-lg ocre" target="_blank" href="EUAv1.css" download="EUAv1.css" role="button">Descargar EUAv1.css</a></div>
+  
+</div>
+
+
+
+
+    
 
    
       <div class="container">
@@ -170,251 +217,39 @@
           <div class="col-12 col-lg-8" style="margin: 0 auto;">
             
        
-<h1>La herramienta</h1>
+<p class="img30"><img src="img/sinCodigoLogo.png" alt="Sin Código"></p>
       <p class="autor"><span class="italica">  </span></p>
-      <p>La edición universitaria ha emprendido desde el año 2010 un camino de profesionalización que se ve reflejado en el desarrollo de cada una de las editoriales que componen la Red de Editoriales de Universidades Nacionales, así como en su conjunto.</p>
-   
-      <p>Entendemos que estamos inmersos en un mundo en constante transformación y en este sentido el paradigma digital es un gran desafío que nos interpela a las editoriales universitarias de manera constante. Creemos que implementar mejores flujos de trabajo para obtener múltiples formatos de salida de nuestras producciones es el camino que nos toca transitar en este momento. Esto seguramente redundará en un mayor posicionamiento del libro universitario argentino en el variado ecosistema editorial y nos ayudará a llegar a nuevos lectores.</p>
-      <p>Sabemos que los cambios de paradigma no resultan fáciles y necesitan un tiempo de transición y actores que se comprometan con su mediación para lograr esta transformación. Por eso, aprovechamos este espacio, este foro, para presentar una herramienta hecha a medida. Tomando la idea prestada de las tecnológicas y el desarrollo web, confeccionamos una hoja de estilos que se adapta a múltiples ereader, sistemas operativos y aplicaciones varias, ya sea kindle, kobo, nook, ibooks, calibre, entre otros.</p>
-      <h1>Por qué usar una hoja de estilos estándar</h1>
-            
+         
+       
       
-      <p>En informática es muy común la reutilización de código y el concepto de soporte y comunidad hacen la diferencia. Desde los albores de internet, se han dedicado numerosos esfuerzos hacia la estandarización de etiquetas y reglas, esto es, cómo llamar a las cosas. Aún más, desde hace unos años, existe en el desarrollo web numerosas bibliotecas o frameworks que comparten hojas de estilos para que no sea necesario definir cada propiedad gráfica siempre que se empieza un proyecto nuevo. Tanto es así que alguien sin conocimientos de css puede hacer páginas web responsivas en html5 sin perder el sueño.</p>
-      <p>Precisamente, el propósito de esta herramienta, <b> Epubs Universitarios Argentinos</b>, es compartir una hoja de estilos que, método emdiante, permita a los distintos equipos editoriales adentrarse en la confección de ebooks. Para que funcione lo único que debe hacerse es una simple asociación de los estilos en InDesign con los estilos de la presente hoja. Para ello se deben cotejar los documentos y actuar  en consecuencia. En la pestaña de propiedades de cada estilo de InDesign, hay un espacio destinado a la exportación de html y epubs. Ahí, en la casilla de nombre de estilo, es donde uno debe asociar unos con otros. Recomendamos mirar en detalle el tutorial para ver todos los pasos en la cofección de un epub desde InDesign, pero sin duda esta herramienta va a ser de suma utilidad para todos. Esperamos la disfruten.</p>
-      
-      
-       <h1>Manos a la obra</h1>
-      
-      
-      <p>Definamos primero qué es un estilo. Podemos pensarlo como un set de características visuales predefinidas que uno asigna a los párrafos y caracteres de los documentos de forma reiterativa. Cada vez que aplicamos un estilo, dejamos una etiqueta en el texto. Esa etiqueta puede servir para identificar si se trata de un párrafo normal, una cita, un título de primer nivel o uno de segundo, o una lista numerada. Esta etiqueta será lo que permitirá que un estilo de InDesign se exporte bien a un epub.</p>
-      
-      <p>Ahora bien, existen dos tipos de estilos: de carácter y de párrafo. Los primeros, como bien pueden imaginarse, se emplean para un conjunto de palabras o incluso caracteres individuales. Los segundos, y más frecuentes, son los de párrafo, que, de hecho, contienen definiciones no solo a nivel párrafo, sino también a nivel fuente. La información de la etiqueta afecta a la totalidad del párrafo seleccionado, por lo que no puede usarse para resaltar una palabra específica.</p>
-      <p>Es importante resaltar la necesidad de que todas las modificaciones a nivel de palabra estén estiladas en InDesign para poder exportarse adecuadamente. Esto implica que las itálicas y otras variables estén definidas por estilo y no por modificaciones locales. Afortunadamente, existen scrips que pueden llevar adelante esta tarea. Los dejampos a disposición. Si tienen dudas sobre cómo usarlos, vean el tutorial.</p>
+      <p>En informática es muy común la reutilización de código. Los desarrolladores comparten bibliotecas para no tener que empezar desde cero en cada proyecto. Es por eso que logran abocarse a la resolución de nuevos problemas de forma constante.</p>
+      <p>Siguiendo el mismo espíritu, presentamos la primera versión de <b>Sin código</b>, una hoja de estilos todo terreno que hace que los epubs se vean bien en ibooks, ereaders, kindles, smartphones y tablets.</p>
+      <p>Uno de los mayores impedimentos de las casas editoras a la hora de digitalizar los fondos editoriales es la falta de conocimientos de html y css. La realidad es que no es imperativo que confeccionen sus propias hojas de estilo o que contraten un desarrollador externo.</p> 
+      <p>Pueden seguir los pasos del tutorial y vincular sus estilos con los de <b>EUAv1.css</b>. Ya no quedan excusas, empiecen difundir sus títulos en digital.</p>.
+      <hr>
+        <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7kiT6Bj91u0?playsinline=1" allowfullscreen></iframe>
+  </div>
+  <hr>
+  <br>
+  <a class="btn btn-primary btn-lg ocre" target="_blank" href="https://www.youtube.com/redirect?event=video_description&v=7kiT6Bj91u0&redir_token=QUFFLUhqblQwSl8yTkFiMWtxQ0sxVWRQVmhqRU9adTFPQXxBQ3Jtc0trVDE3SjBlX2lhT3h0RzhXTFpUaHllRnprX2tRWU43SHJCYlRGVlRjd3dyUnNHNzJ3YUlyOEFnTEx1bURCTU8tUlhySmkwUDdRNEwyckJrNzlURDdWbWxGWWw1eVNuN2xiNDg3TEl0b0t6RjdFUExMbw%3D%3D&q=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F10hyj9pb60jNeFK35C2NQmY70ftIlKYMs%3Fusp%3Dsharing" role="button">Descargar material y scripts del tutorial</a>
+     
+       <h1>¿Todavía estás perdido?</h1>
       
       
-      
-      
-      <p>Sin más preámbulo, vayamos a los estilos en cuestión:</p>
-      
-       <p><b>Estilos de párrafos de imágenes (el número indica el ancho)</b></p> 
-  <pre>     
-  .tituloImagenAbajo {
-  font-size: 95%;
-  font-weight: bold;
-  line-height: 1.3;
-  margin: 0em 0em 1.5em 0;
-  text-indent: 0em;
-  text-align: center;
-  page-break-before: avoid;
-}
-.tituloImagenArriba {
-  font-size: 95%;
-  font-weight: bold;
-  line-height: 1.3;
-  margin: 2em 0em 0em 0;
-  text-indent: 0em;
-  text-align: center;
-  page-break-before: avoid;
-}
-.img10 {
-  width: 10%;
-  height: auto;
-  margin: 4% auto;
-  font-size: 1em;
-}
-.img20 {
-  width: 20%;
-  height: auto;
-  margin: 4% auto;
-  font-size: 1em;
-}
-.img30 {
-  width: 30%;
-  height: auto;
-  margin: 4% auto;
-  font-size: 1em;
-}</pre>
-<p>Y así hasta llegar a img100.</p>
-<p><b>Índices</b></p>
-<pre>
-  .indice1 {
-  margin-top: 0.9em;
-  text-indent: 0em;
-}
-.indice1 a {
-  text-decoration: none;
-  color: black;
-}
-.indice2 {
-  margin-top: 0;
-  font-size: 85%;
-  text-indent:0em;
-  line-height: 1.2em;
-}
-.indice2 a {
-  text-decoration: none;
-  color: black;
-}
-</pre>
-<p>En el tutorial se explica bien cómo realizar un índice automático y asociar estilos al resultante.</p>
-<p><b>Portada</b></p>
-<pre>
-  .autorPortada {
-  font-size: 140%;
-  text-align: center;
-  text-indent:0em;
-  margin: 15% 0% 0% 0%;
-}
-.tituloPortada {
-  font-size: 210%;
-  line-height: 1em;
-  text-align: center;
-  text-indent:0em;
-  margin: 5% 0% 0% 0%;
-}
-.selloPortada {
-  font-size: 85%;
-  text-indent:0em;
-  text-align: center;
-  margin: 15% 5% 25% 5%;
-}
-
-</pre>
-<p><b>Página de legales y créditos</b></p>
-<pre>
-  .legales, .legalesEspacioSuperior {
-  font-size: 75%;
+      <p>No pasa nada, empecemos por el principio y definamos qué es un estilo. Podemos pensarlo como un set de características visuales predefinidas que uno asigna a los párrafos y caracteres de los documentos de forma reiterativa. En InDesign los diseñadores están acostumbrados a usar estilos para diferenciar párrafos de citas, pero también títulos de primer nivel de otros. El estilo lleva, además de un conjunto de características gráficas, un nombre que permite su reutilización. El problema a la hora de hacer epubs desde InDesign consiste en que los estilos confeccionados para papel no pueden traducirse de forma automática al epub. Por suerte, sí se puede vincular el nombre del estilo con los de una hoja externa. Por tanto, sin saber css, pueden los diseñadores asociar sus estilos a los de <b>EUAv1.css</b> y generar epubs profesionales.</p>
+      <p>Imaginemos que estamos en InDesign y que tenemos seleccionado un primer párrafo, que tiene aplicado un estilo llamado "Primer-Párrafo", para poder exportarlo correctamente a un epub, solo tendremos que modificar una pestaña dentro de las propiedades del estilo. La pestaña en cuestión es la de exportación a epub y html. Allí tendremos poner el nombre que queremos que ese estilo tenga en el epub.</p>
+      <p>Habiendo mirado <b>EUAv1.css</b> con un editor de código, sabremos que el estilo que corresponde es "sinSangria", que presenta las siguientes características:</p>
+      <pre>
+  p.sinSangria {
   text-indent: 0;
-  line-height: 1.2em;
-  margin-bottom: 0em;
-  margin-top:0em;
-}
-p.legalesEspacioSuperior {
-  margin-top: 1em;
-}
-p.legalesEspacioSuperior img, p.legales img {
-  width: 27%;
-  height: auto;
-  margin: 0;
-}
-/* Este div.recuadro se puede agrgar en Calibre 
-para la ficha de catalogación */
-
-div.recuadro {
-  width: 90%;
-  height: auto;
-  border: 1px solid;
-  margin: 5% 0%;
-  padding: 3%;
-}
-
-</pre>
-<p><b>Títulos</b></p>
-<pre>
-  p.anteTitulo {
-  font-size: 150%;
-  line-height: 1.25;
-  font-weight: bold;
-  margin: 2em 0 0 0;
-  text-align: center;
-  text-indent:0em;
-  orphans: 1;
-  widows: 1;
-  page-break-after: auto;
-  page-break-before: auto;
-}
-p.tituloCapitulo {
-  font-size: 150%;
-  line-height: 1.25;
-  text-indent:0em;
-  margin: 0 0 2.3em 0;
-  text-align: center;
-  orphans: 1;
-  widows: 1;
-  page-break-after: auto;
-  page-break-before: auto;
-}
-p.subtituloCapitulo {
-  font-size: 100%;
-  line-height: 1;
-  margin-top: -3.1em;
-  margin-bottom: 3.4em;
-  text-align: center;
-  orphans: 1;
-  widows: 1;
-  page-break-after: auto;
-  page-break-before: auto;
-}
-p.autorCapitulo {
-  line-height: 1.1em;
-  margin-top: -3em;
-  margin-bottom: 2.3em;
-  text-indent: 0em;
-  text-align: center;
-}
-.tituloCapitulo + .epigrafe {
-  margin-top: 2em;
-}
-.anteTitulo + .sinSangria {
-  margin-top: 20%;
-}
-p.epigrafe {
-  -epub-line-break: normal;
-  font-size: 85%;
-  text-align: right;
-  margin-left: 4%;
-  font-style: italic;
-  margin-bottom: 2em;
-  text-indent:0em;
-}
-p.epigrafe + p.epigrafe {
-  margin-top: -2em;
-}
-p.epigrafeAutor {
-  font-size: 70%; 
-  margin-left: 4%;
-  margin-top: -2em;
-  margin-bottom: 2em;
-  text-indent:0em;
-  text-align: right;
-}
-
-p.subtitulo1, p.asteriscos {
-  font-size: 105%;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 1em;
-  margin-top: 1.5em;
-  text-indent: 0;
-  page-break-after: avoid;
-}
-p.asteriscos {
-  text-align: center;
-}
-p.subtitulo1 + p.subtitulo2 {
-  margin-top: -0.5em;
-}
-p.subtitulo2 {
   font-size: 95%;
-  line-height: 1.3em;
-  font-weight: bold;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  page-break-after: avoid;
-  text-indent: 0;
+  margin-top: 0em;
+  margin-bottom:0em;
 }
-p.subtitulo3 {
-  font-size: 95%;
-  line-height: 1.3;
-  margin-bottom: 0.5em;
-  margin-top: 1em;
-  text-indent:0em;
-  text-decoration: underline;
-}
-
 </pre>
-<p><b>Estilos principales del cuerpo central</b></p>
-<pre>
+      <p>De la misma manera, si quisiéramos vincular un estilo de párrafo normal llamado en InDesign "Cuerpo Central", deberíamos colocar en la casilla de exportación el nombre "conSangria".</p>
+      <pre>
   p.conSangria {
   font-size: 95%;
   page-break-after: auto;
@@ -423,70 +258,18 @@ p.subtitulo3 {
   margin-bottom: 0em;
   text-indent: 4%;
 }
-p.sinSangria {
-  text-indent: 0;
-  font-size: 95%;
-  margin-top: 0em;
-  margin-bottom:0em;
-}
-p.sinSangriaEspacioSuperior {
-  font-size: 95%;
-  text-indent: 0;
-  margin-top: 1em;
-}
-
-/*------ dentro de una ol o una ul------*/
-li.lista {
-  margin-left: -2.5em;
-}
-/*--------------------------*/
-
-p.bibliografia {
-  margin-top: 0.5em;
-  margin-left: 14px;
-  text-indent: -14px;
-}
-p.cita {
-  font-size: 85%;
-  margin-bottom: 1em;
-  margin-left: 4%;
-  margin-top: 1em;
-  text-indent:0em;
-}
-.cita + .cita {
-  margin-top: -1em;
-  text-indent: 4%;
-}
-p.citaFirma {
-  font-size: 85%;
-  margin-bottom: 1em;
-  margin-left: 4%;
-  text-align: right;
-}
-p.citaFirma + p.citaFirma {
-  margin-top: -1em;
-}
-p.dedicatoria {
-  text-align: right;
-  margin-top: 0.8em;
-  margin-bottom: 2em;
-}
-p.derecha {
-  text-align: right;
-}
-p.centrado {
-  text-align: center;
-}
-p.izquierda {
-  text-align: left;
-}
-</pre>
-      <p>Sin ánimos de enumerar todos los estilos de la hoja, puesto que faltan cuestiones de notas, carácter y tablas, entre otros, la idea era exponer un poco de qué iba la estandarización. El resto de los estilos se pueden ver bien abriendo la EUAv1.css mediante un lector de código como el Sublime Text.</p>
-      
-      <button><a target="_blank" href="EUAv1.css" download="EUAv1.css">Descargar EUAv1</a></button>
+      </pre>
       
       
-     <p>Esperamos poder darle soporte y actualización semestral a la herramienta que entendemos es perfectible, pero había que tirar la primera piedra. Sobre la marcha, habrá que ajustar estilos en las plantillas de Indesign como en la hoja de estilos de los epub.</p>
+      
+     <p><b>Algunas advertencias</b></p> 
+  
+<p>Es muy común que los diseñadores no estilen las itálicas ni las negritas y, desafortunadamente, es necesario que haya una etiqueta a la hora de la exportación a epub. Por suerte, hay muchos scripts que pueden realizar esta tarea por nosotros. En el tutorial se explica con mayor detalle. De la misma manera, es necesario que las imágenes estén dentro de la caja de texto y tengan un estilo de párrafo asociado. Por último, pero no menor, se deben generar índices automáticos. Todo está en el tutorial, así que solo necesitan tiempo y práctica. 
+  <br><br> <a class="btn btn-primary btn-lg ocre" target="_blank" href="EUAv1.css" download="EUAv1.css" role="button">Descargar EUAv1.css</a>
+      
+           
+      
+     <p>Esperamos poder dar soporte y actualización semestral a <b>Sin código</b>. Sabemos que es perfectible y por eso contamos con el aporte de todos para que día a día se vuelva una mejor hoja de estilo.</p>
     
 <hr style="color:grey; margin-bottom: 2em; margin-top: 1em;">
             <br>
