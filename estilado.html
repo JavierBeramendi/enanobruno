@@ -209,7 +209,7 @@ border-color: black;}
 <div class="jumbotron">
   <div class="fondoNegro">
 
-  <p class="lead">Nosotros te damos los estilos, vos los vinculás. Nunca fue tan fácil hacer epubs</p>
+  <p class="lead">Nunca fue tan fácil hacer epubs. Nosotros te damos los estilos, vos los vinculás.</p>
   
   <a class="btn btn-primary btn-lg ocre" target="_blank" href="sinCodv1.css" download="EUAv1.css" role="button">Descargar sinCodv1.css</a></div>
   
@@ -231,10 +231,11 @@ border-color: black;}
          
        
       
-      <p>En informática es muy común la reutilización de código. Los desarrolladores comparten bibliotecas para no tener que empezar desde cero en cada proyecto. Es por eso que logran abocarse a la resolución de nuevos problemas de forma constante.</p>
+      <p>En informática es muy común la reutilización de código. Los desarrolladores comparten bibliotecas para no tener que empezar desde cero en cada proyecto.</p>
       <p>Siguiendo el mismo espíritu, presentamos la primera versión de <b>Sin código</b>, una hoja de estilos todo terreno que hace que los epubs se vean bien en ibooks, ereaders, kindles, smartphones y tablets.</p>
-      <p>Uno de los mayores impedimentos de las casas editoras a la hora de digitalizar los fondos editoriales es la falta de conocimientos de html y css. La realidad es que no es imperativo que confeccionen sus propias hojas de estilo o que contraten un desarrollador externo.</p> 
-      <p>Pueden seguir los pasos del tutorial y vincular sus estilos con los de <b>sinCodv1.css</b>. Ya no quedan excusas, empiecen difundir sus títulos en digital.</p>.
+      <p>Uno de los mayores impedimentos de las editoriales universitarias a la hora de digitalizar sus fondos es la falta de conocimientos de html y css. La realidad es que no es imperativo que confeccionen sus propias hojas de estilos o que contraten un desarrollador externo.</p> 
+      <p>Pueden seguir los pasos del tutorial y vincular sus estilos con los de <b>sinCodv1.css</b>.</p> 
+      <p>Ya no quedan excusas.</p>.
       <hr>
         <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7kiT6Bj91u0?playsinline=1" allowfullscreen></iframe>
@@ -246,7 +247,9 @@ border-color: black;}
        <h1>¿Todavía estás perdido?</h1>
       
       
-      <p>No pasa nada, empecemos por el principio y definamos qué es un estilo. Podemos pensarlo como un set de características visuales predefinidas que uno asigna a los párrafos y caracteres de los documentos de forma reiterativa. En InDesign los diseñadores están acostumbrados a usar estilos para diferenciar párrafos de citas, pero también títulos de primer nivel de otros. El estilo lleva, además de un conjunto de características gráficas, un nombre que permite su reutilización. El problema a la hora de hacer epubs desde InDesign consiste en que los estilos confeccionados para papel no pueden traducirse de forma automática al epub. Por suerte, sí se puede vincular el nombre del estilo con los de una hoja externa. Por tanto, sin saber css, pueden los diseñadores asociar sus estilos a los de <b>sinCodv1.css</b> y generar epubs profesionales.</p>
+      <p>No pasa nada, empecemos por el principio y definamos qué es un estilo. Podemos pensarlo como un set de características visuales predefinidas que uno asigna a los párrafos y caracteres de los documentos de forma reiterativa.</p> 
+      <p>En InDesign los diseñadores están acostumbrados a usar estilos para diferenciar párrafos de citas, pero también títulos de primer nivel de otros. El estilo lleva, además de un conjunto de características gráficas, un nombre que permite su reutilización.</p> 
+      <p>El problema a la hora de hacer epubs desde InDesign consiste en que los estilos confeccionados para papel no pueden traducirse de forma automática al epub. Por suerte, sí se puede vincular el nombre del estilo con los de una hoja externa. Por tanto, sin saber css, pueden los diseñadores asociar sus estilos a los de <b>sinCodv1.css</b> y generar epubs profesionales.</p>
       <p>Imaginemos que estamos en InDesign y que tenemos seleccionado un primer párrafo, que tiene aplicado un estilo llamado "Primer-Párrafo", para poder exportarlo correctamente a un epub, solo tendremos que modificar una pestaña dentro de las propiedades del estilo. La pestaña en cuestión es la de exportación a epub y html. Allí tendremos poner el nombre que queremos que ese estilo tenga en el epub.</p>
       <p>Habiendo mirado <b>sinCodv1.css</b> con un editor de código, sabremos que el estilo que corresponde es "sinSangria", que presenta las siguientes características:</p>
       <pre>
@@ -255,7 +258,7 @@ border-color: black;}
   font-size: 95%;
   margin-top: 0em;
   margin-bottom:0em;
-}
+  }
 </pre>
       <p>De la misma manera, si quisiéramos vincular un estilo de párrafo normal llamado en InDesign "Cuerpo Central", deberíamos colocar en la casilla de exportación el nombre "conSangria".</p>
       <pre>
@@ -266,7 +269,7 @@ border-color: black;}
   margin-top: 0em;
   margin-bottom: 0em;
   text-indent: 4%;
-}
+  }
       </pre>
       
       
