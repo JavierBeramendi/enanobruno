@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title></title>
+ <style>
+   
+   /* ePub base r1.2 ePubLibre */
+
+/* ----- ESTILOS GLOBALES Y DE SECCIONES FIJAS (NO MODIFICABLES) ----- */
+body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+a, .normal { font-style:normal; font-weight:normal; text-decoration:none; }
+sup, sub { font-size:0.75em; line-height:normal; }
+
+.cubierta { margin:0; padding:0; border:0; font-size:0; text-align:center; text-indent:0; page-break-before:always; page-break-after:always; }
+  .cubierta img { height:100%; max-height:100%; }
+
+.tlogo, .tautor, .ttitulo, .tsubtitulo, .trevision, .tfirma { margin:0 0.25em; text-align:center; text-indent:0; font-family:sans-serif; font-weight:bold; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  .tlogo span { margin:3em 0 2.5em; display:inline-block; width:8em; }
+  .tautor { margin-bottom:0.5em; font-size:1.2em; font-weight:normal; color:#595959; }
+  .ttitulo { padding:0; border:0; font-size:1.8em; font-style:normal; text-decoration:none; color:black; visibility:visible; }
+  .tsubtitulo { margin-top:0.3em; }
+  .trevision { margin-top:2.5em; font-size:0.8em; color:#595959; }
+  .tfirma { margin-top:0.25em; font-size:0.65em; }
+  .tfecha { font-family:sans-serif; font-weight:normal; color:#595959; }
+
+.sinopsis, .sinopsis p, .autor, .autor p, .nota p { margin-top:0.5em; text-indent:0; }
+  .sinopsis p, .sinopsis em, .sinopsis strong, .sinopsis big, .sinopsis small, .sinopsis span { font-family:sans-serif; }
+.info { margin:3.5em 1.5em 2.5em; font-size:0.8em; width:90%; }
+  .info p { text-align:left; text-indent:0; }
+.vineta { padding:1em 0; text-align:center; text-indent:0; display:block; }
+.nota { padding-top:3%; page-break-before:always; }
+
+
+/* ----- ESTILOS GENERALES (ADAPTABLES) ----- */
+
+/* encabezados */
+h1, h2, h3, h4, h5, h6 { margin:25% 0.25em 1em; text-align:center; text-indent:0; page-break-after:avoid; page-break-inside:avoid; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  h1 { font-size:1.5em; } /* sólo cambios aprobados, puede afectar páginas globales */
+  h2 { font-size:1.5em; }
+  h3 { font-size:1.4em; }
+  h4 { font-size:1.3em; }
+  h5 { font-size:1.2em; }
+  h6 { font-size:1.1em; }
+
+/* dedicatoria */
+.dedicatoria { margin:5em 1em 0 3em; text-align:right; }
+  .dedicatoria p { text-align:right; text-indent:0; }
+
+/* tipografía */
+.sans, .sans p, .sans em, .sans strong, .sans big, .sans small { font-family:sans-serif; }
+.serif, .serif p, .serif em, .serif strong, .serif big, .serif small { font-family:serif; }
+code, kbd, .mono, .mono p, .mono em, .mono strong, .mono big, .mono small { font-family:monospace; }
+
+i, em, cite, dfn, .cursiva { font-style:italic; }
+b, strong, .negrita { font-weight:bold; }
+ins, .subrayado { text-decoration:underline; }
+del, .tachado { text-decoration:line-through; }
+.oculto { display:none; visibility:hidden; }
+
+big, .grande { font-size:1.2em; }
+small, .versalita { font-size:0.8em; }  /* para texto en mayúsculas, de tamaño similar al de las minúsculas */
+
+/* alineación */
+.izquierda, .izquierda p { text-align:left; }
+.derecha, .derecha p { text-align:right; text-indent:0; }
+.centrado, .centrado p { text-align:center; text-indent:0; }
+.justificado, .justificado p { text-align:justify; }
+.asangre, .asangre p { text-indent:0; }
+
+/* saltos */
+.sintop { margin-top:0; }
+.saltoinicio { margin-top:33%; }
+.salto05 { padding-top:0.5em; }
+.salto10 { padding-top:1em; }
+.salto25 { padding-top:2.5em; }
+
+/* bloques */
+.sinmargen { margin:0; }
+blockquote, .cita { margin:1.5em; }
+.bloque { page-break-inside:avoid; }  /* evita dividir un elemento entre páginas */
+.nosep { text-indent:0; display:inline-block; } /* evita dividir una palabra entre líneas */
+.extenso { orphans:0; widows:0; } /* evita división aleatoria de párrafos muy extensos (bug ADE) */
+.banner { margin:1.5em 12%; padding:0.5em 1em; text-align:center; text-indent:0; border:2px solid black; border-left:none; border-right:none; }
+  .banner p { text-align:center; text-indent:0; }
+
+/* listas */
+li { margin:0; text-align:justify; text-indent:0; line-height:1.3em; }
+
+/* imágenes simples */  /* para láminas verticales (página completa), usar el estilo fijo «cubierta» */
+.ilustra { margin:1em 0; text-align:center; text-indent:0; display:block; }
+  .ilustra img { max-height:100%; max-width:100%; }
+
+
+/* ----- ESTILOS PERSONALES ----- */
+.titul { font-family:"BlackWidow", BlackWidow; }
+.subtit  { text-align:center; text-indent:0; font-size:1.4em; font-weight:bold; margin:0.5em 10% 2.5em; font-family:"Typist", Typist; color:#606066 }
+.titul2 { font-family:"BlackWidow", BlackWidow; margin:15% 5% 0.5em; font-size:2em; }
+.subtit2  { text-align:center; text-indent:0; font-size:1.4em;  margin:0.5em 10% 2.5em; font-family:"Typist", Typist; color:#606066 ; font-weight:bold; }
+.subtit3 { text-align:left; text-indent:0; font-size:1.2em;  margin:2em 10% 1em 1em; font-family:"Typist", Typist; color:#606066 ; }
+.subtit3 p {text-align:left; text-indent:0;}
+
+/* ----- ROTULO PARTES / ENCABEZADOS ----- */
+.partes {text-align:center; margin:20% 1.5em 3em;}
+.partes h1 {display:inline-block; border-bottom:5px dotted gray; 
+margin: 0 0 0.3em; width:13em ; max-width:100%; padding-bottom:0.3em; margin-bottom: 0.3em; font-family:"BlackWidow", BlackWidow; font-size:1.7em; }
+.partes p { font-style:italic; text-align:center; text-indent:0; font-size:1.3em; font-family:"Typist", Typist;}
+
+/* ----- Colocar texto a la derecha alineado a la izquierda ----- */
+.epigraph { margin: 2em 1.5em 1.5em 30%; font-family:serif;  }
+   .epigraph p { text-indent:0; }
+.firma { margin: 0.6em 2em 1.5em 0; font-size:.9em; }
+   .firma p { text-indent: 0; text-align: right;}
+
+/* ----- FAMILIA Typist.ttf ----- */
+@font-face { font-family:"Typist"; font-style:normal; font-weight:normal; src:url(../Fonts/TypistRegular.ttf); } 
+@font-face { font-family:"Typist"; font-style:italic; font-weight:normal; src:url(../Fonts/TypistItalic.ttf); }
+@font-face { font-family:"Typist"; font-style:normal; font-weight:bold; src:url(../Fonts/TypistBold.ttf); } 
+@font-face { font-family:"Typist"; font-style:italic; font-weight:bold; src:url(../Fonts/TypistBoldItalic.ttf); }
+.typis { font-family:"Typist", Typist; }
+
+/* ----- fuente BlackWidow.ttf----- */
+@font-face { font-family:"BlackWidow"; font-style:normal; font-weight:normal; src:url(../Fonts/BlackWidow.ttf) }
+.blackw { font-family:"BlackWidow", BlackWidow; }
+ </style>
+</head>
+
+<body>
+  <h2 class="titul2" title="I. Las Toninas: mate, playa y cables submarinos">I</h2>
+
+  <p class="subtit2">Las Toninas: mate, playa y cables submarinos</p>
+
+  <div class="epigraph">
+    <p>«La Naturaleza está imitada de tal modo por el arte del hombre, que este puede crear un animal artificial».</p>
+
+    <div class="firma">
+      <p>T<small>HOMAS</small> <span class="nosep">H<small>OBBES</small>.</span></p>
+
+      <p class="cursiva">Leviatán, o La materia, forma y poder</p>
+
+      <p><i>de una república eclesiástica y civil</i> (1651).</p>
+    </div>
+  </div>
+
+  <p class="asangre">—Nos van a poner una bomba.</p>
+
+  <p>El comerciante se animó a decir lo que todos comentaban por lo bajo. Fue el primer valiente de la reunión que hasta ese momento se desarrollaba en la paz de un invierno húmedo de 1999. Pero la tensión se acumulaba.</p>
+
+  <p>Las Toninas, un balneario modesto de cinco mil habitantes a trescientos kilómetros de la ciudad de Buenos Aires, sufría una invasión sin precedentes. En sus calles de tierra, se desplegaban grúas, obradores y mezcladoras de cemento. En el puerto se estacionaban barcos de más de cien metros de largo que encendían sus luces a la noche y se iluminaban como si fueran una ciudad flotante. La pizzería del pueblo, acostumbrada a recibir empleados públicos y comerciantes al final del día, comenzó a recibir a belgas que bajaban de los barcos pidiendo cerveza, una tras otra, desde la mañana. Durante meses, los vecinos de Las Toninas no supieron ni entendieron nada. Encargaron más botellas de cerveza y mejoraron el plato del día para el almuerzo, pero nadie les daba más pistas. Mientras tanto, la costanera ancha se colmaba de montículos de arena y cerca de la ruta se levantaban dos nuevos edificios, bajos y grandes como supermercados.</p>
+
+  <p>Lo que los vecinos ignoraban era que ese misterio los haría famosos. Ignoraban también que por el mar y la arena estaban entrando los cables submarinos de internet que conectarían a la Argentina con el mundo. No podían ver que dentro de los nuevos edificios se estaban instalando filas largas de estantes con servidores y conexiones de fibra óptica. No sabían que esta pequeña ciudad de 5200 habitantes se estaba transformando en lo que la haría para siempre conocida. Las Toninas se estaba convirtiendo en «la capital nacional de internet».</p>
+
+  <p>Los habitantes navegaban en rumores: se decía que estaban instalando ese nuevo monstruo de las comunicaciones llamado internet. Pero que no se trataba de simples conexiones sino de su columna vertebral, unos tubos larguísimos que salían de los flamantes edificios y se metían al mar. Era auspicioso ser el centro de algo, pero también les daba miedo. ¿Y si alguien quisiera romper los cables? ¿Quién los protegería si pusieran una bomba para hacer volar el futuro por los aires?</p>
+
+  <p>Ante el pánico, las empresas de telecomunicaciones, las mismas que habían quebrado la paz del pequeño balneario, fueron quienes convocaron a la reunión. El Consejo de Ingenieros de la ciudad vecina de Santa Teresita les propuso a las empresas dueñas de los cables —Level&nbsp;3<a href="#nt4" id="rf4"><sup>[4]</sup></a>, Telefónica y Telecom— reunirse con los habitantes y explicar qué estaba ocurriendo. Eligieron el salón de usos múltiples de la Sociedad de Fomento de Santa Teresita, el más grande de la zona, y ordenaron en filas las sillas de plástico negro. El primero en llegar fue el intendente. De sobretodo y guantes negros, saludó a los ingenieros del lugar y a los representantes de las empresas y tomó asiento rápido. Él también quería saber más.</p>
+
+  <p>El ingeniero Ernesto Curci, que estaba a cargo de la estación de amarre de cables submarinos de Level&nbsp;3, fue el encargado de dar la primera charla. Su misión era explicar que no había nada que temer. Curci, que tenía cuarenta y cuatro años y acababa de ingresar a la compañía, habló más de una hora. De un metro sesenta de alto, erguido y atlético a base de gimnasio y maratones, ya había participado en la instalación de la primera estación de cables submarinos de Las Toninas en 1994, trabajando para Telefónica. Pero eso había pasado más desapercibido.</p>
+
+  <p>Curci siempre resulta el elegido para hablar. Puede describir cosas aburridas para otros, pero que él explica con calma y las hace más comunes, palpables. Parece que nunca quiere romper la paz de su cara, aunque cada tanto se le quiebra cuando sonríe, sin dejar de hablar. Acostumbrado a rodearse de ingenieros, mediciones de transmisiones y electricidad, ese día se enfrentaba a un público distinto, extraño a los desafíos técnicos, pero voraz de información.</p>
+
+  <p>Un vecino lo interrumpió:</p>
+
+  <p>—Ingeniero, con todo respeto, está muy bien lo de internet. Pero acá tenemos miedo de que le pongan una bomba al cable para cometer un acto terrorista.</p>
+
+  <p>Curci caminó por detrás de una mesa que enfrentaba al público y apoyó las manos. Miró al frente y respondió con mucha más sinceridad de la que los invitados esperaban.</p>
+
+  <p>—Mire: Si hay alguien con capacidad para poner una bomba en los cables son las mismas empresas de tecnología que los instalaron. Pero no creo que quieran romper sus propias instalaciones —explicó Curci, en medio de un murmullo y algunas risas furtivas de los estudiantes de Sistemas de la Universidad Atlántida Argentina de Mar de Ajó, que también habían sido invitados—. En todo caso, si quieren hacer volar los cables, es más fácil hacerlo en cualquier lugar del mar, donde no hay tantos sistemas de seguridad. Y si es por terrorismo, sería más efectivo bombardear una destilería de petróleo y cortar el suministro eléctrico de la zona. Sin electricidad, los cables no podrían transmitir internet.</p>
+
+  <p>Quince años después, cuando recuerda la anécdota, Curci sonríe con cariño. Reconoce que el miedo a la bomba en 1999 resultaba comprensible. Internet recién estaba naciendo y sus promotores la anunciaban con euforia, con la misma parafernalia discursiva con la que habían promocionado la carrera espacial en los sesenta. Era el próximo paso hacia el futuro. Y el futuro siempre crea nuevos miedos.</p>
+
+  <p>Curci todavía no sabe si su respuesta dejó tranquilos a los vecinos de Las Toninas. Lo cierto es que, desde que se instalaron los primeros cables submarinos de internet hasta hoy, se conoce en el mundo un solo intento de atentado «contra cables de internet», en Egipto en 2013, y nunca fue del todo aclarado.</p>
+
+  <p>Internet no se detiene. El animal puede herirse, pero nunca de muerte. Es tan esencial para los dos mil millones de personas que la usamos a diario como para los infinitos procesos de comunicación de empresas, organismos gubernamentales, fábricas, transportes. La vida moderna funciona y se alimenta de datos. El&nbsp;95% de la información del planeta se encuentra digitalizada y está disponible en internet y otras redes informáticas.</p>
+
+  <p>Transportar diariamente todos estos caudales de datos es el trabajo de una industria monumental y millonaria. Para eso les pagan a los ingenieros que trabajan en ella («una gran familia», según Curci): para que el tráfico de ceros y unos encuentre siempre rutas despejadas por donde transitar. Para que esto suceda hay que manejar una estructura inmensa, una que emerge desde el mar.</p>
+
+  <p>Internet es un gran monstruo en el que todas sus partes están conectadas y se necesitan mutuamente. De eso se trata: redes que se comunican con otras redes, de a millones, en todo el mundo. Sistemas que conversan con otros sistemas. Y lo hacen a través de un idioma en común, una <i>lingua franca</i>, el protocolo TCP/IP, una serie de comandos que le dicen a los datos que van viajando que busquen el camino más barato para llegar a destino. Si un camino no está disponible, los datos buscan otro. Prueban una y otra vez nuevas rutas hasta alcanzar su destino. Mientras todo eso sucede, nosotros no nos damos cuenta. Simplemente, esperamos que un <i>mail</i> aparezca de la nada en la pantalla o que un video cargue. Son segundos: un sorbo de café, un suspiro frente al teclado, un mensaje que llegó al celular. Pero durante ese instante, el animal trabaja para nosotros. Nunca duerme. Nunca deja de hacer conexiones. Cada parte de su —para nosotros— invisible cuerpo aporta a su movimiento y ninguna puede quedarse quieta. Por eso necesita siempre cargar energía a través de sus cables, ubicados en estaciones de amarre y transmisión como la estación de Las Toninas o en centros de datos (<i>datacenters</i>) ubicados en miles de ciudades. Internet es cooperación pura, desplegada en una enorme estructura asentada en edificios en la tierra, pero también conformada por tubos recorriendo todos los kilómetros necesarios para conectar el mundo.</p>
+
+  <p>La base de todo ese trabajo, de esas millones de conexiones diarias que nos unen, es física. Son tubos y cables —submarinos y terrestres— instalados por corporaciones o por países que dan la infraestructura necesaria para que esos contactos sucedan, para que los datos viajen, vuelen por las arterias y venas de la bestia. Son redes que corren debajo de nosotros, en la calle por la que caminamos todos los días, al costado de nuestro escritorio. Son tubos anchos debajo de la vereda o de una ruta, caños más pequeños que llevan cables a nuestra manzana y otros más conocidos por todos (negros, del diámetro de un dedo meñique) que hacen que otro cable se ensamble en el <i>router</i> que tenemos al lado y la señal aparezca.</p>
+
+  <p>Estamos rodeados por un tejido que no vemos pero sin el cual no podríamos vivir. El esqueleto de internet está allí y un ejército de ingenieros, operarios y marineros lo viene ensamblando desde hace 25 años.</p>
+
+  <p>El Leviatán de internet es tan grande como débil. A veces ejerce sus funciones vitales con normalidad: se carga de energía, de luz, hace una sinapsis, manda un dato más lejos y otro más cerca. Durante esos días, los miembros de la legión de guardianes que lo custodia en sus puestos de control en las estaciones o centros de datos toman un café con tranquilidad y comentan el partido del fin de semana. Miran pantallas con gráficos de colores que les muestran el tráfico de datos en una ciudad, en la otra, a las 2.53 de la madrugada, a las 5.38 de la tarde, y así a cada minuto, 365 días, 24 horas. Porque, a pesar del orden y la concentración, la amenaza siempre asoma. Un corte de energía, el ancla de un barco, un terremoto, una grúa que levanta la nieve o una ardilla con ganas de afilarse los dientes pueden dañar los cables y, de repente, poner en peligro nuestras vidas conectadas. Cuando eso ocurre, las alarmas suenan y ellos actúan.</p>
+
+  <p>La mayoría de las veces salir a reparar las autopistas informáticas es cuestión de rutina y todo vuelve a la calma rápidamente. Pero hay ocasiones en las que no es tan fácil y las reparaciones dejan a mucha gente sin conexión. Sí: a veces sucede. En el verano de 2014, las construcciones de rutas y estadios para el Mundial de Fútbol en Brasil, sumadas a las <i>escolas do samba</i> inmensas cruzando caminos, desataron una serie de cortes en Río de Janeiro y San Pablo durante meses. En 2011, una señora de 75 años que buscaba cables de cobre para vender en el mercado negro en la república de Georgia, en el límite entre Europa y Asia, se topó con un tendido subterráneo de fibra óptica, lo rompió y dejó a toda Armenia —el país vecino— sin conexión por doce horas. A principios de 2008, otro imprevisto: un cable se rompió en el canal de Suez y afectó a 60 millones de personas, desde India hasta Egipto.</p>
+
+  <p>—La mayoría de los cortes son por factores humanos. Cosas estúpidas. Pero son las que te pasan.</p>
+
+  <p>Desde hace catorce años, Curci sale todos los días de la ciudad de Ramos Mejía, en el Gran Buenos Aires, y llega al barrio de Olivos. Y allí se desploma en su escritorio de Level&nbsp;3, una de las dos empresas (junto a Telefónica) dueñas de cables submarinos que conectan a la Argentina con internet y dueña también de la red de fibra óptica más grande del mundo, capaz de gestionar por sí misma el 72% de las direcciones de internet del planeta. Otros días, le toca viajar por las estaciones de cables de América Latina, desde la enorme estación de Miami a la modesta de Las Toninas, para asegurarse de que internet funcione, que los datos corran tranquilos, como él, cuando luego de trabajar se sube a la cinta del gimnasio a descargar la tensión del día.</p>
+
+  <p>—Me ves tranquilo pero tengo úlceras y una gastritis espantosa. En este momento tengo un corte en algún lugar de Buenos Aires, pero es como te decía: si me pongo nervioso yo se cae todo.</p>
+
+  <p>De esa paciencia también depende internet. Nos parece automática cuando saltamos de una página a otra pero, en realidad, es una cadena de decisiones tomadas por seres humanos, personas de carne y hueso.</p>
+
+  <p>—Para muchas cosas hay procesos automáticos: una pantalla que te indica hacia dónde se enrutaron los datos. Pero a veces hay que hacer las cosas a lo bestia, como antes: tener el mapa en la cabeza y elegir el camino.</p>
+
+  <p>De los cuatrocientos hombres que integran su equipo, Curci tiene un grupo de cuarenta que trabaja <i>solo</i> en pensar hipótesis de crisis. El famoso «¿qué pasaría si…?». Cada día ellos despliegan tantos mapas como posibilidades de cables rotos existan y entregan un plan detallado con los pasos a seguir ante esa situación: cuánto combustible extra se necesitará para los grupos electrógenos, cuánta comida para los operarios que reparan los cables, cuántos repuestos hay que tener listos en los depósitos para que los barcos de reparación solo tengan que pasar a buscarlos y reducir el tiempo del arreglo. Si algo ocurre, solo hay que recurrir al plan correspondiente y seguir sus pasos. Desde revueltas políticas hasta golpes de Estado, pasando por vandalismos y robos de cables para vender cobre, hasta las cosas más simples, como el golpe de una grúa de nieve, un ancla o un animal curioso con hambre, todo está escrito en un mapa. Estos guardianes imaginan escenarios, a veces causados por pájaros que picotean cables aéreos.</p>
+
+  <p>—A mí no me divierte que me rompan un cable —dice Curci—. Pero me obliga a ser rápido, a ver cómo giro el sentido del tráfico para no afectar a los clientes. Me gusta eso. De hecho, cuando no me pasa, me pongo a pensar qué pasaría si mañana tuviera un corte. Me siento con mi gente y les digo: «¿Qué hacemos si se nos corta un cable en el medio de la final del Mundial de Fútbol? ¿Y si mañana hay un terremoto en Buenos Aires?».</p>
+
+  <p>El 14 de noviembre de 2007, tuvo que recurrir a uno de esos planes.</p>
+
+  <p>Pasadas las tres de la tarde, un terremoto devastó el norte de Chile, desde la ciudad de Tocopilla hasta la capital, Santiago. Los tubos de internet de su empresa estaban en peligro. La conexión de sus clientes, amenazada. Sin pensarlo dos veces, Curci juntó las cosas de su escritorio y puso en marcha el protocolo. Mandó un <i>mail</i> a todas las oficinas del mundo declarando oficialmente el problema, reunió a su equipo para desplegar el operativo y dejó su escritorio en Olivos para subirse a un avión con destino a Mendoza.</p>
+
+  <p>Con todos los vuelos a Santiago cancelados, el ingeniero cruzó la Cordillera en auto. Cuando llegó a la capital, vio puentes apilados sobre calles y edificios que caían hacia adelante, como piezas gigantes de dominó, sobre autos y carteles. Pero no se detuvo. El temblor ya había cortado internet durante una hora, casi el doble de los 33 minutos anuales de desconexión que su empresa garantiza a sus clientes.</p>
+
+  <p>El ingeniero Curci respiró y se propuso que el temblor no dominara también su mente y su pulso. Sacó la vista del desastre y recordó lo que le decía su madre cuando era un niño: «El que se enoja pierde». Los cuatro días siguientes, mientras los equipos de rescate trabajaban en las calles y los aviones de ayuda cruzaban el cielo, se encerró en un inmenso edificio blanco, un centro de operaciones de la Red —uno de los corazones de la bestia desplegado en el mundo—, y no salió de allí hasta que el servicio volvió a la normalidad. Sus hombres se extendieron como una legión de enfermeros con la orden de coser las arterias rotas para que volvieran a bombear datos, millones de datos. Repararon caños, reconectaron pedazos deshechos de fibra óptica en avenidas con el asfalto quebrado y revivieron los cables de transmisión submarinos atrapados por las placas tectónicas del Pacífico.</p>
+
+  <p>—Sí, reconozco que me gusta la adrenalina —confiesa Curci, siete años después de aquel terremoto, mientras recorremos otro de los dominios de su reino de internet: la estación de amarre de cables submarinos de Las Toninas.</p>
+
+  <p>Hoy no hay crisis pero sí una tormenta de verano que dejó a los turistas sin playa en plena temporada. La lluvia de enero apenas nos deja ver el puente negro con letras blancas que da la bienvenida al pueblo. Solo hay que doblar para ver la estación. Pintada de amarillo huevo, en forma de herradura y rodeada de muros grises, contrasta con las calles descuidadas, embarradas por el agua. La estación es grande. Ocupa toda una manzana. Pero pasa desapercibida. No es casualidad. Adentro, en una sala común y pequeña custodiada por complejos sistemas de seguridad, vive uno de los tres cables que conectan a la Argentina con internet a través del océano Atlántico. Por ese cable pasa gran parte de los datos de internet que intercambiamos a diario.</p>
+
+  <p>Para los 18 integrantes del grupo de Facebook «Las Toninas, capital de internet de la Argentina» la estación es un centro estratégico del país todavía desconocido desde que se instalaron los cables. Esta selecta logia de las redes sociales —que también reclama que eximan al pueblo de pagar por el acceso a internet— todavía sostiene que estamos en el punto exacto donde caería la bomba de la próxima Guerra Mundial. Si eso pasara ahora, tendríamos que salir a la lluvia con pilotos y botas a defender este gran barco donde viven los cables. Pero por el momento la única amenaza real es generada por unos animalitos verdes del tamaño de una mano.</p>
+
+  <p>—¡Cuidado con las ranas! —grita desde adentro Raúl De&nbsp;Pedro, jefe de la estación y uno de los tres ingenieros que trabajan en el lugar al mando de Ernesto Curci—. Si venían ayer, con el calor que hizo, estaba lleno de yararás que subían desde la arena. Pero hoy con esta lluvia les tocaron ranas.</p>
+
+  <p>Con unos rulos marrones largos que descienden por su rostro hasta transformarse en una barba de meses, camisa a cuadros y <i>jean</i> de vestir azul oscuro, De&nbsp;Pedro lleva a los visitantes desde el estacionamiento hasta el interior de la estación. Todo es hermético y seguro, como si estuviéramos en las entrañas del Enterprise de <i>Viaje a las estrellas</i>. En cada pasillo hay señales y carteles de instrucciones ante un eventual accidente; todo está preparado para que el fuego no cruce de una sala a la otra, para que el desastre nunca ocurra y los cables no se corten.</p>
+
+  <p>Los cables submarinos de fibra óptica que conectan a la Argentina con internet y con el mundo entran todos desde el océano Atlántico, en Las Toninas, a través de tres estaciones de amarre.</p>
+
+  <p>A diferencia de la instalación de la segunda estación que despertó el miedo terrorista en el pueblo, la primera no llamó su atención, tal vez por su modesto tamaño. Fue instalada a una cuadra de la comisaría por la entonces recién creada Telecom Internacional de Argentina en 1994 y albergó al primer cable, que funcionó desde ese año hasta que fue desconectado en 2013. El primer cable submarino de fibra óptica del país, bautizado Unisur, era muy corto comparado con los actuales. Medía solo mil setecientos kilómetros pero su tecnología de transmisión superaba en velocidad y capacidad al cobre y se usaba tanto para datos telefónicos como para los primeros de internet. Su recorrido formaba la figura de un número tres que se posaba sobre Las Toninas en Argentina, Maldonado en Uruguay y Florianópolis en Brasil. Tres años antes, esos tres países, junto con Paraguay, habían firmado el Tratado de Asunción, que ponía formalmente en marcha el Mercosur<a href="#nt5" id="rf5"><sup>[5]</sup></a>.</p>
+
+  <p>Solo seis años antes, en 1988, se había instalado el primer cable transatlántico de fibra óptica del mundo, entre Estados Unidos, Inglaterra y Francia.</p>
+
+  <p>—Instalar un cable tan grande es inexplicable —dice Curci, con nostalgia—. Cuando lo inauguramos, no podíamos creer lo que habíamos hecho. A veces cuando lo pienso creo que fui el creador de algo, pero que alguien me dictó el plan de cómo hacerlo.</p>
+
+  <p>Tras casi veinte años en funcionamiento, ese cordón umbilical de fibras que sirvió para las primeras transmisiones de internet en el país salió de circulación en diciembre de 2013. Ahora quedó en el Mar Argentino como el fósil de un animal en descomposición esperando a que alguien lo saque del paso y lo transporte a un museo para ser exhibido como un pionero.</p>
+
+  <p>Luego del Unisur llegaron tres cables submarinos más. Todos se instalaron entre 1999 y 2000, impulsados por el avance mundial de lo que hoy conocemos como la Red. En Argentina, en el año 2000, el fin de la exclusividad de Telefónica y Telecom para prestar servicios de telecomunicaciones internacionales abrió el mercado a otras empresas que, ya avisadas del proceso de apertura, tenían sus cables listos para empezar a operar. En esos años, la Red local sumó 53&nbsp;500 kilómetros de cables de fibra óptica —el equivalente a cruzar ida y vuelta de Alaska a Tierra del Fuego— y seis mil millones de dólares de inversiones. Todos sus nuevos tentáculos, pelos, ramificaciones y datos entraron también por Las Toninas, el kilómetro cero de internet en la Argentina.</p>
+
+  <p>El 10 de mayo de 2000 se inauguró el cable Atlantis&nbsp;2. Con 8500 kilómetros, une América, África y Europa. También sale, por supuesto, desde La Toninas, de la misma pequeña estación de amarre de la que salía el Unisur. Hoy, producto de 14 años de avances tecnológicos, ese mismo cable puede llevar 160 gigabits por segundo (160 mil millones de letras —o números, o números y letras que forman imágenes, conversaciones, videos—). Unos meses después, en septiembre de 2000, comenzó a operar un nuevo cable desde la imponente estación de amarre, cuya construcción había generado tanto pánico: el South American Crossing (<small>SAC</small>). El cable recibió su nombre por la compañía que lo construyó, Global Crossing, comprada en 2011 por Level&nbsp;3. El <small>SAC</small>, además de un cable, conforma un anillo de veinte mil kilómetros que une América Latina, de este a oeste. Por tierra, se completa con otra extensa red de cables y centros de datos que conforman el <i>backbone</i> de la empresa, una columna vertebral de internet capaz de transportar grandes volúmenes de datos que luego se extiende hasta llegar a cada ciudad, cuadra y casa (en Argentina, la empresa tiene centros de datos en Buenos Aires, Córdoba y Mendoza). Level&nbsp;3, quien sigue operando este cable, es uno de los once proveedores de servicios de internet (<small>ISP</small>) de nivel Tier&nbsp;1, es decir, que puede gestionar el nivel más alto de conexión y tiene presencia internacional<a href="#nt6" id="rf6"><sup>[6]</sup></a>. La forma de anillo de la red no es casual. Permite que, si se corta alguna parte de la red, el tráfico se enrute o dirija al lado opuesto y encuentre caminos alternativos para seguir transmitiendo los datos.</p>
+
+  <p>El tercer cable está un poco más lejos, tomando la calle principal de Las Toninas y llegando a Costa Chica. Si bien fue inaugurado en 2001, el edificio parece recién emplazado. Es un rectángulo perfecto de hormigón gris rodeado por un jardín verde y un muro de ladrillos calados. Parece una cárcel de lujo, con un césped cuidado para jugar al golf. El edificio alberga al <span class="nosep">SAM-1</span> (South America&nbsp;1), un cable de 25 mil kilómetros, propiedad de Telefónica, otra de las redes Tier&nbsp;1 de Argentina, con conectividad directa y propia entre América Latina, Estados Unidos y Europa. El <span class="nosep">SAM-1</span> hace lo mismo que el cable de Level&nbsp;3: recorre América Latina desde Las Toninas, pasando por trece estaciones que conectan por el Atlántico hasta Boca Ratón en Miami, donde retornan por el Pacífico hasta amarrar en Valparaíso, Chile.</p>
+
+  <p>Flavio Ferrari, hoy encargado de la estación que cobija al <span class="nosep">SAM-1,</span> un toninense de 38 años y ojos grandes que sonríe mucho, se sorprende cuando alguien visita su lugar de trabajo, un galpón enorme colmado por <i>routers</i> y servidores. La estación, igual que la de Level&nbsp;3, se pensó más grande de lo que hoy necesitan. Sus servidores, apilados como torres, transportan casi 2 terabytes por segundo, que equivalen a 600 horas de video, 7 millones de fotos digitales o 2 mil ediciones completas de la <i>Enciclopedia Británica</i> digital.</p>
+
+  <p>En la estación el trabajo es muy limitado, casi un «paso obligado» del cable para cargar energía. Las decisiones más importantes del <span class="nosep">SAM-1</span> las toma su estación hermana de Lurín, Perú. Ferrari, hijo de una operadora telefónica, de aquellas mujeres que conectaban las perillas de las comunicaciones internacionales cuando se hacían punta a punta, estudió electrónica y empezó a trabajar unos meses antes de la instalación del cable submarino.</p>
+
+  <p>—Fueron cinco días sin dormir, con cuarenta personas trabajando. Éramos cuatro de Telefónica y el resto de Tyco, una empresa suizo-estadounidense que instaló los cables junto con Alcatel —cuenta saliendo del letargo de un día común de enero—. Después trabajamos quince días más para dejar el cable en funcionamiento. Cuando terminamos no sabíamos en dónde estábamos, pero sabíamos que habíamos hecho algo grande. Queríamos dormir, pero nos quedábamos mirando el recorrido, hablando sobre detalles técnicos que todavía no conocíamos bien, pero que suponíamos cómo iban a evolucionar, porque todos estamos en esto hace mucho.</p>
+
+  <p>Mientras que la estación de amarre que alberga al <small>SAM</small> 1 y a su guardián Flavio Ferrari está aislada y sobre la ruta, la del <small>SAC</small>, operada por Level&nbsp;3, se ubica en el centro de Las Toninas. Raúl De&nbsp;Pedro hace de guía por sus pasillos. Carga, honrando a su apellido, las llaves de cada puerta que abre a su paso. Tiene la autoridad de haber cuidado el cable de la estación desde que lo instaló, también él mismo, hace catorce años. Quizá sabe que su vejez será la vejez del cable: que hoy, a sus 50 años, lo vio crecer. Que cuando se jubile el cable seguirá ahí, con alguna reparación, pero funcionando. Esa también será su victoria.</p>
+
+  <p>En la «casa del cable» las paredes están pintadas de un gris metálico. Los techos y los pisos relucientes combinan con la luz artificial. Tiemblan ante los pitidos de los sistemas de seguridad de las puertas que va cerrando De&nbsp;Pedro. Los servidores, encendidos las veinticuatro horas, emiten un ruido monótono que se mezcla con el aire acondicionado que lucha contra el calor acumulado de los aparatos y mantiene los espacios fríos, en veinte grados o menos. A las estaciones y también a los centros de datos siempre hay que llevar un abrigo. A más torres de servidores o <i>racks</i>, más aire, más lucha de los equipos contra la temperatura de las máquinas <i>pensando</i> todo el día. De&nbsp;Pedro, ya acostumbrado a los ambientes frescos, solo lleva puesto una camisa. Lo sigue Marcelo Peresutti, su compañero en la estación, también de su edad pero más flaco, de gestos suaves y voz pausada. Y más atrás, Leandro Vidal, el tercer ingeniero que cuida el cable. Recién recibido, más joven y callado, los asiste con esmero hasta llegar a la sala maestra, donde se encuentra <i>él</i>, la estrella: el famoso cable de internet.</p>
+
+  <p>De Pedro abre la puerta de una habitación de dos metros por seis. Nada indica que allí haya algo valioso. Cuesta creer que internet <i>sea</i> simplemente un cuarto con dos cables negros, el que transmite los datos y el que le da energía. Cuesta creer que para estar de pie frente a ellos tuve que esperar meses, decenas de llamadas, discusiones con agentes de prensa, presentación detallada de datos personales y autorizaciones con abogados corporativos de la compañía.</p>
+
+  <p>Pero <i>él</i> está ahí y toda aquella burocracia ya no importa: el cable, un tubo negro de tres dedos de ancho, apenas más grueso que uno doméstico, tiene pegada una advertencia que avisa «Alta tensión». Como todo objeto de deseo, se puede mirar, pero no tocar. Es uno de los corazones del monstruo de internet, la parte que lo alimenta, lo ilumina y lo hace cumplir su función de transportar información. Por allí pasa gran parte de la subjetividad moderna: <i>mails</i>, posteos de blogs, fotos de redes sociales, archivos de música y películas que intercambian ingleses con argentinos, suecos con coreanos, brasileros con rusos. A su lado, el cable tiene otro tubo, encargado de darle energía y cerrar el circuito de corriente eléctrica.</p>
+
+  <p>Cuando se corta un cable, terrestre o submarino, la forma de detectar el punto exacto de la rotura es a través de señales eléctricas: cuando encuentran una barrera, allí está el problema. Una vez detectada la falla, los técnicos (o buzos si es en el mar) reemplazan la parte cortada, siempre un tramo ínfimo comparado con los miles de kilómetros del cable. Por eso en esta estación, como en las otras <i>landings</i> o centros de datos, la provisión de energía eléctrica es fundamental. Afuera del edificio pero dentro de los muros, se pueden ver los tanques de gasoil preparados para alimentar a los grupos electrógenos y una doble sala de baterías. El suministro debe ser permanente.</p>
+
+  <p>—La hipótesis de crisis extrema sería quedarnos sin combustible para los grupos electrógenos —dice De&nbsp;Pedro—. Tenemos energía para funcionar una semana. Tendrían que cortar todas las rutas durante siete días para generar un problema.</p>
+
+  <p>Con esa afirmación explica también por qué, más que una bomba, la herida mortal para los cables y la bestia sería un corte de electricidad.</p>
+
+  <p>De Pedro le pide a Leandro, su asistente, que traiga un tramo de cable de fibra óptica submarino de diez centímetros, entregado como <i>souvenir</i> de visita. Fuera de esta estación, el cable sería un cable de plástico más, con capas que forman un cilindro de casi cuatro centímetros. La primera, más ancha y negra, está en contacto con el agua y soporta su peso. Luego hay aislantes verdes, capas de cobre conductoras de electricidad y jirones de acero que protegen al cable de roturas. Al final, en el corazón del tubo, asoman unos pelitos de fibra óptica. Son muy suaves y están pintados de unos colores estándar usados por la industria de telecomunicaciones: amarillo, azul, verde, naranja, marrón, rosa. Su componente principal es sílice, estirado cuidadosamente hasta formar un vidrio alargadísimo, tan fino que se mide en micrones<a href="#nt7" id="rf7"><sup>[7]</sup></a>. Un mito repetido en la industria dice que clavarse un pelito de fibra en el dedo puede causar la muerte. ¿Será verdad?</p>
+
+  <p>—Sí, si te entra un pelo de fibra al torrente, tiene el mismo diámetro que un capilar sanguíneo y te podés morir —confirma De&nbsp;Pedro—. Yo no sé si es 100% verdad. Pero por las dudas nosotros acá nos cuidamos.</p>
+
+  <p>Los cables submarinos son mucho más gruesos que los terrestres. Y son más gruesos cuanto más cerca de la costa están, para resistir la actividad humana que pueda dañarlos. También porque es allí donde están enterrados a la menor profundidad de todo su recorrido, a un metro y medio. Pero en la playa no hay nada que señale que el cable está ahí.</p>
+
+  <p>—Es por seguridad —se ríe De Pedro—. Si pusiéramos un cartel para señalar el cable, la gente iría a buscarlo, a tocarlo, a romperlo, a ponerle una bomba.</p>
+
+  <p>Desde el mar a la estación, el cable sigue extremadamente protegido por un camino cubierto de capas de hormigón y terrenos cercados. El recorrido secreto solo lo conocen Curci, De&nbsp;Pedro y algunos hombres más. Son un selecto grupo de guardianes de una bestia condensada en un cable de dimensiones demasiado terrenales, frágiles. En Las Toninas son también tres hombres los que tienen ese mapa de 18 cuadras en la mente, y una vez al día uno de ellos cumple con la tarea de salir de la estación y caminar sobre los pasos del cable.</p>
+
+  <p>Una vez que llega, funciona en base a dos procesos tan distintos como estéticamente complementarios: cantidades astronómicas de electricidad y procesos ópticos refinadísimos, algo así como una radiografía que te permite chequear que lo que estás transmitiendo sea lo que querés transmitir. Internet se alimenta de ellos y los necesita. Pero ambos procedimientos avanzan tan rápido en la industria de las telecomunicaciones que, en las estaciones de Las Toninas (y en cualquiera del mundo), con la misma cantidad de tubos y pelos de fibra instalados en el 2000, hoy se transmite un 400% más de datos que cuando se instalaron las estaciones. Dentro de un año ese volumen podría pasar a un 5000% más. Esos saltos de tecnología hicieron que esta y las otras estaciones de amarre quedaran gigantes, como supermercados llenos de góndolas vacías esperando a un repositor que se quedó dormido. Hoy, en estos salones blanquísimos y asépticos, podríamos estar festejando tres casamientos —uno en cada sala con la música a tope; la aislación lo permitiría— y, al mismo tiempo, desde otra sala, seguir trabajando.</p>
+
+  <p>En el techo, las bandejas color naranja sostienen otros cables, los que conectan a los servidores con la electricidad externa. Una zapatilla de enchufes cae desde arriba y conecta un cable a 220 voltios. En una de las mesas, frente a un mueble con torres de servidores, una computadora Toshiba Tecra 8100 resiste desde la inauguración de este cubo de cemento, en el año 2000, conectada para hacer pruebas de señal. Es la típica laptop ladrillo, pesa más de cinco kilos y en el sitio de ventas <i>online</i> Mercado Libre la venden como antigüedad tecnológica para fanáticos a 160 pesos. Pero aquí, arriba de una mesa perdida en el centro de una sala gigante de la estación, cumple una función estética: es el elemento de ciencia ficción que faltaba al paisaje. La máquina sirve para apretar un botón, una vez por día, y chequear que el mundo de internet esté funcionando correctamente. Vive allí desde hace quince años y hace también quince años que solo cumple con esa operación. El avance tecnológico se dio en lo más pequeño, en la parte más fina, casi invisible: la fibra óptica. El resto de los aparatos que la rodean —y sus guardianes— no han cambiado. Las Toninas, allá afuera, también permanece igual.</p>
+
+  <p class="salto25 asangre">Es enero y la temporada viene mal, se quejan los comerciantes. Las Toninas es un lugar venido abajo, con veredas desparejas, baches en las calles y carteles despintados. Entonces, ¿por qué decidieron poner los cables de fibra óptica submarina justo acá?</p>
+
+  <p>—Las Toninas es un lugar plano, con pocos accidentes, con pocos barcos, donde es fácil obtener permisos para construir, negociar límites marinos y estar cerca de otros cables.</p>
+
+  <p>Pero además de las razones geográficas hubo un motivo económico, también de pueblo pequeño, que definió a Las Toninas como el lugar elegido. Aquí, en la Capital Nacional de Internet, no hay puerto. Los barcos se fueron quedando en San Clemente, la primera ciudad del Partido de la Costa que se ve en el mapa viniendo desde Buenos Aires.</p>
+
+  <p>Si bien estamos en el hogar de los cables de internet, la banda ancha y las conexiones rápidas no abundan. En el centro, el complejo de departamentos Tony Center ofrece internet a 15 pesos la hora. En la otra cuadra, sus mismos dueños tienen un bar, con un <i>router</i> más potente e internet <i>wifi</i> a la que se accede con una clave al tono: <i>soyarenaymar</i>. En las vidrieras hay animales marinos hechos de caracoles, lata y madera. Uno igual a otro, todos con corazones, todos «I &lt;3 Las Toninas», con palmeras que no existen en Las Toninas. Además del locutorio, los turistas pueden conectarse a internet comprando unos papeles rojos y negros envueltos en celofán que la cooperativa de la zona, Atlántica Video Cable, llama «tarjetas prepagas». Retirado el celofán, un portal con publicidad de Mundo Marino pide el código de la tarjeta y se puede navegar a una velocidad que hubiera sido buena en 1998 y hoy abre las fotos en tres minutos. Para los cinco mil habitantes fijos del pueblo, las opciones son las mismas que para la mayoría de Argentina: las monopólicas Telefónica y Cablevisión, y la cooperativa de Pinamar Telpin. Las Toninas es más bien un puerto pasajero de cables, donde cargan energía para seguir hacia el resto del país. Desde aquí, los cables siguen por tubos enterrados en paralelo a la ruta 11 y van yendo hacia el norte, hasta llegar a Buenos Aires y ramificarse por toda la Argentina.</p>
+
+  <p>Para que la señal conserve su intensidad en todo el recorrido se instalaron los repetidores, unas cajas que se conectan de un lado al otro del cable. Desde Las Toninas hasta la estación de Santos, en Brasil, hay 2000 kilómetros y 32 repetidores debajo del mar. Lo mismo ocurre cuando el cable sigue por tierra. Desde Las Toninas a la capital argentina, hay un repetidor cada 100 kilómetros: Conesa, Cerro, Verónica, La Plata, Buenos Aires. Hacia el norte, hasta llegar a Salta, hay 30 repetidores más que acompañan los cables terrestres.</p>
+
+  <p>Antes de la fibra óptica, se lanzaba una señal y se esperaba que, del otro lado, alguien respondiera. Si no había respuesta, se intentaba otra vez. Así hasta que llegaba el mensaje. Hoy los datos, las imágenes, la voz, corren al mismo tiempo por una misma fibra, donde además circulan otras señales. La información siempre llega.</p>
+
+  <p>Sin embargo, todavía hay tareas que la tecnología no reemplaza. Instalar un cable de fibra óptica submarino es un trabajo descomunal. Los avances técnicos no suplieron la gran operación humana que se necesita para subir rollos de miles de kilómetros de cable a la bodega de un barco, enterrarlo mil metros saliendo de la costa y luego completar el tendido en el fondo del mar respetando una ruta precisa y previamente definida. Para lograrlo se necesita casi lo mismo que en 1850, cuando se instaló el primer cableado entre Gran Bretaña y Francia a través del Canal de la Mancha: un barco, marineros, días sin dormir, mucha fuerza, algunas órdenes, un par de gritos. Y paciencia. De la que da el mar y de la que hay que inventar cuando el viento, las olas o el empalme del cable no ayudan a terminar y volver a casa.</p>
+
+  <p class="salto25 asangre">El 95% de las comunicaciones del mundo se hace a través de redes de fibra óptica que corren bajo el mar y unen los continentes por los océanos. Los cables son más de 250 y unen casi un millón de kilómetros, lo que equivale a 22 vueltas al mundo. Para que eso suceda, son necesarios ejércitos de hombres en barco que invaden costas y enchufan la tierra con el mar.</p>
+
+  <p>José María Vázquez coordina uno de esos equipos que pasan su vida en el mar. Su empresa, Dynamic Marine, instala y repara cables submarinos. En 2011, él fue parte de la expedición que instaló el Bicentenario, un pequeño cable de 250 kilómetros que une Las Toninas con Maldonado<a href="#nt8" id="rf8"><sup>[8]</sup></a>, Uruguay.</p>
+
+  <p>Emplazar un cable también es un acto burocrático inmenso. Cada instalación o reparación requiere una serie de permisos de organismos como Cancillería y Prefectura, a quienes se debe presentar el mapa exacto del recorrido para que el Servicio de Hidrografía Naval lo asiente en las cartas marítimas, actualizadas periódicamente. Una vez asentado el cable en el lecho y publicado en la carta marítima, nadie puede pescar ni hacer obras en su «zona otorgada» sin pedir autorización previa. Aun así, las roturas por pesqueros furtivos, generalmente de noche, son comunes y el motivo más frecuente de fracturas de cables submarinos. Para evitarlo, las empresas de telecomunicaciones están trabajando hace unos años con las Naciones Unidas en las Conferencias sobre el Derecho del Mar, para avanzar en una mayor protección de los cables. El objetivo es declarar a internet un «servicio universal esencial» de la humanidad —sin conexión se pierde gran parte de la actividad y la generación de riqueza diaria— y a partir de esa categoría generar normas mundiales que protejan a los cables de las roturas o castiguen más severamente a quienes las produzcan.</p>
+
+  <p>Resuelta la burocracia marina, el barco cablero puede partir. La mayoría de ellos son de dos empresas: la francesa Alcatel y la norteamericana Tyco. En ellos, uno de los costos más altos es el del personal especializado que hace la instalación del cable y lo deja en funcionamiento.</p>
+
+  <p>—Las mismas empresas que fabrican el cable submarino te mandan el rollo ya diseñado según su ruta y un técnico especializado que lo instala. Solo está autorizado a hacerlo él. Es como un gasista matriculado, pero de fibra óptica.</p>
+
+  <p>Vázquez conoce a muchos de estos expertos, que en general hablan el francés de Alcatel o el noruego de Nexans, algunas de las marcas más usadas en la industria.</p>
+
+  <p>—Son estrellas de <i>rock</i>: van todo un mes en el barco pero por ahí solo trabajan dos horas, cuando el cable ya está listo y tienen que dar el OK.</p>
+
+  <p>Su tarea es coordinar todas las tareas de un barco, durante semanas, hasta que la compañía que lo contrata le confirma que el cable está transmitiendo y puede volver a casa.</p>
+
+  <p>—Es difícil. Pero lo más complejo es que cuando llega el momento del empalme, el momento clave, el técnico esté sobrio. Mi trabajo, más que técnico, es conservar la armonía. Son gente que toma mucho.</p>
+
+  <p>Tras la confesión, Vázquez se anima a derribar otro mito: el que dice que los tiburones se comen los cables submarinos y son responsables de muchas de las roturas de fibra marina. En 1987, en su artículo «Los ataques de tiburones retrasan la instalación de cables submarinos de fibra óptica», el <i>New York Times</i> alertaba que estos peces «sienten una atracción hasta ahora inexplicada por los nuevos cables submarinos de comunicaciones que preocupa a las empresas propietarias e instaladoras». El texto comentaba que habían ocurrido ataques en los océanos Atlántico y Pacífico, que habían «dado lugar a una ola de interés por el comportamiento de los tiburones y hasta el descubrimiento de nuevas especies». Según afirmaba James Barrett de AT&amp;T, una de las instaladoras, habían hallado dientes de estos enormes peces en un tendido en las islas Canarias. «Nos vimos sorprendidos», comentaba el ingeniero.</p>
+
+  <p>El problema de los tiburones efectivamente existió. La propia AT&amp;T destinó millones de dólares a investigar el misterio. Finalmente, se llegó a la conclusión de que lo que les gustaba a los tiburones no era el cable en sí ni la sensación de afilarse los dientes contra él. Vázquez tiene la respuesta:</p>
+
+  <p>—Los tiburones confundían la corriente eléctrica que emite el cable con unas ondas similares que generan los peces. Entonces, pensando que el cable era un pez, es decir, comida, lo mordían. Esto se descubrió desconectando el cable: si no tenía más corriente, el tiburón seguía de largo, ya no le interesaba.</p>
+
+  <p>Tras los estudios, la solución de la industria fue tan sencilla como agregar otra capa a los cables submarinos. Los grandes peces dejan de pensar que el cable es comida y el problema está resuelto. Las crisis, ahora, ya no están bajo el agua, sino en la superficie, cuando los cables suben y se enfrentan con los verdaderos generadores de problemas: los seres humanos.</p>
+
+  <br><br><hr>
+  <div class="nota">
+    <p id="nt4"><sup>[4]</sup> Level 3 es un proveedor «mayorista» de infraestructura de internet, del nivel Tier&nbsp;1, es decir, con capacidad de proveer a otros operadores. Por eso, su nombre no nos resulta tan familiar como el de las otras empresas. <a href="#rf4">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt5"><sup>[5]</sup> Paraguay, por su ubicación mediterránea y sin acceso al mar, no fue parte del cable submarino, algo que explica en gran parte su retraso en el acceso a internet: tiene un 23% de penetración, contra 68% de Argentina, 56% Uruguay y 45% de Brasil. <a href="#rf5">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt6"><sup>[6]</sup> El resto son: <small>AOL</small>, AT&amp;T, Verizon Business, <small>NTT</small> Communications, Qwest, Cogent, Sprint, Deutsche Telekom, TeliaSonera y Telefónica Global Solutions. <a href="#rf6">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt7"><sup>[7]</sup> Con el cable de vuelta en casa, medí los pelitos de fibra: en un milímetro entraron cuatro. <a href="#rf7">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt8"><sup>[8]</sup> Propiedad de Antel (Uruguay) y Telefónica (Argentina). <a href="#rf8">&lt;&lt;</a></p>
+  </div>
+</body>
+</html>

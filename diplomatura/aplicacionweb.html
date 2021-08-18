@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title></title>
+  <style>
+      body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+        h1, h2, h3, h4, h5, h6 { text-align:left; margin-top:15%; }
+                h1 { font-size:2em; }
+                h2 { font-size:1.8em; }
+                h3 { font-size:1.6em; }
+                h4 { font-size:1.4em; }
+                h5 { font-size:1.3em; }
+                h6 { font-size:1.2em; }
+  /* Lineas horizontales */
+  hr { background-color: black; height: 0.1em; margin-left: 0em; margin-right: 0em; }
+    .hr1 { height: 0.2em; margin-left: 8em; margin-right: 0em; }
+
+  /* Listas */
+  ul { list-style-type: disc; }
+    .sin { list-style-type: none; }
+    .circulo { list-style-type: circle; }
+    .cuadrado { list-style-type: square; }
+  li
+    .saltomedio { padding-bottom: 1em; }
+    .sin { list-style: none; display: inline }
+
+  /* Imágenes con pie */
+  div.figure {
+      float: center;
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+  div.figure p {
+    text-align: center;
+    text-indent: 0;
+    }
+  /* Tablas */
+  table.prefacio { border-collapse:collapse; margin: 1em auto 1.5em; border: none; width:100%; }
+  table.prefacio tr td { border: none; padding: 0em 1em 0em; }
+    .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+
+  table.cuadro { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadro th { border: 1px solid black; text-align: center; padding: 0em 1em 0em;  }
+  table.cuadro td { border-left: 1px solid black; border-right: 1px solid black; text-align: center; padding: 0em 1em 0em; }
+  table.cuadro caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+        .centrado { text-align:center; text-indent:0 }
+
+  table.cuadrol { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadrol th { border: 1px solid black; text-align: left; padding: 0em 1em 0em;  }
+  table.cuadrol td { border: 1px solid black; text-align: left; padding: 0em 1em 0em; }
+  table.cuadrol caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+
+  table.ejemplos { border-collapse: collapse; margin: 1em auto 1.5em; border-top: 1px solid black; border-bottom: 1px solid black; width:90%; }
+  table.ejemplos caption { caption-side: top; text-align: center; }
+  table.ejemplos tr, td { border: none; padding-left: 0.5em; }
+        .courier { font-family: "Courier", courier; font-size: 0.9em; }
+    .numeral { font-size: 0.65em; width: 1em; }
+
+  table.biblio { border-collapse: collapse; margin: 1em auto 1.5em; border: none; width:95%; }
+  table.biblio tr, td { border: none; padding-left: 0.5em; }
+    .numero { width: 1em; }
+
+  p { text-align:justify; margin:0; text-indent:1.5em; line-height:1.4em; }
+
+    .imagencentrada { text-align: center; text-indent: 0; margin: 1.5em 0 1.5em 0; }
+    .imagenizquierda { float: left; padding: 0.5em 0.0em 0.5em 0; text-indent: 1.5em; }
+
+        .capital { font-variant:small-caps; }
+        .sans { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+        .courier { font-family: "Courier", courier; }
+        .comic { font-family:"Marker Felt", "Comic Sans MS", "Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+
+        .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+        .centrado { text-align:center; text-indent:0 }
+        .asangre { text-indent:0 }
+        .cursiva { font-style: italic }
+        .negrita { font-weight: bold }
+    .subrayado { text-decoration: underline }
+        .salto { padding-bottom:2em; }
+        .saltomedio { padding-bottom:1em; }
+        .cita { margin:1.5em; }
+        .banner { width:75%; text-align:center; text-indent:0; margin:1.5em auto; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+        .sinmargen { margin:0; }
+        
+        .cubierta { margin:2% auto;max-width:95%;height:95%; }
+                .cubierta img { height:100%; }
+        .sinopsis, .sinopsis p { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; text-indent:0; }
+        .info { width:90%; font-size:0.8em; margin:0.5em 0.5em 0; text-indent:0; text-align:justify; }
+        .legal { width:90%; font-size:0.8em; margin:5em 1.5em 0; text-indent:0; }
+                .legal p { text-indent:0; text-align:left; }
+        .intro { margin:5em 0 1.5em; text-indent:0; text-align:right; }
+                .intro p { text-align:right;text-indent:0; }
+
+        /*salto previo de párrafo*/
+    .saltop { margin-top:1em; }
+
+    /*Formato enlace de notas al pie dentro del texto*/
+    .notas { color: black;cursor: pointer;text-decoration:none; line-height: normal; font-size:0.75em;vertical-align:super; }
+
+    /*Formato enlace de notas al pie dentro archivo notes.html (última hoja del documento)*/
+    .notasf { color: black;cursor: pointer;text-decoration:none; }
+
+    /*Saltos de tabulacion*/
+    .sangria1 { text-indent:3em }
+    .sangria2 { text-indent:6em }
+    .sangria3 { text-indent:9em }
+    .sangria4 { text-indent:12em }
+    .sangria5 { text-indent:15em }
+
+    /*Tamaños de letra */
+    .tamano1 { font-size:2em; }
+    .tamano2 { font-size:1.8em; }
+    .tamano3 { font-size:1.6em; }
+    .tamano4 { font-size:1.4em; }
+    .tamano5 { font-size:1.3em; }
+    .tamano6 { font-size:1.2em; }
+
+    .margenizquierdo1-5 { margin-left: 1.5em }
+    .margenizquierdo2 { margin-left: 2em }
+    .margenizquierdo4 { margin-left: 4em }
+    .margenizquierdo6 { margin-left: 6em }
+    .margenizquierdo8 { margin-left: 8em }
+
+    .indice0  { font-size: 1.2em; font-weight: bold; padding-top: 0.5em }
+    .indice1  { font-size: 1.1em; text-indent:3.5em }
+    .indice2  { font-size: 1.1em; text-indent:5.5em }
+    .indice11  { font-size: 1.1em; text-indent:3.5em; padding-top: 0.5em }
+
+    .versalita {font-size: 0.75em}
+
+    .titulo4 { text-indent: 0; font-size: 1.4em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo5 { text-indent: 0; font-size: 1.3em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo6 { text-indent: 0; font-size: 1em; font-weight: bold; padding-top: 1em; padding-bottom: 1em; }
+
+        .indicecapitulo { width:90%; text-align:center; text-indent:0; margin:0em 1.5em 0em; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+
+        .ejemplo { width:90%; text-indent:0; margin:1em 1.5em 1.5em; padding:0.5em 0em; border:1px solid black; border-left:none; border-right:none; }
+
+    .ejemplo .caption { float: none; font-weight: normal; margin-top: -20px; margin-left: 0px; margin-bottom: 0px; padding-right: 16px; padding-left: 5px ; padding-bottom: 0px; padding-top: 0px; background-color: grey; text-align: center }
+
+        .ePUBmarca, .ePUBtitulo, .ePUBsubtitulo, .ePUBautor, .ePUBv, .ePUBfirma, .ePUBgratis { text-align:center; font-weight:normal; text-indent:0; }
+                .ePUBmarca { text-align:center; }
+                        .ePUBmarca span { display:inline-block;width:10em; margin:3em auto; }
+                        .ePUBmarca img { width:100%; }
+                .ePUBautor { margin-bottom:0.5em; }
+                        .ePUBautor code { font-size:1.2em;color:#999; }
+                .ePUBtitulo { margin:0;font-size:1em;text-align:center; }
+                        .ePUBtitulo code { font-weight:bold;font-size:1.8em; }
+                .ePUBsubtitulo { margin:0.3em 0 0; }
+                        .ePUBsubtitulo code { font-weight:bold;font-size:1em; }
+                .ePUBv, .ePUBv code { color:#5084b8;font-size:0.9em;font-weight:bold;margin:0;margin:3em 0 0; }
+                .ePUBfirma, .ePUBfirma b, .ePUBfirma code { font-size:0.8em;margin:0; }
+                .ePUBfecha { color:#999; }
+                .ePUBgratis { text-align:center; }
+                        .ePUBgratis span { display:inline-block;width:14em;margin:3em auto 0; }
+                        .ePUBgratis img { width:100%; }
+  </style>
+  </head>
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <link href="../Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h3 id="heading_id_2"><a id="refCap2"></a>Capítulo 2<br />
+  <br />
+  Qué es una aplicación web</h3>
+
+  <p class="sans salto">En las aplicaciones web suelen distinguirse tres niveles (como en las arquitecturas cliente/servidor de tres niveles): el nivel superior que interacciona con el usuario (el cliente web, normalmente un navegador), el nivel inferior que proporciona los datos (la base de datos) y el nivel intermedio que procesa los datos (el servidor web). En este capítulo se describen el cliente y el servidor web y se comentan los entornos web en los que se ejecutan las aplicaciones web.</p>
+
+  <p class="negrita">Índice General</p>
+
+  <div class="indicecapitulo">
+    <p class="negrita"><a href="#refCap2.1" title="2.1.">2.1. Introducción</a></p>
+
+    <p class="sangria1"><a href="#refCap2.1.1" title="2.1.1.">2.1.1. El cliente</a></p>
+
+    <p class="sangria1"><a href="#refCap2.1.2" title="2.1.2.">2.1.2. El servidor</a></p>
+
+    <p class="negrita"><a href="#refCap2.2" title="2.1.3.">2.2. Transferencia de páginas web</a></p>
+
+    <p class="negrita"><a href="#refCap2.3" title="2.3.">2.3. Entornos web</a></p>
+
+    <p class="sangria1"><a href="#refCap2.3.1" title="2.3.1.">2.3.1. Internet</a></p>
+
+    <p class="sangria1"><a href="#refCap2.3.2" title="2.3.2.">2.3.2. Intranet</a></p>
+
+    <p class="sangria1"><a href="#refCap2.3.3" title="2.3.3.">2.3.3. Extranet</a></p>
+
+    <p class="negrita"><a href="#refCap2.4" title="2.4.">2.4. Ventajas y desventajas</a></p>
+  </div>
+
+  <p class="titulo4" id="refCap2.1">2.1. Introducción</p>
+
+  <p>Una aplicación web (<span class="cursiva">web-based application</span>) es un tipo especial de aplicación cliente/servidor, donde tanto el <span class="negrita">cliente</span> (el navegador, explorador o visualizador<a href="#_ftn5" id="_ftnref5" title="‹5›">‹ 5 ›</a>) como el <span class="negrita">servidor</span> (el servidor web) y el <span class="negrita">protocolo</span> mediante el que se comunican (<span class="cursiva">HyperText Transfer Protocol</span> (<span class="negrita">HTTP</span>)) están estandarizados y no han de ser creados por el programador de aplicaciones (Figura 2.1).</p>
+
+  <p>El protocolo <span class="negrita">HTTP</span> forma parte de la familia de protocolos de comunicaciones <span class="cursiva">Transmission Control Protocol/Internet Protocol</span> (<span class="negrita">TCP/IP</span>), que son los empleados en Internet. Estos protocolos permiten la conexión de sistemas heterogéneos, lo que facilita el intercambio de información entre distintos ordenadores.</p>
+
+  <div class="figure" id="refFigura2.1">
+    <p><img alt="" src="Images/img005.png" /></p>
+
+    <p>Figura 2.1: Esquema básico de una aplicación web</p>
+  </div>
+
+  <p class="titulo5" id="refCap2.1.1">2.1.1. El cliente</p>
+
+  <p>El cliente web es un programa con el que interacciona el usuario para solicitar a un servidor web el envío de los recursos que desea obtener mediante <span class="negrita">HTTP</span><a href="#_ftn6" id="_ftnref6" title="‹6›">‹ 6 ›</a>.</p>
+
+  <p>La parte cliente de las aplicaciones web suele estar formada por el código <span class="cursiva">HyperText Markup Language</span> (<span class="negrita">HTML</span>) que forma la página web más algo de código ejecutable realizado en lenguaje de <span class="cursiva">script</span> del navegador (<span class="cursiva">JavaScript</span> o <span class="cursiva">VBScript</span>) o mediante pequeños programas (<span class="cursiva">applets</span>) realizados en <span class="cursiva">Java</span>. También se suelen emplear <span class="cursiva">plug-ins</span><a href="#_ftn7" id="_ftnref7" title="‹7›">‹ 7 ›</a> que permiten visualizar otros contenidos multimedia (como <span class="sans">Flash</span><a href="#_ftn8" id="_ftnref8" title="‹8›">‹ 8 ›</a>), aunque no se encuentran tan extendidos como las tecnologías anteriores y plantean problemas de incompatibilidad entre distintas plataformas. Por tanto, la misión del cliente web es interpretar las páginas <span class="negrita">HTML</span> y los diferentes recursos que contienen (imágenes, sonidos, etc.).</p>
+
+  <p class="titulo5" id="refCap2.1.2">2.1.2. El servidor</p>
+
+  <p>El servidor web es un programa que está esperando permanentemente las solicitudes de conexión mediante el protocolo <span class="negrita">HTTP</span> por parte de los clientes web. En los sistemas Unix suele ser un "demonio" y en los sistemas <span class="sans">Microsoft Windows</span> un servicio.</p>
+
+  <p>La parte servidor de las aplicaciones web está formada por páginas estáticas que siempre muestran el mismo contenido y por programas o <span class="cursiva">scripts</span> que son ejecutados por el servidor web cuando el navegador del cliente solicita algunas páginas. La salida de este <span class="cursiva">script</span> suele ser una página <span class="negrita">HTML</span> estándar que se envía al navegador del cliente. Tradicionalmente este programa o <span class="cursiva">script</span> que es ejecutado por el servidor web se basa en la tecnología <span class="cursiva">Common Gateway Interface</span> (<span class="negrita">CGI</span>).</p>
+
+  <p>La programación del servidor mediante <span class="negrita">CGI</span> es compleja y laboriosa. El protocolo <span class="negrita">HTTP</span> no almacena el estado entre una conexión y la siguiente (es un protocolo sin estado), por lo que es el programador el que se tiene que encargar de conservarlo. Esto conduce a que el programador tenga que dedicar parte de su tiempo a programar tareas ajenas al n de la aplicación, lo que suele ser origen de diversos problemas.</p>
+
+  <p>Sin embargo, con la entrada en 1995 de M<span class="versalita">ICROSOFT</span> en el mundo Internet y la salida al mercado de su servidor web (<span class="sans">Internet Information Server</span>) se abrió un nuevo campo para las aplicaciones web: <span class="cursiva">Internet Server Application Program Interface</span> (<span class="negrita">ISAPI</span>). Se trata de un conjunto de funciones que el servidor web pone a disposición de los programadores de aplicaciones web. Con <span class="negrita">ISAPI</span>, los programadores pueden crear <span class="cursiva">Dynamic Link Library</span> (<span class="negrita">DLL</span>) con funciones que son invocadas para determinados archivos (se ejecutan cuando el cliente solicita un archivo con una determinada extensión).</p>
+
+  <p>Todo el sistema <span class="cursiva">Active Server Pages</span> (<span class="negrita">ASP</span>), no es más que una <span class="negrita">DLL</span> del tipo <span class="negrita">ISAPI</span> que es invocada automáticamente para los archivos cuya extensión sea <span class="comic">.asp</span>. La DLL ASP preprocesa el archivo <span class="comic">.asp</span> interpretando su código como un <span class="cursiva">script</span> a ejecutar en el servidor. Sin embargo, ella no interpreta directamente el código, sino que en función del lenguaje en el que está escrito, invoca a otra <span class="negrita">DLL</span> que se encarga de ejecutar el <span class="cursiva">script</span>. Después recoge la salida y se la envía al servidor web, el cual a su vez la reenvía al cliente.</p>
+
+  <p>Las ventajas que presenta <span class="negrita">ASP</span> frente a <span class="negrita">CGI</span> son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Las páginas basadas en <span class="negrita">CGI</span> resultan difíciles de mantener, ya que las instrucciones <span class="negrita">HTML</span> se encuentran insertadas en el propio código del programa CGI, mezclándose sus funcionalidades.</li>
+
+    <li class="saltomedio">La ejecución de un programa <span class="negrita">CGI</span> es muy ineciente, debido al proceso de carga del código en memoria que se realiza cada vez que un usuario requiere su ejecución. La existencia de múltiples clientes simultáneos supone múltiples copias del programa en memoria del servidor.</li>
+
+    <li>La unión de <span class="negrita">ISAPI</span> con el servidor web es más "fuerte" (están más integrados), su ejecución es más rápida, con lo que se logra que las aplicaciones basadas en <span class="negrita">ISAPI</span> tengan un mayor rendimiento que las basadas en <span class="negrita">CGI</span>.</li>
+  </ul>
+
+  <p>Además de <span class="negrita">ASP</span>, existen otras tecnologías destinadas a programar la parte servidor de las aplicaciones web: <span class="cursiva">ColdFusion</span>, <span class="cursiva">Java Server Pages</span> (<span class="negrita">JSP</span>), <span class="cursiva">servlets</span>, <span class="negrita"><span class="cursiva">PHP</span></span>, etc. Todas ellas son muy similares, se basan en los mismos principios y ofrecen resultados equivalentes.</p>
+
+  <p class="titulo4" id="refCap2.2">2.2. Transferencia de páginas web</p>
+
+  <p>El proceso completo, desde que el usuario solicita una página, hasta que el cliente web (navegador) se la muestra con el formato apropiado, es el siguiente:</p>
+
+  <ol>
+    <li class="saltomedio">El usuario especifica en el cliente web la dirección de la página que desea consultar: el usuario escribe en el navegador la dirección (<span class="cursiva">Universal Resource Locator</span> (<span class="negrita">URL</span>)) de la página que desea visitar.</li>
+
+    <li class="saltomedio">El cliente establece una conexión con el servidor web.</li>
+
+    <li class="saltomedio">El cliente solicita la página o el objeto deseado.</li>
+
+    <li class="saltomedio">El servidor envía dicha página u objeto (o, si no existe, devuelve un código de error).</li>
+
+    <li class="saltomedio">Si se trata de una página <span class="negrita">HTML</span>, el cliente inicia sus labores de interpretación de los códigos <span class="negrita">HTML</span>. Si el cliente web encuentra instrucciones que hacen referencia a otros objetos que se tienen que mostrar con la página (imágenes, sonidos, animaciones multimedia, etc.), establece automáticamente comunicación con el servidor web para solicitar dichos objetos.</li>
+
+    <li class="saltomedio">Se cierra la conexión entre el cliente y el servidor.</li>
+
+    <li>Se muestra la página al usuario.</li>
+  </ol>
+
+  <p>Obsérvese que siempre se libera la conexión, por lo que ésta sólo tiene laduración correspondiente a la transmisión de la página solicitada. Esto se hace así para no desperdiciar innecesariamente el ancho de banda de la red mientras el usuario lee la página recibida.</p>
+
+  <p>Cuando el usuario activa un enlace de la página, se establece una nueva conexión para recibir otra página o elemento multimedia. Por ello, el usuario tiene la sensación de que está disfrutando de una conexión permanente cuando realmente no es así.</p>
+
+  <p>Un detalle importante es que para casa objeto que se transere por la red se realiza una conexión independiente. Por ejemplo, si el cliente web solicita una página que contiene dos imágenes integradas, se realizan tres conexiones: una para el documento <span class="negrita">HTML</span> y dos para los archivos de las imágenes.</p>
+
+  <p class="titulo4" id="refCap2.3">2.3. Entornos web</p>
+
+  <p>Las aplicaciones web se emplean en tres entornos informáticos muy similares que suelen confundirse entre sí: <span class="cursiva">Internet</span>, <span class="cursiva">intranet</span> y <span class="cursiva">extranet</span>.</p>
+
+  <p class="titulo5" id="refCap2.3.1">2.3.1. Internet</p>
+
+  <p>Internet es una red global que conecta millones de ordenadores por todo el mundo. Su nacimiento se sitúa en 1969, en un proyecto de investigación del Departamento de Defensa de Estados Unidos. En 1998, la Internet tenía más de 100 millones de usuarios en todo el mundo, en diciembre de 2000 unos 400 millones y el número sigue creciendo rápidamente. Más de 100 países están conectados a este nuevo medio para intercambiar todo tipo de información.</p>
+
+  <p>Al contrario que otros servicios <span class="cursiva">online</span>, que se controlan de forma centralizada, la Internet posee un diseño descentralizado. Cada ordenador (<span class="cursiva">host</span>) en la Internet es independiente. Sus operadores pueden elegir que servicio de Internet usar y que servicios locales quieren proporcionar al resto de la Internet. Asombrosamente, este diseño anárquico funciona satisfactoriamente.</p>
+
+  <p>Existe una gran variedad de formas de acceder a la Internet. El método más común es obtener acceso a través de Proveedores de servicios de Internet (<span class="cursiva">Internet Service Provider</span>, <span class="negrita">ISP</span>).</p>
+
+  <p>Cuando se emplea la palabra internet en minúsculas, nos referimos a un conjunto de dos o más redes de ordenadores interconectadas entre sí.</p>
+
+  <p class="titulo5" id="refCap2.3.2">2.3.2. Intranet</p>
+
+  <p>Una intranet es una red de ordenadores basada en los protocolos que gobiernan Internet (<span class="negrita">TCP/IP</span>) que pertenece a una organización y que es accesible únicamente por los miembros de la organización, empleados u otras personas con autorización.</p>
+
+  <p>Una intranet puede estar o no conectada a Internet. Un sitio web en una intranet es y actúa como cualquier otro sitio web, pero los cortafuegos (<span class="cursiva">firewall</span>) lo protegen de accesos no autorizados.</p>
+
+  <p>Al igual que Internet, las intranets se usan para distribuir y compartir información. Las intrantes hoy en día componen el segmento con el mayor crecimiento dentro de Internet, porque son menos caras de montar y de administrar que las redes privadas que se basan en protocolos propietarios.</p>
+
+  <p class="titulo5" id="refCap2.3.3">2.3.3. Extranet</p>
+
+  <p>Una extranet es una intranet a la que pueden acceder parcialmente personas autorizadas ajenas a la organización o empresa propietaria de la intranet.</p>
+
+  <p>Mientras que una intranet reside detrás de un cortafuego y sólo es accesible por las personas que forman parte de la organización propietaria de la intranet, una extranet proporciona diferentes niveles de acceso a personas que se encuentran en el exterior de la organización. Esos usuarios pueden acceder a la extranet sólo si poseen un nombre de usuario y una contraseña con los que identificarse. La identidad del usuario determina que partes de la extranet puede visualizar.</p>
+
+  <p>Las extranets se están convirtiendo en un medio muy usado por empresas que colaboran para compartir información entre ellas. Se emplean como medio de comunicación de una empresa con sus clientes, proveedores o socios. Las extranets son la base del comercio entre empresas (<span class="cursiva">business to business</span>, <span class="negrita">B2B</span>).</p>
+
+  <p class="titulo4" id="refCap2.4">2.4. Ventajas y desventajas</p>
+
+  <p>El desarrollo explosivo de Internet y en especial de la WWW se debe a la aceptación por todo el mundo de los estándares y tecnologías que emplea: medio de transporte común (<span class="negrita">TCP/IP</span>), servidor (<span class="negrita">HTTP</span>) y lenguaje de creación de páginas (<span class="negrita">HTML</span>) estandarizados.</p>
+
+  <p>Muchas empresas han descubierto que las anteriores tecnologías se puedenemplear en las aplicaciones cliente/servidor que emplean. De esta forma nace el concepto de intranet: usar las tecnologías de Internet para implementar las tradicionales aplicaciones cliente/servidor dentro de una empresa. Además, una vez que se tiene una aplicación que funciona en una intranet, aparece la posibilidad de permitir su uso a través de Internet, lo que facilita el teletrabajo o la movilidad de los empleados de una empresa<a href="#_ftn9" id="_ftnref9" title="‹9›">‹ 9 ›</a>.</p>
+
+  <p>Una ventaja clave del uso de aplicaciones web es que el problema de gestionar el código en el cliente se reduce drásticamente. Suponiendo que existe un navegador o explorador estándar en cada cliente, todos los cambios, tanto de interfaz como de funcionalidad, que se deseen realizar a la aplicación se realizan cambiando el código que resida en el servidor web. Compárese esto con el coste de tener que actualizar uno por uno el código en cada uno de los clientes (imaginemos que tenemos 2.000 ordenadores clientes). No sólo se ahorra tiempo porque reducimos la actualización a una sólo máquina, sino que no hay que desplazarse de un puesto de trabajo a otro (la empresa puede tener una distribución geográfica amplia).</p>
+
+  <p>Una segunda ventaja, relacionada con la anterior, es que se evita la gestión de versiones. Se evitan problemas de inconsistencia en las actualizaciones, ya que no existen clientes con distintas versiones de la aplicación.</p>
+
+  <p>Una tercera ventaja es que si la empresa ya está usando Internet, no se necesita comprar ni instalar herramientas adicionales para los clientes.</p>
+
+  <p>Otra ventaja, es que de cara al usuario, los servidores externos (Internet) e internos (intranet) aparecen integrados, lo que facilita el aprendizaje y uso.</p>
+
+  <p>Una última ventaja, pero no menos importante, es la independencia de plataforma. Para que una aplicación web se pueda ejecutar en distintas plataformas (<span class="cursiva">hardware</span> y sistema operativo), sólo se necesita disponer de un navegador para cada una de las plataformas, y no es necesario adaptar el código de la aplicación a cada una de ellas. Además, las aplicaciones web ofrecen una interfaz gráfica de usuario independiente de la plataforma (ya que la plataforma de ejecución es el propio navegador).</p>
+
+  <p>Una desventaja, que sin embargo está desapareciendo rápidamente, es que la programación en la web no es tan versátil o potente como la tradicional. Al principio, las aplicaciones web eran básicamente de "solo lectura": permitían una interacción con el usuario prácticamente nula. Sin embargo, con la aparición de nuevas herramientas como <span class="cursiva">Java</span>, <span class="cursiva">JavaScript</span> y <span class="negrita">ASP</span>, esta limitación tiende a desaparecer.</p>
+  <br><br><hr>
+  <p class="saltop"><a href="#_ftnref5" id="_ftn5" title="‹5›">‹ 5 ›</a> En inglés se le suele denominar <span class="cursiva">browser</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref6" id="_ftn6" title="‹6›">‹ 6 ›</a> Los clientes web también suelen actuar como clientes de transferencia de archivos (FTP), lectores de correo (SMTP y POP) y grupos de noticias (NNTP), etc.</p>
+
+  <p class="saltop"><a href="#_ftnref7" id="_ftn7" title="‹7›">‹ 7 ›</a> Un <span class="cursiva">plug-in</span> es un módulo de software que se instala como un añadido a un programa o sistema y que proporciona nuevas características o servicios al programa o sistema. En los navegadores, suelen permitir la reproducción de diferentes tipos de recursos de audio o vídeo.</p>
+
+  <p class="saltop"><a href="#_ftnref8" id="_ftn8" title="‹8›">‹ 8 ›</a> Tecnología de animación vectorial independiente de la plataforma, creada por M<span class="versalita">ACROMEDIA</span> I<span class="versalita">NC.</span></p>
+
+  <p class="saltop"><a href="#_ftnref9" id="_ftn9" title="‹9›">‹ 9 ›</a> Pensemos, por ejemplo, en los ejecutivos que tienen que desplazarse entre distintos países, pero que necesitan acceder a las aplicaciones de su empresa.</p>
+  <br><br>
+</body>
+</html>
+
+</html>

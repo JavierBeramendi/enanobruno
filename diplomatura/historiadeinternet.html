@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Breve historia de Internet</title>
+  <style>
+    
+body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+a, .normal { font-style:normal; font-weight:normal; text-decoration:none; }
+sup, sub { font-size:0.75em; line-height:normal; }
+
+.cubierta { margin:0; padding:0; border:0; font-size:0; text-align:center; text-indent:0; page-break-before:always; page-break-after:always; }
+  .cubierta img { height:100%; max-height:100%; }
+
+.tlogo, .tautor, .ttitulo, .tsubtitulo, .trevision, .tfirma { margin:0 0.25em; text-align:center; text-indent:0; font-family:sans-serif; font-weight:bold; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  .tlogo span { margin:3em 0 2.5em; display:inline-block; width:8em; }
+  .tautor { margin-bottom:0.5em; font-size:1.2em; font-weight:normal; color:#595959; }
+  .ttitulo { padding:0; border:0; font-size:1.8em; font-style:normal; text-decoration:none; color:black; visibility:visible; }
+  .tsubtitulo { margin-top:0.3em; }
+  .trevision { margin-top:2.5em; font-size:0.8em; color:#595959; }
+  .tfirma { margin-top:0.25em; font-size:0.65em; }
+  .tfecha { font-family:sans-serif; font-weight:normal; color:#595959; }
+
+.sinopsis, .sinopsis p, .autor, .autor p, .nota p { margin-top:0.5em; text-indent:0; }
+  .sinopsis p, .sinopsis em, .sinopsis strong, .sinopsis big, .sinopsis small, .sinopsis span { font-family:sans-serif; }
+.info { margin:3.5em 1.5em 2.5em; font-size:0.8em; width:90%; }
+  .info p { text-align:left; text-indent:0; }
+.vineta { padding:1em 0; text-align:center; text-indent:0; display:block; }
+.nota { padding-top:9%; page-break-before:always; }
+
+
+/* ----- ESTILOS GENERALES (ADAPTABLES) ----- */
+
+/* encabezados */
+h1, h2, h3, h4, h5, h6 { margin:25% 0.25em 1em; text-align:center; text-indent:0; page-break-after:avoid; page-break-inside:avoid; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  h1 { font-size:1.5em; }
+  h2 { font-size:1.5em; }
+  h3 { font-size:1.4em; }
+  h4 { font-size:1.3em; }
+  h5 { font-size:1.2em; }
+  h6 { font-size:1.1em; }
+
+/* dedicatoria */
+.dedicatoria { margin:5em 1em 0 3em; text-align:right; }
+  .dedicatoria p { text-align:right; text-indent:0; }
+
+/* tipografía */
+.sans, .sans p, .sans em, .sans strong, .sans big, .sans small { font-family:sans-serif; }
+.serif, .serif p, .serif em, .serif strong, .serif big, .serif small { font-family:serif; }
+code, kbd, .mono, .mono p, .mono em, .mono strong, .mono big, .mono small { font-family:monospace; }
+
+i, em, cite, dfn, .cursiva { font-style:italic; }
+b, strong, .negrita { font-weight:bold; }
+ins, .subrayado { text-decoration:underline; }
+del, .tachado { text-decoration:line-through; }
+.oculto { display:none; visibility:hidden; }
+
+big, .grande { font-size:1.2em; }
+small, .versalita { font-size:0.8em; }  /* para texto en mayúsculas, de tamaño similar al de las minúsculas */
+
+/* alineación */
+.izquierda, .izquierda p { text-align:left; }
+.derecha, .derecha p { text-align:right; text-indent:0; }
+.centrado, .centrado p { text-align:center; text-indent:0; }
+.justificado, .justificado p { text-align:justify; }
+.asangre, .asangre p { text-indent:0; }
+
+/* saltos */
+.sintop { margin-top:0; }
+.saltoinicio { margin-top:33%; }
+.salto05 { padding-top:0.5em; }
+.salto10 { padding-top:1em; }
+.salto25 { padding-top:2.5em; }
+
+/* bloques */
+.sinmargen { margin:0; }
+blockquote, .cita { margin:1.5em; }
+.bloque { page-break-inside:avoid; }  /* evita dividir un elemento entre páginas */
+.nosep { text-indent:0; display:inline-block; } /* evita dividir una palabra entre líneas */
+.extenso { orphans:0; widows:0; } /* evita división aleatoria de párrafos muy extensos (bug ADE) */
+.banner { margin:1.5em 12%; padding:0.5em 1em; text-align:center; text-indent:0; border:2px solid black; border-left:none; border-right:none; }
+  .banner p { text-align:center; text-indent:0; }
+
+/* listas */
+li { margin:0; text-align:justify; text-indent:0; line-height:1.3em; }
+
+/* imágenes simples */  /* para láminas verticales (página completa), usar el estilo fijo «cubierta» */
+.ilustra { margin:1em 0; text-align:center; text-indent:0; display:block; }
+  .ilustra img { max-height:100%; max-width:100%; }
+
+
+/* ----- ESTILOS PERSONALES ----- */
+
+.capitular { font-size:300%; float: left; margin:-0.1em 0.125em -0.2em 0; text-indent: 0; line-height: 1em; height: 1em; }
+
+.titulocap { text-indent:0em; font-size:1.1em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap2 { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:underline; }
+.titulobib { text-indent:0em; font-size:1.3em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+
+.pinguino { max-width: 66%; max-height: 50%; }
+
+.bibliografia p { text-indent: -1.5em; margin-left: 1.5em; margin-top: 0.5em; }
+.sitiosypag p { text-indent: 0; margin-top: 0.5em; }
+
+.lista, .listasin { margin: 0; }
+.lista li, .listasin li { }
+
+.fuentess { margin-top: 1em; }
+.fuentess p { margin-bottom: 0.5em; text-indent: 0; }
+
+.frase2 { text-indent: 0; margin-left: 2em; }
+.frase3 { text-indent: 0; margin-left: 4em; }
+.frase4 { text-indent: 0; margin-left: 6em; }
+.frase5 { text-indent: 0; margin-left: 8em; }
+.frase6 { text-indent: 0; margin-left: 10em; }
+
+.codigo { margin: 1.5em; }
+.codigo p { text-indent: 0; font-size: 0.8em; text-align: left; }
+.codigo .primera { text-indent: -1.5em; }
+
+  h4 {text-indent:0em; font-size:1.3em; text-align:center;margin-top:2em;margin-bottom:2em;font-style:normal; font-weight:normal; text-decoration:none;}
+
+    h5, h6 {text-indent:0em; font-size:1.2em; text-align:left;margin-top:2em;margin-bottom:1.5em;font-style:normal; font-weight:bold; text-decoration:none;}
+
+  .mini { font-size: 1em;   }
+     code {margin-left: 0.7em ; margin-right:0.4em } 
+
+.bio { font-size:0.9em; width:86%; margin-left:7%; padding: 2.5em 0; } 
+
+cite {margin: 1.1em }
+
+
+.legal { font-size: 0.8em; font-family:"Courier New", Courier, monospace; width:90%; margin-top: 2.5em; }
+  </style>
+</head>
+
+<body>
+  <h2 title="Breve historia de Internet por Bruce Sterling">Breve historia de Internet</h2>
+
+  <p class="derecha cursiva">Bruce Sterling</p>
+
+  <div class="bio">
+    <p class="asangre"><b><span class="capitular">B</span>ruce Sterling</b> escribió novelas y cuentos de ciencia ficción, y libros y columnas sobre temas vinculados a la tecnología. Junto a William Gibson fue una de las figuras más destacadas de la corriente cyberpunk que renovó el género ciencia ficción a comienzos de los ‘80. Entre sus obras pueden mencionarse Islas en la Red (1988), <i>The Difference Engine</i> (1990, en colaboración con Gibson), <i>Mirrorshades: una antología ciberpunk</i> (1992) y <i>The Hacker Crackdown</i> (1990), una investigación sobre la «cacería» de hackers lanzada por el FBI en 1989. Nació en 1954 y vive en Texas, Estados Unidos.</p>
+
+    <p class="salto10">Este artículo sobre la historia y arquitectura de Internet salió publicado en febrero de 1993, en la revista inglesa <i>The magazine of fantasy and science fiction</i>.</p>
+  </div>
+
+  <p>Hace unos treinta años, la RAND Corporation, la principal fábrica de ideas de la América de la guerra fría, se enfrentó a un extraño problema estratégico. ¿Cómo se podrían comunicar con éxito las autoridades norteamericanas tras una guerra nuclear?</p>
+
+  <p>La América postnuclear necesitaría una red de comando y control enlazada de ciudad a ciudad, estado a estado, base a base. Pero sin importar cómo esa red estuviera de protegida, sus líneas y equipos siempre serían vulnerables al impacto de bombas atómicas. Un ataque nuclear reduciría cualquier red imaginable a pedazos.</p>
+
+  <p>¿Cómo sería controlada esa red? Cualquier autoridad central, cualquier núcleo de red centralizado sería un objetivo obvio e inmediato para un misil enemigo. El centro de la red sería el primer lugar a derribar.</p>
+
+  <p>La RAND le dio muchas vueltas a este difícil asunto en secreto militar y llegó a una solución atrevida. La propuesta de la RAND (ideada por uno de sus miembros, Paul Baran) se hizo pública en 1964. En primer lugar, la red <b>no tendría autoridad central</b>. Además, sería <b>diseñada desde el principio para operar incluso hecha pedazos</b>.</p>
+
+  <p>Los principios eran simples. Se asumiría que una red era poco fiable en cualquier momento. Se diseñaría para trascender su propia falta de eficacia. Todos los nodos en la red serían iguales entre sí, cada nodo con autoridad para crear, pasar y recibir mensajes. Los mensajes se dividirían en paquetes, cada paquete dirigido por separado. Cada paquete saldría de un nodo fuente específico y terminaría en un nodo destino. Cada paquete recorrería la red según unos principios particulares.</p>
+
+  <p>La ruta que tome cada paquete no tendría importancia. Solo contarían los resultados finales. Básicamente, el paquete sería lanzado como una patata de un nodo a otro, más o menos en dirección a su destino, hasta acabar en el lugar adecuado. Si grandes porciones de la red fueran destruidas eso simplemente no importaría; los paquetes permanecerían en la red en los nodos que hubieran sobrevivido. Este sistema de envío tan arbitrario podría parecer «ineficiente» en el sentido usual del término (especialmente comparado con, por ejemplo, el sistema telefónico).</p>
+
+  <p>Durante los ‘60, este intrigante concepto de red de conmutación de paquetes descentralizada y a prueba de bombas caminó sin rumbo entre el RAND, el MIT <i>[Massachusetts Institute of Technology]</i> y la UCLA <i>[University of California in Los Angeles]</i>. El National Physical Laboratory [Laboratorio Nacional de Física] de Gran Bretaña preparó la primera red de prueba basada en estos principios en 1968. Poco después, la Agencia de Proyectos de Investigación Avanzada del Pentágono <i>[ARPA, Advanced Research Projects Agency]</i> decidió financiar un proyecto más ambicioso y de mayor envergadura en los Estados Unidos. Los nodos de la red iban a ser superordenadores de alta velocidad (o lo que se llamara así en aquel momento). Eran máquinas poco usuales y de mucho valor y que estaban necesitadas de un buen entramado de red para proyectos nacionales de investigación y desarrollo.</p>
+
+  <p>En el otoño [boreal] de 1969 el primero de esos nodos fue instalado en UCLA. En diciembre de ese año había cuatro nodos en la pequeña red, que se llamó ARPANET después de que fuera promocionada por el Pentágono. Los cuatro ordenadores podían transferir información sobre líneas dedicadas de alta velocidad. Incluso podían ser programados remotamente desde otros nodos. Gracias a ARPANET, científicos e investigadores podían compartir las facilidades de otros ordenadores en la distancia. Era un servicio muy útil ya que el tiempo de proceso de los ordenadores en los ‘70 era algo muy codiciado. En 1971 había quince nodos en ARPANET; en 1972, treinta y siete. Todo iba perfecto.</p>
+
+  <p>En su segundo año de operatividad, sin embargo, algo extraño se hizo patente. Los usuarios de ARPANET habían convertido la red en una oficina de correos electrónica de alta velocidad subvencionada federalmente. La mayor parte del tráfico de ARPANET no era el proceso de datos a largas distancias. En vez de eso, lo que se movía por allí eran noticias y mensajes personales. Los investigadores estaban usando ARPANET para colaborar en proyectos, intercambiar notas sobre sus trabajos y, eventualmente, chismorrear. La gente tenía sus propias cuentas personales en los ordenadores de ARPANET y sus direcciones personales de correo electrónico. No es que sólo utilizaran ARPANET para la comunicación de persona a persona, pero había mucho entusiasmo por esta posibilidad mucho más que por la computación a larga distancia.</p>
+
+  <p>Eso no pasó mucho antes del invento de las listas de distribución, una técnica de emisión de información por ARPANET mediante la cual un mismo mensaje se podía enviar automáticamente a una gran cantidad de subscriptores. Es interesante que una de las primeras listas de distribución masivas se llamara «SF-LOVERS» [Amantes de la Ciencia Ficción]. Discutir sobre ciencia ficción en la red no tenía nada que ver con el trabajo y eso enfadaba a muchos administradores de sistema de ARPANET, pero eso no impediría que la cosa siguiera.</p>
+
+  <p>Durante los ‘70, ARPANET creció. Su estructura descentralizada facilitó la expansión. Contrariamente a las redes standard de las empresas, la red de ARPA se podía acomodar a diferentes tipos de ordenador. En tanto y en cuanto una máquina individual pudiese hablar el lenguaje de conmutación de paquetes de la nueva y anárquica red, su marca, contenidos e incluso su propietario eran irrelevantes.</p>
+
+  <p>El estándar de comunicaciones de ARPA era conocido como NCP, «Network Control Protocol», pero según pasaba el tiempo y la técnica avanzaba, el NCP fue superado por un estándar de más alto nivel y más sofisticado conocido como TCP/IP. El TCP o «Transmission Control Protocol», convierte los mensajes en un caudal de paquetes en el ordenador fuente y los reordena en el ordenador destino. El IP, o «Internet Protocol», maneja las direcciones comprobando que los paquetes caminan por múltiples nodos e incluso por múltiples redes con múltiples standards —no sólo ARPA fue pionera en el standard NCP, sino también Ethernet, FDDI y X.25.</p>
+
+  <p>En 1977, TCP/IP se usaba en otras redes para conectarse a ARPANET. ARPANET estuvo controlada muy estrictamente hasta al menos 1983, cuando su parte militar se desmembró de ella formando la red MILNET. Pero el TCP/IP las unía a todas. Y ARPANET, aunque iba creciendo, se convirtió en un cada vez más pequeño barrio en medio de la vasta galaxia de otras máquinas conectadas.</p>
+
+  <p>Según avanzaban los ‘70 y ‘80, distintos grupos sociales se encontraban en posesión de potentes ordenadores. Era muy fácil conectar esas máquinas a la creciente red de redes. Conforme el uso del TCP/IP se hacía más común, redes enteras caían abrazadas y adheridas a Internet. Siendo el software llamado TCP/IP de dominio público y la tecnología básica descentralizada y anárquica por propia naturaleza, era muy difícil parar a la gente e impedir que se conectara. De hecho, nadie quería impedir a nadie la conexión a esta compleja ramificación de redes que llegó a conocerse como «Internet».</p>
+
+  <p>Conectarse a Internet costaba al contribuyente muy poco o nada desde que cada nodo era independiente y tenía que arreglárselas con la financiación y los requerimientos técnicos. Cuantos más, mejor. Como la red telefónica, la red de ordenadores era cada vez más valiosa según abarcaba grandes extensiones de terreno, gente y recursos.</p>
+
+  <p>Un fax solo es útil si alguien más tiene un fax. Mientras tanto no es más que una curiosidad. ARPANET, también, fue una curiosidad durante un tiempo. Después la red de ordenadores se convirtió en una necesidad importante.</p>
+
+  <p>En 1984 la Fundación Nacional para la Ciencia <i>[National Science Foundation, NSF]</i> entró en escena a través de su Oficina de Computación Científica Avanzada <i>[Office of Advanced Scientific Computing]</i>. La nueva NSFNET supuso un paso muy importante en los avances técnicos conectando nuevas, más rápidas y potentes supercomputadoras a través de enlaces más amplios, rápidos, actualizados y expandidos según pasaban los años, 1986, 1988 y 1990. Otras agencias gubernamentales también se unieron: NASA, los Institutos Nacionales de la Salud, el Departamento de Energía, cada uno manteniendo cierto poderío digital en la confederación Internet.</p>
+
+  <p>Los nodos de esta creciente red de redes se dividían en subdivisiones básicas. Los ordenadores extranjeros y unos pocos americanos eligieron ser denominados según su localización geográfica. Los otros fueron agrupados en los seis <i>dominios</i> básicos de Internet: gov, mil, edu, com, org y net (estas abreviaturas tan sosas pertenecen al estándar de los protocolos TCP/IP). Gov, Mil y Edu definen al gobierno, militares e instituciones educativas, las cuales fueron, por supuesto, pioneras de la ARPANET que comenzó como un experimento de alta tecnología en seguridad nacional. Com, sin embargo, definía a instituciones <i>comerciales</i>, que enseguida entraron a la red como toros de rodeo rodeadas por una nube de entusiastas organizaciones sin ánimo de lucro (los ordenadores tipo <i>net</i> servían como pasarelas entre redes).</p>
+
+  <p>La red ARPANET propiamente dicha expiró en 1989 como víctima feliz de su éxito abrumador. Sus usuarios apenas se dieron cuenta, pero las funciones de ARPANET no solo continuaron sino que mejoraron firmemente. El uso del estándar TCP/IP para redes es ahora algo global. En 1971, hace 21 años, sólo había cuatro nodos en la ARPANET. Hoy existen decenas de miles en Internet esparcidos por cuarenta y dos países y muchos más que se conectan cada día. Tres millones de personas, posiblemente cuatro, usan esta gigantesca madre-de-todas-las-redes.</p>
+
+  <p>Internet es especialmente popular entre los científicos y es probablemente su instrumento más importante de finales del siglo <small>XX</small>. Las posibilidades de acceso tan potentes y sofisticadas que ofrece a datos específicos y a la comunicación personal ha elevado la marcha de la investigación científica enormemente.</p>
+
+  <p>El índice de crecimiento de Internet a comienzo de los ‘90 es espectacular, casi feroz. Se extiende más rápidamente que los teléfonos móviles y que el fax. El año pasado [1991] Internet crecía a un ritmo del 20% mensual. El número de ordenadores con conexión directa al TCP/IP se ha estado doblando anualmente desde 1988. Internet se está desplazando de su origen militar y científico a las escuelas de enseñanza básica e institutos, al mismo tiempo que a bibliotecas públicas y el sector comercial.</p>
+
+  <p>¿Por qué la gente quiere estar «en la internet»? Una de las principales razones es simplemente la libertad. Internet es un raro ejemplo de anarquía verdadera, moderna y funcional. No existe Internet S. A. No hay censores oficiales, ni jefes, ni junta directiva, ni accionistas. En principio, cualquier nodo puede hablar de igual a igual a otros nodos siempre que obedezcan las leyes del protocolo TCP/IP, leyes que no son políticas sino estrictamente técnicas. (Ha existido controversia sobre el uso comercial de Internet, pero esta situación está cambiando según los negocios proporcionan sus propios enlaces y conexiones).</p>
+
+  <p>Internet también es una ganga. Internet en conjunto, a diferencia del sistema telefónico, no cuesta dinero según las distancias. Y a diferencia también de la mayoría de las redes comerciales, no se cobra por tiempo de conexión. De hecho, «Internet» de por sí, que ni siquiera existe como una entidad, no cobra nada por nada. Cada grupo de gente que accede a Internet es responsable de su propia máquina y de su propio trozo de línea.</p>
+
+  <p>La «anarquía» de Internet puede parecer extraña o incluso poco natural, pero tiene cierta profundidad y sentido. Es como la «anarquía» del idioma inglés. Nadie alquila el inglés y nadie lo posee. Como angloparlante, depende de ti aprender hablar inglés correctamente y usarlo para lo que quieras (aunque el gobierno proporciona fondos para ayudarte a que aprendas a leer y escribir algo). Aunque mucha gente se gana la vida usando, explotando y enseñando inglés, el «Inglés» como institución es una propiedad pública, un bien común. Mucho de eso ocurre con Internet. ¿Mejoraría el inglés si «Idioma Inglés S. A.» tuviera un consejo de administración con su director o ejecutivo al frente, un presidente y una asamblea? Probablemente existirían muchas menos palabras en el idioma inglés, y muchas menos nuevas ideas.</p>
+
+  <p>La gente en Internet siente que se trata de una institución que se resiste a la institucionalización. El interés pertenece a todos y a nadie.</p>
+
+  <p>A pesar de esto, hay quién tiene intereses en Internet. Los negociantes quieren que Internet tenga una base financiera. Los gobernantes la quieren más regulada. Los académicos la quieren para fines de investigación. Los militares para la seguridad. Y así muchos más.</p>
+
+  <p>Todas estas fuentes de conflicto permanecen en torpe equilibrio, e Internet, hasta ahora, se mantiene en próspera anarquía. Antes, las líneas de alta velocidad de la NSFnet eran conocidas como la «Espina dorsal de Internet» <i>[Internet Backbone]</i>, y sus propietarios podían señorearse con el resto de Internet; pero hoy existen «espinas dorsales» en Canadá, Japón y Europa, e incluso algunas privadas para el tráfico comercial. Hoy, incluso ordenadores domésticos privados pueden convertirse en nodos de Internet. Se pueden llevar bajo el brazo. Pronto, quizás, en la muñeca.</p>
+
+  <p>Pero, ¿qué es lo que uno <b>hace</b> con Internet? Básicamente, cuatro cosas: correspondencia, grupos de discusión, computación a larga distancia y transferencia de archivos.</p>
+
+  <p>El correo de Internet es el correo electrónico <i>[e-mail]</i>, mucho más rápido que el correo postal norteamericano, que es llamado despectivamente por los usuarios de Internet como «correo caracol» <i>[snail mail]</i>. El correo en Internet es algo como el fax. Es texto electrónico, y no tienes que pagar por él (al menos directamente) y es a escala global. Por correo electrónico se puede mandar software y algunos tipos de imágenes comprimidas. Se está trabajando en nuevas formas de correo electrónico.</p>
+
+  <p>Los grupos de discusión, o «<i>newsgroups</i>», son un mundo aparte. Este mundo de debate y argumentaciones se conoce como «USENET». USENET es de hecho diferente a Internet. USENET es como una multitud ondulante de gente chismosa y con ganas de información que se mueve por Internet en busca de barbacoas de patio trasero. USENET no es tanto una red física como un conjunto de convenciones. En cualquier caso, ahora existen 2500 grupos de discusión separados en USENET y sus mensajes generan unos 7 millones de palabras al día. Naturalmente se habla mucho sobre ordenadores en USENET, pero la variedad de temas sobre los que se habla es enorme, creciendo estos continuamente. En USENET se distribuyen varias publicaciones electrónicas gratuitas de manera periódica.</p>
+
+  <p>Estos grupos y el correo electrónico están disponibles fácilmente, incluso fuera del corazón de Internet. Se puede acceder a ellos a través de las líneas de teléfono normales, desde otras redes como BITnet, UUCP y Fidonet. Los últimos servicios de Internet, computación a larga distancia y transferencia de archivos, requieren de conexión directa usando TCP/IP.</p>
+
+  <p>La computación a larga distancia fue algo pensado para ARPANET y aún se usa mucho, al menos por algunos. Los programadores pueden mantener sus cuentas abiertas en poderosos superordenadores y ejecutar allí sus programas o crear otros nuevos. Los científicos pueden usar potentes ordenadores desde otros continentes. Las bibliotecas ofrecen sus catálogos electrónicos para que se busque en ellos gratuitamente. Enormes catálogos en <span class="nosep">CD-ROM</span> están disponibles a través de este servicio. Y existe mucho software gratuito al mismo tiempo.</p>
+
+  <p>La transferencia de ficheros permite a los usuarios acceder a máquinas remotas y tomar de ellas programas o textos. Muchos ordenadores de Internet —unos dos mil o más— permiten que se acceda a ellos de manera anónima y que la gente use sus archivos de manera gratuita. Esto no es algo trivial, ya que libros enteros se pueden transferir en cuestión de minutos. Hoy, en 1992, existen más de un millón de ficheros públicos disponibles a quién los quiera utilizar (y otros millones disponibles a gente con autorización). La transferencia de ficheros por Internet se está convirtiendo en una nueva forma de publicación, en la que el lector copia electrónicamente el texto que desee en la cantidad que quiera y de forma gratuita. Nuevos programas de Internet, como «archie», «gopher» y «WAIS» se han desarrollado para catalogar y explorar esa cantidad de material.</p>
+
+  <p>Esta Internet sin cabeza, anárquica y con millones de tentáculos se está extendiendo como el pan de molde. Cada ordenador con la potencia suficiente es una espora potencial de Internet y hoy los ordenadores se venden a menos de 2000 dólares y están disponibles en todo el mundo. La red ARPA, diseñada para asegurar el control de una sociedad desolada después de un holocausto nuclear, ha sido sobrepasada por su hija mutante, Internet, que está a fuera de control a conciencia y se expande exponencialmente por la aldea global de la post guerra fría. La expansión de Internet en los ‘90 se parece a la que sufrió la informática personal en los ‘70, aunque es más rápida y más importante. Más importante, quizás, porque da a los ordenadores personales una imagen de algo barato, de fácil acceso y con posibilidades de almacenaje a una escala realmente planetaria.</p>
+
+  <p>El futuro de Internet pasa por ser más grande y con velocidades exponencialmente mayores. La comercialización de Internet es un tema candente hoy día, donde se promete cualquier tipo de comercialización salvaje de la información. El gobierno federal, agradecido por este éxito inesperado, aún tiene mucho que decir en esto. La NREN, National Research and Educational Network [Red Nacional de Educación e Investigación], fue aprobada en el otoño de 1991 como un proyecto a cinco años y con un presupuesto de dos mil millones de dólares para que la red troncal de Internet fuera actualizada. NREN será unas 50 veces más rápida que la red más rápida de hoy día permitiendo la transferencia de la <i>Enciclopedia Británica</i> en un segundo. Las redes de ordenadores permitirán gráficos animados en 3D, enlaces de radio y teléfonos móviles a ordenadores portátiles, fax, voz y televisión de alta definición. ¡Un circo global multimedia!</p>
+
+  <p>O al menos así se espera —y se planea—. La Internet real del futuro debe soportar pocos parecidos con los planes de hoy. Prever las cosas nunca ha tenido mucho que ver con el rápido desarrollo de Internet. Después de todo, Internet se parece muy poco a aquellos sombríos planes del RAND para el post-holocausto. Esto resulta una sutil y feliz ironía.</p>
+
+  <p>¿Cómo se accede a Internet? Bien, si no se tiene un ordenador con módem, hay que hacerse de uno. El ordenador puede actuar como una terminal y se puede usar una línea de teléfonos ordinaria para conectarse a una máquina enganchada a Internet. Simplemente esto puede hacer que se tenga acceso a los grupos de discusión y a una dirección de correo electrónico propia. Merece la pena tener estos servicios aunque sólo con el correo y las noticias no se está del todo «en Internet».</p>
+
+  <p>Si está usted en un campus, la universidad puede que tenga «acceso directo» a líneas TCP/IP de Internet de alta velocidad. Hágase con una cuenta de Internet en un ordenador del campus y será capaz de utilizar los servicios de computación remota y la transferencia de archivos. Algunas ciudades como Cleveland proporcionan acceso gratuito a la red. Las empresas tienen cada vez más posibilidades de acceso y están deseando vender esos accesos a sus clientes. La cuota estándar es de unos 40 dólares al mes —más o menos como el servicio de TV por cable.</p>
+
+  <p>Según avancen los noventas, encontrar acceso a Internet será mucho más fácil y barato. Su facilidad de uso también mejorará del salvaje Interfaz UNIX del TCP/IP a otros muchos más intuitivos y cómodos para el usuario, eso es una buena noticia. Aprender Internet ahora, o al menos aprender sobre Internet, es para entendidos. Cuando cambiemos de siglo la «cultura de redes», tal como la «cultura de los ordenadores» antes de ésta, se introducirá forzosamente en el ámbito de su vida.</p>
+</body>
+</html>

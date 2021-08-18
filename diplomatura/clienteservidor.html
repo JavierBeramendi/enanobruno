@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title></title>
+  <style>
+      body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+        h1, h2, h3, h4, h5, h6 { text-align:left; margin-top:15%; }
+                h1 { font-size:2em; }
+                h2 { font-size:1.8em; }
+                h3 { font-size:1.6em; }
+                h4 { font-size:1.4em; }
+                h5 { font-size:1.3em; }
+                h6 { font-size:1.2em; }
+  /* Lineas horizontales */
+  hr { background-color: black; height: 0.1em; margin-left: 0em; margin-right: 0em; }
+    .hr1 { height: 0.2em; margin-left: 8em; margin-right: 0em; }
+
+  /* Listas */
+  ul { list-style-type: disc; }
+    .sin { list-style-type: none; }
+    .circulo { list-style-type: circle; }
+    .cuadrado { list-style-type: square; }
+  li
+    .saltomedio { padding-bottom: 1em; }
+    .sin { list-style: none; display: inline }
+
+  /* Imágenes con pie */
+  div.figure {
+      float: center;
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+  div.figure p {
+    text-align: center;
+    text-indent: 0;
+    }
+  /* Tablas */
+  table.prefacio { border-collapse:collapse; margin: 1em auto 1.5em; border: none; width:100%; }
+  table.prefacio tr td { border: none; padding: 0em 1em 0em; }
+    .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+
+  table.cuadro { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadro th { border: 1px solid black; text-align: center; padding: 0em 1em 0em;  }
+  table.cuadro td { border-left: 1px solid black; border-right: 1px solid black; text-align: center; padding: 0em 1em 0em; }
+  table.cuadro caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+        .centrado { text-align:center; text-indent:0 }
+
+  table.cuadrol { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadrol th { border: 1px solid black; text-align: left; padding: 0em 1em 0em;  }
+  table.cuadrol td { border: 1px solid black; text-align: left; padding: 0em 1em 0em; }
+  table.cuadrol caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+
+  table.ejemplos { border-collapse: collapse; margin: 1em auto 1.5em; border-top: 1px solid black; border-bottom: 1px solid black; width:90%; }
+  table.ejemplos caption { caption-side: top; text-align: center; }
+  table.ejemplos tr, td { border: none; padding-left: 0.5em; }
+        .courier { font-family: "Courier", courier; font-size: 0.9em; }
+    .numeral { font-size: 0.65em; width: 1em; }
+
+  table.biblio { border-collapse: collapse; margin: 1em auto 1.5em; border: none; width:95%; }
+  table.biblio tr, td { border: none; padding-left: 0.5em; }
+    .numero { width: 1em; }
+
+  p { text-align:justify; margin:0; text-indent:1.5em; line-height:1.4em; }
+
+    .imagencentrada { text-align: center; text-indent: 0; margin: 1.5em 0 1.5em 0; }
+    .imagenizquierda { float: left; padding: 0.5em 0.0em 0.5em 0; text-indent: 1.5em; }
+
+        .capital { font-variant:small-caps; }
+        .sans { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+        .courier { font-family: "Courier", courier; }
+        .comic { font-family:"Marker Felt", "Comic Sans MS", "Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+
+        .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+        .centrado { text-align:center; text-indent:0 }
+        .asangre { text-indent:0 }
+        .cursiva { font-style: italic }
+        .negrita { font-weight: bold }
+    .subrayado { text-decoration: underline }
+        .salto { padding-bottom:2em; }
+        .saltomedio { padding-bottom:1em; }
+        .cita { margin:1.5em; }
+        .banner { width:75%; text-align:center; text-indent:0; margin:1.5em auto; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+        .sinmargen { margin:0; }
+        
+        .cubierta { margin:2% auto;max-width:95%;height:95%; }
+                .cubierta img { height:100%; }
+        .sinopsis, .sinopsis p { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; text-indent:0; }
+        .info { width:90%; font-size:0.8em; margin:0.5em 0.5em 0; text-indent:0; text-align:justify; }
+        .legal { width:90%; font-size:0.8em; margin:5em 1.5em 0; text-indent:0; }
+                .legal p { text-indent:0; text-align:left; }
+        .intro { margin:5em 0 1.5em; text-indent:0; text-align:right; }
+                .intro p { text-align:right;text-indent:0; }
+
+        /*salto previo de párrafo*/
+    .saltop { margin-top:1em; }
+
+    /*Formato enlace de notas al pie dentro del texto*/
+    .notas { color: black;cursor: pointer;text-decoration:none; line-height: normal; font-size:0.75em;vertical-align:super; }
+
+    /*Formato enlace de notas al pie dentro archivo notes.html (última hoja del documento)*/
+    .notasf { color: black;cursor: pointer;text-decoration:none; }
+
+    /*Saltos de tabulacion*/
+    .sangria1 { text-indent:3em }
+    .sangria2 { text-indent:6em }
+    .sangria3 { text-indent:9em }
+    .sangria4 { text-indent:12em }
+    .sangria5 { text-indent:15em }
+
+    /*Tamaños de letra */
+    .tamano1 { font-size:2em; }
+    .tamano2 { font-size:1.8em; }
+    .tamano3 { font-size:1.6em; }
+    .tamano4 { font-size:1.4em; }
+    .tamano5 { font-size:1.3em; }
+    .tamano6 { font-size:1.2em; }
+
+    .margenizquierdo1-5 { margin-left: 1.5em }
+    .margenizquierdo2 { margin-left: 2em }
+    .margenizquierdo4 { margin-left: 4em }
+    .margenizquierdo6 { margin-left: 6em }
+    .margenizquierdo8 { margin-left: 8em }
+
+    .indice0  { font-size: 1.2em; font-weight: bold; padding-top: 0.5em }
+    .indice1  { font-size: 1.1em; text-indent:3.5em }
+    .indice2  { font-size: 1.1em; text-indent:5.5em }
+    .indice11  { font-size: 1.1em; text-indent:3.5em; padding-top: 0.5em }
+
+    .versalita {font-size: 0.75em}
+
+    .titulo4 { text-indent: 0; font-size: 1.4em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo5 { text-indent: 0; font-size: 1.3em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo6 { text-indent: 0; font-size: 1em; font-weight: bold; padding-top: 1em; padding-bottom: 1em; }
+
+        .indicecapitulo { width:90%; text-align:center; text-indent:0; margin:0em 1.5em 0em; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+
+        .ejemplo { width:90%; text-indent:0; margin:1em 1.5em 1.5em; padding:0.5em 0em; border:1px solid black; border-left:none; border-right:none; }
+
+    .ejemplo .caption { float: none; font-weight: normal; margin-top: -20px; margin-left: 0px; margin-bottom: 0px; padding-right: 16px; padding-left: 5px ; padding-bottom: 0px; padding-top: 0px; background-color: grey; text-align: center }
+
+        .ePUBmarca, .ePUBtitulo, .ePUBsubtitulo, .ePUBautor, .ePUBv, .ePUBfirma, .ePUBgratis { text-align:center; font-weight:normal; text-indent:0; }
+                .ePUBmarca { text-align:center; }
+                        .ePUBmarca span { display:inline-block;width:10em; margin:3em auto; }
+                        .ePUBmarca img { width:100%; }
+                .ePUBautor { margin-bottom:0.5em; }
+                        .ePUBautor code { font-size:1.2em;color:#999; }
+                .ePUBtitulo { margin:0;font-size:1em;text-align:center; }
+                        .ePUBtitulo code { font-weight:bold;font-size:1.8em; }
+                .ePUBsubtitulo { margin:0.3em 0 0; }
+                        .ePUBsubtitulo code { font-weight:bold;font-size:1em; }
+                .ePUBv, .ePUBv code { color:#5084b8;font-size:0.9em;font-weight:bold;margin:0;margin:3em 0 0; }
+                .ePUBfirma, .ePUBfirma b, .ePUBfirma code { font-size:0.8em;margin:0; }
+                .ePUBfecha { color:#999; }
+                .ePUBgratis { text-align:center; }
+                        .ePUBgratis span { display:inline-block;width:14em;margin:3em auto 0; }
+                        .ePUBgratis img { width:100%; }
+  </style>
+  </head>
+
+<body>
+  <h3 id="heading_id_2"><a id="refCap1"></a>Capítulo 1<br />
+  <br />
+  Arquitecturas cliente/servidor</h3>
+
+  <p class="sans salto">Las aplicaciones web son un tipo especial de aplicaciones cliente/servidor. Antes de aprender a programar aplicaciones web conviene conocer las características básicas de las arquitecturas cliente/servidor.</p>
+
+  <p class="negrita">Índice General</p>
+
+  <div class="indicecapitulo">
+    <p class="negrita"><a href="#refCap1.1" title="1.1.">1.1. Introducción</a></p>
+
+    <p class="negrita"><a href="#refCap1.2" title="1.2.">1.2. Separación de funciones</a></p>
+
+    <p class="negrita"><a href="#refCap1.3" title="1.3.">1.3. Modelos de distribución en aplicaciones cliente/servidor</a></p>
+
+    <p class="sangria1"><a href="#refCap1.3.1" title="1.3.1.">1.3.1. Presentación distribuida</a></p>
+
+    <p class="sangria1"><a href="#refCap1.3.2" title="1.3.2.">1.3.2. Aplicación distribuida</a></p>
+
+    <p class="sangria1"><a href="#refCap1.3.3" title="1.3.3.">1.3.3. Datos distribuidos</a></p>
+
+    <p class="negrita"><a href="#refCap1.4" title="1.4.">1.4. Arquitecturas de dos y tres niveles</a></p>
+
+    <p class="negrita"><a href="#refCap1.5" title="1.5.">1.5. Descripción de un sistema cliente/servidor</a></p>
+  </div>
+
+  <p class="titulo4" id="refCap1.1">1.1. Introducción</p>
+
+  <p>Cliente/servidor es una arquitectura de red<a href="#_ftn1" id="_ftnref1" title="‹1›">‹ 1 ›</a> en la que cada ordenador o proceso en la red es <span class="negrita">cliente</span> o <span class="negrita">servidor</span>. Normalmente, los servidores son ordenadores potentes dedicados a gestionar unidades de disco (servidor de ficheros), impresoras (servidor de impresoras), tráfico de red (servidor de red), datos (servidor de bases de datos) o incluso aplicaciones (servidor de aplicaciones), mientras que los clientes son máquinas menos potentes y usan los recursos que ofrecen los servidores.</p>
+
+  <p>Esta arquitectura implica la existencia de una relación entre procesos que solicitan servicios (<span class="negrita">clientes</span>) y procesos que responden a estos servicios (<span class="negrita">servidores</span>). Estos dos tipos de procesos pueden ejecutarse en el mismo procesador o en distintos.</p>
+
+  <p>La arquitectura cliente/servidor implica la realización de aplicaciones distribuidas. La principal ventaja de esta arquitectura es que permite separar las funciones según su servicio, permitiendo situar cada función en la plataforma más adecuada para su ejecución. Además, también presenta las siguientes ventajas:</p>
+
+  <ul>
+    <li class="saltomedio">Las redes de ordenadores permiten que múltiples procesadores puedan ejecutar partes distribuidas de una misma aplicación, logrando concurrencia de procesos.</li>
+
+    <li class="saltomedio">Existe la posibilidad de migrar aplicaciones de un procesador a otro con modificaciones mínimas en los programas.</li>
+
+    <li class="saltomedio">Se obtiene una escalabilidad de la aplicación. Permite la ampliación horizontal o vertical de las aplicaciones. La <span class="negrita">escalabilidad horizontal</span> se refiere a la capacidad de añadir o suprimir estaciones de trabajo que hagan uso de la aplicación (clientes), sin que afecte sustancialmente al rendimiento general. La <span class="negrita">escalabilidad vertical</span> permite la migración hacia servidores de mayor o menor capacidad y velocidad o de un tipo diferente.</li>
+
+    <li>Posibilita el acceso a los datos independientemente de donde se encuentre el usuario.</li>
+  </ul>
+
+  <p class="titulo4" id="refCap1.2">1.2. Separación de funciones</p>
+
+  <p>La arquitectura cliente/servidor nos permite la separación de funciones en tres niveles, tal como se muestra en la Figura 1.1:</p>
+
+  <ul>
+    <li class="saltomedio"><span class="negrita">Lógica de presentación</span>. La presentación de los datos es una función independiente del resto.</li>
+
+    <li class="saltomedio"><span class="negrita">Lógica de negocio (o aplicación)</span>. Los flujos de trabajo pueden cambiarse según las necesidades existentes de un procesador a otro.</li>
+
+    <li class="saltomedio"><span class="negrita">Lógica de datos</span>. La gestión de los datos debe ser independiente para poder ser distribuida según las necesidades de la empresa en cada momento.</li>
+  </ul>
+
+  <div class="figure" id="refFigura1.1">
+    <p><img alt="" src="Images/img001.png" /></p>
+
+    <p>Figura 1.1: Separación de funciones</p>
+  </div>
+
+  <p>Si un sistema distribuido se diseña correctamente, los tres niveles anteriores pueden distribuirse y redistribuirse independientemente sin afectar al funcionamiento de la aplicación.</p>
+
+  <p class="titulo4" id="refCap1.3">1.3. Modelos de distribución en aplicaciones cliente/servidor</p>
+
+  <p>Según como se distribuyan las tres funciones básicas de una aplicación (presentación, negocio y datos) entre el cliente y el servidor, podemos contemplar tres modelos: presentación distribuida, aplicación distribuida y datos distribuidos.</p>
+
+  <p class="titulo5" id="refCap1.3.1">1.3.1. Presentación distribuida</p>
+
+  <p class="saltomedio">El cliente sólo mantiene la presentación, el resto de la aplicación se ejecuta remotamente (Figura 1.2). La presentación distribuida, en su forma más simple, es una interfaz gráfica de usuario a la que se le pueden acoplar controles de validación de datos, para evitar la validación de los mismos en el servidor.</p>
+
+  <div class="figure" id="refFigura1.2">
+    <p><img alt="" src="Images/img002.png" /></p>
+
+    <p>Figura 1.2: Presentación distribuida</p>
+  </div>
+
+  <p class="titulo5" id="refCap1.3.2">1.3.2. Aplicación distribuida</p>
+
+  <p class="saltomedio">Es el modelo que proporciona máxima flexibilidad, puesto que permite tanto a servidor como a cliente mantener la lógica de negocio realizando cada uno las funciones que le sean más propias, bien por organización, o bien por mejora en el rendimiento del sistema (Figura 1.3).</p>
+
+  <div class="figure" id="refFigura1.3">
+    <p><img alt="" src="Images/img003.png" /></p>
+
+    <p>Figura 1.3: Aplicación distribuida</p>
+  </div>
+
+  <p class="titulo5" id="refCap1.3.3">1.3.3. Datos distribuidos</p>
+
+  <p class="saltomedio">Los datos son los que se distribuyen, por lo que la lógica de datos es lo que queda separada del resto de la aplicación (Figura 1.4). Se puede dar de dos formas: ficheros distribuidos o bases de datos distribuidas.</p>
+
+  <div class="figure" id="refFigura1.4">
+    <p><img alt="" src="Images/img004.png" /></p>
+
+    <p>Figura 1.4: Datos distribuidos</p>
+  </div>
+
+  <p class="titulo4" id="refCap1.4">1.4. Arquitecturas de dos y tres niveles</p>
+
+  <p>La diferencia entre las aplicaciones de dos y tres niveles estriba en la forma de distribución de la aplicación entre el cliente y el servidor.</p>
+
+  <p>Una arquitectura de dos niveles está basada en un sistema gestor de bases de datos donde el cliente mantiene la lógica de la presentación, negocio, y de acceso a los datos, y el servidor únicamente gestiona los datos. Suelen ser aplicaciones cerradas que supeditan la lógica de los procesos cliente al gestor de base de datos que se está usando.</p>
+
+  <p>En las arquitecturas de tres niveles, la lógica de presentación, la lógica de negocio y la lógica de datos están separadas, de tal forma que mientras la lógica de presentación se ejecutará normalmente en la estación cliente, la lógica de negocio y la de datos pueden estar repartidas entre distintos procesadores.</p>
+
+  <p>El objetivo de aumentar el número de niveles en una aplicación distribuida es lograr una mayor independencia entre un nivel y otro, lo que facilita la portabilidad en entornos heterogéneos.</p>
+
+  <p class="titulo4" id="refCap1.5">1.5. Descripción de un sistema cliente/servidor</p>
+
+  <p>Un sistema cliente/servidor suele presentar las siguientes características:</p>
+
+  <ol>
+    <li class="saltomedio">Una combinación de la parte cliente (también llamada <span class="italic">front-end</span>) que interactúa con el usuario (hace de interfaz entre el usuario y el resto de la aplicación) y la parte servidor (o <span class="italic">back-end)</span> que interactúa con los recursos compartidos (bases de datos, impresoras, módems).</li>
+
+    <li class="saltomedio">La parte cliente y servidor tienen diferentes necesidades de recursos a la hora de ejecutarse: velocidad de procesador, memoria, velocidad y capacidad de los discos duros, dispositivos de entrada/salida, etc.</li>
+
+    <li class="saltomedio">El entorno suele ser heterogéneo y multivendedor. El hardware y sistema operativo del cliente y el servidor suelen diferir. El cliente y el servidor se suelen comunicar a través de unas API<a href="#_ftn2" id="_ftnref2" title="‹2›">‹ 2 ›</a> y RPC<a href="#_ftn3" id="_ftnref3" title="‹3›">‹ 3 ›</a> conocidas (por ejemplo, ODBC<a href="#_ftn4" id="_ftnref4" title="‹4›">‹ 4 ›</a> para acceder a bases de datos).</li>
+
+    <li>Normalmente la parte cliente se implementa haciendo uso de una inter- faz gráfica de usuario, que permite la introducción de datos a través de teclado, ratón, lápiz óptico, etc.</li>
+  </ol>
+
+  <br><br><hr>
+  <p class="saltop"><a href="#_ftnref1" id="_ftn1" title="‹1›">‹ 1 ›</a> Otro tipo de arquitectura de red es <span class="cursiva">peer-to-peer</span> (entre pares o de igual a igual), en la que cada ordenador de la red posee responsabilidades equivalentes.</p>
+
+  <p class="saltop"><a href="#_ftnref2" id="_ftn2" title="‹2›">‹ 2 ›</a> <span class="cursiva">Application Program Interface</span>, interfaz de programación de aplicaciones.</p>
+
+  <p class="saltop"><a href="#_ftnref3" id="_ftn3" title="‹3›">‹ 3 ›</a> <span class="cursiva">Remote Procedure Call</span>, llamada a procedimiento remoto.</p>
+
+  <p class="saltop"><a href="#_ftnref4" id="_ftn4" title="‹4›">‹ 4 ›</a> <span class="cursiva">Open Database Connectivity</span>, conectividad de bases de datos abierta.</p>
+  <br><br>
+</body>
+</html>
