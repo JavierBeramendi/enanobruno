@@ -1,0 +1,4314 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Instalación de software</title>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+      body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+        h1, h2, h3, h4, h5, h6 { text-align:left; margin-top:15%; }
+                h1 { font-size:2em; }
+                h2 { font-size:1.8em; }
+                h3 { font-size:1.6em; }
+                h4 { font-size:1.4em; }
+                h5 { font-size:1.3em; }
+                h6 { font-size:1.2em; }
+  /* Lineas horizontales */
+  hr { background-color: black; height: 0.1em; margin-left: 0em; margin-right: 0em; }
+    .hr1 { height: 0.2em; margin-left: 8em; margin-right: 0em; }
+
+  /* Listas */
+  ul { list-style-type: disc; }
+    .sin { list-style-type: none; }
+    .circulo { list-style-type: circle; }
+    .cuadrado { list-style-type: square; }
+  li
+    .saltomedio { padding-bottom: 1em; }
+    .sin { list-style: none; display: inline }
+
+  /* Imágenes con pie */
+  div.figure {
+      float: center;
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+  div.figure p {
+    text-align: center;
+    text-indent: 0;
+    }
+  /* Tablas */
+  table.prefacio { border-collapse:collapse; margin: 1em auto 1.5em; border: none; width:100%; }
+  table.prefacio tr td { border: none; padding: 0em 1em 0em; }
+    .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+
+  table.cuadro { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadro th { border: 1px solid black; text-align: center; padding: 0em 1em 0em;  }
+  table.cuadro td { border-left: 1px solid black; border-right: 1px solid black; text-align: center; padding: 0em 1em 0em; }
+  table.cuadro caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+        .centrado { text-align:center; text-indent:0 }
+
+  table.cuadrol { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadrol th { border: 1px solid black; text-align: left; padding: 0em 1em 0em;  }
+  table.cuadrol td { border: 1px solid black; text-align: left; padding: 0em 1em 0em; }
+  table.cuadrol caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+
+  table.ejemplos { border-collapse: collapse; margin: 1em auto 1.5em; border-top: 1px solid black; border-bottom: 1px solid black; width:90%; }
+  table.ejemplos caption { caption-side: top; text-align: center; }
+  table.ejemplos tr, td { border: none; padding-left: 0.5em; }
+        .courier { font-family: "Courier", courier; font-size: 0.9em; }
+    .numeral { font-size: 0.65em; width: 1em; }
+
+  table.biblio { border-collapse: collapse; margin: 1em auto 1.5em; border: none; width:95%; }
+  table.biblio tr, td { border: none; padding-left: 0.5em; }
+    .numero { width: 1em; }
+
+  p { text-align:justify; margin:0; text-indent:1.5em; line-height:1.4em; }
+
+    .imagencentrada { text-align: center; text-indent: 0; margin: 1.5em 0 1.5em 0; }
+    .imagenizquierda { float: left; padding: 0.5em 0.0em 0.5em 0; text-indent: 1.5em; }
+
+        .capital { font-variant:small-caps; }
+        .sans { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+        .courier { font-family: "Courier", courier; }
+        .comic { font-family:"Marker Felt", "Comic Sans MS", "Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+
+        .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+        .centrado { text-align:center; text-indent:0 }
+        .asangre { text-indent:0 }
+        .cursiva { font-style: italic }
+        .negrita { font-weight: bold }
+    .subrayado { text-decoration: underline }
+        .salto { padding-bottom:2em; }
+        .saltomedio { padding-bottom:1em; }
+        .cita { margin:1.5em; }
+        .banner { width:75%; text-align:center; text-indent:0; margin:1.5em auto; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+        .sinmargen { margin:0; }
+        
+        .cubierta { margin:2% auto;max-width:95%;height:95%; }
+                .cubierta img { height:100%; }
+        .sinopsis, .sinopsis p { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; text-indent:0; }
+        .info { width:90%; font-size:0.8em; margin:0.5em 0.5em 0; text-indent:0; text-align:justify; }
+        .legal { width:90%; font-size:0.8em; margin:5em 1.5em 0; text-indent:0; }
+                .legal p { text-indent:0; text-align:left; }
+        .intro { margin:5em 0 1.5em; text-indent:0; text-align:right; }
+                .intro p { text-align:right;text-indent:0; }
+
+        /*salto previo de párrafo*/
+    .saltop { margin-top:1em; }
+
+    /*Formato enlace de notas al pie dentro del texto*/
+    .notas { color: black;cursor: pointer;text-decoration:none; line-height: normal; font-size:0.75em;vertical-align:super; }
+
+    /*Formato enlace de notas al pie dentro archivo notes.html (última hoja del documento)*/
+    .notasf { color: black;cursor: pointer;text-decoration:none; }
+
+    /*Saltos de tabulacion*/
+    .sangria1 { text-indent:3em }
+    .sangria2 { text-indent:6em }
+    .sangria3 { text-indent:9em }
+    .sangria4 { text-indent:12em }
+    .sangria5 { text-indent:15em }
+
+    /*Tamaños de letra */
+    .tamano1 { font-size:2em; }
+    .tamano2 { font-size:1.8em; }
+    .tamano3 { font-size:1.6em; }
+    .tamano4 { font-size:1.4em; }
+    .tamano5 { font-size:1.3em; }
+    .tamano6 { font-size:1.2em; }
+
+    .margenizquierdo1-5 { margin-left: 1.5em }
+    .margenizquierdo2 { margin-left: 2em }
+    .margenizquierdo4 { margin-left: 4em }
+    .margenizquierdo6 { margin-left: 6em }
+    .margenizquierdo8 { margin-left: 8em }
+
+    .indice0  { font-size: 1.2em; font-weight: bold; padding-top: 0.5em }
+    .indice1  { font-size: 1.1em; text-indent:3.5em }
+    .indice2  { font-size: 1.1em; text-indent:5.5em }
+    .indice11  { font-size: 1.1em; text-indent:3.5em; padding-top: 0.5em }
+
+    .versalita {font-size: 0.75em}
+
+    .titulo4 { text-indent: 0; font-size: 1.4em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo5 { text-indent: 0; font-size: 1.3em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo6 { text-indent: 0; font-size: 1em; font-weight: bold; padding-top: 1em; padding-bottom: 1em; }
+
+        .indicecapitulo { width:90%; text-align:center; text-indent:0; margin:0em 1.5em 0em; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+
+        .ejemplo { width:90%; text-indent:0; margin:1em 1.5em 1.5em; padding:0.5em 0em; border:1px solid black; border-left:none; border-right:none; }
+
+    .ejemplo .caption { float: none; font-weight: normal; margin-top: -20px; margin-left: 0px; margin-bottom: 0px; padding-right: 16px; padding-left: 5px ; padding-bottom: 0px; padding-top: 0px; background-color: grey; text-align: center }
+
+        .ePUBmarca, .ePUBtitulo, .ePUBsubtitulo, .ePUBautor, .ePUBv, .ePUBfirma, .ePUBgratis { text-align:center; font-weight:normal; text-indent:0; }
+                .ePUBmarca { text-align:center; }
+                        .ePUBmarca span { display:inline-block;width:10em; margin:3em auto; }
+                        .ePUBmarca img { width:100%; }
+                .ePUBautor { margin-bottom:0.5em; }
+                        .ePUBautor code { font-size:1.2em;color:#999; }
+                .ePUBtitulo { margin:0;font-size:1em;text-align:center; }
+                        .ePUBtitulo code { font-weight:bold;font-size:1.8em; }
+                .ePUBsubtitulo { margin:0.3em 0 0; }
+                        .ePUBsubtitulo code { font-weight:bold;font-size:1em; }
+                .ePUBv, .ePUBv code { color:#5084b8;font-size:0.9em;font-weight:bold;margin:0;margin:3em 0 0; }
+                .ePUBfirma, .ePUBfirma b, .ePUBfirma code { font-size:0.8em;margin:0; }
+                .ePUBfecha { color:#999; }
+                .ePUBgratis { text-align:center; }
+                        .ePUBgratis span { display:inline-block;width:14em;margin:3em auto 0; }
+                        .ePUBgratis img { width:100%; }
+
+                          
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  </style>
+  </head>
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <link href="../Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h3 id="heading_id_2"><a id="refCap3"></a>Capítulo 3<br />
+  <br />
+  HTML</h3>
+
+  <p class="sans salto">HTML es un lenguaje de marcas (etiquetas) que se emplea para dar formato a los documentos que se quieren publicar en la WWW. Los navegadores pueden interpretar las etiquetas y muestran los documentos con el formato deseado. En este capítulo se presentan los conceptos básicos y avanzados (tablas, formularios y marcos) de HTML. El capítulo finaliza con una guía de estilo: pequeños consejos que pueden ayudar a lograr mejores páginas web.</p>
+
+  <p class="negrita">Índice General</p>
+
+  <div class="indicecapitulo">
+    <p class="negrita"><a href="#refCap3.1" title="3.1.">3.1. Introducción</a></p>
+
+    <p class="negrita"><a href="#refCap3.2" title="3.2.">3.2. Evolución de HTML</a></p>
+
+    <p class="negrita"><a href="#refCap3.3" title="3.3.">3.3. Clasificación de las páginas</a></p>
+
+    <p class="negrita"><a href="#refCap3.4" title="3.4.">3.4. Qué necesito para usar HTML</a></p>
+
+    <p class="negrita"><a href="#refCap3.5" title="3.5.">3.5. Conceptos básicos de HTML</a></p>
+
+    <p class="sangria1"><a href="#refCap3.5.1" title="3.5.1.">3.5.1. Estructura de una página</a></p>
+
+    <p class="sangria1"><a href="#refCap3.5.2" title="3.5.2.">3.5.2. Caracteres especiales y secuencias de escape</a></p>
+
+    <p class="negrita"><a href="#refCap3.6" title="3.6.">3.6. Metadatos</a></p>
+
+    <p class="negrita"><a href="#refCap3.7" title="3.7.">3.7. Etiquetas HTML</a></p>
+
+    <p class="negrita"><a href="#refCap3.8" title="3.8.">3.8. Formato del texto</a></p>
+
+    <p class="sangria1"><a href="#refCap3.8.1" title="3.8.1.">3.8.1. Encabezados de secciones</a></p>
+
+    <p class="sangria1"><a href="#refCap3.8.2" title="3.8.2.">3.8.2. Formatos de caracteres</a></p>
+
+    <p class="sangria1"><a href="#refCap3.8.3" title="3.8.3.">3.8.3. La etiqueta &lt;FONT&gt;</a></p>
+
+    <p class="sangria1"><a href="#refCap3.8.4" title="3.8.4.">3.8.4. Alineamiento del texto</a></p>
+
+    <p class="negrita"><a href="#refCap3.9" title="3.9.">3.9. Listas</a></p>
+
+    <p class="sangria1"><a href="#refCap3.9.1" title="3.9.1.">3.9.1. Listas de definición</a></p>
+
+    <p class="sangria1"><a href="#refCap3.9.2" title="3.9.2.">3.9.2. Listas ordenadas</a></p>
+
+    <p class="sangria1"><a href="#refCap3.9.3" title="3.9.3.">3.9.3. Listas no ordenadas</a></p>
+
+    <p class="negrita"><a href="#refCap3.10" title="3.10.">3.10. Colores</a></p>
+
+    <p class="sangria1"><a href="#refCap3.10.1" title="3.10.1.">3.10.1. Color de fondo de una página</a></p>
+
+    <p class="sangria1"><a href="#refCap3.10.2" title="3.10.2.">3.10.2. Color del texto</a></p>
+
+    <p class="negrita"><a href="#refCap3.11" title="3.11.">3.11. Enlaces</a></p>
+
+    <p class="sangria1"><a href="#refCap3.11.1" title="3.11.1.">3.11.1. Enlace a un punto del mismo documento</a></p>
+
+    <p class="sangria1"><a href="#refCap3.11.2" title="3.11.2.">3.11.2. Enlace a otro documento</a></p>
+
+    <p class="sangria1"><a href="#refCap3.11.3" title="3.11.3.">3.11.3. Enlace a un punto de otro documento</a></p>
+
+    <p class="negrita"><a href="#refCap3.12" title="3.12.">3.12. Tablas</a></p>
+
+    <p class="sangria1"><a href="#refCap3.12.1" title="3.12.1.">3.12.1. Tablas invisibles</a></p>
+
+    <p class="sangria1"><a href="#refCap3.12.2" title="3.12.2.">3.12.2. Tablas como marcos</a></p>
+
+    <p class="negrita"><a href="#refCap3.13" title="3.13.">3.13. Imágenes</a></p>
+
+    <p class="sangria1"><a href="#refCap3.13.1" title="3.13.1.">3.13.1. Etiqueta &lt;IMG&gt;</a></p>
+
+    <p class="sangria1"><a href="#refCap3.13.2" title="3.13.2.">3.13.2. Imágenes como fondo de una página</a></p>
+
+    <p class="negrita"><a href="#refCap3.14" title="3.14.">3.14. Formularios</a></p>
+
+    <p class="sangria1"><a href="#refCap3.14.1" title="3.14.1.">3.14.1. Controles de un formulario</a></p>
+
+    <p class="sangria1"><a href="#refCap3.14.2" title="3.14.2.">3.14.2. Campos de verificación</a></p>
+
+    <p class="sangria1"><a href="#refCap3.14.3" title="3.14.3">3.14.3. Campos excluyentes</a></p>
+
+    <p class="sangria1"><a href="#refCap3.14.4" title="3.14.4.">3.14.4. Campos de texto</a></p>
+
+    <p class="sangria1"><a href="#refCap3.14.5" title="3.14.5.">3.14.5. Listas de selección</a></p>
+
+    <p class="sangria1"><a href="#refCap3.14.6" title="3.14.6.">3.14.6. Áreas de texto</a></p>
+
+    <p class="negrita"><a href="#refCap3.15" title="3.15.">3.15. Marcos</a></p>
+
+    <p class="negrita"><a href="#refCap3.16" title="3.16.">3.16. Guía de estilo</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.1" title="3.16.1.">3.16.1. Organizar el código HTML</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.2" title="3.16.2.">3.16.2. Cuidado con los colores</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.3" title="3.16.3.">3.16.3. Cuidado con los tipos de letra</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.4" title="3.16.4.">3.16.4. Sacar partido al hipertexto</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.5" title="3.16.5.">3.16.5. Usar las capacidades multimedia</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.6" title="3.16.6.">3.16.6. Identidad corporativa</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.7" title="3.16.7.">3.16.7. Permitir que los usuarios se comuniquen</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.8" title="3.16.8.">3.16.8. Facilitar las búsquedas</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.9" title="3.16.9.">3.16.9. Revisar las páginas periódicamente</a></p>
+
+    <p class="sangria1"><a href="#refCap3.16.10" title="3.16.10.">3.16.10. Los enlaces</a></p>
+  </div>
+
+  <p class="titulo4" id="refCap3.1">3.1. Introducción</p>
+
+  <p>Las páginas web o páginas <span class="negrita">HTML</span> son unos ficheros escritos en el lenguaje <span class="negrita">HTML</span>. El desarrollo de estas páginas abarca un amplio grupo de tecnologías, desde las páginas más sencillas que sólo usan el lenguaje <span class="negrita">HTML</span> hasta las más complejas que usan <span class="cursiva">Dynamic HTML</span> (<span class="negrita">DHTML</span>), <span class="cursiva">JavaScript</span>, <span class="cursiva">applets</span> realizados en <span class="cursiva">Java</span> o componentes <span class="cursiva">ActiveX</span>.</p>
+
+  <p>El lenguaje <span class="negrita">HTML</span> se basa en <span class="cursiva">Standard Generalized Markup Language</span> (<span class="negrita">SGML</span>), un sistema mucho más completo y complicado de procesamiento de documentos que indica como organizar y marcar (etiquetar) un documento. <span class="negrita">HTML</span> define e interpreta las etiquetas de acuerdo a <span class="negrita">SGML</span>.</p>
+
+  <p>Las páginas <span class="negrita">HTML</span> se pueden diseñar usando texto con distintos tipos de letras o colores, imágenes, listas de elementos, tablas, etc. Su modo de empleo es muy sencillo: se basa en el uso de etiquetas que indican que elementos contiene cada página, el formato que hay que aplicar a cada uno de ellos y como se tienen que distribuir por la página.</p>
+
+  <p class="titulo4" id="refCap3.2">3.2. Evolución de HTML</p>
+
+  <p>El nacimiento de <span class="negrita">HTML</span> va ligado al de la <span class="cursiva">World Wide Web</span> (<span class="negrita">WWW</span>). Los orígenes de ambos se sitúan en 1991, en los trabajos que llevaba a cabo Tim Berners-Lee y sus compañeros en el CERN<a href="#_ftn10" id="_ftnref10" title="‹10›">‹ 10 ›</a> en Suiza. Uno de los primeros artículos en los que muestran sus ideas es "World-Wide Web: The Information Universe"<a href="#_ftn11" id="_ftnref11" title="‹11›">‹ 11 ›</a>. En este artículo detallan un sistema que permita realizar el sueño de "interconectar todo el conocimiento de la humanidad y facilitar su acceso a todo el mundo gracias al empleo de los ordenadores". Para lograrlo, hacen uso de tecnologías como el hipertexto o la hipermedia, tecnologías que ya existían desde hacía varios años (en contra de lo que la gente cree, estas tecnologías no fueron inventadas por ellos).</p>
+
+  <p>Entre las distintas partes que componen el sistema que proponen, se incluye "una sintaxis en el estilo de SGML" para proporcionar formato a los documentos. A partir de ahí nace <span class="negrita">HTML</span> como un lenguaje para el intercambio de documentos científicos y técnicos. <span class="negrita">HTML</span> evita la complejidad de <span class="negrita">SGML</span> al definir un pequeño conjunto de etiquetas que simplifican la estructura de los documentos y las reglas no son tan estrictas como en <span class="negrita">SGML</span>.</p>
+
+  <p>En octubre de 1994, Tim Berners-Lee, funda el <span class="cursiva">World Wide Web Consortium</span> (<span class="negrita">W3C</span>) en el <span class="cursiva">Massachusetts Institute of Technology, Laboratory for Computer Science [</span><span class="cursiva">MIT/LCS</span><span class="cursiva">]</span> en colaboración con el CERN, y con el apoyo de DARPA<a href="#_ftn12" id="_ftnref12" title="‹12›">‹ 12 ›</a> y de la Comisión Europea. En abril de 1995, el INRIA<a href="#_ftn13" id="_ftnref13" title="‹13›">‹ 13 ›</a> se convierte en el primer <span class="cursiva">host</span> europeo de <span class="negrita">W3C</span>.</p>
+
+  <p class="saltomedio">El objetivo principal del <span class="negrita">W3C</span> es encabezar el desarrollo de la <span class="negrita">WWW</span>, mediante la elaboración de protocolos que aseguren su estandarización. Hoy en día, <span class="negrita">W3C</span> lidera el desarrollo de distintas tecnologías, como <span class="negrita">HTML</span>, <span class="negrita">HTTP</span>, <span class="cursiva">Extensible Markup Language</span> (<span class="negrita">XML</span>), <span class="cursiva">Portable Network Graphics</span> (<span class="negrita">PNG</span>), etc. En el Cuadro 3.1 mostramos las distintas versiones de <span class="negrita">HTML</span> que se han estandarizado<a href="#_ftn14" id="_ftnref14" title="‹14›">‹ 14 ›</a> desde 1995.</p>
+
+  <table class="cuadro" id="refCuadro3.1">
+    <caption>
+      Cuadro 3.1: Versiones de HTML
+    </caption>
+
+    <tr>
+      <th>Fecha</th>
+
+      <th>Versión</th>
+    </tr>
+
+    <tr>
+      <td>Noviembre 1995</td>
+
+      <td>HTML 2.0</td>
+    </tr>
+
+    <tr>
+      <td>Enero 1997</td>
+
+      <td>HTML 4.0</td>
+    </tr>
+
+    <tr>
+      <td>Diciembre 1997</td>
+
+      <td>HTML 3.2</td>
+    </tr>
+
+    <tr>
+      <td>Diciembre 1999</td>
+
+      <td>HTML 4.01</td>
+    </tr>
+
+    <tr>
+      <td>Enero 2000</td>
+
+      <td>XHTML 1.0</td>
+    </tr>
+  </table>
+
+  <p>En enero de 2000 aparece <span class="cursiva">Extensible HyperText Markup Language</span> (<span class="negrita">XHTML</span>) 1.0, el futuro sustituto de <span class="negrita">HTML</span>. Como dice el propio estándar, se trata de "una reformulación de HTML en XML 1.0". <span class="negrita">XHTML</span> es el lenguaje <span class="negrita">HTML</span> escrito según las normas que impone <span class="negrita">XML</span>. Por tanto, es una aplicación concreta de <span class="negrita">XML</span> y no deben confundirse entre sí. Las principales diferencias entre <span class="negrita">HTML</span> y <span class="negrita">XHTML</span> 1.0 son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Las etiquetas y atributos tienen que escribirse en minúsculas.</li>
+
+    <li class="saltomedio">Los valores de los atributos tienen que ir entre comillas.</li>
+
+    <li class="saltomedio">No se admiten atributos sin valor.</li>
+
+    <li>Todas las etiquetas tienen que aparecer por parejas (inicio y fin) o como etiquetas vacías.</li>
+  </ul>
+
+  <p class="titulo4" id="refCap3.3">3.3. Clasificación de las páginas</p>
+
+  <p>Según como se generan las páginas web en el servidor, se clasifican en:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="negrita">Estáticas</span>. Poseen un contenido fijo, todos los usuarios que las consultan reciben la misma información. El usuario recibe en su navegador la página del servidor sin un procesamiento previo<a href="#_ftn15" id="_ftnref15" title="‹15›">‹ 15 ›</a>.</li>
+
+    <li><span class="negrita">Dinámicas o activas en el servidor</span>: poseen un contenido variable, distintos usuarios al consultar la misma página pueden recibir distintos contenidos. El usuario recibe en su navegador la página después de haber sido procesada en el servidor. Para lograrlo se emplean lenguajes de programación. Ejemplo: páginas generadas por un <span class="negrita">CGI</span>, páginas <span class="negrita">ASP</span>, etc.</li>
+  </ul>
+
+  <p>Por otro lado, según como se visualizan las páginas en el cliente, se clasifican en:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="negrita">Estáticas</span>. Cuando no poseen ningún tipo de código de <span class="cursiva">script</span>, <span class="cursiva">applets</span> o <span class="cursiva">plug-ins</span>. Ejemplo: sólo código <span class="negrita">HTML</span>.</li>
+
+    <li><span class="negrita">Dinámicas o activas en el cliente</span>. Cuando se interpreta o ejecuta código en el equipo del usuario. Para lograrlo se emplean lenguajes de programación y objetos integrados. Ejemplo: páginas con <span class="cursiva">JavaScript</span>, <span class="negrita">DHTML</span>, <span class="cursiva">applets</span>, etc.</li>
+  </ul>
+
+  <p>Las características anteriores se pueden combinar como se quieran: una página puede ser estática en el servidor y en el cliente, estática en el servidor pero dinámica en el cliente, dinámica en el servidor y estática en el cliente y, por último, dinámica en el servidor y dinámica en el cliente.</p>
+
+  <p>Si nos planteamos crear páginas dinámicas en el servidor o en el cliente, surgen una serie de ventajas y desventajas. Las ventajas principales de las páginas activas en el cliente son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Se descarga de trabajo al servidor, ya que la ejecución del código se realiza de forma distribuida en cada cliente.</li>
+
+    <li class="saltomedio">Se reduce el ancho de banda necesario, ya que se evitan continuos traspasos de información del servidor al cliente y viceversa.</li>
+
+    <li>Ofrecen respuestas inmediatas al usuario.</li>
+  </ul>
+
+  <p>Sin embargo, existen algunas razones que nos llevan a crear páginas activas en el servidor:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Cuando la información sobre la que se realiza el procesamiento es muy amplia, su envío al cliente supone un ancho de banda grande.</li>
+
+    <li class="saltomedio">Puede existir información restringida sobre la que se realice el procesamiento y que no interese que pueda llegar íntegra al cliente.</li>
+
+    <li class="saltomedio">Las páginas activas en el cliente se basan en tecnologías dependientes del navegador y del sistema operativo del usuario. Presuponer que el usuario dispone de los requisitos necesarios para que funcionen las páginas es un error.</li>
+
+    <li>Las páginas activas en el cliente pueden ser poco seguras.</li>
+  </ul>
+
+  <p>Entonces, ¿cuál de las cuatro combinaciones posibles elegir? La mejor opción es la última: páginas dinámicas tanto en el servidor como en el cliente, ya que podremos aprovechar las ventajas de las dos opciones y eliminar sus desventajas. Simplemente, habrá que distribuir la lógica de nuestra aplicación entre el servidor y el cliente, de forma que se obtenga la solución más óptima a nuestro problema.</p>
+
+  <p>En este capítulo nos vamos a centrar en el lenguaje <span class="negrita">HTML</span>, que nos permite realizar páginas estáticas en el cliente. En el Capítulo 5 veremos <span class="cursiva">JavaScript</span>, que nos permitirá realizar páginas dinámicas en el cliente. Ambas tecnologías no influyen en la parte del servidor. El desarrollo de páginas activas en el servidor queda fuera de los objetivos de este libro.</p>
+
+  <p class="titulo4" id="refCap3.4">3.4. Qué necesito para usar HTML</p>
+
+  <p>No es necesario un servidor web, un proveedor web o tener una conexión a Internet para empezar a escribir documentos <span class="negrita">HTML</span>. Los documentos <span class="negrita">HTML</span> tienen un formato de texto plano (<span class="cursiva">American Standard Code for Information Interchange</span> (<span class="negrita">ASCII</span>)), por lo que todo lo que se necesita es un editor (como el <span class="sans">Bloc de notas</span> de <span class="sans">Microsoft Windows</span>) para crear las páginas y un navegador para verlas. Podemos crear, vincular y probar documentos <span class="negrita">HTML</span> completos en nuestro ordenador, aunque no esté conectado a ninguna red.</p>
+
+  <p>Para facilitar la creación de páginas <span class="negrita">HTML</span>, han aparecido gran cantidad de programas. Básicamente, se pueden dividir en dos grupos: los editores de <span class="negrita">HTML</span> y los programas de diseño <span class="negrita">HTML</span>.</p>
+
+  <p>La mayoría de editores que ayudan a escribir <span class="negrita">HTML</span> son simples editores de texto con algunos botones que pegan las etiquetas más comunes. Otros, suelen incluir la característica <span class="cursiva">syntax highlight</span>: significa que el editor es capaz de comprender el lenguaje en el que se programa, y colorea las palabras diferenciándolas según sean etiquetas, atributos, comentarios, etc.</p>
+
+  <p>Por otro lado, los programas de diseño muestran la página <span class="negrita">HTML</span> de forma gráfica y en tiempo real: es posible desplazar los distintos elementos que la componen (tablas, imágenes, texto), modificar sus propiedades (tamaño, color, tipo de letra) y crear efectos avanzados. Un inconveniente de estos programas es que generan mucho código <span class="negrita">HTML</span>: si en el futuro se desea modificar la página directamente a través del código <span class="negrita">HTML</span>, es prácticamente imposible. Entre los mejores programas de esta clase destacan <span class="sans">Adobe Golive</span>, <span class="sans">Claris Home Page</span>, <span class="sans">Macromedia DreamWeaver</span> y <span class="sans">Microsoft FrontPage</span>.</p>
+
+  <p>Conviene aclarar desde un principio que lo único que da formato a una página web es una etiqueta <span class="negrita">HTML</span>. Si editamos con cuidado un archivo de texto con objeto de tener párrafos y columnas de cifras formateadas, pero no se incluye ninguna etiqueta, al visualizarlo en <span class="negrita">HTML</span> todo el texto fluirá en un solo párrafo y se perderá todo el formato que le hayamos aplicado.</p>
+
+  <p>La extensión de un archivo <span class="negrita">HTML</span> suele ser <span class="courier">.html</span> o <span class="courier">.htm</span><a href="#_ftn16" id="_ftnref16" title="‹16›">‹ 16 ›</a>. Se deben emplear nombres cortos y sencillos. Hay que evitar el uso de espacios o de caracteres especiales en el nombre del archivo y también controlar el uso de mayúsculas y minúsculas puesto que en Internet existen multitud de sistemas operativos, que no pueden aceptar los mismos nombres de archivo que acepta el nuestro. Por ejemplo, hay sistemas operativos en los que las mayúsculas y minúsculas se distinguen (<span class="sans">Unix</span>) y otros donde no (<span class="sans">Microsoft Windows</span><a href="#_ftn17" id="_ftnref17" title="‹17›">‹ 17 ›</a>).</p>
+
+  <p class="titulo4" id="refCap3.5">3.5. Conceptos básicos de HTML</p>
+
+  <p>El lenguaje <span class="negrita">HTML</span> consta de una serie de etiquetas o marcas (<span class="cursiva">tags</span>). La mayoría de las etiquetas aparecen por parejas (códigos pareados), siendo una de comienzo (apertura) y otra de fin<a href="#_ftn18" id="_ftnref18" title="‹18›">‹ 18 ›</a> (cierre): delimitan la parte del documento <span class="negrita">HTML</span> que se ve afectada por su acción. Pero también hay etiquetas que aparecen de forma individual, como <span class="courier">&lt;IMG&gt;</span> para insertar una imagen.</p>
+
+  <p>Todas las etiquetas comienzan con el símbolo <span class="courier">&lt;</span> (menor que) y terminan con el símbolo <span class="courier">&gt;</span> (mayor que). Entre estos dos símbolos aparece el nombre de la etiqueta. Por ejemplo, <span class="courier">&lt;HR&gt;</span> es una etiqueta válida, pero <span class="courier">&lt;HR</span> o <span class="courier">&lt;HR&lt;</span> no lo son.</p>
+
+  <p>Las etiquetas de fin tienen el mismo nombre que las de inicio, pero van precedidas del símbolo <span class="courier">/</span> (barra inclinada). Por ejemplo, la etiqueta de cierre correspondiente a <span class="courier">&lt;HTML&gt;</span> es <span class="courier">&lt;/HTML&gt;</span>.</p>
+
+  <p>Una etiqueta puede poseer varios atributos a los que hay que asignar valor. Estos atributos suelen ser opcionales y algunos necesitan un tipo de valor concreto. Los atributos se escriben dentro de la etiqueta y separados por espacios en blanco. Para asignar un valor a un atributo se emplea el signo igual (=). Por ejemplo, la etiqueta <span class="courier">&lt;IMG&gt;</span>, que no tiene una etiqueta de cierre, tiene varios atributos, entre ellos <span class="courier">WIDTH</span> y <span class="courier">HEIGHT</span> que esperan un valor numérico y el atributo <span class="courier">ALT</span> que espera cualquier cadena de caracteres.</p>
+
+  <p>Cuando un usuario solicita una página <span class="negrita">HTML</span> a un servidor web, este envía la página tal cual. En el momento en que el explorador recibe la página, interpreta las etiquetas que la página contiene, mostrando al usuario el resultado final (donde no aparecen ya las etiquetas, sino el resultado de su evaluación).</p>
+
+  <p class="titulo5" id="refCap3.5.1">3.5.1. Estructura de una página</p>
+
+  <p>La estructura básica de una página se divide en cabecera (<span class="courier">&lt;HEAD&gt; ... &lt;/HEAD&gt;</span>) y cuerpo (<span class="courier">&lt;BODY&gt; ... &lt;/BODY&gt;</span>). El esqueleto básico de una página es:</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.1
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;!DOCTYPE HTML PUBLIC ".//W3C//DTD HTML 4.0//EN"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">Cabecera de la página</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">Cuerpo de la página</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <p>El sentido de cada una de las líneas es:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Línea 1: Permite indicar la versión <span class="negrita">HTML</span> que se va a utilizar para escribir la página. Normalmente no se incluye.</li>
+
+    <li class="saltomedio">Línea 2: Junto a la línea 9, indican el comienzo y fin de la página. La etiqueta <span class="courier">&lt;HTML&gt;</span> es obligatoria.</li>
+
+    <li class="saltomedio">Línea 3: Junto a la línea 5, indican el comienzo y fin de la cabecera.</li>
+
+    <li class="saltomedio">Línea 4: Lo que escribamos en la cabecera no se verá en la página. Se suele usar para indicar el título de la página con <span class="courier">&lt;TITLE&gt; ... &lt;/TITLE&gt;</span>, incluir código que se ejecuta en el cliente con <span class="courier">&lt;SCRIPT&gt; ... &lt;/SCRIPT&gt;</span>, definir un estilo con <span class="courier">&lt;STYLE&gt; ... &lt;/STYLE&gt;</span> o incluir información sobre el contenido de la página con la etiqueta <span class="courier">&lt;META&gt;</span>.</li>
+
+    <li class="saltomedio">Línea 6: Junto a la línea 8, indican el comienzo y fin del cuerpo.</li>
+
+    <li class="saltomedio">Línea 7: Lo que escribamos en el cuerpo se verá en la página. La información contenida en esta sección se puede visualizar con apariencias muy diversas: sólo hay que aplicar distintos formatos a las secciones que la componen.</li>
+  </ul>
+
+  <p>Cuando se escriban las etiquetas de fin hay que llevar mucho cuidado en el orden. Por ejemplo, en el esqueleto anterior, la etiqueta <span class="courier">&lt;HTML&gt;</span> aparece antes que <span class="courier">&lt;BODY&gt;</span>; la última etiqueta en aparecer es la primera que se tiene que cerrar. Por tanto, el orden correcto es primero <span class="courier">&lt;/BODY&gt;</span> y luego <span class="courier">&lt;/HTML&gt;</span>.</p>
+
+  <p>El siguiente código crea una página <span class="negrita">HTML</span> sencilla, que podemos ver en la Figura 3.1. El título indicado sólo aparece en la barra de título de la ventana activa del navegador. El título se indica usando los código pareados <span class="courier">&lt;TITLE&gt; ... &lt;/TITLE&gt;</span>, y se especifica usando un texto plano, sin códigos <span class="negrita">HTML</span> de formato (no se puede poner en negrita o cursiva, por ejemplo).</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.2
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Esto es una página HTML&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">Esto es el cuerpo de una página HTML</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">Esto tiene que aparecer en una línea nueva</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <p>Es muy aconsejable poner título a todos los documentos y, además, se deberá procurar que éste sea lo más descriptivo posible, puesto que si algún usuario decide incluir nuestra página en su lista de enlaces (<span class="cursiva">bookmarks</span>), será el título lo que quede almacenado en dicha lista (junto con la <span class="negrita">URL</span>). En el caso de que no se haya especificado un título, lo que se almacena en la lista de enlaces es la dirección de la página (<span class="negrita">URL</span>).</p>
+
+  <div class="figure" id="refFigura3.1">
+    <p><img alt="" src="Images/img006.png" /></p>
+
+    <p>Figura 3.1: Primera página HTML</p>
+  </div>
+
+  <p>En cualquier parte de una página <span class="negrita">HTML</span>, si queremos incluir un comentario deberemos emplear la etiqueta <span class="courier">&lt;!-- Comentario --&gt;</span>. Los comentarios no se procesan y no producen una salida visible en la página.</p>
+
+  <p>Los saltos de línea que incluyamos en una página son irrelevantes (el navegador no los tiene en cuenta). Para producir un salto de línea se emplea la etiqueta <span class="courier">&lt;BR&gt;</span>. Los espacios en blanco también son irrelevantes: si separamos dos palabras por varios espacios en blanco, sólo se tendrá en cuenta uno de ellos. Si queremos incluir varios espacios en blanco, debemos de emplear el código de escape <span class="courier">&amp;nbsp;</span>. Por ejemplo, para incluir tres espacios en blanco se tiene que escribir <span class="courier">&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>.</p>
+
+  <p class="titulo5" id="refCap3.5.2">3.5.2. Caracteres especiales y secuencias de escape</p>
+
+  <p>Algunos sistemas informáticos trabajan con 7 bits en vez de 8. En esos casos, si se desea trabajar con caracteres <span class="negrita">ASCII</span> de la parte superior de la tabla (128-255), es necesario codificarlos de algún modo. En los documentos <span class="negrita">HTML</span> se pueden codificar de dos formas, mediante referencias decimales o referencias a entidades.</p>
+
+  <p>Las referencias decimales (también llamadas secuencias de escape) usan el formato <span class="courier">&amp;#nnn;</span> donde <span class="courier">nnn</span> es el código <span class="negrita">ASCII</span> del carácter. Por ejemplo, <span class="courier">&amp;#193;</span> representa el carácter <span class="courier">Á</span>.</p>
+
+  <p>Las referencias a entidades usan el formato <span class="courier">&amp;aaaa;</span> donde <span class="courier">aaaa</span> es una cadena de texto que representa el carácter. Por ejemplo, <span class="courier">&amp;Aacute;</span> representa el carácter <span class="courier">Á</span>.</p>
+
+  <p>Además, existen algunos caracteres de la parte inferior de la tabla de caracteres <span class="negrita">ASCII</span> que poseen un significado especial en <span class="negrita">HTML</span>, por lo que es necesario codificarlos. En el Cuadro 3.2 figuran los caracteres especiales con su secuencia de escape.</p>
+
+  <table class="cuadro" id="refCuadro3.2">
+    <caption>
+      Cuadro 3.2: Caracteres con un significado especial en HTML
+    </caption>
+
+    <tr>
+      <th>Carácter</th>
+
+      <th>Decimal</th>
+
+      <th>Entidad</th>
+    </tr>
+
+    <tr>
+      <td>"</td>
+
+      <td><span class="courier">&amp;#34;</span></td>
+
+      <td><span class="courier">&amp;quot;</span></td>
+    </tr>
+
+    <tr>
+      <td>&amp;</td>
+
+      <td><span class="courier">&amp;#38;</span></td>
+
+      <td><span class="courier">&amp;amp;</span></td>
+    </tr>
+
+    <tr>
+      <td>&lt;</td>
+
+      <td><span class="courier">&amp;#60;</span></td>
+
+      <td><span class="courier">&amp;lt;</span></td>
+    </tr>
+
+    <tr>
+      <td>&gt;</td>
+
+      <td><span class="courier">&amp;#62;</span></td>
+
+      <td><span class="courier">&amp;gt;</span></td>
+    </tr>
+  </table>
+
+  <p>También existen otros caracteres que son difíciles de conseguir desde el teclado, ya que no están representados. En el Cuadro 3.3 figuran algunos de los más significativos.</p>
+
+  <table class="cuadro" id="refCuadro3.3">
+    <caption>
+      Cuadro 3.3: Caracteres especiales
+    </caption>
+
+    <tr>
+      <th>Carácter</th>
+
+      <th>Decimal</th>
+
+      <th>Entidad</th>
+    </tr>
+
+    <tr>
+      <td>§</td>
+
+      <td><span class="courier">&amp;#167;</span></td>
+
+      <td><span class="courier">&amp;sect;</span></td>
+    </tr>
+
+    <tr>
+      <td>©</td>
+
+      <td><span class="courier">&amp;#169;</span></td>
+
+      <td><span class="courier">&amp;copy;</span></td>
+    </tr>
+
+    <tr>
+      <td>®</td>
+
+      <td><span class="courier">&amp;#174;</span></td>
+
+      <td><span class="courier">&amp;reg;</span></td>
+    </tr>
+
+    <tr>
+      <td>¶</td>
+
+      <td><span class="courier">&amp;#182;</span></td>
+
+      <td><span class="courier">&amp;para;</span></td>
+    </tr>
+  </table>
+
+  <p class="titulo4" id="refCap3.6">3.6. Metadatos</p>
+
+  <p>La etiqueta <span class="courier">&lt;META&gt;</span> permite indicar metadatos<a href="#_ftn19" id="_ftnref19" title="‹19›">‹ 19 ›</a> de una forma muy simple. Permite incorporar información sobre el contenido de una página. Esta etiqueta sólo puede aparecer en la sección <span class="courier">&lt;HEAD&gt;</span>. Esta etiqueta la emplean los motores de búsqueda, los navegadores y las herramientas de diseño de páginas web.</p>
+
+  <p>La etiqueta <span class="courier">&lt;META&gt;</span> presenta dos variantes. La sintaxis de estas dos variantes es:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">
+      <p class="asangre"><span class="courier">&lt;META HTTP-EQUIV="propiedad" CONTENT="contenido"&gt;</span>. El atributo <span class="courier">HTTP-EQUIV</span> se emplea cuando la página web se recupera mediante <span class="negrita">HTTP</span>. Los servidores web pueden usar el nombre de la propiedad para crear una cabecera según el estándar <span class="cursiva">Request for Comments</span> (<span class="negrita">RFC</span>) 822<a href="#_ftn20" id="_ftnref20" title="‹20›">‹ 20 ›</a> en la cabecera de la respuesta HTTP (algunas propiedades de la cabecera no se pueden fijar de esta forma). Por ejemplo, la siguiente etiqueta <span class="courier">&lt;META&gt;</span>:</p>
+
+      <p class="asangre"><span class="courier">&lt;META HTTP-EQUIV="Expires" CONTENT="Tue, 20 Aug 1996 14:25:27 GMT"&gt;</span></p>
+
+      <p class="asangre">se convierte en la siguiente cabecera <span class="negrita">HTTP</span>:</p>
+
+      <p class="asangre"><span class="courier">Expires: Tue, 20 Aug 1996 14:25:27 GMT</span></p>
+
+      <p class="asangre">que puede ser usada por la cache del navegador o por los servidores proxy para saber hasta cuando se puede emplear la copia de una página existente en la caché.</p>
+    </li>
+
+    <li><span class="courier">&lt;META NAME="propiedad" CONTENT="contenido"&gt;</span>. Se emplea para incluir propiedades del documento, tales como autor, fecha de caducidad, una lista de palabras clave, etc. El atributo <span class="courier">NAME</span> indica el nombre de la propiedad mientras que el atributo <span class="courier">CONTENT</span> especifica su valor. Por ejemplo, las siguientes etiquetas <span class="courier">&lt;META&gt;</span> indican el autor, una descripción, una lista de palabras clave y la fecha de creación de una página:</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.3
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;META NAME="Author" CONTENT="Sergio Luján Mora"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;META NAME="Rights" CONTENT="Sergio Luján Mora"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;META NAME="Description" CONTENT="Una página de prueba"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;META NAME="Keywords" CONTENT="curso, html, diseño, web"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;META NAME="Date" CONTENT="Monday, 1 January, 2001"&gt;</td>
+    </tr>
+  </table>
+
+  <p>A título de ejemplo, la página principal de la web de la Universidad de Alicante contiene los siguientes metadatos:</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.4
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;META HTTP-EQUIV="pragma" CONTENT="no-cache"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;META NAME="Author" CONTENT="Universidad de Alicante"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;META NAME="Copyright" CONTENT=" © Universidad de Alicante"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;META NAME="Description" CONTENT="Web que recoge toda la ..."&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;META NAME="keywords" CONTENT="Universidad de Alicante, Alicante ..."&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;META NAME="Formatter" CONTENT="Mozilla/4.5 [es](Win98; I)[Netscape]"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;META NAME="Generator" CONTENT="Mozilla/4.5 [es](Win98; I)[Netscape]"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;META NAME="robots" CONTENT="index, follow"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;META HTTP-EQUIV="Content-Language" CONTENT="ES"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;META HTTP-EQUIV="Content-Script-Type" CONTENT="JavaScript"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859"&gt;</td>
+    </tr>
+  </table>
+
+  <p class="titulo4" id="refCap3.7">3.7. Etiquetas HTML</p>
+
+  <p>Existen cientos de etiquetas, cada una con su conjunto de atributos. Además, no existe un estándar que acepten todos los navegadores: los dos principales navegadores, <span class="sans">Netscape Navigator</span> y <span class="sans">Microsoft Internet Explorer</span>, presentan diferencias entre ellos, aceptando cada uno etiquetas que no acepta el otro. Existe un intento de estandarización por parte de <span class="negrita">W3C</span>, que periódicamente publica borradores, recomendaciones y estándares definitivos. La última recomendación es <span class="negrita">XHTML</span> 1.0 (combinación de <span class="negrita">HTML</span> y <span class="negrita">XML</span>), que sustituye a <span class="negrita">HTML</span> 4.01.</p>
+
+  <p>Las etiquetas <span class="negrita">HTML</span> (reconocidas por <span class="sans">Netscape Navigator 4.0</span> y superiores) las podemos clasificar en las siguientes categorías (en esta clasificación una etiqueta sólo aparece en una categoría, pero realmente hay etiquetas que se pueden clasificar en varias categorías):</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Etiquetas que definen la estructura del documento: <span class="courier">&lt;HTML&gt;</span>, <span class="courier">&lt;HEAD&gt;</span> y <span class="courier">&lt;BODY&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas que pueden ir en la cabecera: <span class="courier">&lt;TITLE&gt;</span>, <span class="courier">&lt;BASE&gt;</span>, <span class="courier">&lt;META&gt;</span>, <span class="courier">&lt;STYLE&gt;</span> y <span class="courier">&lt;LINK&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas que definen bloques de texto: <span class="courier">&lt;ADDRESS&gt;</span>, <span class="courier">&lt;BLOCKQUOTE&gt;</span>, <span class="courier">&lt;DIV&gt;</span>, <span class="courier">&lt;H1&gt;</span> ... <span class="courier">&lt;H6&gt;</span>, <span class="courier">&lt;P&gt;</span>, <span class="courier">&lt;PRE&gt;</span> y <span class="courier">&lt;XMP&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de listas: <span class="courier">&lt;DIR&gt;</span>, <span class="courier">&lt;DL&gt;</span>, <span class="courier">&lt;DT&gt;</span>, <span class="courier">&lt;DD&gt;</span>, <span class="courier">&lt;MENU&gt;</span>, <span class="courier">&lt;OL&gt;</span>, <span class="courier">&lt;UL&gt;</span> y <span class="courier">&lt;LI&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de características del texto: <span class="courier">&lt;B&gt;</span>, <span class="courier">&lt;BASEFONT&gt;</span>, <span class="courier">&lt;BIG&gt;</span>, <span class="courier">&lt;BLINK&gt;</span>, <span class="courier">&lt;CITE&gt;</span>, <span class="courier">&lt;CODE&gt;</span>, <span class="courier">&lt;EM&gt;</span>, <span class="courier">&lt;FONT&gt;</span>, <span class="courier">&lt;I&gt;</span>, <span class="courier">&lt;KBD&gt;</span>, <span class="courier">&lt;PLAINTEXT&gt;</span>, <span class="courier">&lt;SMALL&gt;</span>, <span class="courier">&lt;S&gt;</span>, <span class="courier">&lt;STRIKE&gt;</span>, <span class="courier">&lt;STRONG&gt;</span>, <span class="courier">&lt;SUB&gt;</span>, <span class="courier">&lt;SUP&gt;</span>, <span class="courier">&lt;TT&gt;</span>, <span class="courier">&lt;U&gt;</span> y <span class="courier">&lt;VAR&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de anclas y enlaces: <span class="courier">&lt;A&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de imágenes y mapas de imágenes: <span class="courier">&lt;IMG&gt;</span>, <span class="courier">&lt;AREA&gt;</span> y <span class="courier">&lt;MAP&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de tablas: <span class="courier">&lt;TABLE&gt;</span>, <span class="courier">&lt;CAPTION&gt;</span>, <span class="courier">&lt;TR&gt;</span>, <span class="courier">&lt;TD&gt;</span> y <span class="courier">&lt;TH&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de formularios: <span class="courier">&lt;FORM&gt;</span>, <span class="courier">&lt;INPUT&gt;</span>, <span class="courier">&lt;SELECT&gt;</span>, <span class="courier">&lt;OPTION&gt;</span>, <span class="courier">&lt;TEXTAREA&gt;</span>, <span class="courier">&lt;KEYGEN&gt;</span> y <span class="courier">&lt;ISINDEX&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de marcos: <span class="courier">&lt;FRAME&gt;</span>,<span class="courier">&lt;FRAMESET&gt;</span> y <span class="courier">&lt;NOFRAMES&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de situación de contenidos: <span class="courier">&lt;LAYER&gt;</span>, <span class="courier">&lt;ILAYER&gt;</span> y <span class="courier">&lt;NOLAYER&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de script: <span class="courier">&lt;SCRIPT&gt;</span>, <span class="courier">&lt;NOSCRIPT&gt;</span> y <span class="courier">&lt;SERVER&gt;</span>.</li>
+
+    <li class="saltomedio">Etiquetas de applets y plug-ins: <span class="courier">&lt;APPLET&gt;</span>, <span class="courier">&lt;PARAM&gt;</span>, <span class="courier">&lt;EMBED&gt;</span>, <span class="courier">&lt;NOEMBED&gt;</span> y <span class="courier">&lt;OBJECT&gt;</span>.</li>
+
+    <li>Etiquetas de ajuste del texto: <span class="courier">&lt;BR&gt;</span>, <span class="courier">&lt;CENTER&gt;</span>, <span class="courier">&lt;HR&gt;</span>, <span class="courier">&lt;MULTICOL&gt;</span>, <span class="courier">&lt;NOBR&gt;</span>, <span class="courier">&lt;SPACER&gt;</span>, <span class="courier">&lt;SPAN&gt;</span> y <span class="courier">&lt;WBR&gt;</span>.</li>
+  </ul>
+
+  <p>Vamos a comentar las etiquetas más importantes (las más empleadas) con los atributos más comunes. No es una explicación exhaustiva, pero suficiente para un primer contacto con <span class="negrita">HTML</span>. En el Apéndice A se puede consultar una relación con todas las etiquetas que acepta <span class="sans">Netscape Communicator 4.0</span>.</p>
+
+  <p class="titulo4" id="refCap3.8">3.8. Formato del texto</p>
+
+  <p>En esta sección vamos a repasar las etiquetas más importantes que permiten asignar formato al texto: los encabezados de sección, los estilos lógicos y físicos, la etiqueta <span class="courier">&lt;FONT&gt; ... &lt;/FONT&gt;</span> y por último, como alinear el texto.</p>
+
+  <p class="titulo5" id="refCap3.8.1">3.8.1. Encabezados de secciones</p>
+
+  <p>Existen seis niveles de encabezados, numerados del 1 al 6, y según tamaños decrecientes: el nivel 1 es la etiqueta <span class="courier">&lt;H1&gt; ... &lt;/H1&gt;</span> (la más prominente) y el nivel 6 es la etiqueta <span class="courier">&lt;H6&gt; ... &lt;/H6&gt;</span> (la menos prominente). Los encabezados se suelen mostrar con tipos de letra más grandes, en negrita o más enfatizados que el texto normal. Pero los niveles 5 y 6 aparecen normalmente con un tamaño inferior al del texto normal. El tamaño de cada encabezado lo selecciona el navegador, por lo que la apariencia puede variar significativamente de uno a otro.</p>
+
+  <p>Cuando se visualizan, los encabezados comienzan en una línea nueva y se suele dejar un espacio en blanco extra antes de ellos. La sintaxis de esta etiqueta es:</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.5
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;Hn ALIGN="LEFT" | "CENTER" | "RIGHT" | "JUSTIFY"&gt; ... &lt;/Hn&gt;</td>
+    </tr>
+  </table>
+
+  <p>donde <span class="courier">n</span> es un número del 1 al 6 y el atributo <span class="courier">ALIGN</span> especifica el alineamiento horizontal del encabezado<a href="#_ftn21" id="_ftnref21" title="‹21›">‹ 21 ›</a>. Por ejemplo, en la Figura 3.2 vemos como se visualiza el siguiente código en un navegador.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.6
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">Texto normal</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;H1&gt;Encabezado nivel 1&lt;/H1&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;H2&gt;Encabezado nivel 2&lt;/H2&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;H3&gt;Encabezado nivel 3&lt;/H3&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;H4&gt;Encabezado nivel 4&lt;/H4&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;H5&gt;Encabezado nivel 5&lt;/H5&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;H6&gt;Encabezado nivel 6&lt;/H6&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">Texto normal</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.2">
+    <p><img alt="" src="Images/img007.png" /></p>
+
+    <p>Figura 3.2: Ejemplo de encabezados</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.8.2">3.8.2. Formatos de caracteres</p>
+
+  <p>Las siguientes etiquetas se pueden emplear en línea (<span class="cursiva">inline</span>), lo que significa que no interrumpen el fluir del texto (no producen saltos de línea ni nada similar). Por tanto, se pueden aplicar a caracteres individuales.</p>
+
+  <p>Los formatos (también llamados estilos) se dividen en lógicos y físicos. Los formatos lógicos dependen del navegador (cada uno lo puede interpretar de distinta forma), mientras que los formatos físicos siempre se representan de la misma forma.</p>
+
+  <p>El siguiente código <span class="negrita">HTML</span> muestra las etiquetas de los formatos más comunes. En la Figura 3.3 vemos como se visualiza en un navegador.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.7
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">Formatos físicos:&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;B&gt;Texto en negrita: &lt;B&gt;&lt;/B&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;I&gt;Texto en cursiva: &lt;I&gt;&lt;/I&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;U&gt;Texto subrayado: &lt;U&gt;&lt;/U&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;TT&gt;Texto en teletipo (fuente fija): &lt;TT&gt;&lt;/TT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;STRIKE&gt;Texto tachado: &lt;STRIKE&gt;&lt;/STRIKE&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;S&gt;También funciona &lt;S&gt;&lt;/S&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">Formatos lógicos:&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;CITE&gt;Cita: &lt;CITE&gt;&lt;/CITE&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;CODE&gt;Código: &lt;CODE&gt;&lt;/CODE&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;DFN&gt;Definición: &lt;DFN&gt;&lt;/DFN&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">&lt;EM&gt;Enfatizado: &lt;EM&gt;&lt;/EM&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier">&lt;KBD&gt;Texto tecleado: &lt;KBD&gt;&lt;/KBD&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier">&lt;STRONG&gt;Texto grueso: &lt;STRONG&gt;&lt;/STRONG&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier">&lt;VAR&gt;Texto variable: &lt;VAR&gt;&lt;/VAR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.3">
+    <p><img alt="" src="Images/img008.png" /></p>
+
+    <p>Figura 3.3: Formatos físicos y lógicos</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.8.3">3.8.3. La etiqueta &lt;FONT&gt;</p>
+
+  <p>La etiqueta <span class="courier">&lt;FONT&gt; ... &lt;/FONT&gt;</span> permite modificar el tipo de letra, el tamaño y el color del texto . Todo el texto entre las etiquetas <span class="courier">&lt;FONT&gt; ... &lt;/FONT&gt;</span> se muestra según los valores especificados en los atributos de la etiqueta.</p>
+
+  <p>Para modificar el tipo de letra se emplea el atributo <span class="courier">FACE</span>. Se le puede indicar una lista de tipos de letras separados por comas. El navegador comprueba si el primer tipo de letra está disponible, si no es así prueba con el segundo y así sucesivamente. Si ninguno de los tipos de letra está disponible, no se produce ningún cambio en el tipo de letra.</p>
+
+  <p>Los tipos de letra pueden ser específicos o genéricos. Entre los primeros, los más empleados son <span class="courier">Arial</span>, <span class="courier">Courier</span>, <span class="courier">Helvetic</span>a, <span class="courier">Tahoma</span>, <span class="courier">Times</span> y <span class="courier">Verdana</span>. Los tipos de letra genéricos son <span class="courier">serif</span>, <span class="courier">sans-serif</span>, <span class="courier">cursive</span>v, <span class="courier">monospace</span> y <span class="courier">fantasy</span>. El siguiente código muestra el uso de distintos tipos de letra. En la Figura 3.4 podemos observar como se visualiza en un navegador. Como se ve en la imagen del navegador, el texto escrito en <span class="courier">Helvetica</span> aparece con el tipo de letra por defecto; esto se debe a que en el ordenador en el que se visualiza la página no está disponible el tipo de letra <span class="courier">Helvetica</span>.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.8
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">Tipos de letra específicos:&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;FONT FACE="Arial"&gt;Texto en Arial&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;FONT FACE="Helvetica"&gt;Texto en Helvetica&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;FONT FACE="Tahoma"&gt;Texto en Tahoma&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">Tipos de letra genéricos:&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;FONT FACE="serif"&gt;Texto en serif&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;FONT FACE="sans-serif"&gt;Texto en sans-serif&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;FONT FACE="cursive"&gt;Texto en cursive&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;FONT FACE="monospace"&gt;Texto en monospace&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;FONT FACE="fantasy"&gt;Texto en fantasy&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.4">
+    <p><img alt="" src="Images/img009.png" /></p>
+
+    <p>Figura 3.4: Distintos tipos de letra con la etiqueta &lt;FONT&gt;</p>
+  </div>
+
+  <p>Para modificar el tamaño se emplea el atributo <span class="courier">SIZE</span>. Este atributo define el tamaño de forma relativa, en un intervalo del 1 (letra más pequeña) a 7 (letra más grande). El tamaño base por defecto es 3<a href="#_ftn22" id="_ftnref22" title="‹22›">‹ 22 ›</a>. También se puede indicar un valor relativo al tamaño base si se emplean los signos + o -. Por ejemplo, +2 significa un incremento en dos unidades respecto al tamaño base. En la Figura 3.5 vemos como se visualiza el siguiente código que muestra el uso del atributo <span class="courier">SIZE</span>.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.9
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">Distintos tamaños de letra:&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;FONT SIZE="1"&gt;Texto en 1&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;FONT SIZE="2"&gt;Texto en 2&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;FONT SIZE="3"&gt;Texto en 3&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;FONT SIZE="4"&gt;Texto en 4&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;FONT SIZE="5"&gt;Texto en 5&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;FONT SIZE="6"&gt;Texto en 6&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;FONT SIZE="7"&gt;Texto en 7&lt;/FONT&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.5">
+    <p><img alt="" src="Images/img010.png" /></p>
+
+    <p>Figura 3.5: Distintos tamaños de letra con la etiqueta &lt;FONT&gt;</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.8.4">3.8.4. Alineamiento del texto</p>
+
+  <p>La etiqueta <span class="courier">&lt;P&gt; ... &lt;/P&gt;</span> se emplea para marcar párrafo de texto. Un párrafo comienza en una línea nueva y el navegador suele dejar un espacio en blanco extra antes del párrafo.</p>
+
+  <p>Para alinear el contenido de un párrafo se emplea el atributo <span class="courier">ALIGN</span>. El contenido del párrafo puede alinearse a la izquierda (<span class="courier">LEFT</span>), a la derecha (<span class="courier">RIGHT</span>), centrado (<span class="courier">CENTER</span>) o justificado (<span class="courier">JUSTIFY</span>). El siguiente código <span class="negrita">HTML</span> muestra el mismo párrafo alineado de cuatro formas distintas. En la Figura 3.6 podemos ver el código visualizado en un navegador.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.10
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;P ALIGN="LEFT"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">Los enlaces o hiperenlaces permiten relacionar distintas páginas</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">entre sí (hipertexto). Esta característica da la posibilidad de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">organizar la información en distintas páginas HTML enlazadas, de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">forma que el usuario pueda seleccionar la que más le interese en</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">cada momento.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;/P&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;P ALIGN="RIGHT"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">Los enlaces o hiperenlaces permiten relacionar distintas páginas</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">entre sí (hipertexto). Esta característica da la posibilidad de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">organizar la información en distintas páginas HTML enlazadas, de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">forma que el usuario pueda seleccionar la que más le interese en</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">cada momento.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier">&lt;/P&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier">&lt;P ALIGN="CENTER"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier">Los enlaces o hiperenlaces permiten relacionar distintas páginas</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier">entre sí (hipertexto). Esta característica da la posibilidad de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier">organizar la información en distintas páginas HTML enlazadas, de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">21</td>
+
+      <td class="courier">forma que el usuario pueda seleccionar la que más le interese en</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">22</td>
+
+      <td class="courier">cada momento.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">23</td>
+
+      <td class="courier">&lt;/P&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">24</td>
+
+      <td class="courier">&lt;P ALIGN="JUSTIFY"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">25</td>
+
+      <td class="courier">Los enlaces o hiperenlaces permiten relacionar distintas páginas</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">26</td>
+
+      <td class="courier">entre sí (hipertexto). Esta característica da la posibilidad de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">27</td>
+
+      <td class="courier">organizar la información en distintas páginas HTML enlazadas, de</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">28</td>
+
+      <td class="courier">forma que el usuario pueda seleccionar la que más le interese en</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">29</td>
+
+      <td class="courier">cada momento.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">30</td>
+
+      <td class="courier">&lt;/P&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">31</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">32</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.6">
+    <p><img alt="" src="Images/img011.png" /></p>
+
+    <p>Figura 3.6: Alineamiento de párrafos: izquierda, derecha, centrado y justificado</p>
+  </div>
+
+  <p>Los bloques de texto se especifican usando la etiqueta <span class="courier">&lt;BLOCKQUOTE&gt; ... &lt;/BLOCKQUOTE&gt;</span>. Un bloque de texto aparece sangrado hacia la derecha. Se suele emplear para marcar citas textuales o deniciones de especial relevancia. Los bloques de texto se pueden anidar para producir un mayor sangrado. El siguiente código muestra el empleo de esta etiqueta. En la Figura 3.7 se puede ver como se muestra en un navegador web.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.11
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">Este texto no tiene sangría.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;BLOCKQUOTE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">1. Un nivel de sangría.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;BLOCKQUOTE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">2. Dos niveles de sangría.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;BLOCKQUOTE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">3. Tres niveles de sangría.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;/BLOCKQUOTE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/BLOCKQUOTE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">Volvemos al nivel 1.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/BLOCKQUOTE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">Volvemos a texto</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">sin sangría.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.7">
+    <p><img alt="" src="Images/img012.png" /></p>
+
+    <p>Figura 3.7: Bloques de texto con distinta sangría</p>
+  </div>
+
+  <p class="titulo4" id="refCap3.9">3.9. Listas</p>
+
+  <p>Las listas permiten organizar la información de una manera lógica, lo que facilita su legibilidad. Existen cinco tipos de listas en <span class="negrita">HTML</span>: listas de definición, listas ordenadas, listas no ordenadas, listas de directorio y listas de menú. Como las dos últimas listas están obsoletas, ya que se visualizan como las listas no ordenadas, no las vamos a ver.</p>
+
+  <p>Las listas se pueden anidar entre sí, incluso si son de distinto tipo. En el caso de anidar listas no numeradas, cada nivel de anidamiento tendrá un tipo de símbolo distinto.</p>
+
+  <p class="titulo5" id="refCap3.9.1">3.9.1. Listas de definición</p>
+
+  <p>Una lista de definición se emplea para mostrar términos con sus correspondientes definiciones, como si se tratase de un glosario o diccionario.</p>
+
+  <p>Una lista de definición se crea con la etiqueta <span class="courier">&lt;DL&gt; ... &lt;/DL&gt;</span> (<span class="cursiva">definition list</span>). Contiene una serie de términos, que se definen con la etiqueta <span class="courier">&lt;DT&gt;</span> (<span class="cursiva">definition term</span>), y cada término posee una o más definiciones, que se indican cada una con la etiqueta <span class="courier">&lt;DD&gt;</span> (<span class="cursiva">definition description</span>). Las definiciones de cada término aparecen con una sangría hacia la derecha.</p>
+
+  <p>El siguiente ejemplo muestra como se usan estas etiquetas. Aunque las líneas que contienen las etiquetas <span class="courier">&lt;DD&gt;</span> aparecen con unos espacios en blanco al principio, estos no influyen para nada en su visualización. En la Figura 3.8 vemos el resultado que produce este ejemplo.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.12
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;DL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;DT&gt;BANCO</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;DD&gt;Lugar donde se deposita dinero</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;DD&gt;Sitio donde se sienta la gente</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;DT&gt;GATO</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;DD&gt;Animal de cuatro patas con pelo</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;DD&gt;Herramienta para levantar un vehículo</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;DT&gt;ORDENADOR</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;DD&gt;Aparato electrónico que realiza cálculos</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/DL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.8">
+    <p><img alt="" src="Images/img013.png" /></p>
+
+    <p>Figura 3.8: Listas de definición</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.9.2">3.9.2. Listas ordenadas</p>
+
+  <p>En las listas ordenadas o numeradas, cada elemento aparece numerado. La etiqueta <span class="courier">&lt;OL&gt; ... &lt;OL&gt;</span> (<span class="cursiva">ordered list</span>) define una lista de este tipo. Cada elemento se define con la etiqueta <span class="courier">&lt;LI&gt;</span> (<span class="cursiva">list item</span>). Esta etiqueta posee dos atributos: <span class="courier">START</span> y <span class="courier">TYPE</span>.</p>
+
+  <p>El atributo <span class="courier">START</span> indica el valor desde el que se empieza la numeración; tiene que ser un valor positivo.</p>
+
+  <p>El atributo <span class="courier">TYPE</span> indica el tipo de numeración de los elementos de la lista. Los posibles valores de este atributos son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="courier">A</span>: indica una numeración con letras en mayúscula.</li>
+
+    <li class="saltomedio"><span class="courier">a</span>: indica una numeración con letras en minúscula.</li>
+
+    <li class="saltomedio"><span class="courier">I</span>: indica una numeración con números romanos en mayúsculas.</li>
+
+    <li class="saltomedio"><span class="courier">i</span>: indica una numeración con números romanos en minúsculas.</li>
+
+    <li><span class="courier">1</span>: indica una numeración con números.</li>
+  </ul>
+
+  <p>El siguiente ejemplo muestra el uso de esta etiqueta. Además, también se puede ver como se pueden anidar listas (incluir una lista dentro de otra lista). En la Figura 3.9 vemos como se muestra esta página.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.13
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">Lista normal, con anidamiento:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;OL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;LI&gt;Lista anidada:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier sangria1">&lt;OL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier sangria1">&lt;LI&gt;Elemento 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier sangria1">&lt;LI&gt;Elemento 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier sangria1">&lt;/OL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/OL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">Lista numerada con letras en mayúsculas:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;OL TYPE="A"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier">&lt;/OL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier">Lista numerada con números romanos:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier">&lt;OL TYPE="i"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">21</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">22</td>
+
+      <td class="courier">&lt;/OL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">23</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">24</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.9">
+    <p><img alt="" src="Images/img014.png" /></p>
+
+    <p>Figura 3.9: Listas ordenadas</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.9.3">3.9.3. Listas no ordenadas</p>
+
+  <p>En las listas no ordenadas, los elementos aparecen marcados mediante unos pequeños elementos gráficos, llamados en inglés <span class="cursiva">bullet</span>. La etiqueta <span class="courier">&lt;UL&gt; ... &lt;/UL&gt;</span> (<span class="cursiva">unordered list</span>) define una lista no ordenada. Cada elemento se define con la etiqueta <span class="courier">&lt;LI&gt;</span> (<span class="cursiva">list item</span>).</p>
+
+  <p>Esta etiqueta posee el atributo <span class="courier">TYPE</span>, que permite cambiar el elemento gráfico empleado para marcar los elementos. Los posibles valores que puede tomar este atributo son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="courier">CIRCLE</span>: un disco con el centro vacío.</li>
+
+    <li class="saltomedio"><span class="courier">DISC</span>: un disco sólido.</li>
+
+    <li><span class="courier">SQUARE</span>: un cuadrado.</li>
+  </ul>
+
+  <p>El siguiente código muestra como se emplea esta etiqueta. Además, en la última lista hay un anidamiento de varias listas. En la Figura 3.10 se puede ver que cuando se anidan varias listas, el elemento gráfico <span class="cursiva">bullet</span> cambia automáticamente, según cual sea el nivel de anidamiento.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.14
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;UL TYPE="CIRCLE"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;/UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;UL TYPE="DISC"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;/UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;UL TYPE="SQUARE"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;LI&gt;Elemento 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;/UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">&lt;UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier">&lt;LI&gt;Elemento a:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier sangria1">&lt;UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier sangria1">&lt;LI&gt;Elemento b:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier sangria2">&lt;UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier sangria2">&lt;LI&gt;Elemento c:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">21</td>
+
+      <td class="courier sangria2">&lt;/UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">22</td>
+
+      <td class="courier sangria1">&lt;/UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">23</td>
+
+      <td class="courier">&lt;/UL&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">24</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">25</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.10">
+    <p><img alt="" src="Images/img015.png" /></p>
+
+    <p>Figura 3.10: Listas no ordenadas</p>
+  </div>
+
+  <p class="titulo4" id="refCap3.10">3.10. Colores</p>
+
+  <p>En HTML se puede cambiar el color de distintos elementos, como el color de fondo de una página, el color del texto, el color de una tabla, etc. Existen dos formas de especificar los colores:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Mediante las componentes <span class="cursiva">Red Green Blue</span> (<span class="negrita">RGB</span>). Mediante esta codificación, se especifica la intensidad de los colores básicos rojo, verde y azul que permiten obtener por combinación cualquier otro color. Cada componente puede variar entre 0 y 255, por lo que se tienen 16 777 216 (256 x 256 x 256) colores. Las componentes se tienen que expresar en hexadecimal y al principio se tiene que poner el signo <span class="courier">#</span>; por tanto, el formato general es <span class="courier">#RRGGBB</span>. Por ejemplo, el color negro se representa mediante <span class="courier">#000000</span>, el color blanco como <span class="courier">#FFFFFF</span> y un rojo brillante como <span class="courier">#FF0000</span>.</li>
+
+    <li>Mediante los nombres de los colores. Existen una serie de colores a los que se les ha asignado un nombre en inglés, como <span class="cursiva">green</span>, <span class="cursiva">olive</span> o <span class="cursiva">white</span>.</li>
+  </ul>
+
+  <p>En el Apéndice B se incluye más información sobre el uso de colores en <span class="negrita">HTML</span> y como pasar las componentes <span class="negrita">RGB</span> de decimal a hexadecimal.</p>
+
+  <p class="titulo5" id="refCap3.10.1">3.10.1. Color de fondo de una página</p>
+
+  <p>El color de fondo de una página se puede cambiar mediante el atributo <span class="courier">BGCOLOR</span> de la etiqueta <span class="courier">&lt;BODY&gt; ... &lt;/BODY&gt;</span>.</p>
+
+  <p class="titulo5" id="refCap3.10.2">3.10.2. Color del texto</p>
+
+  <p>La etiqueta <span class="courier">&lt;FONT&gt; ... &lt;/FONT&gt;</span> posee el atributo <span class="courier">COLOR</span> que permite indicar el color del texto. También se puede cambiar el color del texto para toda una página, el color de los enlaces, el color de los enlaces visitados y el color de los enlaces al activarse. Para ello se emplean los atributos <span class="courier">TEXT</span>, <span class="courier">LINK</span>, <span class="courier">VLINK</span> y <span class="courier">ALINK</span> de la etiqueta <span class="courier">&lt;BODY&gt; ... &lt;/BODY&gt;</span>.</p>
+
+  <p>En el siguiente ejemplo, se cambia el color del texto y de los enlaces para que todos tengan el mismo color y no se puedan diferenciar unos de otros.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.15
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY TEXT="black" LINK="black" VLINK="text" ALINK="black"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;A HREF="http://www.ua.es"&gt;Universidad de Alicante&lt;/A&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;A HREF="http://www.eps.ua.es"&gt;Escuela Politécnica Superior&lt;/A&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <p class="titulo4" id="refCap3.11">3.11. Enlaces</p>
+
+  <p>Los enlaces o hiperenlaces permiten relacionar distintas páginas entre sí (hipertexto). Esta característica da la posibilidad de organizar la información en distintas páginas <span class="negrita">HTML</span> enlazadas, de forma que el usuario pueda seleccionar la que más le interese en cada momento.</p>
+
+  <p>Un hiperenlace puede hacer referencia a un punto determinado de la página que lo contiene, a otra página <span class="negrita">HTML</span> o a un punto determinado de otra página <span class="negrita">HTML</span>. En los dos últimos casos, la página destino puede residir en el mismo servidor que la página que contiene el hiperenlace o en otro distinto.</p>
+
+  <p>La etiqueta que utiliza <span class="negrita">HTML</span> para definir un hiperenlace es <span class="courier">&lt;A&gt; ... &lt;/A&gt;</span>. Todo aquello que aparezca en una página <span class="negrita">HTML</span> entre dichas etiquetas se considera un hiperenlace (será el objeto sensible que al ser pulsado producirá el salto al destino del enlace). Normalmente suele utilizarse texto e imágenes como hiperenlaces.</p>
+
+  <p class="titulo5" id="refCap3.11.1">3.11.1. Enlace a un punto del mismo documento</p>
+
+  <p>Un enlace de este tipo consta de dos partes: una referencia y un destino. El destino se identifica por un nombre. La referencia hará alusión al nombre del destino. En una página se pueden incluir varias referencias a un mismo destino, pero no se pueden crear varios destinos con el mismo nombre. La forma de definir este enlace es:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Referencia: <span class="courier">&lt;A HREF="#nombre"&gt;objeto del enlace&lt;/A&gt;</span>.</li>
+
+    <li>Destino: <span class="courier">&lt;A NAME="nombre"&gt;objeto del destino&lt;/A&gt;</span>.</li>
+  </ul>
+
+  <p>Como puede observarse, en el caso de la referencia el nombre al que hace alusión va precedido del símbolo almohadilla (<span class="courier">#</span>), mientras que en el destino no.</p>
+
+  <p>En el siguiente código de ejemplo, tenemos un enlace sobre la misma página. En la Figura 3.11 vemos que la palabra <span class="courier">enlace</span> es un enlace; al pulsar sobre ella saltamos al destino que podemos ver en la Figura 3.12.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.16
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Esto es una página HTML&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">Aquí tenemos un &lt;A HREF="#destino"&gt;enlace&lt;/A&gt; sobre la misma</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">página. Hay que dejar muchas líneas en blanco para que se</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">pueda comprobar el efecto.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;A NAME="destino"&gt;Esto&lt;/A&gt; es el destino del enlace que aparece</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">al principio de la página.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.11">
+    <p><img alt="" src="Images/img016.png" /></p>
+
+    <p>Figura 3.11: Enlace a un destino interno</p>
+  </div>
+
+  <div class="figure" id="refFigura3.12">
+    <p><img alt="" src="Images/img017.png" /></p>
+
+    <p>Figura 3.12: Destino del enlace interno</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.11.2">3.11.2. Enlace a otro documento</p>
+
+  <p>Para incluir un enlace en un documento a otro documento, simplemente hay que incluir en el documento origen una referencia al documento destino. En este último no hace falta indicar que es destino de un enlace. La forma de definir este enlace es:</p>
+
+  <ul class="cuadrado">
+    <li>Referencia: <span class="courier">&lt;A HREF="pagina.html"&gt;objeto del enlace&lt;/A&gt;</span>.</li>
+  </ul>
+
+  <p>Muy importante: cuando indiquemos el nombre del documento destino (<span class="courier">pagina.html</span>), hay que tener mucho cuidado con las mayúsculas y minúsculas. En el siguiente ejemplo tenemos dos páginas con colores de fondo distintos; en cada una de ellas figura un enlace a la otra.</p>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">html4a.html</span> (Figura 3.13):</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.17
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Esto es una página HTML&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY BGCOLOR="#FFBBBB"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;B&gt;Aquí tenemos un &lt;A HREF="html4b.html"&gt;enlace&lt;/A&gt; a otra</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">página que tiene el fondo azul.&lt;/B&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.13">
+    <p><img alt="" src="Images/img018.png" /></p>
+
+    <p>Figura 3.13: Página con enlace a otra página</p>
+  </div>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">html4b.html</span> (Figura 3.14):</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.18
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Esto es una página HTML&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY BGCOLOR="#BBBBFF"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;B&gt;Aquí tenemos un &lt;A HREF="html4a.html"&gt;enlace&lt;/A&gt; a otra</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">página que tiene el fondo rojo.&lt;/B&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.14">
+    <p><img alt="" src="Images/img019.png" /></p>
+
+    <p>Figura 3.14: Página con enlace a otra página</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.11.3">3.11.3. Enlace a un punto de otro documento</p>
+
+  <p>Este tipo de enlace es una combinación de los dos anteriores. La forma de definir este enlace es:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Referencia: <span class="courier">&lt;A HREF="pagina.html#nombre"&gt;objeto del enlace&lt;/A&gt;</span>.</li>
+
+    <li>Destino: <span class="courier">&lt;A NAME="nombre"&gt;objeto del destino&lt;/A&gt;</span>.</li>
+  </ul>
+
+  <p>En el siguiente ejemplo tenemos una página con dos enlaces a la misma página, pero a distintos destinos dentro de esa página.</p>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">html5a.html</span> (Figura 3.15):</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.19
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Esto es una página HTML&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;B&gt;Aquí tenemos un &lt;A HREF="html5b.html#destino1"&gt;enlace&lt;/A&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">a un destino de otra página.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">Aquí tenemos otro &lt;A HREF="html5b.html#destino2"&gt;enlace&lt;/A&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">a otro destino de la misma página que antes.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/B&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.15">
+    <p><img alt="" src="Images/img020.png" /></p>
+
+    <p>Figura 3.15: Página con dos enlaces a otra página</p>
+  </div>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">html5b.html</span> (Figura 3.16):</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.20
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Esto es una página HTML&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;B&gt;Aquí tenemos un &lt;A NAME="destino1"&gt;destino&lt;/A&gt;, el número 1.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">Aquí tenemos otro &lt;A NAME="destino2"&gt;destino&lt;/A&gt;, el número 2.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;/B&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.16">
+    <p><img alt="" src="Images/img021.png" /></p>
+
+    <p>Figura 3.16: Página destino de los enlaces</p>
+  </div>
+
+  <p class="titulo4" id="refCap3.12">3.12. Tablas</p>
+
+  <p>Hasta que aparecieron las tablas en el lenguaje <span class="negrita">HTML</span>, la única posibilidad de tabular cosas en una página consistía en usar texto con preformato (<span class="courier">&lt;PRE&gt; ... &lt;/PRE&gt;</span>) y colocar manualmente los espacios hasta que las columnas estuviesen perfectamente alineadas. Este proceso, además de ser realmente tedioso, no ofrece resultados con la vistosidad deseada.</p>
+
+  <p>Las tablas se construyen siguiendo una serie de reglas sencillas:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Las tablas en <span class="negrita">HTML</span> se definen mediante los códigos pareados <span class="courier">&lt;TABLE&gt; ... &lt;/TABLE&gt;</span>.</li>
+
+    <li class="saltomedio">Una tabla se compone de celdillas de datos. Una celdilla se define usando los códigos <span class="courier">&lt;TD&gt; ... &lt;/TD&gt;</span>.</li>
+
+    <li class="saltomedio">Las celdillas se agrupan en filas, que se definen con los códigos <span class="courier">&lt;TR&gt; ... &lt;/TR&gt;</span>.</li>
+
+    <li class="saltomedio">Pueden existir celdillas que se emplean como encabezados de filas o columnas, y se definen con los códigos <span class="courier">&lt;TH&gt; ... &lt;/TH&gt;</span>. Este tipo de celdas suele aparecer diferenciada de las otras, normalmente en negrita.</li>
+
+    <li>Las celdillas pueden contener cualquier elemento <span class="negrita">HTML</span>: texto, imágenes, enlaces e incluso otras tablas anidadas.</li>
+  </ul>
+
+  <p>El siguiente ejemplo muestra una tabla con bordes formada por nueve celdas, de las que tres forman parte del encabezado. La tabla se ha dividido en tres filas y tres columna. En la Figura 3.17 vemos como se ve esta página en una navegador.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.21
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TABLE BORDER="1"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier sangria1">&lt;TH&gt;Cabecera 1&lt;/TH&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier sangria1">&lt;TH&gt;Cabecera 2&lt;/TH&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier sangria1">&lt;TH&gt;Cabecera 3&lt;/TH&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;/TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier sangria1">&lt;TD&gt;Elemento (1, 1)&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier sangria1">&lt;TD&gt;Elemento (1, 2)&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier sangria1">&lt;TD&gt;Elemento (1, 3)&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier sangria1">&lt;TD&gt;Elemento (2, 1)&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier sangria1">&lt;TD&gt;Elemento (2, 2)&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier sangria1">&lt;TD&gt;Elemento (2, 3)&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier">&lt;/TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier">&lt;/TABLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">21</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.17">
+    <p><img alt="" src="Images/img022.png" /></p>
+
+    <p>Figura 3.17: Tabla sencilla</p>
+  </div>
+
+  <p>Los atributos más importantes de la etiqueta <span class="courier">&lt;TABLE&gt;</span> son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="courier">BGCOLOR="color"</span>. Color de fondo de la tabla.</li>
+
+    <li class="saltomedio"><span class="courier">BORDER="n"</span>. Indica el grosor del borde exterior de la tabla y de las líneas delimitadoras interiores. Un valor 0 produce que no tenga borde.</li>
+
+    <li class="saltomedio"><span class="courier">CELLPADDING="n"</span>. Determina el espacio que debe existir entre los bordes de cada celdilla y el contenido de la celda.</li>
+
+    <li class="saltomedio"><span class="courier">CELLSPACING="n"</span>. Especifica la cantidad de espacio que debe existir entre celdas contiguas.</li>
+
+    <li class="saltomedio"><span class="courier">HEIGHT="n" | "n %"</span>. Alto de la tabla. Se puede indicar en pixels o en tanto por ciento en relación a la altura total disponible.</li>
+
+    <li><span class="courier">WIDTH="n" | "n %"</span>. Ancho de la tabla. Se puede indicar en pixels o en tanto por ciento en relación a la anchura total disponible.</li>
+  </ul>
+
+  <p>Los atributos más importantes de las etiquetas <span class="courier">&lt;TR&gt;</span>, <span class="courier">&lt;TH&gt;</span> y <span class="courier">&lt;TD&gt;</span> son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="courier">ALIGN="LEFT" | "CENTER" | "RIGHT"</span>. Alineamiento horizontal del contenido de una celda.</li>
+
+    <li class="saltomedio"><span class="courier">vBGCOLOR="color"</span>. Color de fondo de una celda.</li>
+
+    <li><span class="courier">VALIGN="BASELINE" | "BOTTOM" | "MIDDLE" | "TOP"</span>. Alineamiento vertical del contenido de una celda.</li>
+  </ul>
+
+  <p class="titulo5" id="refCap3.12.1">3.12.1. Tablas invisibles</p>
+
+  <p>Se conoce como tablas invisibles a aquellas que no poseen borde (<span class="courier">BORDER="0"</span>). Las tablas invisibles son muy útiles para distribuir los distintos elementos en una página <span class="negrita">HTML</span>.</p>
+
+  <p>Por ejemplo, mediante tablas invisibles se puede mostrar el texto con márgenes a la izquierda y a la derecha, mostrar texto a varias columnas, dividir una imagen en diferentes ficheros y que se muestre como si no estuviese dividida, etc.</p>
+
+  <p class="titulo5" id="refCap3.12.2">3.12.2. Tablas como marcos</p>
+
+  <p>Las tablas son muy útiles para crear marcos alrededor del texto o cualquier otro elemento de una página <span class="negrita">HTML</span>. Se pueden conseguir efectos muy elegantes y a su vez sencillos de realizar mediante diversas tablas anidadas. Por ejemplo, el siguiente código, cuyo resultado se muestra en la Figura 3.18, muestra un texto sobre un fondo rojo rodeado de un marco amarillo en una página cuyo fondo es de color naranja. El tamaño de las celdas de la tabla exterior se ha modificado mediante el atributo <span class="courier">CELLPADDING="10"</span> para obtener un marco más ancho.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.22
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY BGCOLOR="orange"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;CENTER&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;TABLE BORDER="0" BGCOLOR="yellow" CELLPADDING="10"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;TR&gt;&lt;TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier sangria1">&lt;TABLE BORDER="0" BGCOLOR="red"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier sangria1">&lt;TR&gt;&lt;TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier sangria1">&lt;FONT SIZE="5"&gt;HTML útil y práctico&lt;/FONT&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier sangria1">&lt;/TD&gt;&lt;/TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier sangria1">&lt;/TABLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/TD&gt;&lt;/TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/TABLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/CENTER&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.18">
+    <p><img alt="" src="Images/img023.png" /></p>
+
+    <p>Figura 3.18: Tablas como marcos</p>
+  </div>
+
+  <p class="titulo4" id="refCap3.13">3.13. Imágenes</p>
+
+  <p>Al inicio de la web, el empleo de imágenes en los documentos <span class="negrita">HTML</span> era muy escaso<a href="#_ftn23" id="_ftnref23" title="‹23›">‹ 23 ›</a>. Sin embargo, hoy es todo lo contrario y es muy difícil encontrar páginas que no empleen una gran cantidad de imágenes.</p>
+
+  <p>Los dos formatos de imagen que admiten la mayoría de los navegadores son <span class="cursiva">Graphics Interchange Format</span> (<span class="negrita">GIF</span>) y <span class="cursiva">Joint Photographic Experts Group</span> (<span class="negrita">JPEG</span>). Las características básicas de ambos formatos se han resumido en el Cuadro 3.4.</p>
+
+  <table class="cuadro" id="refCuadro3.4">
+    <caption>
+      Cuadro 3.4: Diferencias entre GIF y JPEG
+    </caption>
+
+    <tr>
+      <th>Característica</th>
+
+      <th>GIF</th>
+
+      <th>JPEG</th>
+    </tr>
+
+    <tr>
+      <td>Colores</td>
+
+      <td>256 (8 bits)</td>
+
+      <td>16 777 216 (24 bits)</td>
+    </tr>
+
+    <tr>
+      <td>Transparencia</td>
+
+      <td>Sí</td>
+
+      <td>No</td>
+    </tr>
+
+    <tr>
+      <td>Animación</td>
+
+      <td>Sí</td>
+
+      <td>No</td>
+    </tr>
+
+    <tr>
+      <td>Compresión</td>
+
+      <td>Sin perdidas</td>
+
+      <td>Con perdidas</td>
+    </tr>
+
+    <tr>
+      <td>Dibujo</td>
+
+      <td>Sí</td>
+
+      <td>No</td>
+    </tr>
+
+    <tr>
+      <td>Fotografía</td>
+
+      <td>No</td>
+
+      <td>Sí</td>
+    </tr>
+  </table>
+
+  <p>También existe el formato <span class="negrita">PNG</span>, que se ha creado como sustituto de <span class="negrita">GIF</span>. Este formato gráfico se ha creado específicamente para Internet y otras redes de ordenadores. Sus características más importantes son: transparencia alfa, color de 24 bits y una compresión mejor que <span class="negrita">GIF</span>. Además, emplea compresión sin pérdidas<a href="#_ftn24" id="_ftnref24" title="‹24›">‹ 24 ›</a>. Aunque <span class="sans">Microsoft Internet Explorer</span> y <span class="sans">Netscape Communicator</span> en sus últimas versiones ya lo soportan, aún no se encuentra muy extendido su uso.</p>
+
+  <p class="titulo5" id="refCap3.13.1">3.13.1. Etiqueta &lt;IMG&gt;</p>
+
+  <p>La etiqueta <span class="negrita">HTML</span> que permite insertar una imagen en un documento es <span class="courier">&lt;IMG&gt;</span>. Una imagen se puede colocar en cualquier punto de un documento: en un enlace, en una tabla, etc. Los atributos más importantes de esta etiqueta son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="courier">SRC="localización"</span>. Indica la localización y el nombre de la imagen que se quiere insertar.</li>
+
+    <li class="saltomedio"><span class="courier">BORDER="anchura"</span>. Anchura del borde que se crea alrededor de la imagen. Cuando se coloca una imagen en un enlace, automáticamente se crea un borde; si no se quiere que aparezca el borde, hay que asignar el valor 0 a este atributo.</li>
+
+    <li class="saltomedio"><span class="courier">WIDTH="anchura"</span>. Anchura de la imagen.</li>
+
+    <li class="saltomedio"><span class="courier">HEIGHT="altura"</span>. Altura de la imagen.</li>
+
+    <li class="saltomedio"><span class="courier">ALT="texto"</span>. Texto alternativo que se muestra si el navegador no admite la etiqueta &lt;IMG&gt; o se ha interrumpido la carga de imágenes.</li>
+
+    <li><span class="courier">ALIGN="LEFT" | "RIGHT" | "TOP" | "ABSMIDDLE" | "ABSBOTTOM" | "TEXTTOP" | "MIDDLE" | "BASELINE" | "BOTTOM"</span>. Especifica el alineamiento de la imagen con respecto al texto que la rodea.</li>
+  </ul>
+
+  <p>Se recomienda indicar siempre la anchura y la altura de cada imagen con los atributos <span class="courier">WIDTH</span> y <span class="courier">HEIGHT</span>, ya que así la visualización de las páginas es más rápida<a href="#_ftn25" id="_ftnref25" title="‹25›">‹ 25 ›</a>.</p>
+
+  <p>El siguiente código muestra como se emplean las imágenes. La página está formada por una tabla con cuatro celdas. En cada celda se muestra la misma imagen con un alineamiento distinto. Además, la última imagen también posee un borde. En la Figura 3.19 se puede observar como se visualiza este código en un navegador.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.23
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TABLE BORDER="0"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier sangria1">&lt;TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier sangria1">&lt;IMG SRC="foto.jpg" WIDTH="134" HEIGHT="191" ALIGN="TEXTTOP"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier sangria1">El manitas de la casa</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier sangria1">&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier sangria1">&lt;TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier sangria1">&lt;IMG SRC="foto.jpg" WIDTH="134" HEIGHT="191" ALIGN="MIDDLE"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier sangria1">El manitas de la casa</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier sangria1">&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier sangria1">&lt;TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier sangria1">&lt;IMG SRC="foto.jpg" WIDTH="134" HEIGHT="191" ALIGN="BOTTOM"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier sangria1">El manitas de la casa</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier sangria1">&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier sangria1">&lt;TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier sangria1">&lt;IMG SRC="foto.jpg" WIDTH="134" HEIGHT="191" BORDER="10"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">21</td>
+
+      <td class="courier sangria1">El manitas de la casa</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">22</td>
+
+      <td class="courier sangria1">&lt;/TD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">23</td>
+
+      <td class="courier">&lt;/TR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">24</td>
+
+      <td class="courier">&lt;/TABLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">25</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">26</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.19">
+    <p><img alt="" src="Images/img024.png" /></p>
+
+    <p>Figura 3.19: Imágenes con distinto alineamiento del texto</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.13.2">3.13.2. Imágenes como fondo de una página</p>
+
+  <p>La etiqueta <span class="courier">&lt;BODY&gt; ... &lt;/BODY&gt;</span> posee el atributo <span class="courier">BACKGROUND</span> que permite mostrar una imagen como fondo de una página. Si la imagen tiene un tamaño menor que la ventana del navegador, la imagen se muestra en forma de "mosaico" hasta cubrir toda la superficie de la ventana.</p>
+
+  <p class="titulo4" id="refCap3.14">3.14. Formularios</p>
+
+  <p>Los formularios son la herramienta que ofrece <span class="negrita">HTML</span> para poder obtener información de un usuario que visita una página <span class="negrita">HTML</span> y enviarla al servidor web para su procesamiento.</p>
+
+  <p>Un formulario contiene dos tipos de elementos básicos: campos de datos (cuadros de texto, listas de selección, casillas de verificación) y de control (botones).</p>
+
+  <p>Dentro de una página <span class="negrita">HTML</span> se puede incluir más de un formulario, pero teniendo en cuenta que no pueden anidarse ni solaparse. El servidor web sólo podrá recibir la información introducida en uno de ellos (sólo se envía la información de uno de los formularios al servidor).</p>
+
+  <p>La estructura básica de un formulario es:</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.24
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;FORM NAME="nombre" ACTION="pagina.html" METHOD="metodo"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">Controles del formulario</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;/FORM&gt;</td>
+    </tr>
+  </table>
+
+  <p>El sentido de cada una de las líneas es:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Línea 1: La etiqueta <span class="courier">&lt;FORM&gt;</span> marca el inicio del formulario. El atributo <span class="courier">NAME</span> asigna un nombre al formulario (para poder hacer referencia a él posteriormente), <span class="courier">ACTION</span> indica la dirección (<span class="negrita">URL</span>) de la página o programa que procesa los datos del formulario en el servidor y <span class="courier">METHOD</span> indica el método que se va a utilizar para enviar los datos del formulario al servidor (<span class="courier">GET</span> o <span class="courier">POST</span><a href="#_ftn26" id="_ftnref26" title="‹26›">‹ 26 ›</a>).</li>
+
+    <li class="saltomedio">Línea 2: En esta sección se incluyen los controles que posee el formulario.</li>
+
+    <li>Línea 3: Fin del formulario.</li>
+  </ul>
+
+  <p class="titulo5" id="refCap3.14.1">3.14.1. Controles de un formulario</p>
+
+  <p>Un formulario puede contener los siguiente controles:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio">Botones (para enviar información, borrar y otras acciones): <span class="courier">&lt;INPUT TYPE="SUBMIT"&gt;</span>, <span class="courier">&lt;INPUT TYPE="RESET"&gt;</span>, <span class="courier">&lt;INPUT TYPE="BUTTON"&gt;</span>.</li>
+
+    <li class="saltomedio">Imágenes que actúan como botones (para enviar información): <span class="courier">&lt;INPUT TYPE="IMAGE"&gt;</span>.</li>
+
+    <li class="saltomedio">Campos de verificación: <span class="courier">&lt;INPUT TYPE="CHECKBOX"&gt;</span>.</li>
+
+    <li class="saltomedio">Campos excluyentes (botones de radio): <span class="courier">&lt;INPUT TYPE="RADIO"&gt;</span>.</li>
+
+    <li class="saltomedio">Campos de texto: <span class="courier">&lt;INPUT TYPE="TEXT"&gt;</span>.</li>
+
+    <li class="saltomedio">Campos de contraseña<a href="#_ftn27" id="_ftnref27" title="‹27›">‹ 27 ›</a> (<span class="cursiva">password</span>): <span class="courier">&lt;INPUT TYPE="PASSWORD"&gt;</span>.</li>
+
+    <li class="saltomedio">Campos ocultos: <span class="courier">&lt;INPUT TYPE="HIDDEN"&gt;</span>.</li>
+
+    <li class="saltomedio">Envío de ficheros: <span class="courier">&lt;INPUT TYPE="FILE"&gt;</span>.</li>
+
+    <li class="saltomedio">Listas de selección: <span class="courier">&lt;SELECT&gt; ... &lt;/SELECT&gt;</span>, <span class="courier">&lt;OPTION&gt;</span>.</li>
+
+    <li>Áreas de texto (campos de texto multilínea): <span class="courier">&lt;TEXTAREA&gt; ... &lt;/TEXTAREA&gt;</span>.</li>
+  </ul>
+
+  <p>Para que los datos introducidos en un formulario se envíen al servidor, todo formulario tiene que tener un botón de tipo <span class="courier">TYPE="SUBMIT"</span>, que envía automáticamente los datos. Este botón se puede sustituir por un botón normal <span class="courier">TYPE="BUTTON"</span>, pero entonces el envío se tiene que realizar manualmente mediante código de <span class="cursiva">script</span>.</p>
+
+  <p>Conviene dar un nombre a los campos que coloquemos en un formulario, ya que al enviar la información, ésta se transmite como pares nombre-valor. Para ello, todas las etiquetas de los controles poseen el atributo <span class="courier">NAME</span> para asignar un nombre al control, que deberá ser un nombre único, es decir, ningún otro control tendrá que tener el mismo nombre (excepto en el caso de los botones de radio), y el atributo <span class="courier">VALUE</span> para asignar un valor (todas las etiquetas tienen este atributo excepto <span class="courier">&lt;INPUT TYPE="IMAGE"&gt;</span>, <span class="courier">&lt;SELECT&gt; ... &lt;/SELECT&gt;</span> y <span class="courier">&lt;TEXTAREA&gt; ... &lt;/TEXTAREA&gt;</span>). En los botones, el atributo <span class="courier">VALUE</span> modifica el texto que muestra el botón.</p>
+
+  <p>El siguiente código genera una página <span class="negrita">HTML</span> con un formulario que contiene un campo de texto, un campo de contraseña, dos campos excluyentes con el mismo nombre (y por tanto sólo se puede elegir una de las dos opciones), dos campos de verificación, una lista de selección, un área de texto y dos botones (para enviar información y borrar). En la Figura 3.20 se muestra el formulario tal como se ve en un navegador.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.25
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Esto es una página HTML con formularios&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">Esto es el cuerpo de una página HTML. Esta página posee un formulario:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;HR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;FORM NAME="miFormulario" ACTION="procesa.asp" METHOD="POST"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">Cuadro de texto: &lt;INPUT TYPE="TEXT" NAME="control1a" VALUE="Algo"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">Cuadro de texto contraseña: &lt;INPUT TYPE="PASSWORD" NAME="control1b"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">Botones de radio:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;INPUT TYPE="RADIO" NAME="control2" VALUE="1"&gt;Opción 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier">&lt;INPUT TYPE="RADIO" NAME="control2" VALUE="2"&gt;Opción 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier">Casilla de verificación:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier">&lt;INPUT TYPE="CHECKBOX" NAME="control3a" VALUE="1"&gt;Opción 1</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier">&lt;INPUT TYPE="CHECKBOX" NAME="control3b" VALUE="2"&gt;Opción 2</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">21</td>
+
+      <td class="courier">Lista de selección:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">22</td>
+
+      <td class="courier">&lt;SELECT NAME="control4"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">23</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="ali"&gt;Alicante&lt;/OPTION&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">24</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="val"&gt;Valencia&lt;/OPTION&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">25</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="cas"&gt;Castellón&lt;/OPTION&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">26</td>
+
+      <td class="courier">&lt;/SELECT&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">27</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">28</td>
+
+      <td class="courier">Area de texto: &lt;TEXTAREA NAME="control5"&gt;&lt;/TEXTAREA&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">29</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">30</td>
+
+      <td class="courier">&lt;INPUT TYPE="SUBMIT" VALUE="Enviar"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">31</td>
+
+      <td class="courier">&lt;INPUT TYPE="RESET" VALUE="Borrar"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">32</td>
+
+      <td class="courier">&lt;/FORM&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">33</td>
+
+      <td class="courier">&lt;HR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">34</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">35</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.20">
+    <p><img alt="" src="Images/img025.png" /></p>
+
+    <p>Figura 3.20: Formulario con distintos controles</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.14.2">3.14.2. Campos de verificación</p>
+
+  <p>Los campos de verificación (<span class="courier">&lt;INPUT TYPE="CHECKBOX"&gt;</span>) poseen dos valores: activado y desactivado. Si al enviarse un formulario un campo de verificación está activo, se envía al servidor el valor indicado por <span class="courier">VALUE</span>. Distintos campos de verificación pueden tener el mismo nombre (<span class="courier">NAME</span>), aunque no es lo usual ya que "complica" la programación de la aplicación web en el servidor.</p>
+
+  <p>Si se desea que por defecto un campo de verificación aparezca activado, se tiene que incluir el atributo <span class="courier">CHECKED</span> en la etiqueta <span class="courier">&lt;INPUT TYPE="CHECKBOX"&gt;</span>.</p>
+
+  <p class="titulo5" id="refCap3.14.3">3.14.3. Campos excluyentes</p>
+
+  <p>Los campos excluyentes o botones de radio (<span class="courier">&lt;INPUT TYPE="RADIO"&gt;</span>) tienen sentido cuando se emplean varios a la vez. Un grupo de botones de radio está formado por varios botones de radio que tienen todos el mismo nombre (<span class="courier">NAME</span>). En un grupo de botones de radio sólo un botón de radio puede estar seleccionado en un instante. Un formulario puede contener distintos grupos de botones de radio.</p>
+
+  <p>Los botones de radio también poseen el atributo <span class="courier">CHECKED</span> que permite indicar un botón de radio por defecto.</p>
+
+  <p class="titulo5" id="refCap3.14.4">3.14.4. Campos de texto</p>
+
+  <p>En los campos de texto normal (<span class="courier">&lt;INPUT TYPE="TEXT"&gt;</span>) y de contraseña (<span class="courier">&lt;INPUT TYPE="PASSWORD"&gt;</span>) se puede escribir una cadena de caracteres. Se puede emplear el atributo <span class="courier">SIZE</span> para especificar el tamaño "visual" del cuadro de texto. Es decir, se puede indicar cuantos caracteres se pueden visualizar en un momento dado.</p>
+
+  <p>No confundir este atributo con <span class="courier">MAXLENGTH</span>, que especifica el número máximo de caracteres que se pueden introducir. Si no se especifica nada, se pueden introducir tantos caracteres como se desee.</p>
+
+  <p class="titulo5" id="refCap3.14.5">3.14.5. Listas de selección</p>
+
+  <p>Las listas de selección se crean con la etiqueta <span class="courier">&lt;SELECT&gt; ... &lt;/SELECT&gt;</span>. En las listas de selección se muestra una serie de opciones de las que el usuario puede elegir una. Si se añade el atributo <span class="courier">MULTIPLE</span>, el usuario puede elegir múltiples opciones<a href="#_ftn28" id="_ftnref28" title="‹28›">‹ 28 ›</a>. El atributo <span class="courier">SIZE</span> permite indicar cuantas opciones de la lista se visualizan simultáneamente.</p>
+
+  <p>Cada opción de una lista de selección se indica con la etiqueta <span class="courier">&lt;OPTION&gt;</span>. Cada opción puede tener asociado un valor (<span class="courier">VALUE</span>), que es el valor que se enviará al servidor. Si se desea que una opción aparezca marcada por defecto se tiene que añadir a la opción el atributo <span class="courier">SELECTED</span>.</p>
+
+  <p>El siguiente ejemplo muestra tres listas: una lista normal, una lista normal que muestra tres opciones a la vez y posee una seleccionada por defecto y una lista múltiple. En la Figura 3.21 se puede observar como se visualiza este código en un navegador.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.26
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;FORM&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">Lista de selección normal:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;SELECT NAME="provincia"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="1"&gt;Alicante</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="2"&gt;Valencia</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="3"&gt;Castellón</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;/SELECT&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">Lista de selección normal de tamaño 3:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;SELECT NAME="universidad" SIZE="3"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="uv"&gt;Universidad de Valencia</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="uji"&gt;Universidad Jaime I</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">15</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="ua" SELECTED&gt;Universidad de Alicante</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">16</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="upv"&gt;Universidad Politécnica de Valencia</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">17</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="umh"&gt;Universidad Miguel Hernández</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">18</td>
+
+      <td class="courier sangria1">&lt;/SELECT&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">19</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">20</td>
+
+      <td class="courier">Lista de selección múltiple:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">21</td>
+
+      <td class="courier">&lt;SELECT NAME="departamento" MULTIPLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">22</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="dlsi"&gt;D. de Lenguajes y Sistemas Informáticos</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">23</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="damma"&gt;D. de Análisis M. y M. Aplicada</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">24</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="dfists"&gt;D. de Física, Ingeniería de Sistemas y ...</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">25</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="dagr"&gt;D. de Análisis Geográfico Regional</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">26</td>
+
+      <td class="courier sangria1">&lt;OPTION VALUE="mmlab"&gt;Laboratorio Multimedia</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">27</td>
+
+      <td class="courier">&lt;/SELECT&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">28</td>
+
+      <td class="courier">&lt;/FORM&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">29</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">30</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.21">
+    <p><img alt="" src="Images/img026.png" /></p>
+
+    <p>Figura 3.21: Distintas listas de selección</p>
+  </div>
+
+  <p class="titulo5" id="refCap3.14.6">3.14.6. Áreas de texto</p>
+
+  <p>La etiqueta <span class="courier">&lt;TEXTAREA&gt; ... &lt;/TEXTAREA&gt;</span> define un área de texto donde se pueden escribir varias líneas de texto. Esta etiqueta posee dos atributos que permiten modificar su tamaño. El atributo <span class="courier">COLS</span> indica el número de caracteres por línea que se pueden mostrar sin tener que realizar <span class="cursiva">scroll</span>. El atributo <span class="courier">ROWS</span> define el número de líneas que se pueden mostrar sin realizar <span class="cursiva">scroll</span>.</p>
+
+  <p>Si se quiere que el área de texto muestre un texto por defecto, se puede incluir entre las etiquetas de inicio y fin. El siguiente ejemplo muestra dos áreas de texto de distinto tamaño, una de ellas con un texto por defecto. En la Figura 3.22 se puede ver esta página visualizada en un navegador. Se pueden observar las barras de desplazamiento vertical y horizontal.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.27
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;FORM&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">Área 1:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;TEXTAREA ROWS="2" COLS="40"&gt;Texto por defecto...&lt;/TEXTAREA&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">Área 2:</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;TEXTAREA ROWS="4" COLS="20"&gt;&lt;/TEXTAREA&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">&lt;/FORM&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.22">
+    <p><img alt="" src="Images/img027.png" /></p>
+
+    <p>Figura 3.22: Áreas de texto de distinto tamaño</p>
+  </div>
+
+  <p class="titulo4" id="refCap3.15">3.15. Marcos</p>
+
+  <p>Un marco (<span class="cursiva">frame</span>) es una región de una ventana que actúa como si fuera una ventana ella misma. La ventana principal puede contener múltiples marcos, de forma que diferentes regiones de la ventana muestren diferentes contenidos. A su vez, un marco puede contener otros marcos.</p>
+
+  <p>Normalmente, los marcos se emplean para dividir la ventana del navegador en dos partes: en una de ellas, la más pequeña, se muestra un índice del sitio web (esta parte no varía); la otra, la más grande, modifica su contenido según los enlaces que se pulsen en el índice.</p>
+
+  <p>Para definir los marcos se emplean las tres etiquetas siguientes: <span class="courier">&lt;FRAMESET&gt; ... &lt;/FRAMESET&gt;</span>, <span class="courier">&lt;FRAME&gt;</span> y <span class="courier">&lt;NOFRAMES&gt; ... &lt;/NOFRAMES&gt;</span>.</p>
+
+  <p>La etiqueta <span class="courier">&lt;FRAMESET&gt; ... &lt;/FRAMESET&gt;</span> define un conjunto de marcos que van a aparecer en la ventana. Esta etiqueta contiene una o más etiquetas <span class="courier">&lt;FRAME&gt;</span> que definen cada uno de los marcos. Los principales atributos de esta etiqueta son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="courier">BORDER="anchura"</span>. Anchura del borde de cada marco.</li>
+
+    <li class="saltomedio"><span class="courier">FRAMEBORDER="YES" | "NO"</span>. Indica si el borde es en tres dimensiones o plano.</li>
+
+    <li><span class="courier">COLS="listaAnchurasColumnas"</span>. Anchuras de cada uno de los marcos, separadas por comas. La anchura se puede indicar como número de pixels o como un porcentaje sobre el total disponible (en este caso, el número se tiene que acompañar del signo porcentaje). Por ejemplo, si se quiere dividir la ventana del navegador en dos columnas que ocupan el 30 y 70 por ciento:</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.28
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;FRAMESET COLS="30%,70%"&gt;</td>
+    </tr>
+  </table>
+
+  <ul class="cuadrado">
+    <li><span class="courier">ROWS="listaAlturasFilas"</span>. Alturas de cada uno de los marcos, separadas por comas. La altura se puede indicar como número de pixels o como un porcentaje sobre el total disponible (en este caso, el número se tiene que acompañar del signo porcentaje). Por ejemplo, si se quiere dividir la ventana del navegador en tres filas que ocupan el 10, 80 y 10 por ciento:</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.29
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;FRAMESET ROWS="10%,80%,10%"&gt;</td>
+    </tr>
+  </table>
+
+  <p>La etiqueta <span class="courier">&lt;FRAMESET&gt; ... &lt;/FRAMESET&gt;</span> define el número de filas (<span class="courier">ROWS</span>) o columnas (<span class="courier">COLS</span>) en que se va a dividir la ventana. Los dos atributos no se pueden emplear simultáneamente. Esta etiqueta se puede anidar, de forma que dentro de un <span class="courier">&lt;FRAMESET&gt;</span> se puede incluir otro <span class="courier">&lt;FRAMESET&gt;</span>. De este modo, se pueden combinar filas con columnas.</p>
+
+  <p>La etiqueta <span class="courier">&lt;FRAME&gt;</span> define un marco, que es una región de una ventana con contenido propio y que se puede navegar de forma independiente. Cada marco tiene su propia <span class="negrita">URL</span> que define el contenido que se va a mostrar. Los atributos más importantes de esta etiqueta son:</p>
+
+  <ul class="cuadrado">
+    <li class="saltomedio"><span class="courier">SRC="URL"</span>. Indica la <span class="negrita">URL</span> del documento que se quiere mostrar en el marco.</li>
+
+    <li class="saltomedio"><span class="courier">NAME="nombreMarco"</span>. Nombre del marco. Este nombre se emplea en la etiqueta <span class="courier">&lt;A&gt; ... &lt;/A&gt;</span> para mostrar una página en un marco concreto.</li>
+
+    <li class="saltomedio"><span class="courier">FRAMEBORDER="YES" | "NO"</span>. Igual que el atributo de la etiqueta <span class="courier">&lt;FRAMESET&gt; ... &lt;/FRAMESET&gt;</span>.</li>
+
+    <li class="saltomedio"><span class="courier">NORESIZE</span>. Si aparece este atributo, no se puede modificar el tamaño del marco.</li>
+
+    <li><span class="courier">SCROLLING="YES" | "NO" | "AUTO"</span>. Indica si pueden aparecer barras de desplazamiento cuando no quepa toda la página en el marco.</li>
+  </ul>
+
+  <p>Por último, la etiqueta <span class="courier">&lt;NOFRAMES&gt; ... &lt;/NOFRAMES&gt;</span> se emplea para mostrar contenido en los navegadores que no pueden mostrar marcos. Los navegadores que sí que pueden mostrar marcos ignoran todo el contenido de esta etiqueta.</p>
+
+  <p>Lo interesante de los marcos es que se puede variar el contenido de los mismos de forma independiente. Desde un marco se puede modificar el contenido de otro. Para ello, se tiene que emplear un enlace (<span class="courier">&lt;A&gt; ... &lt;/A&gt;</span>) con el atributo <span class="courier">TARGET</span>. Este atributo debe de tomar el nombre del marco que se quiere modificar (el nombre se habrá indicado en la etiqueta <span class="courier">&lt;FRAME&gt;</span> con el atributo <span class="courier">NAME</span>).</p>
+
+  <p>En el siguiente ejemplo, la página <span class="courier">frame1.html</span> crea una venta con dos marcos (<span class="courier">marcoIzq</span> y <span class="courier">marcoDer</span>). En el marco izquierdo se muestra la página <span class="courier">frame1a.html</span>; en el marco derecho se muestran las páginas <span class="courier">frame1b.html</span> y <span class="courier">frame1c.html</span> según se seleccione en los enlaces que contiene <span class="courier">marcoIzq</span>. En la Figura 3.23 vemos el resultado de mostrar estas páginas en un navegador.</p>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">frame1.html</span>:</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.30
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Ejemplo de marcos&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;FRAMESET COLS="20%,80%" BORDER=10&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier sangria1">&lt;FRAME SRC="frame1a.html" NAME="marcoIzq"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier sangria1">&lt;FRAME SRC="frame1b.html" NAME="marcoDer"&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier sangria1">&lt;NOFRAMES&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier sangria1">Su navegador de Internet no permite mostrar marcos</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier sangria1">&lt;/NOFRAMES&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">&lt;/FRAMESET&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">frame1a.html</span>:</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.31
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Ejemplo de marcos&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">Esta página tiene que aparecer a la izquierda.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">Si pincha &lt;A HREF="frame1b.html" TARGET="marcoDer"&gt;aquí&lt;/A&gt;,</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">9</td>
+
+      <td class="courier">a la derecha tiene que aparecer la página 1.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">10</td>
+
+      <td class="courier">&lt;BR&gt;&lt;BR&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">11</td>
+
+      <td class="courier">Si pincha &lt;A HREF="frame1c.html" TARGET="marcoDer"&gt;aquí&lt;/A&gt;,</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">12</td>
+
+      <td class="courier">a la derecha tiene que aparecer la página 2.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">13</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">14</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">frame1b.html</span>:</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.32
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Ejemplo de marcos&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">Esta es la página &lt;B&gt;1&lt;/B&gt;.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <ul class="cuadrado">
+    <li>Página <span class="courier">frame1c.html</span>:</li>
+  </ul>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.33
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">&lt;HTML&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">&lt;HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">&lt;TITLE&gt;Ejemplo de marcos&lt;/TITLE&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">4</td>
+
+      <td class="courier">&lt;/HEAD&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">5</td>
+
+      <td class="courier">&lt;BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">6</td>
+
+      <td class="courier">Esta es la página &lt;B&gt;2&lt;/B&gt;.</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">7</td>
+
+      <td class="courier">&lt;/BODY&gt;</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">8</td>
+
+      <td class="courier">&lt;/HTML&gt;</td>
+    </tr>
+  </table>
+
+  <div class="figure" id="refFigura3.23">
+    <p><img alt="" src="Images/img028.png" /></p>
+
+    <p>Figura 3.23: Página con dos marcos verticales</p>
+  </div>
+
+  <p class="titulo4" id="refCap3.16">3.16. Guía de estilo</p>
+
+  <p>A continuación hemos incluido una serie de indicaciones que pueden ayudar a la hora de crear páginas web.</p>
+
+  <p class="titulo5" id="refCap3.16.1">3.16.1. Organizar el código HTML</p>
+
+  <p>Si se crea una página web directamente con el código <span class="negrita">HTML</span>, es recomendable hacerlo como si se estuviese programando. Es decir, organizar el código para que sea más fácil su lectura, poner comentarios, etc. Todo ello supone un trabajo extra, pero facilita el mantenimiento de las páginas.</p>
+
+  <p class="titulo5" id="refCap3.16.2">3.16.2. Cuidado con los colores</p>
+
+  <p>Hay que llevar mucho cuidado con las combinaciones de colores que se emplean, ya que algunas cuestan mucho de leer.</p>
+
+  <p>Si tenemos páginas con mucho texto, es conveniente usar una combinación de colores de alto contraste, que facilite la lectura: un color oscuro sobre un fondo claro (negro o azul sobre blanco o un color crema) o al revés (un color claro para el texto sobre un fondo oscuro).</p>
+
+  <p class="titulo5" id="refCap3.16.3">3.16.3. Cuidado con los tipos de letra</p>
+
+  <p>El uso de distintos tipos de letra puede originar bastantes problemas. Se suele recomendar un tipo de letra <span class="sans">sans-serif</span> (como <span class="sans">Arial</span>, <span class="sans">Helvetica</span>, <span class="sans">Tahoma</span> o <span class="sans">Verdana</span>) para la lectura de texto en pantalla.</p>
+
+  <p>A menudo, se elige un tipo de letra para un sitio web y aparece en algunas partes de los documentos texto en otro tipo de letra. No causa un buen efecto en el visitante "sufrir" este problema.</p>
+
+  <p>Por último, hay que intentar elegir tipos de letra "estándar". Si empleamos un tipo poco usual, seguramente la mayoría de la gente no lo tendrá instalado en sus ordenadores y las páginas no se visualizarán correctamente.</p>
+
+  <p class="titulo5" id="refCap3.16.4">3.16.4. Sacar partido al hipertexto</p>
+
+  <p>Las referencias cruzadas permiten abordar un mismo tema en distintos niveles de profundidad. Se puede permitir al usuario pasar de largo información técnica o conceptos avanzados de un tema, estableciendo enlaces a textos más extensos. En general, podemos disponer de una página corta, con una presentación de la información escueta, que lleve a páginas que contengan detalles acerca de los temas tratados.</p>
+
+  <p class="titulo5" id="refCap3.16.5">3.16.5. Usar las capacidades multimedia</p>
+
+  <p>Como se suele decir, una imagen vale más que mil palabras. Pero hay que tener cuidado: el uso de muchas imágenes puede confundir al usuario. Además, hay que tener en cuenta la velocidad de transferencia: las imágenes emplean muchos kilobytes, lo que aumenta el tiempo que tarda en cargarse una página. Hay que ponerse como límite de 20 a 30 Kb de imágenes por página.</p>
+
+  <p>Un truco muy importante: una vez cargada una imagen, el navegador la almacena en la cache; cuando volvamos a emplear esa misma imagen en otra página, no necesitará descargarla otra vez. Para que nuestras páginas se carguen más rápidamente, es aconsejable combinar los mismos elementos gráficos (iconos, líneas, imágenes de fondo, etc.) en todas nuestras páginas.</p>
+
+  <p>Por último, mucho cuidado con las imágenes de fondo: si tienen muchos colores y detalles pueden ocultar otros detalles de la página e impedir la lectura correcta del texto.</p>
+
+  <p class="titulo5" id="refCap3.16.6">3.16.6. Identidad corporativa</p>
+
+  <p>Hay que intentar conseguir una "identidad corporativa" en todas las páginas: emplear los mismos tipos de letra, colores, imágenes de fondo, iconos, etc., para dotar a las páginas de un estilo homogéneo. De esta forma, el usuario se sentirá "inmerso" en las páginas.</p>
+
+  <p class="titulo5" id="refCap3.16.7">3.16.7. Permitir que los usuarios se comuniquen</p>
+
+  <p>En las páginas hay que incluir una dirección de contacto para que los usuarios se puedan comunicar. De este modo, se podrán recibir sugerencias, indicaciones de cómo mejorar las páginas o errores localizados.</p>
+
+  <p class="titulo5" id="refCap3.16.8">3.16.8. Facilitar las búsquedas</p>
+
+  <p>Una adecuada clasificación y exposición de la información que contienen nuestras páginas facilitará la navegación de los usuarios. En general, la página principal (<span class="cursiva">homepage</span>) debería presentar en una sola página toda la información disponible en nuestro servidor.</p>
+
+  <p class="titulo5" id="refCap3.16.9">3.16.9. Revisar las páginas periódicamente</p>
+
+  <p>No hay nada peor que encontrar enlaces rotos: enlaces que apuntan a páginas que no existen, porque se hayan borrado, movido de sitio o falle la ruta de acceso. Una revisión periódica ahorra al usuario muchos problemas. Además, es importante indicar la fecha de la última modificación y las novedades añadidas. Esto permite, entre otras cosas, que el usuario se cerciore de la seriedad del autor de las páginas y facilita la navegación a los usuarios asiduos.</p>
+
+  <p>Si una página aparece con un signo "en construcción" y su última revisión es del año anterior, el usuario pensará que es mejor buscar lo que quiere en otra parte.</p>
+
+  <p class="titulo5" id="refCap3.16.10">3.16.10. Los enlaces</p>
+
+  <p>La elección del lugar apropiado para poner los enlaces es crucial para una correcta presentación del hipertexto. Por ejemplo, compárense los dos siguientes trozos de código <span class="negrita">HTML</span>. Es evidente que la primera opción es mucho mejor que la segunda.</p>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.34
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">La &lt;A HREF="/concejalias/turismo"&gt;Concejalía de Turismo&lt;/A&gt; se</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">encarga de gestionar el turismo rural y de playa ...</td>
+    </tr>
+  </table>
+
+  <table class="ejemplos">
+    <caption>
+      Ejemplo 3.35
+    </caption>
+
+    <tr>
+      <td class="courier numeral">1</td>
+
+      <td class="courier">La Concejalía de Turismo se encarga de gestionar el turismo rural</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">2</td>
+
+      <td class="courier">y de playa ... (&lt;A HREF="/concejalias/turismo"&gt;haga click aquí</td>
+    </tr>
+
+    <tr>
+      <td class="courier numeral">3</td>
+
+      <td class="courier">para ver más información acerca de la Concejalía de Turismo&lt;/A&gt;).</td>
+    </tr>
+  </table>
+
+  <p>En los primeros años de la web había que poner <span class="sans">haga click</span> porque la gente no estaba acostumbrada a los enlaces, pero eso ya es historia.</p>
+
+  <br><br><hr>
+    
+  <p class="saltop"><a href="#_ftnref10" id="_ftn10" title="‹10›">‹ 10 ›</a> <span class="cursiva">Conseil Europeen pour le Recherche Nucleaire</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref11" id="_ftn11" title="‹11›">‹ 11 ›</a> Tim Berners-Lee, Robert Cailliau, Jean-François Groff, Bernd Pollermann. World-Wide Web: The Information Universe. <span class="cursiva">Electronic Networking: Research, Applications and Policy</span>, Vol. 1, No. 2, Meckler, Westport CT, primavera 1992.</p>
+
+  <p class="saltop"><a href="#_ftnref12" id="_ftn12" title="‹12›">‹ 12 ›</a> <span class="cursiva">Defense Advanced Research Projects Agency</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref13" id="_ftn13" title="‹13›">‹ 13 ›</a> <span class="cursiva">Institut National de Recherche en Informatique et Automatique</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref14" id="_ftn14" title="‹14›">‹ 14 ›</a> Algunas versiones, como <span class="negrita">HTML+</span> o <span class="negrita">HTML 3.0</span> nunca llegaron a estándar.</p>
+
+  <p class="saltop"><a href="#_ftnref15" id="_ftn15" title="‹15›">‹ 15 ›</a> Las páginas estáticas también pueden mostrar datos procedentes de una base de datos mediante la técnica <span class="cursiva">snap shot</span>. La información de la base de datos se convierte en <span class="negrita">HTML</span> de forma manual, automáticamente cuando ocurre un suceso o a una fecha y hora dadas (por ejemplo, todos los días a las tres de la mañana). Esta técnica es adecuada para catálogos, listas de precios, directorios telefónicos, etc., que no se modifican muy a menudo.</p>
+
+  <p class="saltop"><a href="#_ftnref16" id="_ftn16" title="‹16›">‹ 16 ›</a> Esta extensión existe debido a que en DOS y Microsoft Windows 3.x los ficheros sólo pueden tener una extensión de tres caracteres.</p>
+
+  <p class="saltop"><a href="#_ftnref17" id="_ftn17" title="‹17›">‹ 17 ›</a> Aunque los nombres de los archivos pueden tener mayúsculas y minúsculas, para acceder a un archivo no se tienen en cuenta. Por ello, en un mismo directorio no pueden existir dos archivos que sólo se diferencian porque algunos caracteres aparecen en mayúsculas en uno y en minúsculas en el otro.</p>
+
+  <p class="saltop"><a href="#_ftnref18" id="_ftn18" title="‹18›">‹ 18 ›</a> Los navegadores actuales son muy flexibles: si falta alguna etiqueta de fin no producen un error y muestran la página lo mejor posible. De todas formas, es recomendable ajustarse siempre a la sintaxis y no cometer errores.</p>
+
+  <p class="saltop"><a href="#_ftnref19" id="_ftn19" title="‹19›">‹ 19 ›</a> Información sobre la información. Los metadatos, por ejemplo, permiten indicar cómo, cuándo y quién ha recogido una información y como le ha dado formato.</p>
+
+  <p class="saltop"><a href="#_ftnref20" id="_ftn20" title="‹20›">‹ 20 ›</a> <span class="cursiva">Standard for ARPA Internet Text Messages</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref21" id="_ftn21" title="‹21›">‹ 21 ›</a> En la documentación de <span class="sans">Netscape Communicator</span> no figura el valor <span class="courier">JUSTIFY</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref22" id="_ftn22" title="‹22›">‹ 22 ›</a> Se puede cambiar con la etiqueta <span class="courier">&lt;BASEFONT SIZE="numero"&gt;</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref23" id="_ftn23" title="‹23›">‹ 23 ›</a> Las razones pueden ser varias: los ordenadores no tenían la suficiente potencia para manejar varias imágenes a la vez, el ancho de banda en la comunicaciones era menor o a nadie se le había ocurrido la idea de hacer un uso "intensivo y extensivo" de las imágenes.</p>
+
+  <p class="saltop"><a href="#_ftnref24" id="_ftn24" title="‹24›">‹ 24 ›</a> Compresión de la información en la que todos los datos iniciales se almacenan, por lo que la calidad de las imágenes no se ve afectada al recuperar las imágenes una vez comprimidas.</p>
+
+  <p class="saltop"><a href="#_ftnref25" id="_ftn25" title="‹25›">‹ 25 ›</a> El navegador conoce el tamaño de las imágenes antes de cargarlas, por lo que ya puede reservar el correspondiente espacio en el diseño de la página.</p>
+
+  <p class="saltop"><a href="#_ftnref26" id="_ftn26" title="‹26›">‹ 26 ›</a> Normalmente se utiliza <span class="courier">POST</span>, que indica que los datos se envíen por la entrada estándar. Si se utiliza <span class="courier">GET</span>, los datos se envían unidos a la <span class="negrita">URL</span>.</p>
+
+  <p class="saltop"><a href="#_ftnref27" id="_ftn27" title="‹27›">‹ 27 ›</a> Un campo de contraseña es idéntico a un campo de texto, pero los caracteres se ocultan mediante asteriscos.</p>
+
+  <p class="saltop"><a href="#_ftnref28" id="_ftn28" title="‹28›">‹ 28 ›</a> Para seleccionar varias opciones se emplean la tecla <span class="negrita">Control</span> para seleccionar de una en una y la tecla <span class="negrita">Mays</span> para seleccionar un conjunto contiguo de opciones (se marca la primera y la última).</p>
+</body></html>
+
+</html>

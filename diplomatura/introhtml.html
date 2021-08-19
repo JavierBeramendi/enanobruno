@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Instalación de software</title>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+      body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+        h1, h2, h3, h4, h5, h6 { text-align:left; margin-top:15%; }
+                h1 { font-size:2em; }
+                h2 { font-size:1.8em; }
+                h3 { font-size:1.6em; }
+                h4 { font-size:1.4em; }
+                h5 { font-size:1.3em; }
+                h6 { font-size:1.2em; }
+  /* Lineas horizontales */
+  hr { background-color: black; height: 0.1em; margin-left: 0em; margin-right: 0em; }
+    .hr1 { height: 0.2em; margin-left: 8em; margin-right: 0em; }
+
+  /* Listas */
+  ul { list-style-type: disc; }
+    .sin { list-style-type: none; }
+    .circulo { list-style-type: circle; }
+    .cuadrado { list-style-type: square; }
+  li
+    .saltomedio { padding-bottom: 1em; }
+    .sin { list-style: none; display: inline }
+
+  /* Imágenes con pie */
+  div.figure {
+      float: center;
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+  div.figure p {
+    text-align: center;
+    text-indent: 0;
+    }
+  /* Tablas */
+  table.prefacio { border-collapse:collapse; margin: 1em auto 1.5em; border: none; width:100%; }
+  table.prefacio tr td { border: none; padding: 0em 1em 0em; }
+    .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+
+  table.cuadro { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadro th { border: 1px solid black; text-align: center; padding: 0em 1em 0em;  }
+  table.cuadro td { border-left: 1px solid black; border-right: 1px solid black; text-align: center; padding: 0em 1em 0em; }
+  table.cuadro caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+        .centrado { text-align:center; text-indent:0 }
+
+  table.cuadrol { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadrol th { border: 1px solid black; text-align: left; padding: 0em 1em 0em;  }
+  table.cuadrol td { border: 1px solid black; text-align: left; padding: 0em 1em 0em; }
+  table.cuadrol caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+
+  table.ejemplos { border-collapse: collapse; margin: 1em auto 1.5em; border-top: 1px solid black; border-bottom: 1px solid black; width:90%; }
+  table.ejemplos caption { caption-side: top; text-align: center; }
+  table.ejemplos tr, td { border: none; padding-left: 0.5em; }
+        .courier { font-family: "Courier", courier; font-size: 0.9em; }
+    .numeral { font-size: 0.65em; width: 1em; }
+
+  table.biblio { border-collapse: collapse; margin: 1em auto 1.5em; border: none; width:95%; }
+  table.biblio tr, td { border: none; padding-left: 0.5em; }
+    .numero { width: 1em; }
+
+  p { text-align:justify; margin:0; text-indent:1.5em; line-height:1.4em; }
+
+    .imagencentrada { text-align: center; text-indent: 0; margin: 1.5em 0 1.5em 0; }
+    .imagenizquierda { float: left; padding: 0.5em 0.0em 0.5em 0; text-indent: 1.5em; }
+
+        .capital { font-variant:small-caps; }
+        .sans { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+        .courier { font-family: "Courier", courier; }
+        .comic { font-family:"Marker Felt", "Comic Sans MS", "Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+
+        .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+        .centrado { text-align:center; text-indent:0 }
+        .asangre { text-indent:0 }
+        .cursiva { font-style: italic }
+        .negrita { font-weight: bold }
+    .subrayado { text-decoration: underline }
+        .salto { padding-bottom:2em; }
+        .saltomedio { padding-bottom:1em; }
+        .cita { margin:1.5em; }
+        .banner { width:75%; text-align:center; text-indent:0; margin:1.5em auto; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+        .sinmargen { margin:0; }
+        
+        .cubierta { margin:2% auto;max-width:95%;height:95%; }
+                .cubierta img { height:100%; }
+        .sinopsis, .sinopsis p { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; text-indent:0; }
+        .info { width:90%; font-size:0.8em; margin:0.5em 0.5em 0; text-indent:0; text-align:justify; }
+        .legal { width:90%; font-size:0.8em; margin:5em 1.5em 0; text-indent:0; }
+                .legal p { text-indent:0; text-align:left; }
+        .intro { margin:5em 0 1.5em; text-indent:0; text-align:right; }
+                .intro p { text-align:right;text-indent:0; }
+
+        /*salto previo de párrafo*/
+    .saltop { margin-top:1em; }
+
+    /*Formato enlace de notas al pie dentro del texto*/
+    .notas { color: black;cursor: pointer;text-decoration:none; line-height: normal; font-size:0.75em;vertical-align:super; }
+
+    /*Formato enlace de notas al pie dentro archivo notes.html (última hoja del documento)*/
+    .notasf { color: black;cursor: pointer;text-decoration:none; }
+
+    /*Saltos de tabulacion*/
+    .sangria1 { text-indent:3em }
+    .sangria2 { text-indent:6em }
+    .sangria3 { text-indent:9em }
+    .sangria4 { text-indent:12em }
+    .sangria5 { text-indent:15em }
+
+    /*Tamaños de letra */
+    .tamano1 { font-size:2em; }
+    .tamano2 { font-size:1.8em; }
+    .tamano3 { font-size:1.6em; }
+    .tamano4 { font-size:1.4em; }
+    .tamano5 { font-size:1.3em; }
+    .tamano6 { font-size:1.2em; }
+
+    .margenizquierdo1-5 { margin-left: 1.5em }
+    .margenizquierdo2 { margin-left: 2em }
+    .margenizquierdo4 { margin-left: 4em }
+    .margenizquierdo6 { margin-left: 6em }
+    .margenizquierdo8 { margin-left: 8em }
+
+    .indice0  { font-size: 1.2em; font-weight: bold; padding-top: 0.5em }
+    .indice1  { font-size: 1.1em; text-indent:3.5em }
+    .indice2  { font-size: 1.1em; text-indent:5.5em }
+    .indice11  { font-size: 1.1em; text-indent:3.5em; padding-top: 0.5em }
+
+    .versalita {font-size: 0.75em}
+
+    .titulo4 { text-indent: 0; font-size: 1.4em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo5 { text-indent: 0; font-size: 1.3em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo6 { text-indent: 0; font-size: 1em; font-weight: bold; padding-top: 1em; padding-bottom: 1em; }
+
+        .indicecapitulo { width:90%; text-align:center; text-indent:0; margin:0em 1.5em 0em; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+
+        .ejemplo { width:90%; text-indent:0; margin:1em 1.5em 1.5em; padding:0.5em 0em; border:1px solid black; border-left:none; border-right:none; }
+
+    .ejemplo .caption { float: none; font-weight: normal; margin-top: -20px; margin-left: 0px; margin-bottom: 0px; padding-right: 16px; padding-left: 5px ; padding-bottom: 0px; padding-top: 0px; background-color: grey; text-align: center }
+
+        .ePUBmarca, .ePUBtitulo, .ePUBsubtitulo, .ePUBautor, .ePUBv, .ePUBfirma, .ePUBgratis { text-align:center; font-weight:normal; text-indent:0; }
+                .ePUBmarca { text-align:center; }
+                        .ePUBmarca span { display:inline-block;width:10em; margin:3em auto; }
+                        .ePUBmarca img { width:100%; }
+                .ePUBautor { margin-bottom:0.5em; }
+                        .ePUBautor code { font-size:1.2em;color:#999; }
+                .ePUBtitulo { margin:0;font-size:1em;text-align:center; }
+                        .ePUBtitulo code { font-weight:bold;font-size:1.8em; }
+                .ePUBsubtitulo { margin:0.3em 0 0; }
+                        .ePUBsubtitulo code { font-weight:bold;font-size:1em; }
+                .ePUBv, .ePUBv code { color:#5084b8;font-size:0.9em;font-weight:bold;margin:0;margin:3em 0 0; }
+                .ePUBfirma, .ePUBfirma b, .ePUBfirma code { font-size:0.8em;margin:0; }
+                .ePUBfecha { color:#999; }
+                .ePUBgratis { text-align:center; }
+                        .ePUBgratis span { display:inline-block;width:14em;margin:3em auto 0; }
+                        .ePUBgratis img { width:100%; }
+
+                          
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  </style>
+  </head>
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <link href="../Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2 id="faq026">Introducción al lenguaje HTML</h2>
+
+  <p>El HTML es un lenguaje o código que se ideó para crear páginas de internet. Este lenguaje o estos códigos son reconocidos por un editor de texto HTML el cual, de acuerdo a esos códigos, imágenes, textos, tablas y un sin fin de elementos que se colocan dentro del código permiten la creación de una página de internet.</p>
+
+  <p>Los ebook funcionan, básicamente, como una página web, guardándose su contenido casi como si de páginas web se tratase.</p>
+
+  <p class="salto10">Siendo muy básicos necesitamos entender que el lenguaje HTML funciona por medio de «etiquetas» que dan propiedades concretas a los objetos que se encuentran entre la etiqueta de apertura (<span class="hb">&lt;x&gt;</span>) y la etiqueta de cierre (<span class="hb">&lt;/x&gt;</span>).</p>
+
+  <p>Cada archivo de un ebook, uno de los capítulos del libro, por ejemplo, debe incluir el siguiente código:</p>
+
+  <div class="ejcodigo">
+    <p class="hb">&lt;html&gt;</p>
+
+    <p class="hb margizq10">&lt;head&gt;</p>
+
+    <p class="hb margizq23">&lt;title&gt;&lt;/title&gt;</p>
+
+    <p class="hg margizq23">&lt;!--llamada a la página de CSS--&gt;</p>
+
+    <p class="hb margizq10">&lt;/head&gt;</p>
+
+    <p class="hb margizq10">&lt;body&gt;</p>
+
+    <p class="hg margizq23">&lt;!--CONTENIDO EL CAPÍTULO--&gt;</p>
+
+    <p class="hb margizq10">&lt;/body&gt;</p>
+
+    <p class="hb">&lt;/html&gt;</p>
+  </div>
+
+  <p>La etiqueta <span class="hb">&lt;html&gt;</span> nos indica el punto de partida del código que creará la página el capítulo. El final se indica, como en todas las sentencias, con <span class="hb">&lt;/html&gt;</span></p>
+
+  <p>La etiqueta <span class="hb">&lt;head&gt;</span> nos indica el punto de partida de la cabecera del capítulo, área que se utiliza para incluir códigos y textos invisibles que dan forma a algunos aspectos de la página.</p>
+
+  <p>La etiqueta <span class="hb">&lt;title&gt;</span>, que en las páginas web se utiliza para adjudicarle un título a la página que será visto en la barra superior de la página de internet, en los ebook no tiene finalidad, pero figura en todos los archivos.</p>
+
+  <p>Y para finalizar tenemos la etiqueta <span class="hb">&lt;body&gt;</span> que nos indica el inicio del cuerpo del capítulo donde se coloca el texto, imágenes y el contenido principal de este.</p>
+
+  <p>También se observa la forma en que se incluyen los comentarios, que es el modo de explicar algunos aspectos internos del archivo en el que se encuentran.</p>
+
+  <p class="salto10">Posiblemente, la etiqueta más importante sea la referida a los párrafos. Sin necesidad de entrar en detalles decimos que están definidos por las etiquetas <span class="hb">&lt;p&gt;</span>:</p>
+
+  <div class="ejcodigo">
+    <p><span class="hb">&lt;p&gt;</span>Párrafo<span class="hb">&lt;/p&gt;</span></p>
+
+    <p><span class="hb">&lt;p&gt;</span>Párrafo<span class="hb">&lt;/p&gt;</span></p>
+  </div>
+
+  <p>Si ponemos otro párrafo seguido, se interpretará como un punto y aparte pero no dejará una línea entre los dos. Para añadir espacios y otras características, consulta el siguiente apartado (CSS).</p>
+
+  <p class="seccion">Etiquetas frecuentes</p>
+
+  <p>Algunas de las etiquetas HTML más importantes con las que te vas a encontrar a la hora de editar ePubs son:</p>
+
+  <ul>
+    <li><span class="hb">&lt;p&gt;&lt;/p&gt;</span>: etiquetas de párrafo.</li>
+
+    <li><span class="hb">&lt;i&gt;&lt;/i&gt;</span> y <span class="hb">&lt;em&gt;&lt;/em&gt;</span>: etiquetas de cursiva.</li>
+
+    <li><span class="hb">&lt;b&gt;&lt;/b&gt;</span> y <span class="hb">&lt;strong&gt;&lt;/strong&gt;</span>: etiquetas de negrita.</li>
+
+    <li><span class="hb">&lt;img&gt;&lt;/img&gt;</span>: etiquetas de imagen.</li>
+
+    <li><span class="hb">&lt;h1&gt;</span> (o <span class="hb">&lt;h2&gt;</span>, <span class="hb">&lt;h3&gt;</span>, <span class="hb">&lt;h4&gt;</span>): etiquetas que corresponden a los encabezados.</li>
+
+    <li><span class="hb">&lt;a&gt;&lt;/a&gt;</span>: etiquetas de enlaces.</li>
+
+    <li><span class="hb">&lt;div&gt;</span>, <span class="hb">&lt;span&gt;</span>, <span class="hb">&lt;div&gt;</span>… etc.</li>
+  </ul>
+
+  <p class="salto10">En todo caso, si estás interesado en hacer algo concreto y no sabes la etiqueta que lo hace, o bien has visto una etiqueta que no sabes para qué sirve, puedes preguntar en el foro o consultar páginas como las siguientes (en inglés):</p>
+
+  <div class="centrado salto05">
+    <p><a href="http://www.quackit.com/html/tags/">www.quackit.com</a></p>
+
+    <p><a href="http://www.w3schools.com/html/default.asp">www.w3schools.com</a></p>
+  </div>
+
+  <p class="seccion" id="faq027">Enlaces externos e internos</p>
+
+  <p>Al igual que las páginas web, los ebook pueden utilizar tanto los enlaces externos como los internos.</p>
+
+  <p class="subseccion">Enlaces externos</p>
+
+  <p>Consisten en enlaces a páginas web externas al lector y que funcionarán si el lector está preparado para conectarse a internet.</p>
+
+  <p>Al final del epígrafe anterior tienes dos enlaces de este tipo:</p>
+
+  <ul>
+    <li class="nolist">
+      <div class="ejcodigo">
+        <p><span class="hb">&lt;a</span> <span class="hr">href</span><span class="hb">=</span><span class="hg">"http://www.quackit.com/html/tags"</span><span class="hb">&gt;</span>www.quackit.com<span class="hb">&lt;/a&gt;</span></p>
+
+        <p><span class="hb">&lt;a</span> <span class="hr">href</span><span class="hb">=</span><span class="hg">"http://www.w3schools.com/html/default.asp"</span><span class="hb">&gt;</span>www.w3schools.com<span class="hb">&lt;/a&gt;</span></p>
+      </div>
+    </li>
+  </ul>
+
+  <p class="subseccion">Enlaces internos</p>
+
+  <p>Estos enlaces dan la posibilidad de dirigir la lectura a cualquier parte del libro.</p>
+
+  <ul>
+    <li>Si al final del capítulo 2 queremos dar la opción al lector de saltar al capítulo 116, como hizo Julio Cortázar en su libro <i>Rayuela</i>, al final de dicho capítulo debemos escribir el siguiente código:
+
+      <div class="ejcodigo">
+        <p class="salto05"><span class="hb">&lt;p</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"derecha"</span><span class="hb">&gt;&lt;a</span> <span class="hr">href</span><span class="hb">=</span><span class="hg">"../Text/capitulo-116.xhtml"</span><span class="hb">&gt;&lt;b&gt;</span>[116]<span class="hb">&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;</span></p>
+      </div>
+
+      <p>Cuando pulsemos sobre [116] la lectura saltará al mencionado capítulo, tal como queríamos.</p>
+
+      <div class="ejpantalla">
+        <p class="cursiva">La muerte, el muñequito. La lengua de la Maga me hace cosquillas. Rocamadour, la ética, el muñequito, la Maga. La lengua, la cosquilla, la ética.</p>
+
+        <p class="centrado"><a href="../Text/1.3.LenguajeHTML.xhtml#ejcap116"><b>[116]</b></a></p>
+        <hr />
+
+        <p class="sans negrita centrado salto05" id="ejcap116">Capítulo 116</p>
+
+        <p class="centrado">…</p>
+      </div>
+    </li>
+
+    <li>Si quisiéramos redirigir a alguna parte en especial de este capítulo, al final por ejemplo, pondríamos:
+
+      <div class="ejcodigo">
+        <p class="salto05"><span class="hb">&lt;a</span> <span class="hr">href</span><span class="hb">=</span><span class="hg">"../Text/116.xhtml"</span> <span class="hr">id</span><span class="hb">=</span><span class="hg">"final116"</span><span class="hb">&gt;&lt;b&gt;</span>[final cap 116]<span class="hb">&lt;/b&gt;&lt;/a&gt;</span></p>
+      </div>
+
+      <p>Y al final del capítulo 116 pondríamos el siguiente código:</p>
+
+      <div class="ejcodigo">
+        <p class="sans negrita salto05">116.xhtml</p>
+
+        <p class="salto05 sans">…</p>
+
+        <p><span class="hb">&lt;a</span> <span class="hr">id</span><span class="hb">=</span><span class="hg">"final116"</span><span class="hb">&gt;&lt;/a&gt;</span></p>
+      </div>
+
+      <p>Ahora cuando pulsemos sobre [116] la lectura saltará al final del capítulo 116.</p>
+
+      <div class="ejpantalla">
+        <p class="cursiva">La muerte, el muñequito. La lengua de la Maga me hace cosquillas. Rocamadour, la ética, el muñequito, la Maga. La lengua, la cosquilla, la ética.</p>
+
+        <p class="centrado"><a href="../Text/1.3.LenguajeHTML.xhtml#final116"><b>[116]</b></a></p>
+        <hr />
+
+        <p class="centrado">…</p>
+
+        <p class="centrado negrita">Fin del capítulo</p><a id="final116"></a>
+      </div>
+    </li>
+
+    <li>Las notas son un caso especial de estos enlaces internos, con la particularidad de que están diseñadas para un viaje de ida y vuelta.
+
+      <div class="ejcodigo">
+        <p class="sans negrita salto05">Capitulo08.xhtml</p>
+
+        <p class="salto05"><span class="hb">&lt;p&gt;</span>En este texto hay una nota<span class="hb">&lt;a</span> <span class="hr">href</span><span class="hb">=</span><span class="hg">"../Text/notas.xhtml#nt1"</span> <span class="hr">id</span><span class="hb">=</span><span class="hg">"rf1"</span><span class="hb">&gt;&lt;sup&gt;</span>[1]<span class="hb">&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;</span></p>
+        <hr />
+
+        <p class="sans negrita salto05">notas.xhtml</p>
+
+        <p class="salto05"><span class="hb">&lt;p</span> <span class="hr">id</span><span class="hb">=</span><span class="hg">"nt1"</span> <span class="hb">&gt;&lt;sup&gt;</span>[1]<span class="hb">&lt;/sup&gt;</span> Nota explicativa. <span class="hb">&lt;a</span> <span class="hr">href</span><span class="hb">=</span><span class="hg">"../Text/Capitulo08.xhtml#rf1"</span><span class="hb">&gt;</span><span class="hr">&amp;lt;&amp;lt;</span><span class="hb">&lt;/a&gt;&lt;/p&gt;</span></p>
+      </div>
+
+      <div class="ejpantalla">
+        <p>En este texto hay una nota<a href="../Text/1.3.LenguajeHTML.xhtml#ntej" id="rfej"><sup>[1]</sup></a>.</p>
+        <hr />
+
+        <p id="ntej"><sup>[1]</sup> Nota explicativa. <a href="../Text/1.3.LenguajeHTML.xhtml#rfej">&lt;&lt;</a></p>
+      </div>
+
+      <p>Se explicarán con detalle en el apartado MAQUETANDO EL CONTENIDO.</p>
+    </li>
+  </ul>
+</body></html>
+
+</html>

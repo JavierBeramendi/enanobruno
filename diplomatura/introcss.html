@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Instalación de software</title>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+      body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+        h1, h2, h3, h4, h5, h6 { text-align:left; margin-top:15%; }
+                h1 { font-size:2em; }
+                h2 { font-size:1.8em; }
+                h3 { font-size:1.6em; }
+                h4 { font-size:1.4em; }
+                h5 { font-size:1.3em; }
+                h6 { font-size:1.2em; }
+  /* Lineas horizontales */
+  hr { background-color: black; height: 0.1em; margin-left: 0em; margin-right: 0em; }
+    .hr1 { height: 0.2em; margin-left: 8em; margin-right: 0em; }
+
+  /* Listas */
+  ul { list-style-type: disc; }
+    .sin { list-style-type: none; }
+    .circulo { list-style-type: circle; }
+    .cuadrado { list-style-type: square; }
+  li
+    .saltomedio { padding-bottom: 1em; }
+    .sin { list-style: none; display: inline }
+
+  /* Imágenes con pie */
+  div.figure {
+      float: center;
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+  div.figure p {
+    text-align: center;
+    text-indent: 0;
+    }
+  /* Tablas */
+  table.prefacio { border-collapse:collapse; margin: 1em auto 1.5em; border: none; width:100%; }
+  table.prefacio tr td { border: none; padding: 0em 1em 0em; }
+    .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+
+  table.cuadro { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadro th { border: 1px solid black; text-align: center; padding: 0em 1em 0em;  }
+  table.cuadro td { border-left: 1px solid black; border-right: 1px solid black; text-align: center; padding: 0em 1em 0em; }
+  table.cuadro caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+        .centrado { text-align:center; text-indent:0 }
+
+  table.cuadrol { border-collapse:collapse; margin: 1em auto 1.5em; border: 1px solid black;  }
+  table.cuadrol th { border: 1px solid black; text-align: left; padding: 0em 1em 0em;  }
+  table.cuadrol td { border: 1px solid black; text-align: left; padding: 0em 1em 0em; }
+  table.cuadrol caption { caption-side: bottom; text-align: center; padding: 1em 0em 1.5em; }
+
+  table.ejemplos { border-collapse: collapse; margin: 1em auto 1.5em; border-top: 1px solid black; border-bottom: 1px solid black; width:90%; }
+  table.ejemplos caption { caption-side: top; text-align: center; }
+  table.ejemplos tr, td { border: none; padding-left: 0.5em; }
+        .courier { font-family: "Courier", courier; font-size: 0.9em; }
+    .numeral { font-size: 0.65em; width: 1em; }
+
+  table.biblio { border-collapse: collapse; margin: 1em auto 1.5em; border: none; width:95%; }
+  table.biblio tr, td { border: none; padding-left: 0.5em; }
+    .numero { width: 1em; }
+
+  p { text-align:justify; margin:0; text-indent:1.5em; line-height:1.4em; }
+
+    .imagencentrada { text-align: center; text-indent: 0; margin: 1.5em 0 1.5em 0; }
+    .imagenizquierda { float: left; padding: 0.5em 0.0em 0.5em 0; text-indent: 1.5em; }
+
+        .capital { font-variant:small-caps; }
+        .sans { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+        .courier { font-family: "Courier", courier; }
+        .comic { font-family:"Marker Felt", "Comic Sans MS", "Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; }
+
+        .derecha { text-align:right; }
+        .izquierda { text-align:left; }
+        .centrado { text-align:center; text-indent:0 }
+        .asangre { text-indent:0 }
+        .cursiva { font-style: italic }
+        .negrita { font-weight: bold }
+    .subrayado { text-decoration: underline }
+        .salto { padding-bottom:2em; }
+        .saltomedio { padding-bottom:1em; }
+        .cita { margin:1.5em; }
+        .banner { width:75%; text-align:center; text-indent:0; margin:1.5em auto; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+        .sinmargen { margin:0; }
+        
+        .cubierta { margin:2% auto;max-width:95%;height:95%; }
+                .cubierta img { height:100%; }
+        .sinopsis, .sinopsis p { font-family:"Helvetica Neue", Helvetica, Verdana, Arial, Trebuchet MS, Trebuchet, sans-serif; text-indent:0; }
+        .info { width:90%; font-size:0.8em; margin:0.5em 0.5em 0; text-indent:0; text-align:justify; }
+        .legal { width:90%; font-size:0.8em; margin:5em 1.5em 0; text-indent:0; }
+                .legal p { text-indent:0; text-align:left; }
+        .intro { margin:5em 0 1.5em; text-indent:0; text-align:right; }
+                .intro p { text-align:right;text-indent:0; }
+
+        /*salto previo de párrafo*/
+    .saltop { margin-top:1em; }
+
+    /*Formato enlace de notas al pie dentro del texto*/
+    .notas { color: black;cursor: pointer;text-decoration:none; line-height: normal; font-size:0.75em;vertical-align:super; }
+
+    /*Formato enlace de notas al pie dentro archivo notes.html (última hoja del documento)*/
+    .notasf { color: black;cursor: pointer;text-decoration:none; }
+
+    /*Saltos de tabulacion*/
+    .sangria1 { text-indent:3em }
+    .sangria2 { text-indent:6em }
+    .sangria3 { text-indent:9em }
+    .sangria4 { text-indent:12em }
+    .sangria5 { text-indent:15em }
+
+    /*Tamaños de letra */
+    .tamano1 { font-size:2em; }
+    .tamano2 { font-size:1.8em; }
+    .tamano3 { font-size:1.6em; }
+    .tamano4 { font-size:1.4em; }
+    .tamano5 { font-size:1.3em; }
+    .tamano6 { font-size:1.2em; }
+
+    .margenizquierdo1-5 { margin-left: 1.5em }
+    .margenizquierdo2 { margin-left: 2em }
+    .margenizquierdo4 { margin-left: 4em }
+    .margenizquierdo6 { margin-left: 6em }
+    .margenizquierdo8 { margin-left: 8em }
+
+    .indice0  { font-size: 1.2em; font-weight: bold; padding-top: 0.5em }
+    .indice1  { font-size: 1.1em; text-indent:3.5em }
+    .indice2  { font-size: 1.1em; text-indent:5.5em }
+    .indice11  { font-size: 1.1em; text-indent:3.5em; padding-top: 0.5em }
+
+    .versalita {font-size: 0.75em}
+
+    .titulo4 { text-indent: 0; font-size: 1.4em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo5 { text-indent: 0; font-size: 1.3em; font-weight: bold; padding-top: 2em; padding-bottom: 1em; }
+    .titulo6 { text-indent: 0; font-size: 1em; font-weight: bold; padding-top: 1em; padding-bottom: 1em; }
+
+        .indicecapitulo { width:90%; text-align:center; text-indent:0; margin:0em 1.5em 0em; padding:0.5em 1em; border:2px solid black; border-left:none; border-right:none; }
+
+        .ejemplo { width:90%; text-indent:0; margin:1em 1.5em 1.5em; padding:0.5em 0em; border:1px solid black; border-left:none; border-right:none; }
+
+    .ejemplo .caption { float: none; font-weight: normal; margin-top: -20px; margin-left: 0px; margin-bottom: 0px; padding-right: 16px; padding-left: 5px ; padding-bottom: 0px; padding-top: 0px; background-color: grey; text-align: center }
+
+        .ePUBmarca, .ePUBtitulo, .ePUBsubtitulo, .ePUBautor, .ePUBv, .ePUBfirma, .ePUBgratis { text-align:center; font-weight:normal; text-indent:0; }
+                .ePUBmarca { text-align:center; }
+                        .ePUBmarca span { display:inline-block;width:10em; margin:3em auto; }
+                        .ePUBmarca img { width:100%; }
+                .ePUBautor { margin-bottom:0.5em; }
+                        .ePUBautor code { font-size:1.2em;color:#999; }
+                .ePUBtitulo { margin:0;font-size:1em;text-align:center; }
+                        .ePUBtitulo code { font-weight:bold;font-size:1.8em; }
+                .ePUBsubtitulo { margin:0.3em 0 0; }
+                        .ePUBsubtitulo code { font-weight:bold;font-size:1em; }
+                .ePUBv, .ePUBv code { color:#5084b8;font-size:0.9em;font-weight:bold;margin:0;margin:3em 0 0; }
+                .ePUBfirma, .ePUBfirma b, .ePUBfirma code { font-size:0.8em;margin:0; }
+                .ePUBfecha { color:#999; }
+                .ePUBgratis { text-align:center; }
+                        .ePUBgratis span { display:inline-block;width:14em;margin:3em auto 0; }
+                        .ePUBgratis img { width:100%; }
+
+                          
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  </style>
+  </head>
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <link href="../Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2 id="faq028">Introducción al lenguaje CSS</h2>
+
+  <p>El lenguaje CSS nos sirve para asignar propiedades a las etiquetas HTML, lo que nos permite separar «contenido» de «continente» en un documento concreto (por ejemplo, en una página web). De esta forma podemos darle estructura y diseño de una manera sencilla.</p>
+
+  <p class="seccion">Definir un estilo en CSS</p>
+
+  <p>Un estilo CSS consta de dos partes principales: un selector y una o más declaraciones.</p>
+
+  <div class="ejcodigo">
+    <p><span class="hr">body</span> { <span class="hb">margin</span>:1em; }</p>
+  </div>
+
+  <p>Donde <span class="hr">body</span> corresponde al selector y «<span class="hb">margin</span>:1em» es una declaración.</p>
+
+  <p class="salto05">Una declaración CSS siempre termina con un punto y coma. Las clases están rodeadas por llaves. Para hacer que la CSS sea más legible se puede optar por poner las declaraciones de cada clase en diferentes líneas.</p>
+
+  <div class="ejcodigo">
+    <p class="salto05"><span class="hr">p</span> { <span class="hb">margin</span>:0; <span class="hb">text-align</span>:justify; <span class="hb">text-indent</span>:1.5em; <span class="hb">line-height</span>:1.3em; }</p>
+    <hr />
+
+    <p><span class="hr">p</span> {</p>
+
+    <div class="versonizq">
+      <p><span class="hb">margin</span>:0;</p>
+
+      <p><span class="hb">text-align</span>:justify;</p>
+
+      <p><span class="hb">text-indent</span>:1.5em;</p>
+
+      <p><span class="hb">line-height</span>:1.3em; }</p>
+    </div>
+  </div>
+
+  <p>Para poder explicar la función de las clases o algún otro punto que se considere necesario, se utilizan los comentarios. La sintaxis de los comentarios CSS es muy diferente a la de los comentarios HTML, por lo que no deben confundirse:</p>
+
+  <div class="ejcodigo">
+    <p class="sans negrita">style.css</p>
+
+    <p class="salto05"><span class="hg">/* esta línea es opcional */</span></p>
+    <hr />
+
+    <p class="sans negrita">Section0001.xhtml</p>
+
+    <p class="salto05"><span class="hg">&lt;!--esta línea es opcional--&gt;</span></p>
+  </div>
+
+  <p>Los delimitadores son, como se ve en el ejemplo: <span class="hg">/* COMENTARIO */</span>.</p>
+
+  <p>Cuando hagamos nuestras clases personalizadas es siempre conveniente comentarlas, siendo aconsejable, a veces, anotar como debe ser llamada en el archivo .xhtml.</p>
+
+  <p class="seccion">Cómo llamar un estilo desde HTML</p>
+
+  <p>Hay tres formas de insertar estilos en HTML:</p>
+
+  <ul>
+    <li class="salto10">
+      <b>Estilo en línea</b>. Cuando las declaraciones se expresan directamente con la sentencia <span class="hr">style</span> dentro del cuerpo de un archivo .xhtml (en este caso las declaraciones no van encerradas entre comillas y ni tampoco entre llaves):
+
+      <div class="ejcodigo">
+        <p><span class="hb">&lt;p</span> <span class="hr">style</span><span class="hb">=</span><span class="hg">"color:sienna; margin-left:20em"</span><span class="hb">&gt;</span>Párrafo de color siena<span class="hb">&lt;/p&gt;</span></p>
+      </div>
+
+      <p class="aviso">NO puede utilizarse en el ebook</p>
+    </li>
+
+    <li class="salto10">
+      <b>Hoja de estilos interna</b>. Se define en la sección head de un archivo .xhtml mediante la etiqueta <span class="hb">&lt;style&gt;</span>. Aparecerá así:
+
+      <div class="ejcodigo">
+        <p class="hb">&lt;head&gt;</p>
+
+        <p class="hb">&lt;style&gt;</p>
+
+        <div class="ho versonizq">
+          <p>hr {color:sienna;}</p>
+
+          <p>p {margin-left:20px;}</p>
+
+          <p>body {background-image:url("images/back40.gif");}</p>
+        </div>
+
+        <p class="hb">&lt;/style&gt;</p>
+
+        <p class="hb">&lt;/head&gt;</p>
+      </div>
+
+      <p class="aviso">NO puede utilizarse en el ebook</p>
+    </li>
+
+    <li class="salto10" id="faq029">
+      <b>Hoja de estilos externa</b>. Todos los estilos van agrupados en un archivo externo a los archivos de texto, con extensión .css (en el ePub Base de nuestra comunidad se denomina <i>style.css</i>). Cada .xhtml debe enlazar a la hoja de estilos con la etiqueta <span class="hb">&lt;link&gt;,</span> dentro de la sección de la cabecera (<span class="hb">&lt;head&gt;</span>).
+
+      <div class="ejcodigo">
+        <p class="hb">&lt;head&gt;</p>
+
+        <div class="versonizq">
+          <p class="hb">&lt;title&gt;&lt;/title&gt;</p>
+
+          <p><span class="hb">&lt;link</span> <span class="hr">href</span><span class="hb">=</span><span class="hg">"../Styles/style.css"</span> <span class="hr">rel</span><span class="hb">=</span><span class="hg">"stylesheet"</span> <span class="hr">type</span><span class="hb">=</span><span class="hg">"text/css"</span> <span class="hb">/&gt;</span></p>
+        </div>
+
+        <p class="hb">&lt;/head&gt;</p>
+      </div>
+
+      <p class="regla">NOTA: Es la única forma de utilizar los estilos en los eBook.</p>
+    </li>
+  </ul>
+
+  <p class="seccion">ePub Base: style.css</p>
+
+  <p>En la plantilla de ePubLibre, el archivo ePub Base, se incluye una hoja de estilos externa llamada <i>style.css</i> que se ubica dentro de la carpeta <i>Styles</i>. Contiene una serie de estilos predefinidos para agilizar nuestra tarea, que han sido probados en diversos lectores electrónicos para asegurar su compatibilidad y adecuada visualización.</p>
+
+  <p class="subseccion">Estructura</p>
+
+  <p class="salto10">En el style.css verás que las declaraciones se agrupan en tres grandes apartados, separados por sus correspondientes comentarios:</p>
+
+  <div class="salto05">
+    <div class="ejcodigo">
+      <p class="hg">/* ---- ESTILOS GLOBALES Y DE SECCIONES FIJAS (NO MODIFICABLES) ---- */</p>
+    </div>
+
+    <p class="cita">Que como indica el comentario, <b class="hd">NO SON MODIFICABLES</b>. Este bloque engloba los estilos de las etiquetas que forman el ePub «<span class="hr">body, p, a, sub, sup</span>…» y las clases creadas expresamente para dar formato a las secciones fijas del ePub Base. El código que ahí aparece no es modificable, en caso de que necesitemos modificar el comportamiento de alguno de esos elementos cuando aparecen en el cuerpo del libro, lo haremos usando clases personalizadas.</p>
+  </div>
+
+  <div class="salto05">
+    <div class="ejcodigo">
+      <p class="hg">/* ---- ESTILOS GENERALES (ADAPTABLES EN CASOS ESPECIALES) ---- */</p>
+    </div>
+
+    <p class="cita">En este bloque encontramos los estilos de las etiquetas y clases que resultarán muy útiles para la maquetación de nuestros aportes pero que no tienen una incidencia directa o significativa en las secciones fijas del ePub Base. El código que contiene <b>es modificable</b> según nuestras necesidades aunque tendremos que apoyarnos en clases personalizadas si los cambios afectan a las secciones fijas del ePub Base (como cuando queremos cambiar el aspecto de los <span class="hb">&lt;h1&gt;</span>).</p>
+
+    <p class="cita">En el caso de <span class="hb">&lt;h1&gt;</span> son directamente modificables las siguientes propiedades: <b>margin, padding, border, font-size, font-style, text-align, text-indent, text-decoration, font-family, font-weight</b> y <b>color</b>.</p>
+
+    <p class="aviso">Si queremos modificar otra propiedad de <span class="hb">&lt;h1&gt;</span>, debemos crear una clase personal y añadirla a la etiqueta (<span class="hb">&lt;h1</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"personal"</span><span class="hb">&gt;</span>) para evitar modificaciones en la página título.</p>
+  </div>
+
+  <div class="salto05">
+    <div class="ejcodigo">
+      <p class="hg">/* ---- ESTILOS PERSONALES ---- */</p>
+    </div>
+
+    <div class="cita">
+      <p>Este apartado aparece como última línea de archivo, ya que aquí deberán ir <b>tus propias declaraciones</b>, y en el ePub Base inicial está vacío.</p>
+
+      <p class="salto05" id="faq030">Es conveniente personalizar el ePub Base, incluyendo en el archivo style.css nuestras clases ya validadas, es decir clases de las que tengamos la certeza de que no crean problemas en ningún lector. En el foro hay un <b>banco de pruebas</b> para validar los códigos que se sospeche que pueden no funcionar en algún lector.</p>
+
+      <p class="regla"><b>NOTA:</b> Si usas una versión personalizada del ePub Base, no olvides borrar las clases no usadas antes de publicar el libro.</p>
+
+      <p>También se puede poner tu nombre en <i>titulo.xhtml</i> e <i>info.xhtml</i>, etc.</p>
+    </div>
+  </div>
+
+  <p class="subseccion">Aplicación de estilos</p>
+
+  <p class="salto10">La utilización de las clases almacenadas en nuestra «hoja de estilos» se realiza de dos formas, según sea un selector de algún elemento de HTML o un selector de clase.</p>
+
+  <p>El estilo de un elemento de HTML (como <span class="hb">&lt;body&gt;</span> o <span class="hb">&lt;p&gt;</span>) se declara en el style.css para llamarlo desde un .xhtml:</p>
+
+  <div class="ejcodigo">
+    <p class="sans negrita salto05">style.css</p>
+
+    <p class="salto05"><span class="hr">body</span> { <span class="hb">margin</span>:1em; }</p>
+    <hr />
+
+    <p class="sans negrita salto05">Section0001.xhtml</p>
+
+    <p class="salto05"><span class="hb">&lt;body&gt;</span>…<span class="hb">&lt;/body&gt;</span></p>
+  </div>
+
+  <p>La llamada a un selector de clase (como «<span class="hr">.versalita</span>») igualmente necesita declararse en el style.css para llamarlo desde un .xhtml:</p>
+
+  <div class="ejcodigo">
+    <p class="sans negrita salto05">style.css</p>
+
+    <p class="salto05"><span class="hr">.versalita</span> { <span class="hb">font-size</span>:0.8em; } <span class="hg">/*fijate en el punto que antecede al nombre*/</span></p>
+    <hr />
+
+    <p class="sans negrita salto05">Section0001.xhtml</p>
+
+    <p class="salto05"><span class="hb">&lt;span</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"versalita"</span><span class="hb">&gt;</span>XXII<span class="hb">&lt;/span&gt;</span></p>
+  </div>
+
+  <p class="subseccion">Ejemplos</p>
+
+  <p>Veamos algunos ejemplos de cómo aplicar clases y los resultados que producen para que puedas familiarizarte con el código CSS.</p>
+
+  <p class="asangre">Algunos editores prefieren eliminar el indentado al comienzo de cada capítulo o tras una pausa. Es suficiente aplicar el estilo «<span class="hr">.asangre</span>»:</p>
+
+  <div class="ejcodigo">
+    <p><span class="hb">&lt;p</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"asangre"</span><span class="hb">&gt;</span>Párrafo<span class="hb">&lt;/p&gt;</span></p>
+  </div>
+
+  <div class="ejpantalla">
+    <p>Párrafo (texto con identado 1 em por defecto)</p>
+    <hr />
+
+    <p class="asangre">Párrafo (asangre)</p>
+  </div>
+
+  <p class="asangre">Para indicar una pausa o cambio de tema podemos usar el estilo «<span class="hr">.salto25</span>» (usado para saltos de escena) o «<span class="hr">.salto10</span>» (usado para saltos en cartas, sinopsis, poemas). Los párrafos no se deben separar o «espaciar» sistemáticamente usando saltos:</p>
+
+  <div class="ejcodigo">
+    <p><span class="hb">&lt;p</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"salto10"</span><span class="hb">&gt;</span>Párrafo<span class="hb">&lt;/p&gt;</span></p>
+  </div>
+
+  <div class="ejpantalla">
+    <p class="salto10">Párrafo</p>
+  </div>
+
+  <p class="asangre">Para destacar un bloque de texto, como una carta o un recorte de periódico es muy útil el estilo «<span class="hr">.cita</span>»:</p>
+
+  <div class="ejcodigo">
+    <p><span class="hb">&lt;p</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"cita"</span><span class="hb">&gt;</span>Carta<span class="hb">&lt;/p&gt;</span></p>
+  </div>
+
+  <div class="ejpantalla">
+    <p class="cita">Carta</p>
+  </div>
+
+  <p class="asangre">Podemos combinar distintos estilos para conseguir distintos efectos. Aquí un ejemplo de la combinación de los estilos «<span class="hr">.cita</span>», «<span class="hr">.centrado</span>» y «<span class="hr">.negrita</span>»:</p>
+
+  <div class="ejcodigo">
+    <p><span class="hb">&lt;p</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"cita centrado negrita"</span><span class="hb">&gt;</span>Párrafo<span class="hb">&lt;/p&gt;</span></p>
+  </div>
+
+  <div class="ejpantalla">
+    <p class="cita centrado negrita">Párrafo</p>
+  </div>
+
+  <p class="asangre">Para recrear un rótulo o placa está el estilo «<span class="hr">.banner</span>»:</p>
+
+  <div class="ejcodigo">
+    <p><span class="hb">&lt;p</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"banner"</span><span class="hb">&gt;</span>Rótulo<span class="hb">&lt;/p&gt;</span></p>
+  </div>
+
+  <div class="ejpantalla">
+    <p class="banner">Rótulo</p>
+  </div>
+
+  <p class="asangre">Por defecto todos los párrafos aparecen justificados. Para alinear el texto disponemos de los estilos «<span class="hr">.derecha</span>», «<span class="hr">.izquierda</span>» y «<span class="hr">.centrado</span>». El estilo «<span class="hr">.versalita</span>» nos proporcionará ese tipo de letra:</p>
+
+  <div class="ejcodigo">
+    <p><span class="hb">&lt;p</span> <span class="hr">class</span><span class="hb">=</span><span class="hg">"derecha versalita"</span><span class="hb">&gt;</span>Párrafo<span class="hb">&lt;/p&gt;</span></p>
+  </div>
+
+  <div class="ejpantalla">
+    <p class="derecha versalita">Párrafo</p>
+  </div>
+
+  <p>Estos son solo algunos de los estilos añadidos por defecto. Te aconsejamos que eches un vistazo al archivo <i>style.css</i> del ePub Base para poder ir entendiendo su estructura, y poder definir más adelante estilos propios o añadir estilos recomendados por otros editores cuando lo precises. Más adelante se explica más detenidamente en qué consiste el «ePub Base» y sus partes.</p>
+
+  <div class="regla">
+    <p>Si te encuentras con alguna clase que no sabes qué es o para qué sirve, puedes consultar webs como las siguientes (en inglés):</p>
+
+    <p><a href="http://www.blooberry.com/indexdot/css/propindex/all.htm">www.blooberry.com</a></p>
+
+    <p><a href="http://www.w3schools.com/css/">www.w3schools.com</a></p>
+  </div>
+</body>
+</html>
+
+</html>
