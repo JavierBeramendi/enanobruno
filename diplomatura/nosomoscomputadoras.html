@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Breve historia de Internet</title>
+   
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    
+body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+a, .normal { font-style:normal; font-weight:normal; text-decoration:none; }
+sup, sub { font-size:0.75em; line-height:normal; }
+
+.cubierta { margin:0; padding:0; border:0; font-size:0; text-align:center; text-indent:0; page-break-before:always; page-break-after:always; }
+  .cubierta img { height:100%; max-height:100%; }
+
+.tlogo, .tautor, .ttitulo, .tsubtitulo, .trevision, .tfirma { margin:0 0.25em; text-align:center; text-indent:0; font-family:sans-serif; font-weight:bold; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  .tlogo span { margin:3em 0 2.5em; display:inline-block; width:8em; }
+  .tautor { margin-bottom:0.5em; font-size:1.2em; font-weight:normal; color:#595959; }
+  .ttitulo { padding:0; border:0; font-size:1.8em; font-style:normal; text-decoration:none; color:black; visibility:visible; }
+  .tsubtitulo { margin-top:0.3em; }
+  .trevision { margin-top:2.5em; font-size:0.8em; color:#595959; }
+  .tfirma { margin-top:0.25em; font-size:0.65em; }
+  .tfecha { font-family:sans-serif; font-weight:normal; color:#595959; }
+
+.sinopsis, .sinopsis p, .autor, .autor p, .nota p { margin-top:0.5em; text-indent:0; }
+  .sinopsis p, .sinopsis em, .sinopsis strong, .sinopsis big, .sinopsis small, .sinopsis span { font-family:sans-serif; }
+.info { margin:3.5em 1.5em 2.5em; font-size:0.8em; width:90%; }
+  .info p { text-align:left; text-indent:0; }
+.vineta { padding:1em 0; text-align:center; text-indent:0; display:block; }
+.nota { padding-top:3%; page-break-before:always; }
+
+
+/* ----- ESTILOS GENERALES (ADAPTABLES) ----- */
+
+/* encabezados */
+h1, h2, h3, h4, h5, h6 { margin:15% 0.25em 1em; text-align:center; text-indent:0; page-break-after:avoid; page-break-inside:avoid; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  h1 { font-size:1.5em; }
+  h2 { font-size:1.5em; }
+  h3 { font-size:1.4em; }
+  h4 { font-size:1.3em; }
+  h5 { font-size:1.2em; }
+  h6 { font-size:1.1em; }
+
+/* dedicatoria */
+.dedicatoria { margin:5em 1em 0 3em; text-align:right; }
+  .dedicatoria p { text-align:right; text-indent:0; }
+
+/* tipografía */
+.sans, .sans p, .sans em, .sans strong, .sans big, .sans small { font-family:sans-serif; }
+.serif, .serif p, .serif em, .serif strong, .serif big, .serif small { font-family:serif; }
+code, kbd, .mono, .mono p, .mono em, .mono strong, .mono big, .mono small { font-family:monospace; }
+
+i, em, cite, dfn, .cursiva { font-style:italic; }
+b, strong, .negrita { font-weight:bold; }
+ins, .subrayado { text-decoration:underline; }
+del, .tachado { text-decoration:line-through; }
+.oculto { display:none; visibility:hidden; }
+
+big, .grande { font-size:1.2em; }
+small, .versalita { font-size:0.8em; }  /* para texto en mayúsculas, de tamaño similar al de las minúsculas */
+
+/* alineación */
+.izquierda, .izquierda p { text-align:left; }
+.derecha, .derecha p { text-align:right; text-indent:0; }
+.centrado, .centrado p { text-align:center; text-indent:0; }
+.justificado, .justificado p { text-align:justify; }
+.asangre, .asangre p { text-indent:0; }
+
+/* saltos */
+.sintop { margin-top:0; }
+.saltoinicio { margin-top:33%; }
+.salto05 { padding-top:0.5em; }
+.salto10 { padding-top:1em; }
+.salto25 { padding-top:2.5em; }
+
+/* bloques */
+.sinmargen { margin:0; }
+blockquote, .cita { margin:1.5em; }
+.bloque { page-break-inside:avoid; }  /* evita dividir un elemento entre páginas */
+.nosep { text-indent:0; display:inline-block; } /* evita dividir una palabra entre líneas */
+.extenso { orphans:0; widows:0; } /* evita división aleatoria de párrafos muy extensos (bug ADE) */
+.banner { margin:1.5em 12%; padding:0.5em 1em; text-align:center; text-indent:0; border:2px solid black; border-left:none; border-right:none; }
+  .banner p { text-align:center; text-indent:0; }
+
+/* listas */
+li { margin:0; text-align:justify; text-indent:0; line-height:1.3em; }
+
+/* imágenes simples */  /* para láminas verticales (página completa), usar el estilo fijo «cubierta» */
+.ilustra { margin:1em 0; text-align:center; text-indent:0; display:block; }
+  .ilustra img { max-height:100%; max-width:100%; }
+
+
+/* ----- ESTILOS PERSONALES ----- */
+
+.capitular { font-size:300%; float: left; margin:-0.1em 0.125em -0.2em 0; text-indent: 0; line-height: 1em; height: 1em; }
+
+.titulocap { text-indent:0em; font-size:1.1em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap2 { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:underline; }
+.titulobib { text-indent:0em; font-size:1.3em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+
+.pinguino { max-width: 66%; max-height: 50%; }
+
+.bibliografia p { text-indent: -1.5em; margin-left: 1.5em; margin-top: 0.5em; }
+.sitiosypag p { text-indent: 0; margin-top: 0.5em; }
+
+.lista, .listasin { margin: 0; }
+.lista li, .listasin li { }
+
+.fuentess { margin-top: 1em; }
+.fuentess p { margin-bottom: 0.5em; text-indent: 0; }
+
+.frase2 { text-indent: 0; margin-left: 2em; }
+.frase3 { text-indent: 0; margin-left: 4em; }
+.frase4 { text-indent: 0; margin-left: 6em; }
+.frase5 { text-indent: 0; margin-left: 8em; }
+.frase6 { text-indent: 0; margin-left: 10em; }
+
+.codigo { margin: 1.5em; }
+.codigo p { text-indent: 0; font-size: 0.8em; text-align: left; }
+.codigo .primera { text-indent: -1.5em; }
+
+  h4 {text-indent:0em; font-size:1.3em; text-align:center;margin-top:2em;margin-bottom:2em;font-style:normal; font-weight:normal; text-decoration:none;}
+
+    h5, h6 {text-indent:0em; font-size:1.2em; text-align:left;margin-top:2em;margin-bottom:1.5em;font-style:normal; font-weight:bold; text-decoration:none;}
+
+  .mini { font-size: 1em;   }
+     code {margin-left: 0.7em ; margin-right:0.4em } 
+
+.bio { font-size:0.9em; width:86%; margin-left:7%; padding: 2.5em 0; } 
+
+cite {margin: 1.1em }
+
+
+.legal { font-size: 0.8em; font-family:"Courier New", Courier, monospace; width:90%; margin-top: 2.5em; }
+
+  
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  </style>
+</head>
+
+<body>
+  <h1>Primera parte: ¿QUÉ ES UNA PERSONA?</h1>
+
+  <h2 id="sigil_toc_id_1">1. Personas desaparecidas</h2>
+
+  <p class="asangre">El software expresa ideas sobre todos los temas, desde la naturaleza de una nota musical hasta la naturaleza de las personas. Además, está sujeto a un proceso extraordinariamente rígido de <em>lock-in</em>, de «anclaje». Por lo tanto, las ideas (en el presente, cuando el software mueve cada vez más los asuntos humanos) se han vuelto más proclives a quedar sujetas al anclaje que en épocas anteriores. La mayor parte de las ideas ancladas hasta la fecha no son tan malas, pero algunas de las ideas que se han dado en llamar «web 2.0» son trastos inútiles, así que deberíamos rechazarlas mientras estamos a tiempo.</p>
+
+  <div class="cita derecha">
+    <p>El lenguaje es el espejo del alma;</p>
+
+    <p>la manera en que un hombre habla, así es él.</p>
+
+    <p class="salto05">P<span class="versalita">UBLIO</span> S<span class="versalita">IRIO</span></p>
+  </div>
+
+  <h3 id="sigil_toc_id_2">Los fragmentos no son personas</h3>
+
+  <p class="asangre">En torno al arranque del siglo <small>XXI</small> algo empezó a salir mal en la revolución digital. La red se vio inundada de diseños intrascendentes llamados a veces web 2.0. Esta ideología promueve la libertad radical en la superficie de la red, pero, irónicamente, esa libertad va más dirigida a las máquinas que a las personas. No obstante, a veces se alude a ella como «cultura abierta».</p>
+
+  <p>Los comentarios anónimos en blogs, los vídeos de bromas insustanciales y los popurrís intrascendentes pueden parecer triviales e inofensivos, pero, en conjunto, esa forma de comunicación fragmentaria e impersonal ha degradado la interacción interpersonal.</p>
+
+  <p>Ahora la comunicación suele experimentarse como un fenómeno sobrehumano que se eleva por encima de los individuos. Una nueva generación ha llegado a la mayoría de edad con una expectativa limitada de lo que una persona puede ser y de aquello en lo que cada persona puede llegar a convertirse.</p>
+
+  <h3 id="sigil_toc_id_3">Lo más importante de una tecnología es cómo cambia a las personas</h3>
+
+  <p class="asangre">Cuando trabajo con <em>gadgets</em> digitales experimentales, como las nuevas versiones de realidad virtual, en un entorno de laboratorio, eso siempre me recuerda cómo los pequeños cambios en los detalles de un diseño digital pueden tener efectos profundos e imprevistos en la experiencia de los humanos que interactúan con él. El más mínimo cambio en algo tan trivial en apariencia como la facilidad de uso de un botón a veces puede alterar por completo las pautas de comportamiento.</p>
+
+  <p>Por ejemplo, el investigador de la Universidad de Stanford Jeremy Bailenson ha demostrado que el hecho de cambiar la altura del avatar de una persona en una realidad virtual inmersiva transforma su autoestima y la percepción social de uno mismo. La tecnología es una extensión de nosotros mismos y, al igual que los avatares del laboratorio de Jeremy, nuestras identidades pueden ser alteradas por los caprichos de los <em>gadgets</em>. Es imposible trabajar con tecnología de la información sin involucrarse al mismo tiempo con la ingeniería social.</p>
+
+  <p>Uno puede preguntarse: «Si bloggeo, twitteo y wikeo todo el tiempo, ¿cómo afecta a eso que soy?» o «Si la mente colmena es mi público, ¿quién soy yo?». Nosotros, los inventores de tecnologías digitales somos como comediantes de <em>stand up</em> o neurocirujanos en el sentido de que nuestro trabajo se hace eco de profundas cuestiones filosóficas; por desgracia, últimamente hemos demostrado ser malos filósofos.</p>
+
+  <p>Cuando los desarrolladores de tecnologías digitales diseñan un programa que te pide que interactúes con un ordenador como si fuera una persona, lo que están haciendo al mismo tiempo es pedirte que aceptes en lo más recóndito de tu cerebro que tú también podrías ser concebido como un programa. Cuando diseñan un servicio de internet editado por una masa anónima enorme, están dando a entender que una masa arbitraria de humanos es un organismo con un punto de vista legítimo.</p>
+
+  <p>Distintos diseños estimulan distintos potenciales de la naturaleza humana. Nuestros esfuerzos no deberían estar dirigidos a lograr que la mentalidad de rebaño sea lo más eficiente posible. En cambio, sí deberíamos tratar de inspirar el fenómeno de la inteligencia individual.</p>
+
+  <p>«¿Qué es una persona?». Si supiera la respuesta, podría programar una persona artificial en un ordenador. Pero no puedo. Una persona no es una fórmula fácil, sino una aventura, un misterio, un salto hacia la fe.</p>
+
+  <h3 id="sigil_toc_id_4">Optimismo</h3>
+
+  <p class="asangre">Sería duro para cualquiera, y ni qué decir para un tecnólogo, levantarse cada mañana sin fe en que el futuro puede ser mejor que el pasado.</p>
+
+  <p>En los años ochenta, cuando internet solo estaba al alcance de un pequeño número de pioneros, solía enfrentarme con personas que tenían miedo de que esas tecnologías extrañas en las que yo estaba trabajando, como la realidad virtual, desataran los demonios de la naturaleza humana. Por ejemplo, ¿la gente se volvería adicta a la realidad virtual como si se tratara de una droga? ¿Se quedarían atrapados en ella, incapaces de volver al mundo físico donde vivimos el resto de las personas? Algunas de esas preguntas eran tontas y otras, clarividentes.</p>
+
+  <h3 id="sigil_toc_id_5">Cómo influye la política en la tecnología de la información</h3>
+
+  <p class="asangre">En aquel entonces yo formaba parte de una alegre banda de idealistas. Si en los años ochenta hubieras quedado para comer conmigo y con John Perry Barlow, que se convertiría en cofundador de la fundación Electronic Frontier, o con Kevin Kelly, que terminaría siendo el editor fundador de la revista <em>Wired</em>, nos habrías escuchado dando vueltas en torno a todas esas ideas. Los ideales son importantes en el mundo de la tecnología, pero el mecanismo a través del cual influyen en los acontecimientos es distinto que en el resto de las esferas de la vida. Los tecnólogos no usamos la persuasión para influir sobre los demás; o al menos no lo hacemos demasiado bien. Entre nosotros hay unos pocos comunicadores de nivel (como Steve Jobs), pero la mayoría no somos especialmente persuasivos.</p>
+
+  <p>Nosotros desarrollamos extensiones de tu existencia, como ojos y oídos a distancia (webcams y teléfonos móviles) y una memoria ampliada (el mundo de datos que se pueden consultar en la red). Esos elementos se convierten en las estructuras mediante las que te conectas con el mundo y con otras personas. Esas estructuras, a su vez, pueden cambiar tu concepción de ti mismo y del mundo. Jugueteamos con tu filosofía manipulando tu experiencia cognitiva directamente, no de forma indirecta a través de la discusión. Basta con un pequeño grupo de ingenieros para crear una tecnología que moldee el futuro de la experiencia humana a velocidad increíble. Por lo tanto, antes de que se diseñen esas manipulaciones directas, desarrolladores y usuarios deberían mantener una discusión crucial acerca de cómo construir una relación humana con la tecnología. Este libro trata de esas discusiones.</p>
+
+  <p>El diseño de la red tal como la conocemos hoy día no era inevitable. A principios de los noventa había decenas de intentos creíbles en pos de un diseño capaz de presentar la información digital en red de una manera más popular. Compañías como General Magic y Xanadu diseñaron proyectos alternativos con cualidades fundamentalmente distintas que no llegaron a buen puerto.</p>
+
+  <p>Una sola persona, Tim Berners-Lee, vino a crear el diseño particular de la red tal como la conocemos hoy. Tal como fue presentado, el diseño de la red era minimalista, en el sentido de que presumía lo menos posible sobre cómo sería una página web. Además, era abierto, pues la arquitectura no daba preferencia a ninguna página por encima de otra, y todas las páginas eran accesibles a todos. También hacía hincapié en la responsabilidad, ya que solo el propietario de un sitio web era capaz de garantizar que su sitio estuviera disponible.</p>
+
+  <p>La motivación inicial de Berners-Lee era dar servicio a una comunidad de físicos, no a todo el mundo. Aun así, los primeros usuarios adoptaron el diseño de la red en un ambiente muy influido por discusiones de tono idealista. En el período anterior al nacimiento de la red, las ideas en juego eran radicalmente optimistas y adquirieron fuerza en la comunidad, y luego en el mundo en general.</p>
+
+  <p>Puesto que al crear tecnologías de la información inventamos muchas cosas de la nada, ¿cómo decidimos cuáles son mejores? La libertad radical que hallamos en los sistemas digitales plantea un reto moral desconcertante. Lo inventamos todo, entonces, ¿qué es lo que vamos a inventar? Por desgracia, ese dilema —el de tener tanta libertad— es ilusorio.</p>
+
+  <p>A medida que un programa aumenta en tamaño y complejidad, el software puede convertirse en una maraña cruel. Cuando intervienen otros programadores, puede resultar un laberinto. Si uno es lo bastante listo, puede crear un programa pequeño desde cero, pero se requiere mucho esfuerzo (y algo más que un poco de suerte) para modificar con éxito un programa grande, sobre todo si otros programas dependen de él. Incluso los mejores equipos de expertos en desarrollo de software se topan periódicamente con montones de disyuntivas y problemas de diseño.</p>
+
+  <p>Es encantador desarrollar programas pequeños en soledad, pero el proceso de mantener un software a gran escala siempre resulta deprimente. Por eso, la tecnología digital sume a la psique del programador en una especie de esquizofrenia. Se produce una confusión constante entre los ordenadores reales y los ordenadores ideales. A los tecnólogos les gustaría que todos los programas se comportaran como un nuevo programa pequeño y divertido, y están dispuestos a utilizar cualquier estrategia psicológica a su alcance para evitar pensar en los ordenadores de forma realista.</p>
+
+  <p>El carácter precario de los programas informáticos en desarrollo puede hacer que algunos diseños digitales queden congelados por un proceso conocido como <em>lock in</em>, o anclaje. Esto ocurre cuando se diseñan muchos programas de software para que trabajen con uno ya existente. Modificar de forma significativa un software cuando muchos otros programas dependen de él es el proceso más difícil de llevar a cabo. Por eso casi nunca se hace.</p>
+
+  <h3 class="sigil_not_in_toc">De vez en cuando aparece un paraíso digital</h3>
+
+  <p class="asangre">Un día a principios de los ochenta, un diseñador de sintetizadores musicales llamado Dave Smith inventó sin darle demasiada importancia una forma de representar las notas musicales. Se la llamó MIDI. Su enfoque concebía la música desde el punto de vista de quien toca un teclado. MIDI estaba compuesto de patrones digitales que representaban acciones del teclado como «pulsar tecla» y «soltar tecla».</p>
+
+  <p>Eso significaba que no podía describir las expresiones sinuosas y fugaces que puede lograr un cantante o un saxofonista. Solo podía describir el mundo en mosaico del teclista, no el mundo en acuarela del violín. Pero MIDI no tenía por qué preocuparse por todas las variedades de la expresión musical, pues Dave solo quería conectar varios sintetizadores entre sí para poder disponer de una paleta mayor de sonidos mientras tocaba un solo teclado.</p>
+
+  <p>A pesar de sus limitaciones, MIDI se convirtió en el sistema estándar para representar la música en un software. Se diseñaron programas musicales y sintetizadores para trabajar con él, y rápidamente se hizo poco práctico cambiar o deshacerse de todo aquel software y hardware inicial. MIDI se afianzó y, a pesar de los esfuerzos hercúleos por parte de una serie de poderosas organizaciones comerciales, académicas y profesionales de todo el mundo que buscaron renovarlo a lo largo de varias décadas, hoy sigue vigente sin cambio alguno.</p>
+
+  <p>Por supuesto, la cuestión de los estándares y su inevitable falta de capacidad predictiva plantearon un incordio aun antes de la llegada de los ordenadores. Sirva de ejemplo el ancho de vía, las dimensiones de la vía de tren. El metro de Londres fue diseñado con vías estrechas y túneles también estrechos que no permiten instalar aire acondicionado en varias líneas porque no hay espacio para ventilar el aire caliente de los trenes. De ese modo, decenas de miles de habitantes de una de las ciudades más ricas del mundo se ven obligados hoy a viajar asfixiados de calor debido a una decisión inflexible de diseño tomada hace más de cien años.</p>
+
+  <p>Pero el software es peor que las vías, pues siempre está obligado a adaptarse con absoluta perfección a una confusión infinitamente concreta, arbitraria, compleja e inextricable. Los requisitos en materia de ingeniería son tan estrictos y perversos que adaptarse a estándares cambiantes puede suponer una lucha interminable. De modo que si en el mundo de las vías de ferrocarril el anclaje puede resultar una especie de gángster, en el mundo digital es un tirano absoluto.</p>
+
+  <h3 id="sigil_toc_id_6">La vida en la superficie curva de la ley de Moore</h3>
+
+  <p class="asangre">El aspecto fatídico e inquietante de la tecnología de la información es que de vez en cuando y por casualidad un diseño concreto llega para ocupar un nicho pero, una vez implementado, se vuelve definitivo. A partir de entonces se convierte en un elemento fijo, aunque un proyecto mejor también pudiera haber tomado su lugar antes del momento de su afianzamiento. Entonces lo que antes era una simple molestia se convierte ahora en un cataclismo porque la potencia de los ordenadores aumenta de manera exponencial. En el mundo de la informática esto se conoce como la ley de Moore.</p>
+
+  <p>Los ordenadores se han vuelto millones de veces más potentes, e inmensamente más comunes y mejor conectados que cuando yo inicié mi carrera, de lo que no hace tanto tiempo. Es como si te arrodillaras para plantar una semilla de un árbol y este creciera tan deprisa que se tragara todo tu pueblo antes siquiera de que tuvieras tiempo de levantarte.</p>
+
+  <p>De modo que el software plantea a los tecnólogos un nivel de responsabilidad que a veces podría parecer injusto. Como la potencia de los ordenadores está aumentando a una velocidad exponencial, los diseñadores y programadores de tecnología deben tener mucho cuidado al elegir entre diseños alternativos. Las consecuencias de pequeñas decisiones, en un principio intrascendentes, a menudo pueden llegar a convertirse en las normas definitorias e inalterables de nuestras vidas.</p>
+
+  <p>Actualmente MIDI está presente en tu teléfono y en millones de aparatos más. Es el entramado sobre el que se crea casi toda la música popular que escuchamos. Una gran parte del sonido que nos rodea —la música ambiental y los pitidos, los tonos de llamada y los despertadores— se concibe en MIDI. La experiencia auditiva humana está plagada de notas discretas que encajan en una cuadrícula.</p>
+
+  <p>Llegará el día en que quedará fijado por el proceso de anclaje un sistema digital para describir el habla que permitirá que los ordenadores suenen mejor que hoy cuando nos hablan. Puede que ese sistema se adapte a la música, y tal vez se desarrolle una música digital más fluida y expresiva. Pero aunque eso ocurra, dentro de mil años, cuando una descendiente nuestra viaje a la velocidad de la luz a explorar un nuevo sistema solar, seguramente tendrá que aguantar unos pitidos musicales molestos en MIDI que le avisará de que hay que recalibrar el filtro antimateria.</p>
+
+  <h3 id="sigil_toc_id_7">El anclaje convierte las ideas en hechos</h3>
+
+  <p class="asangre">Antes de MIDI, una nota musical era una idea insondable que iba más allá de cualquier definición absoluta. Para el músico, era una forma de pensar, o una forma de enseñar y documentar la música. Era una herramienta mental distinguible de la propia música. Distintas personas podían hacer transcripciones de la misma grabación musical, por ejemplo, y terminar proponiendo partituras ligeramente distintas.</p>
+
+  <p>Después de MIDI, una nota musical dejó de ser simplemente una idea para convertirse en una estructura rígida y obligatoria que no se puede evitar en aquellas áreas de la vida que se han digitalizado. El proceso de anclaje es como una ola que invade poco a poco el reglamento de la vida, discriminando las ambigüedades propias de los pensamientos flexibles a medida que más estructuras de pensamiento se afianzan en una realidad permanente.</p>
+
+  <p>Podemos comparar el anclaje con el método científico. El filósofo Karl Popper estaba en lo cierto al afirmar que la ciencia es un proceso que descalifica ideas conforme avanza: por ejemplo, uno ya no puede creer de forma razonable en una Tierra plana que saltó a la vida hace miles de años. La ciencia elimina ideas empíricamente, con un buen motivo. El anclaje, sin embargo, elimina opciones de diseño basadas en la facilidad de programación, en la factibilidad política, en la moda, o creadas por casualidad.</p>
+
+  <p>El anclaje elimina las ideas que no encajan en el plan de representación digital triunfante, pero también reduce o limita las ideas que él mismo inmortaliza, extirpando la penumbra insondable de significado que distingue una palabra del lenguaje natural de una orden en un programa informático.</p>
+
+  <p>Los criterios que guían la ciencia pueden resultar más admirables que los que guían el anclaje, pero a menos que se nos ocurra una forma totalmente distinta de crear software, la existencia de futuros anclajes está garantizada. El progreso científico, en cambio, siempre requiere determinación y puede estancarse por cuestiones políticas o por falta de financiación o de curiosidad. En este punto se presenta un desafío: ¿cómo es que un músico podría valorar el concepto más amplio y menos definido de nota que precedió a MIDI, al mismo tiempo que usa todo el día la tecnología MIDI e interactúa con otros músicos a través del filtro de MIDI? ¿Vale la pena siquiera intentarlo? ¿Debería un artista digital sucumbir simplemente al anclaje y aceptar la idea infinitamente explícita y finita de una nota MIDI?</p>
+
+  <p>Si es importante explorar el misterio, considerar las cosas que no se pueden definir del todo —o representar en un formato digital—, entonces tendremos que buscar nuevas ideas y objetos permanentemente, abandonando las antiguas como es el caso de las notas musicales. A lo largo de este libro abordaré la cuestión de si las personas se están convirtiendo en una especie de notas MIDI: excesivamente definidas y limitadas en la práctica a lo que se puede representar en un ordenador. Esto acarrea consecuencias enormes: es cierto que podríamos llegar a abandonar las notas musicales, pero el problema es que no podemos abandonarnos a nosotros mismos.</p>
+
+  <p>Cuando Dave creó MIDI, me entusiasmé. Algunos amigos míos del equipo original de Macintosh crearon rápidamente una interfaz de hardware a fin de que un Mac pudiera utilizar MIDI para controlar un sintetizador, y yo desarrollé un programa rápido de creación musical. Nos sentíamos tan libres, pero la verdad es que deberíamos haber sido más cautos.</p>
+
+  <p>Hoy en día MIDI se ha vuelto demasiado difícil de cambiar, de modo que la cultura misma ha cambiado para que parezca más completo de lo que inicialmente se pretendía. Hemos reducido nuestras expectativas con respecto a lo que esperamos de las formas más triviales de sonido musical en pos de que la tecnología resulte adecuada. No fue culpa de Dave. ¿Cómo iba a saberlo?</p>
+
+  <h3 id="sigil_toc_id_8">Cosificación digital: el anclaje convierte la filosofía en realidad</h3>
+
+  <p class="asangre">Muchas de las ideas sobre cómo se elabora el software, afectadas por el proceso de anclaje, proceden de un antiguo sistema operativo llamado UNIX, que posee algunas características que se parecen a MIDI.</p>
+
+  <p>Mientras que MIDI constriñe la expresión musical en el modelo restrictivo de las acciones de las teclas de un teclado musical, el sistema UNIX hace lo mismo con toda la computación, pero en su caso utilizando las acciones de las teclas de un teclado del estilo de una máquina de escribir. Un programa UNIX suele ser parecido a la simulación de una persona que escribe rápido a máquina.</p>
+
+  <p>En UNIX hay un elemento central llamado «interfaz de comando». En ese sistema, escribes las instrucciones, pulsas la tecla «Enter», y las instrucciones se llevan a cabo<a href="#nt1" id="rf1"><sup>[1]</sup></a>. Un principio de diseño unificador de UNIX es que un programa desconoce si una persona es la que pulsó esa tecla o si lo hizo un programa. Puesto que las personas reales son más lentas que las personas simuladas a la hora de manejar teclados, la importancia de la coordinación precisa se ve anulada por esta idea. Como resultado de ello, UNIX se basa en actos discretos que no tienen por qué suceder en un momento concreto. En cambio, el organismo humano se basa en procesos sensoriales, cognitivos y motores continuos que deben ser sincronizados con exactitud en el tiempo. (MIDI queda a medio camino en algún lugar entre el concepto de tiempo representado por UNIX y el concepto de tiempo del cuerpo humano, al estar basado en actos discretos que suceden en momentos concretos).</p>
+
+  <p>UNIX manifiesta una creencia excesiva en los símbolos abstractos y discretos y una creencia insuficiente en la realidad temporal, continua y no abstracta; se parece más a una máquina de escribir que a una pareja de baile. (Tal vez las máquinas de escribir o los procesadores de texto siempre deberían reaccionar al instante, como una pareja de baile, pero todavía no es el caso.) UNIX tiende a «querer conectar» con la realidad como si la realidad fuera una red de mecanógrafos rápidos.</p>
+
+  <p>Si lo que se espera es que se diseñen ordenadores que sirvan a las personas de carne y hueso y también a las personas simuladas, UNIX debería ser considerado un mal diseño. Yo lo descubrí en los años setenta, cuando intenté crear instrumentos musicales sensibles con UNIX. Buscaba hacer lo que MIDI no puede hacer, que es trabajar con los aspectos fluidos de la música, que son difíciles de transcribir en una partitura, y descubrí que la filosofía subyacente de UNIX era demasiado precaria y torpe para este fin.</p>
+
+  <p>Los argumentos a favor de UNIX se centraban en que los ordenadores aumentarían su velocidad millones de veces en las décadas por venir. Se creía que el aumento de velocidad acabaría con los problemas de sincronización que a mí tanto me preocupaban. De hecho, los ordenadores actuales son millones de veces más rápidos, y UNIX se ha convertido en un elemento más del entorno de la vida. Existen herramientas expresivas razonables que contienen UNIX, de modo que el aumento de la velocidad ha bastado para compensar los problemas de UNIX en algunos casos. Pero no en todos.</p>
+
+  <p>Llevo un iPhone en el bolsillo y, en efecto, ese aparato funciona básicamente con UNIX. Un elemento inquietante de este <em>gadget</em> es que está condicionado por un set misterioso de retrasos impredecibles, de interfaces de usuario. El cerebro del usuario espera una respuesta al pulsar un botón virtual, pero tarda un instante en producirse. Durante ese momento se crea una extraña tensión, y la intuición deja lugar al nerviosismo. Es el fantasma de UNIX que se sigue negando a incorporar los ritmos de mi cuerpo y mi cabeza después de todos estos años.</p>
+
+  <p>No estoy criticando en concreto el iPhone (que elogiaré más adelante en otro capítulo). Podría haber elegido cualquier ordenador personal contemporáneo. Windows no es UNIX, pero comparte la idea de UNIX de que un símbolo es más importante que el flujo del tiempo y la continuidad de la experiencia.</p>
+
+  <p>La difícil relación entre UNIX y el mundo temporal en el que el cuerpo humano se mueve y la mente humana piensa es un ejemplo decepcionante de anclaje, pero no necesariamente un ejemplo desastroso. Tal vez incluso ayude a la gente a valorar el mundo físico pasado de moda, mientras la realidad virtual se perfecciona. De ser así, habrá resultado ser una auténtica bendición.</p>
+
+  <h3 id="sigil_toc_id_9">Las filosofías de software afianzadas se vuelven invisibles gracias a la ubicuidad</h3>
+
+  <p class="asangre">Una idea anclada todavía más profundamente es la noción de archivo. Hubo un tiempo, no hace demasiado, en que muchos informáticos creían que la idea de archivo no era tan buena.</p>
+
+  <p>El primer diseño de algo parecido a internet, el Xanadu de Ted Nelson, concebía la existencia de un gigantesco archivo global, por ejemplo. La primera serie de Macintosh, que no llegó a ser lanzada, no tenía archivos. En su lugar, el conjunto de la producción del usuario se acumulaba en una gran estructura, una especie de página web personal. Steve Jobs se hizo cargo del proyecto Mac después del hombre que lo inició, el difunto Jef Raskin, y pronto aparecieron los archivos.</p>
+
+  <p>UNIX tenía archivos; el Mac tal como fue lanzado tenía archivos; Windows tenía archivos. Los archivos son ahora parte de la vida; enseñamos la idea de archivo a los alumnos de informática como si fuera parte de la naturaleza. De hecho, nuestro concepto de archivo puede ser más duradero que nuestras ideas acerca de la naturaleza. Me puedo llegar a imaginar que algún día los físicos nos dirán que ha llegado el momento de dejar de creer en los fotones porque han descubierto una forma mejor de reflexionar sobre la luz, pero es probable que el archivo siga existiendo.</p>
+
+  <p>El archivo constituye un conjunto de ideas filosóficas que adquirieron una carnadura constante. Entre las nociones implícitas en el concepto de archivo, se encuentra la idea de que la expresión humana se da en fragmentos separables que se pueden organizar como hojas de un árbol abstracto; y la de que los fragmentos tienen versiones y necesitan ser combinados con aplicaciones compatibles.</p>
+
+  <p>¿Qué representan los archivos para el futuro de la expresión humana? Se trata de una pregunta más difícil de responder que la pregunta «¿Cómo influye la lengua inglesa en el pensamiento de los hablantes nativos ingleses?». Por lo menos se puede comparar a los anglohablantes con los hablantes de chino, pero los archivos son universales. La idea de archivo ha adquirido tal magnitud que somos incapaces de imaginar un marco lo bastante grande como para abarcar la noción de archivo con el fin de evaluarlo empíricamente.</p>
+
+  <h3 id="sigil_toc_id_10">Lo que ha pasado con los trenes, los archivos y las notas musicales podría ocurrir dentro de poco con la definición de ser humano</h3>
+
+  <p class="asangre">Cuando las filosofías cristalizan en un software anclado, vale la pena prestar atención. Por ejemplo, ¿es el anonimato o pseudoanonimato hoy reinante algo bueno? Se trata de una pregunta importante, pues las filosofías correspondientes sobre cómo los humanos pueden crear sentido están tan integradas en los diseños de software de internet que quizá nunca podamos deshacernos del todo de ellas, o incluso que ni siquiera recordemos que las cosas pudieron haber sido distintas.</p>
+
+  <p>Al menos deberíamos intentar evitar ese ejemplo particularmente delicado de anclaje inminente. El anclaje nos hace olvidar las libertades perdidas que teníamos en el pasado digital. Eso puede hacer que resulte más difícil ver las libertades que tenemos en el presente digital. Afortunadamente, pese a las dificultades, todavía podemos tratar de cambiar algunas expresiones filosóficas que están a punto de quedar ancladas en las herramientas que utilizamos para entendernos entre nosotros y para entender el mundo.</p>
+
+  <h3 id="sigil_toc_id_11">Una sorpresa feliz</h3>
+
+  <p class="asangre">El advenimiento de la red constituyó un caso insólito cuando descubrimos información nueva y concluyente sobre el potencial humano. ¿Quién habría dicho (al menos al principio) que millones de personas se esforzarían tanto en un proyecto que no respondía a motivos publicitarios y comerciales, amenazas de castigo, figuras carismáticas, política identitaria, explotación del miedo a la muerte, o cualquiera del resto de las motivaciones de la humanidad? Cantidades ingentes de personas hicieron algo de forma cooperativa solo porque era una buena idea, y eso fue hermoso.</p>
+
+  <p>Algunos de los excéntricos más fantasiosos del mundo digital habían vaticinado que eso ocurriría, pero aun así fue toda una sorpresa cuando realmente sucedió. Resulta que incluso una filosofía optimista e idealista es realizable. Introduce una filosofía de vida feliz en el software, y puede que muy probablemente se haga realidad.</p>
+
+  <h3 id="sigil_toc_id_12">La crítica tecnológica no se debe dejar a los luditas</h3>
+
+  <p class="asangre">Pero no todas las sorpresas han sido tan buenas.</p>
+
+  <p>Este revolucionario digital todavía cree en la mayoría de los ideales bonitos y profundos que estimularon nuestro trabajo hace muchos años. En el fondo, había una gran fe en la naturaleza humana. Creíamos en que si le conferíamos poder a los individuos, se obtendría más bien que mal.</p>
+
+  <p>Resulta realmente perverso el modo en que internet se viene deteriorando desde entonces. La fe central en el diseño inicial de la red fue desbancada por una fe distinta en la centralidad de entidades imaginarias cuyo símbolo más claro es la idea de que internet en su conjunto está cobrando vida y convirtiéndose en una criatura sobrehumana.</p>
+
+  <p>Los diseños guiados por esta nueva clase de fe, perversa, han desplazado a las personas a las sombras. La moda del anonimato ha anulado la gran apertura general de los años noventa. Ese cambio de rumbo ha favorecido en cierto punto a los sádicos, pero el peor efecto que ha tenido es la degradación de la gente corriente.</p>
+
+  <p>En parte esto se debió a que el voluntarismo demostró ser una fuerza sumamente poderosa en la primera versión de la red. Cuando las empresas irrumpieron para capitalizar lo sucedido, hubo un problema, pues el contenido de la red, el aspecto cultural, funcionaba bastante bien sin necesidad de un plan de negocios.</p>
+
+  <p>Google propuso la idea de unir publicidad y búsqueda, pero ese negocio permaneció en la periferia de lo que la gente realmente hacía en la red. Tuvo efectos indirectos, pero ninguno directo. Las primeras oleadas de actividad de la red fueron extraordinariamente vigorosas y tenían un toque personal. La gente creaba páginas personales; todas parecían distintas, y a menudo extrañas. La red tenía un sabor especial.</p>
+
+  <p>Los emprendedores buscaban crear productos que inspiraran la demanda (o al menos oportunidades publicitarias que algún día pudieran competir con Google) donde no había una carencia que remediar ni una necesidad que cubrir, aparte de la codicia. Google había descubierto un nuevo nicho que se afianzaba constantemente gracias a la naturaleza de la tecnología digital. Resulta que el sistema digital para representar a las personas y los anuncios y poder relacionarlos se parece a MIDI. Se trata de un ejemplo de cómo la tecnología digital puede provocar un aumento explosivo de la importancia del «efecto red». Cada elemento del sistema —cada ordenador, cada persona, cada bit— llega a depender de la observancia detallada y sin tregua de un estándar común, un punto de intercambio común.</p>
+
+  <p>A diferencia de MIDI, el estándar secreto de software de Google está escondido en su nube informática<a href="#nt2" id="rf2"><sup>[2]</sup></a> en lugar de estar replicado en tu bolsillo. Cualquiera que quiera poner un anuncio debe usarlo, o bien quedarse librado a la buena de Dios, relegado a una subcultura pequeña e intrascendente, del mismo modo que los músicos digitales deben usar MIDI si quieren trabajar de manera conjunta en la esfera digital. En el caso de Google, el monopolio es opaco y está patentado. (A veces los nichos digitales anclados están patentados y a veces no. La dinámica es la misma en cualquiera de los dos casos, aunque las consecuencias comerciales pueden ser muy distintas).</p>
+
+  <p>Solo hay espacio para un jugador en el nicho que ocupa Google, de modo que la mayoría de los proyectos en competencia que aparecieron después no han obtenido ganancias. Gigantes como Facebook han cambiado la cultura con ánimo de obtener beneficios, pero sin resultado alguno hasta la fecha de escritura de este libro<a href="#nt3" id="rf3"><sup>[3]</sup></a>.</p>
+
+  <p>En mi opinión, había muchas formas de lograr nuevos éxitos comerciales, pero la fe de los <em>nerds</em> ha guiado a los emprendedores por un determinado camino. Había que convertir la productividad voluntaria en un <em>commodity</em> porque el tipo de fe que critico prospera cuando se finge que los ordenadores lo hacen todo y las personas no hacen nada.</p>
+
+  <p>Una interminable serie de estratagemas respaldadas por inversiones gigantescas ha animado a los jóvenes que entraban en el mundo de internet por primera vez a crear perfiles estandarizados en sitios como Facebook. Los intereses comerciales promovieron la adopción generalizada de diseños estandarizados como el blog, y esos diseños alentaron a su vez el pseudoanonimato al menos en algunos de sus rasgos, en lugar de la extroversión orgullosa que caracterizó la primera oleada de la cultura de la red.</p>
+
+  <p>En lugar de tratar a las personas como fuentes de su propia creatividad, los sitios comerciales basados en la agregación y abstracción se han dedicado a presentar fragmentos anónimos de creatividad como productos caídos del cielo, o desenterrados del suelo, ocultando así su verdadero origen.</p>
+
+  <h3 id="sigil_toc_id_13">Ascenso tribal</h3>
+
+  <p class="asangre">Si hemos llegado a esta situación es porque hace poco una subcultura de tecnólogos se ha vuelto más influyente que las otras. La subcultura triunfante no tiene un nombre oficial, pero en ocasiones me he referido a sus miembros como «totalitarios cibernéticos» o «maoístas digitales».</p>
+
+  <p>La tribu ascendente está compuesta, entre otros, por gente del mundo de la cultura abierta/mundo del Creative Commons, la comunidad de Linux, la gente asociada con el enfoque de la inteligencia artificial aplicado a la informática, gente de la web 2.0, los usuarios anticontexto que intercambian y mezclan archivos. Su capital es Silicon Valley, pero tienen bases de poder por todo el mundo, dondequiera que se cree cultura digital. Sus blogs favoritos son Boing Boing, TechCrunch y Slashdot, y su embajada en el viejo mundo es <em>Wired</em>.</p>
+
+  <p>Evidentemente, estoy generalizando; no todos los miembros de los citados grupos suscriben todas las opiniones que critico. De hecho, el problema del pensamiento de grupo que me preocupa no está tanto en la cabeza de los propios tecnólogos como en la cabeza de los usuarios de las herramientas que promueven los totalitarios cibernéticos.</p>
+
+  <p>El error central de la cultura digital más reciente es picar tan fino una red de individuos que se termina obteniendo un puré. Entonces uno empieza a preocuparse más por la abstracción de la red que por las personas reales conectadas en la red, cuando en realidad la propia red carece de sentido. Únicamente las personas son significativas.</p>
+
+  <p>Cuando me refiero a la tribu no estoy hablando de un «ellos» lejano. Los miembros de esta tribu son mis amigos de toda la vida, mis mentores, mis alumnos, mis colegas y mis compañeros de viaje. Muchos de mis amigos no están de acuerdo conmigo. En su favor debo decir que tengo total libertad para expresar mis opiniones, consciente de que seguiré siendo bien recibido en nuestro mundo.</p>
+
+  <p>Por otra parte, sé que también hay una tradición humanista dentro de la informática. Entre las figuras más conocidas de esa tradición se cuentan el difunto Joseph Weizenbaum, Ted Nelson, Terry Winograd, Alan Kay, Bill Buxton, Doug Englebart, Brian Cantwell Smith, Henry Fuchs, Ken Perlin, Ben Schneiderman (que creó la idea de hacer clic sobre un enlace) y Andy van Dam, un profesor que ha influido a generaciones de discípulos, incluido Randy Pausch. Otra importante figura de la informática humanista es David Gelernter, que concibió una gran parte de los fundamentos técnicos de lo que se ha dado en llamar «computación en nube», así como muchas de las posibles aplicaciones prácticas de las nubes.</p>
+
+  <p>Y todavía habría que señalar que el humanismo en la informática no parece tener correlación con ningún estilo cultural en particular. Por ejemplo, Ted Nelson es un hijo de los sesenta, autor del que podría ser considerado el primer musical rock (<em>Anything &amp; Everything</em>), una especie de vagabundo y una figura contracultural si es que alguna vez existió alguna. David Gelernter, por otra parte, es un conservador en materia de cultura y política que escribe para periódicos como <em>Commentary</em> y da clases en Yale. Y sin embargo, yo encuentro inspiración en la obra de ambos.</p>
+
+  <h3 id="sigil_toc_id_14">Trampa para una tribu</h3>
+
+  <p class="asangre">Las intenciones de la tribu de los totalitarios cibernéticos son buenas. Simplemente están siguiendo un camino allanado en el pasado por freudianos y marxistas bienintencionados, y no lo digo en sentido peyorativo. Pienso en las primeras encarnaciones del marxismo, por ejemplo, antes de que el estalinismo y el maoísmo asesinaran a millones de personas.</p>
+
+  <p>Los movimientos relacionados con Freud y Marx alegaban estar basados en la razón y el conocimiento científico del mundo. Ambos se consideraban en conflicto con fantasías extrañas y manipuladoras de las religiones. Y sin embargo, ambos inventaron sus propias fantasías, que resultaron ser igual de extrañas.</p>
+
+  <p>Lo mismo está ocurriendo ahora. Un autoproclamado movimiento materialista que pretende basarse en la ciencia empieza, con gran rapidez, a parecerse a una religión. No tarda en presentar su propia escatología y sus revelaciones acerca de lo que está pasando realmente: hechos portentosos que nadie salvo los iniciados pueden apreciar. En la Singularidad y la noosfera, la idea de que una conciencia colectiva surge de entre todos los usuarios de la red, resuenan el determinismo social del marxismo y el cálculo de las perversiones de Freud. Nos precipitamos por delante de los escépticos, de la investigación científica, a nuestra cuenta y riesgo, tal como lo hicieron los marxistas y los freudianos.</p>
+
+  <p>Los reduccionistas precoces del misterio son desgarrados por cismas, como ha ocurrido siempre con los marxistas y freudianos. Les parece increíble que vea cosas en común entre los miembros de la tribu. Para ellos, por ejemplo, los sistemas Linux y UNIX son totalmente distintos, mientras que para mí son puntos coincidentes en un amplio lienzo de posibilidades, aun cuando, a estas alturas, gran parte del lienzo prácticamente haya quedado olvidado.</p>
+
+  <p>De todos modos, el futuro de la religión será determinado por los caprichos del software que quede anclado durante las próximas décadas, tal como pasará con el futuro de las notas musicales y de la humanidad.</p>
+
+  <h3 id="sigil_toc_id_15">En qué punto del viaje estamos</h3>
+
+  <p class="asangre">Es el momento de hacer el inventario. Algo asombroso ocurrió con la introducción de la red global. Al poner a disposición de un gran número de personas una herramienta de información extraordinariamente abierta y desorganizada, quedó reivindicada la fe en la bondad humana. Llegado este momento, esa apertura se puede declarar «anclada» a un grado significativo. ¡Hurra!</p>
+
+  <p>Al mismo tiempo, algunas ideas no tan buenas acerca de la vida y el significado también se «anclaron», como la concepción del sonido musical ligeramente alterada de MIDI y la incapacidad de UNIX para hacer frente al tiempo tal como los humanos lo experimentan.</p>
+
+  <p>Se trata de costes no demasiado elevados, lo que yo llamaría pérdidas estéticas. Y se ven contrarrestados, sin embargo, por algunas victorias estéticas. El mundo digital tiene mejor aspecto que sonido porque una comunidad de activistas digitales, que incluye a gente de Xerox Parc (sobre todo Alan Kay), Apple, Adobe y el mundo académico (sobre todo Don Knuth, de Stanford), lucharon por la buena causa de librarnos de tipografías horribles y rígidas y de otros elementos visuales con los que, de no haber sido por ellos, nos habríamos estancado.</p>
+
+  <p>Luego están aquellos elementos gestados hace poco que marcarán el futuro de la experiencia humana, como la idea ya anclada de archivo, que son tan imprescindibles como el aire que respiramos. De ahora en adelante, el archivo será uno de los elementos subyacentes básicos de la historia humana, como los genes. Nunca sabremos lo que eso significa, ni lo que podrían haber significado otras alternativas.</p>
+
+  <p>En resumen, nos ha ido de maravilla. Pero el reto al que nos enfrentamos ahora no es como los anteriores. Los nuevos diseños que están a punto de quedar afectados por el proceso de anclaje, los proyectos de la web 2.0, exigen que todas las personas se definan limitándose. Una cosa es proponer una concepción limitada de la música o el tiempo en la contienda para decidir qué idea filosófica quedará anclada. Y otra cosa es hacerlo con la mismísima idea de lo que significa ser una persona.</p>
+
+  <h3 id="sigil_toc_id_16">Por qué es importante</h3>
+
+  <p class="asangre">Si te sientes bien usando las herramientas que utilizas, ¿quién soy yo para decirte que hay algo malo en lo que haces? Pero te pido que tengas en cuenta estos puntos:</p>
+
+  <ul>
+    <li>A la hora de diseñar la sociedad, el hecho de colocar el acento sobre la masa significa retirarlo de los individuos, y cuando les pides a las personas que no sean personas, adoptan malas conductas propias de la turba. Esto no solo desemboca en el fortalecimiento de los trolls, sino también en un mundo poco acogedor y constructivo en general.</li>
+
+    <li>Las finanzas se vieron transformadas por la computación en nube. El éxito en las finanzas pasó a depender cada vez más de la manipulación de la nube a expensas del respeto de principios financieros sólidos.</li>
+
+    <li>Hay propuestas para transformar la conducta de la ciencia en una línea semejante. Los científicos entenderían entonces menos de lo que hoy entienden.</li>
+
+    <li>La cultura popular ha ingresado en el mal de la nostalgia. La cultura online está dominada por mezcolanzas triviales de la cultura existente antes de la aparición de esas mezcolanzas, y por los <em>fandom</em> que responden a los bastiones debilitados de los medios de comunicación de masas. Es una cultura de la reacción sin acción.</li>
+
+    <li>La espiritualidad se está suicidando. La conciencia intenta extinguirse por propia voluntad.</li>
+  </ul>
+
+  <p>Podría parecer que estoy elaborando un catálogo de todas las cosas que podrían salir mal en el futuro de la cultura al verse alteradas por la tecnología, pero no es el caso. Todos estos ejemplos en realidad no son más que distintos aspectos de un único y gran error.</p>
+
+  <p class="banner">Tenemos que pensar en los estratos digitales que estamos asentando ahora para beneficiar a las futuras generaciones. Debemos ser optimistas y pensar que la civilización sobrevivirá a este siglo desafiante, y esforzarnos por crear el mejor mundo posible para aquellos que heredarán nuestros esfuerzos.</p>
+
+  <p>El significado profundo de lo que es ser una persona se está viendo limitado por ilusiones de bits. Puesto que de aquí en adelante las personas se conectarán inexorablemente entre ellas a través de los ordenadores, debemos encontrar una alternativa.</p>
+
+  <p>Junto a los múltiples problemas a los que se enfrenta el mundo en la actualidad, los debates acerca de la cultura online pueden parecer menos acuciantes. Necesitamos ocuparnos del calentamiento global, pasar a un nuevo ciclo energético, evitar las guerras de destrucción masiva, apoyar a una población envejecida, ingeniárnoslas para sacar provecho de los mercados libres sin volvernos vulnerables a sus fracasos, y ocuparnos de otros asuntos básicos. Pero la cultura digital y los temas relacionados como el futuro de la privacidad y los derechos de propiedad intelectual conciernen a la sociedad que tendremos si conseguimos sobrevivir a esos retos.</p>
+
+  <p>Cada causa que pretende salvar al mundo posee una lista de propuestas con «cosas que cada uno de nosotros puede hacer»: ir al trabajo en bici, reciclar, etc.</p>
+
+  <p>Yo propongo una lista parecida relacionada con los problemas de los que estoy hablando:</p>
+
+  <ul>
+    <li>No postees comentarios anónimos a menos que realmente puedas correr algún peligro.</li>
+
+    <li>Si te esfuerzas por colaborar en las entradas de Wikipedia, esfuérzate todavía más en usar tu propia voz y tu expresión personal fuera de wiki para atraer a personas a las que pueden interesarles los temas a los que has contribuido.</li>
+
+    <li>Crea un sitio web que exprese algo sobre ti que no encaje en el molde disponible de una red social.</li>
+
+    <li>Cuelga de vez en cuando un vídeo cuya creación te haya exigido cien veces más tiempo que el necesario para verlo.</li>
+
+    <li>Escribe una entrada de blog que te haya exigido semanas de reflexión hasta que has oído la vocecilla interior que necesitaba salir.</li>
+
+    <li>Si twitteas, trata de innovar buscando una forma de describir tu estado interior en lugar de recurrir a sucesos externos, para evitar el peligro de creer que los sucesos descritos objetivamente te definen, de la misma manera que definirían a una máquina.</li>
+  </ul>
+
+  <p>Estas son algunas de las cosas que puedes hacer para ser una persona y no una fuente de fragmentos de los que otros se aprovechan.</p>
+
+  <p>Todos los diseños de software aludidos tienen aspectos que se podrían tratar de forma más humanista. Un diseño que comparte la capacidad de Twitter de ofrecer un contacto continuo entre personas quizá pudiera renunciar al entusiasmo de Twitter por los fragmentos. Es algo que desconocemos, pues se trata de un espacio de diseño que todavía no ha sido explorado.</p>
+
+  <p>Mientras el software no te defina, estás contribuyendo a ampliar la identidad de las ideas que se anclarán para las generaciones futuras. En la mayoría de las áreas de la expresión humana, está bien que una persona ame el medio con el que trabaja. Ama la pintura si eres pintor; ama el clarinete si eres músico. Ama la lengua (u ódiala). El amor por estas cosas es el amor por el misterio.</p>
+
+  <p>Pero, en el caso de los materiales creativos digitales, como MIDI, UNIX o incluso la red global, conviene ser escéptico. Estos proyectos han tomado forma hace muy poco, y poseen un elemento fortuito y accidental. Resiste a las rutinas fáciles que te imponen. Si amas un medio construido con software, corres el peligro de quedar atrapado en las ideas simplistas de otra persona. ¡Lucha contra ello!</p>
+
+  <h3 id="sigil_toc_id_17">La importancia de la política digital</h3>
+
+  <p class="asangre">En los años ochenta y noventa hubo una campaña activa para promover la elegancia visual en el software. Ese movimiento político dio frutos cuando logró influir a ingenieros de empresas como Apple y Microsoft que por casualidad tuvieron la oportunidad de controlar la dirección que estaba tomando el software antes de que el anclaje pusiera sus esfuerzos en discusión.</p>
+
+  <p>Por eso tenemos lindas fuentes y opciones de diseño flexibles en nuestras pantallas. De otra manera, no habría ocurrido. El ímpetu en apariencia imparable dentro del mundo de los ingenieros de software estaba empujando la informática hacia las pantallas feas, pero se evitó ese destino.</p>
+
+  <p>En la actualidad debería estar teniendo lugar una campaña parecida que influyera a ingenieros, diseñadores, empresarios y todo aquel relacionado con la informática, con el fin de apoyar alternativas humanistas cuando sea posible. Sin embargo, por desgracia parece estar ocurriendo lo contrario.</p>
+
+  <p>La cultura online está llena hasta el tope de retórica sobre cuál debería ser el verdadero camino que conduce a un mundo mejor, y hoy por hoy se encuentra muy tendenciosamente orientada hacia una forma de pensar antihumana.</p>
+
+  <h3 id="sigil_toc_id_18">El futuro</h3>
+
+  <p class="asangre">La verdadera naturaleza de internet es uno de los temas de conversación más habituales en la red. Es sorprendente que internet haya crecido tanto como para ser capaz de contener la enorme cantidad de comentarios que pululan sobre su propia naturaleza.</p>
+
+  <p>La promoción de la ortodoxia tecno-político-cultural más reciente, que yo critico, se ha vuelto incesante y generalizada. El <em>New York Times</em>, por ejemplo, promueve a diario la llamada política digital abierta, a pesar de que ese ideal y el movimiento que se encuentra detrás están destruyendo el periódico y el resto de los diarios<a href="#nt4" id="rf4"><sup>[4]</sup></a>. Parece un caso de síndrome de Estocolmo periodístico.</p>
+
+  <p>Todavía no ha aparecido una interpretación pública adecuada de un punto de vista alternativo que se oponga a la nueva ortodoxia. Para oponerme a ella, tengo que aportar algo más que unos cuantos comentarios sarcásticos. También tengo que dar con un entorno intelectual alternativo lo bastante grande como para vagabundear libremente en él. Para adquirir perspectiva, alguien que ha estado inmerso en la ortodoxia tiene que experimentar un cambio completo de mentalidad al estilo de las imágenes en las que fondo y forma compiten y se impone alternativamente una sobre otra ante la sorpresa del observador. No basta con toparse con unos cuantos pensamientos heterodoxos, sino que requiere una nueva arquitectura de pensamientos interconectados bien abarcadora capaz de envolver a una persona con una cosmovisión distinta.</p>
+
+  <p>De modo que he concebido este libro como una larga declaración de fe en los opuestos de la teoría computacional, la noosfera, la Singularidad, la web 2.0, el <em>long tail</em> y todo lo demás. Espero que mi inconformismo estimule un entorno mental alternativo, en el que se pueda dar la oportunidad de crear un nuevo humanismo digital.</p>
+
+  <p>Un efecto inevitable de este proyecto de desprogramación a través de la inmersión es que volcaré una corriente constante de negatividad sobre las ideas que critico. Lectores, tened la seguridad de que al final la negatividad va disminuyendo, y de que los últimos capítulos tienen un tono optimista.</p>
+
+  <h2 id="sigil_toc_id_19">2. Un apocalipsis de la abdicación</h2>
+
+  <p class="asangre">Las ideas que espero que no queden ancladas se basan en un fundamento filosófico que a veces llamo totalitarismo cibernético. El totalitarismo cibernético aplica metáforas de ciertas tendencias de la informática a las personas y el resto de la realidad. A continuación se presentan objeciones pragmáticas a esta filosofía.</p>
+
+  <h3 id="sigil_toc_id_20">Qué hacer cuando los expertos en tecnología están más locos que los luditas</h3>
+
+  <p class="asangre">La Singularidad es una idea apocalíptica propuesta originalmente por John von Neumann, uno de los inventores de la computación digital, y esclarecida por figuras como Vernor Vinge y Ray Kurzweil.</p>
+
+  <p>Hay muchas versiones de la fantasía de la Singularidad. Esta es la que solía contar Marvin Minsky en las sobremesas a principios de los ochenta: un día no muy lejano, tal vez hacia 2020 o 2030, los ordenadores y los robots podrán construir copias de sí mismos que serán un poco mejores que los originales gracias al software inteligente. La segunda generación de robots construirá entonces una tercera, pero tardarán menos tiempo, gracias a sus mejoras sobre la primera generación.</p>
+
+  <p>El proceso se repetirá. Las sucesivas generaciones serán cada vez más inteligentes y más rápidas. La gente creerá que tiene todo bajo control hasta que un buen día la tasa de mejora de los robots será tan rápida que los robots superinteligentes dominarán la tierra.</p>
+
+  <p>En algunas versiones de la historia, los robots son descritos como microscópicos y forman una «plaga gris» que devora la tierra; en otras internet cobra vida y recluta a todas las máquinas conectadas a la red que forman un ejército para controlar el planeta. Puede que entonces los humanos disfruten de la inmortalidad dentro de la realidad virtual porque el cerebro global será tan grande que le resultará sencillísimo albergar toda nuestra conciencia para la eternidad.</p>
+
+  <p>La Singularidad por venir es una creencia popular en la sociedad de los tecnólogos. Los libros sobre la Singularidad son tan habituales en una Facultad de Informática como las imágenes del Rapto en una librería evangélica.</p>
+
+  <p>(Por si no sabes lo que es el Rapto, se trata de una llamativa creencia de la cultura evangélica estadounidense relacionada con el apocalipsis cristiano. Me crie en la zona rural de Nuevo México, y los cuadros sobre el Rapto eran habituales en lugares como gasolineras o ferreterías. Normalmente incluían coches que chocaban entre ellos porque los virtuosos conductores habían desaparecido de repente, al haber sido llamados al cielo poco antes de la llegada del infierno a la tierra. Las famosísimas novelas de la saga <em>Left Behind</em> describen la misma situación).</p>
+
+  <p>Es posible que haya algo de verdad en las ideas asociadas con la Singularidad en la máxima escala de la realidad. Tal vez sea verdad que, a nivel cósmico, surjan inevitablemente formas de conciencia cada vez más elevadas, hasta que todo el universo se convierta en un cerebro o algo similar. Incluso a una escala mucho más pequeña de millones o miles de años, resulta más excitante imaginar que la humanidad evoluciona hacia un estado más maravilloso de lo que podemos expresar hoy en día. Las únicas alternativas serían la extinción o un equilibrio estático tedioso, que sería un poco decepcionante y triste, de modo que esperemos que la condición humana, tal como ahora la entendemos, alcance la trascendencia.</p>
+
+  <p>La diferencia entre la lucidez y el fanatismo radica en la capacidad del creyente para evitar confundir las consecuencias de distintos marcos temporales. Si crees que el Rapto es inminente, puede que resolver los problemas de esta vida no sea tu máxima prioridad. Puede que incluso prefieras aceptar las guerras y tolerar la pobreza y la enfermedad que darían origen al Rapto. Del mismo modo, si crees que se avecina la Singularidad, puede que dejes de diseñar tecnología útil para los humanos y te prepares para los acontecimientos que desencadenará.</p>
+
+  <p>Pero en cualquiera de los casos, el resto de nosotros nunca sabremos si tenías razón. Se puede detectar fácilmente la tecnología que contribuye a mejorar la condición humana, y esa posibilidad se puede ver retratada en clave de ciencia ficción optimista en <em>Star Trek</em>.</p>
+
+  <p>Sin embargo, la Singularidad requiere que las personas mueran en su encarnación física, sean subidas a un ordenador y permanezcan conscientes, o simplemente que las personas sean aniquiladas en un instante imperceptible antes de que una nueva superconciencia tome la tierra. El Rapto y la Singularidad tienen un elemento en común: no pueden ser confirmados por los vivos.</p>
+
+  <h3 id="sigil_toc_id_21">La cultura es necesaria hasta para percibir la tecnología de la información</h3>
+
+  <p class="asangre">En el nuevo ambiente digital se fomentan de forma cotidiana afirmaciones cada vez más extremas. Los bits se presentan como si estuvieran vivos, mientras que los humanos son fragmentos pasajeros. Todos los comentarios anónimos que aparecen en blogs y vídeos deben haber sido obra de personas reales, pero ¿quién sabe dónde están ahora, o si están muertos? La colmena digital está creciendo a expensas de la individualidad.</p>
+
+  <p>Kevin Kelly dice que ya no necesitamos a los autores, que todas las ideas del mundo, todos los fragmentos que solían ser reunidos de forma coherente en forma de libros por autores concretos, se pueden combinar en un solo libro global. Chris Anderson, el editor de <em>Wired</em>, afirma que la ciencia debería dejar de buscar teorías que los científicos puedan entender, pues en cualquier caso la nube digital las entenderá mejor<a href="#nt5" id="rf5"><sup>[5]</sup></a>.</p>
+
+  <p>La retórica antihumana resulta fascinante del mismo modo que lo es la autodestrucción: nos ofende, pero no podemos apartar la vista.</p>
+
+  <p>El enfoque antihumano de la computación es una de las ideas con menos fundamento de la historia humana. Un ordenador ni siquiera existe a menos que una persona lo experimente. Puede que haya una masa caliente de silicio estampado atravesado por corrientes eléctricas, pero los bits no significan nada sin una persona culta que los interprete.</p>
+
+  <p>No se trata de solipsismo. Puedes creer que tu cerebro inventa el mundo, pero aun así una bala te matará. Sin embargo, una bala virtual ni siquiera existe a menos que una persona la reconozca como representación de una bala. Las pistolas son reales de un modo en que los ordenadores no lo son.</p>
+
+  <h3 id="sigil_toc_id_22">Dejando obsoletas a las personas para que los ordenadores parezcan más avanzados</h3>
+
+  <p class="asangre">Muchos de los intelectuales de Silicon Valley de hoy parecen haber adoptado como certezas lo que antes eran conjeturas, sin el espíritu de curiosidad ilimitada que en un principio les dio origen. Las ideas que alguna vez estuvieron reservadas al oscuro mundo de los laboratorios de inteligencia artificial se han vuelto hegemónicas en la cultura tecnológica. El primer dogma de esta nueva cultura es que toda la realidad, incluidos los humanos, es un gran sistema de información. Eso no significa que estemos condenados a una existencia sin sentido. En su lugar, hay un nueva suerte de destino manifiesto que nos ofrece una misión que cumplir. El significado de la vida, desde este punto de vista, consiste en hacer que el sistema digital que llamamos realidad funcione a «niveles de descripción» cada vez más elevados.</p>
+
+  <p>La gente aparenta saber el significado de los llamados «niveles de descripción», pero dudo de que alguien lo sepa de verdad. Una página web está pensada para representar un nivel de descripción más elevado que una simple letra, mientras que el cerebro constituye un nivel más alto que una página web. Una versión ampliada y cada vez más común de esta idea es que la red en su conjunto es o será dentro de poco un nivel más elevado que un cerebro.</p>
+
+  <p>Los humanos no tienen ningún papel especial en este plan. Dentro de poco los ordenadores se volverán tan grandes y tan rápidos y la red estará tan llena de información que las personas resultarán obsoletas y serán descartadas como en el caso de los personajes de las novelas sobre el Rapto o serán subsumidas por un ente cibersobrehumano.</p>
+
+  <p>La cultura de Silicon Valley ha consagrado esa idea difusa y la ha difundido como solo pueden hacerlo los tecnólogos. Como la puesta en práctica de una idea vale más que mil palabras, las ideas se pueden difundir en los diseños de software. Si uno cree que la distinción entre los roles de la gente y los ordenadores está empezando a desaparecer, podría expresarlo —como lo hicieron algunos amigos míos de Microsoft una vez— diseñando las prestaciones de un procesador de texto que se supone que sabe lo que quieres, como cuando quieres empezar una lista dentro de un documento. Puede que te haya ocurrido que de repente Microsoft Word decide, en el momento equivocado, que estás creando una lista en tu documento. Pese a que yo estoy totalmente a favor de la automatización de las tareas menores, esto es distinto.</p>
+
+  <p>Desde mi punto de vista, esa clase de prestación es absurda, pues acabas teniendo que trabajar más de lo necesario para manipular las expectativas que el programa pone en tu documento. La verdadera función de esa prestación no es hacernos la vida más fácil, sino promover una nueva filosofía: que el ordenador está evolucionando en una forma de vida que puede entender a las personas mejor de lo que las personas se entienden a sí mismas.</p>
+
+  <p>Otro ejemplo es lo que yo llamo la «carrera por ser el más meta». Si un diseño como Facebook o Twitter despersonaliza a la gente, entonces otro servicio como Friendfeed —que es posible que ni siquiera exista cuando se publique este libro— puede que dentro de poco venga a agregar los estratos previos de agregación, haciendo que los individuos parezcan todavía más abstractos y que la ilusión de lo «meta» a un alto nivel sea más celebrada.</p>
+
+  <h3 id="sigil_toc_id_23">La información no merece ser libre</h3>
+
+  <p class="asangre">«La información quiere ser libre». Eso se suele decir. Parece que Stewart Brand, el fundador de <em>Whole Earth Catalog</em>, fue el primero en decirlo.</p>
+
+  <p>Yo digo que la información no merece ser libre.</p>
+
+  <p>A los totalitarios cibernéticos les encanta pensar en la información como si estuviera viva y tuviera sus propias ideas y ambiciones. Pero ¿y si la información es inanimada? ¿Y si todavía es menos que inanimada, un simple producto del pensamiento humano? ¿Y qué pasaría si solo los humanos son reales y la información no lo es?</p>
+
+  <p>Por supuesto, hay un uso técnico de la palabra «información» que hace referencia a algo totalmente real. Se trata de la clase de información relacionada con la entropía. Pero esa clase de información básica, que existe independientemente de la cultura de un observador, no es del mismo tipo de la que podemos poner en los ordenadores, la clase de información que supuestamente quiere ser libre.</p>
+
+  <p>La información es una experiencia alienada.</p>
+
+  <p>Uno puede pensar en la información culturalmente descifrable como una forma potencial de experiencia, de la misma manera en que puedes pensar en un ladrillo descansando sobre una repisa como si estuviera asimilando energía potencial. Cuando se empuja el ladrillo, la energía se manifiesta. Eso solo es posible porque en algún momento del pasado fue colocado alto.</p>
+
+  <p>Del mismo modo, la información almacenada puede hacer que la experiencia se manifieste si se empuja en la dirección adecuada. Un archivo en un disco duro contiene sin duda información que existe objetivamente. El hecho de que los bits sean discernibles en lugar de estar revueltos en una masa confusa —tal como el calor revuelve las cosas— es lo que los convierte en bits.</p>
+
+  <p>Pero si bien los bits pueden guardar un significado potencial, únicamente pueden hacerlo si son experimentados por alguien. Cuando eso sucede, se desarrolla una comunión cultural entre el que acumula los bits y el que los recupera. La experiencia es el único proceso que puede desalienar la información.</p>
+
+  <p>La información que supuestamente quiere ser libre no es más que una sombra de nuestras mentes, y no quiere nada por sí misma. No sufrirá si no consigue lo que quiere.</p>
+
+  <p>Pero si deseas dar el paso desde la antigua religión, en la que uno espera que Dios le conceda la vida después de la muerte, hacia la nueva religión, en la que uno espera volverse inmortal al ser subido en un ordenador, entonces tienes que creer que la información es real y está viva. De modo que para ti será importante rediseñar instituciones humanas como el arte, la economía y el derecho para reforzar la creencia de que la información está viva. Y demandas a los demás que vivamos en tu nueva concepción de una religión de Estado. Nos necesitas para que deifiquemos la información y así reforzar tu fe.</p>
+
+  <h3 id="sigil_toc_id_24">La manzana vuelve a caer</h3>
+
+  <p class="asangre">Se trata de un error con un origen notable. Alan Turing lo expuso poco antes de suicidarse.</p>
+
+  <p>El suicidio de Turing es un tema delicado en los círculos informáticos. Hay una cierta aversión de hablar del tema porque no queremos que nuestro padre fundador parezca una <em>celebrity</em> mediática y que su recuerdo se vea trivializado por los aspectos sensacionalistas de su muerte.</p>
+
+  <p>El legado de Turing, el matemático, va más allá de cualquier posible sensacionalismo. Sus contribuciones fueron sumamente elegantes y fundacionales. Nos legó grandes descubrimientos, incluyendo gran parte de los cimientos matemáticos de la computación digital. El más alto galardón de la informática, nuestro premio Nobel, lleva su nombre.</p>
+
+  <p>Sin embargo, Turing, en tanto figura cultural, también merece reconocimiento. Lo primero que hay que destacar es que fue uno de los grandes héroes de la Segunda Guerra Mundial. Fue el primer <em>cracker</em>, una persona que usa los ordenadores para burlar las medidas de seguridad del enemigo. Usando uno de los primeros ordenadores, desentrañó un código secreto nazi, llamado Enigma, que los matemáticos nazis consideraban indescifrable. Los nazis descodificaban el código Enigma sobre el terreno utilizando un dispositivo mecánico del tamaño aproximado de una caja de puros. Turing lo reelaboró como patrón de bits que podía ser analizado en un ordenador y así lo descifró. ¿Quién sabe en qué mundo estaríamos viviendo hoy si Turing no hubiera tenido éxito?</p>
+
+  <p>El segundo dato que hay que saber sobre Turing es que era homosexual en una época en que ser gay era ilegal. Las autoridades británicas, creyendo que actuaban de la forma más compasiva, lo obligaron a someterse a un dudoso tratamiento médico que se suponía debía corregir su homosexualidad. El tratamiento, por extraño que parezca, consistía en inyectarle enormes dosis de hormonas de mujer.</p>
+
+  <p>Para entender cómo a alguien se le pudo ocurrir semejante plan, hay que recordar que antes de que aparecieran los ordenadores la máquina de vapor era la metáfora favorita para entender la naturaleza humana. Toda esa presión sexual iba en aumento, lo que hacía funcionar mal a la máquina, de modo que la esencia contraria, la femenina, debería compensarla y reducir la presión. Esta historia debería servir como cuento con moraleja. El uso habitual de los ordenadores tal como los entendemos hoy, como fuente de modelos y metáforas de nosotros mismos, seguramente es tan fiable como el uso de la máquina de vapor en aquel entonces.</p>
+
+  <p>Cuando a Turing le crecieron los pechos y desarrolló otras características femeninas, cayó en una profunda depresión. Se suicidó en su laboratorio comiéndose una manzana que él mismo roció con cianuro. Poco antes de su muerte, presentó ante el mundo una idea espiritual que debe ser valorada al margen de sus logros técnicos. Se trata del famoso test de Turing. La aparición de una idea espiritual verdaderamente nueva es algo muy poco común, y el hecho de que Turing diera con una es otro ejemplo de su genio.</p>
+
+  <p>Turing dio a conocer su nueva propuesta bajo la forma de un experimento mental, basado en un popular juego de salón victoriano. Un hombre y una mujer se esconden, y un juez debe determinar quién es quién basándose únicamente en los textos de las notas que se pasan de uno a otro.</p>
+
+  <p>Turing sustituyó a la mujer por un ordenador. ¿Puede el juez saber quién es el hombre? En caso de que no, ¿es el ordenador consciente? ¿Inteligente acaso? ¿Merece igualdad de derechos?</p>
+
+  <p>Nos resulta imposible saber el papel que desempeñó la tortura que en aquel entonces padecía en su formulación de la prueba. Lo que es innegable es que una de las figuras clave en la derrota del fascismo fue destruida por nuestro propio bando, después de la guerra, porque era gay. No es de extrañar que reflexionara acerca de los derechos de criaturas diferentes.</p>
+
+  <p>Cuando Turing falleció, el software se encontraba todavía en una fase tan temprana que nadie podía saber el lío en que resultaría cuando evolucionara. Turing imaginó una forma prístina y cristalina de existencia en el campo digital, y yo creo que imaginar una forma de vida al margen de los tormentos del cuerpo y de la política de la sexualidad pudo haber sido un consuelo para él. Llama la atención que fuera la mujer la que fue sustituida por el ordenador, y que en el suicidio de Turing resuene la caída de Eva.</p>
+
+  <h3 id="sigil_toc_id_25">La prueba de Turing es un arma de doble filo</h3>
+
+  <p class="asangre">Cualquiera que fuese su motivación, Turing fue el autor de la primera propuesta que respalda la idea de que los bits pueden tener una vida propia e independiente de los observadores humanos. Desde entonces, esta idea ha aparecido de mil maneras distintas, desde la inteligencia artificial hasta la mente colmena, por no hablar de las numerosas <em>start-ups</em> de Silicon Valley publicitadas a bombo y platillo.</p>
+
+  <p>Sin embargo, me parece que la prueba de Turing ha sido mal interpretada por varias generaciones de tecnólogos. Normalmente se la propone para respaldar la idea de que las máquinas pueden alcanzar aquella cualidad que otorga conciencia a las personas. Después de todo, si una máquina te ha hecho creer que es consciente, sería muy prejuicioso de tu parte seguir diciendo que no lo es.</p>
+
+  <p>Sin embargo, lo que la prueba nos indica en realidad, aunque no sea necesariamente lo que Turing esperaba que indicara, es que la inteligencia artificial solo se puede conocer en sentido relativo, es decir, a ojos de un espectador humano<a href="#nt6" id="rf6"><sup>[6]</sup></a>.</p>
+
+  <p>La forma de pensar de la inteligencia artificial es decisiva en las ideas que critico en este libro. Si una máquina puede ser consciente, entonces la nube informática será una conciencia todavía mejor y mucho más capaz que la de un individuo. Si eres de esa opinión, trabajar en beneficio de la nube por encima de los individuos te sitúa en el bando de los ángeles.</p>
+
+  <p>Pero la prueba de Turing es un arma de doble filo. Es imposible saber si la máquina se ha vuelto más lista o si simplemente tú has bajado tu nivel de inteligencia hasta tal punto que la máquina parece inteligente. Si puedes mantener una conversación con una persona simulada presentada por un programa de inteligencia artificial, ¿puedes saber realmente hasta qué punto has dejado que tu sentido de persona se degrade para que la ilusión te parezca real?</p>
+
+  <p>La gente se degrada constantemente para que las máquinas parezcan inteligentes. Antes de la crisis, los banqueros confiaban en algoritmos supuestamente inteligentes que podían calcular los riesgos crediticios para evitar otorgar préstamos inadecuados. Pedimos a los profesores que enseñen a aprobar exámenes estandarizados para que el desempeño de los alumnos se vea bien ante un algoritmo. En repetidas ocasiones hemos demostrado la habilidad ilimitada de nuestra especie para bajar nuestros estándares y hacer que la tecnología de la información parezca buena. Cada uno de los ejemplos de inteligencia en una máquina es ambiguo.</p>
+
+  <p>La misma ambigüedad que alguna vez motivó proyectos académicos discutibles de inteligencia artificial ha sido reembalada ahora como cultura de masas. ¿Ese buscador sabe realmente lo que queremos, o estamos siguiendo el juego, bajando nuestro nivel de exigencia para que el buscador parezca inteligente? Mientras se espera que el contacto con nuevas tecnologías avanzadas cambie la perspectiva humana, el ejercicio de tratar la inteligencia de las máquinas como si fuera real requiere que las personas reduzcan su conexión de la realidad.</p>
+
+  <p>Después de un período prolongado de experimentos fallidos en tareas como la comprensión del lenguaje natural, un número considerable de entusiastas de la inteligencia artificial acabó encontrando consuelo en la adoración de la mente colmena, que aporta mejores resultados porque detrás hay personas reales.</p>
+
+  <p>Wikipedia, por ejemplo, opera con lo que yo llamo la ilusión del oráculo, en la que se suprime el conocimiento de la autoría humana de un texto para darle al texto una validez sobrehumana. Los libros sagrados tradicionales operan en la misma dirección y presentan muchos de los mismos problemas.</p>
+
+  <p>Este es otro de los motivos por los que a veces pienso en la cultura cibernética totalitaria como una nueva religión. La denominación es mucho más que una metáfora aproximada, pues incluye una nueva forma de buscar la vida después de la muerte. Me resulta muy extraño que Ray Kurzweil quiera que la nube informática global recoja el contenido de nuestros cerebros para que podamos vivir eternamente en la realidad virtual. Cuando mis amigos y yo creamos las primeras máquinas de realidad virtual, nuestro único objetivo era hacer de este mundo un espacio más creativo, expresivo, empático e interesante. La idea no era escapar de él.</p>
+
+  <p>Un desfile de «grandes ideas» supuestamente originales que implican el culto a las ilusiones de los bits ha cautivado a Silicon Valley, Wall Street y otros centros de poder. Puede ser Wikipedia o las personas simuladas al otro lado de la línea telefónica. Pero lo único que estamos oyendo en realidad es el error de Turing repetido una y otra vez.</p>
+
+  <h3 id="sigil_toc_id_26">O piensa en el ajedrez</h3>
+
+  <p class="asangre">¿Los procesos económicos, científicos y culturales de moda basados en la nube podrán dejar atrás los enfoques anticuados que requieren la comprensión humana? No, porque solo el contacto con la comprensión humana permite que el contenido de la nube adquiera existencia.</p>
+
+  <p>La cultura fragmentaria de la liberación espera con ansiedad los triunfos futuros de la tecnología que darán lugar a la Singularidad y a otros acontecimientos imaginarios. Pero ya existen ejemplos en los que el test de Turing ha sido más o menos superado y que han supuesto una reducción de la condición de persona. El ajedrez es uno de ellos.</p>
+
+  <p>El juego del ajedrez posee una combinación rara de cualidades: sus normas son fáciles de entender, pero es difícil jugar bien; y, lo más importante, la urgencia por dominarlo parece eterna. Los jugadores humanos adquieren niveles cada vez más elevados de destreza, pero nadie puede afirmar que la empresa ha llegado a su fin.</p>
+
+  <p>Los ordenadores y el ajedrez comparten un antepasado común. Los dos se crearon como herramientas de guerra. El ajedrez nació como un simulacro de una batalla, un arte marcial mental. El diseño del ajedrez se remonta todavía más lejos, hacia atrás en el tiempo: hasta los orígenes de nuestra triste ascendencia animal con órdenes jerárquicos y clanes rivales.</p>
+
+  <p>Del mismo modo, los ordenadores modernos se desarrollaron para guiar misiles y descifrar códigos militares. El ajedrez y los ordenadores son descendientes directos de la violencia que impulsa la evolución en el mundo natural, por más asépticos y abstractos que puedan ser en el contexto de la civilización. El espíritu de competencia resulta palpable tanto en la informática como en el ajedrez, y cuando se juntan, la adrenalina fluye.</p>
+
+  <p>Lo que hace que el ajedrez fascine a los informáticos es precisamente que jugamos mal. Desde nuestro punto de vista, el cerebro humano hace rutinariamente cosas que se nos antojan de una dificultad casi insuperable, como entender oraciones. Sin embargo, no organizamos torneos de comprensión de oraciones porque la tarea nos resulta demasiado fácil y vulgar.</p>
+
+  <p>Los ordenadores nos fascinan y nos decepcionan por igual. Los niños pueden aprender a programarlos, pero es muy difícil, incluso para el más consumado profesional, programarlos bien. A pesar del evidente potencial de los ordenadores, sabemos perfectamente que seguimos sin desarrollar los mejores programas.</p>
+
+  <p>Pero esto no basta para explicar la efusión de ansiedad popular que se produjo con ocasión de la victoria del ordenador Deep Blue en mayo de 1997 frente al campeón mundial de ajedrez Garri Kaspárov, justo cuando la red empezaba a vivir sus primeros momentos de gran influencia sobre la cultura popular. Al margen del bombo de los viejos medios de comunicación, era evidente que la respuesta del público era sincera y sentida. Durante milenios, el dominio del ajedrez había sido sinónimo de la inteligencia más elevada y refinada; y ahora un ordenador podía vencer al mejor de los humanos.</p>
+
+  <p>Se habló mucho de si los seres humanos seguían siendo especiales, de si los ordenadores se estaban convirtiendo en nuestros iguales. Hoy en día, algo así no sería noticia, pues a la gente le han metido en la cabeza hasta tal punto la forma de pensar de la inteligencia artificial que parece una noticia vieja y creíble. Sin embargo, la forma de encuadrar el acontecimiento desde el punto de vista de la inteligencia artificial fue desafortunada. Lo que ocurrió sobre todo fue que un equipo de informáticos construyó una máquina muy rápida y dio con una forma mejor de representar el problema que supone la elección de la siguiente jugada en una partida de ajedrez. La gente, no las máquinas, llevaron a cabo ese logro.</p>
+
+  <p>La victoria central del equipo del Deep Blue fue la de la claridad y la elegancia de pensamiento. Para que un ordenador venciera a un campeón de ajedrez tenían que converger dos tipos de progresos: un aumento de la potencia cruda del hardware y una mejora en la sofisticación y la claridad con la que se representan en el software las decisiones de una partida de ajedrez. Este doble camino hacía que fuera difícil predecir el año, pero no la eventualidad de que un ordenador venciera.</p>
+
+  <p>Si el equipo del Deep Blue no hubiera resuelto el problema de software, de todas maneras, algún día, un ordenador habría acabado siendo el campeón del mundo, gracias a la pura potencia. Por lo tanto, la intriga no reside en preguntarse si un ordenador que juega al ajedrez vencería alguna vez al mejor ajedrecista, sino hasta qué punto la elegancia de la programación desempeñaría un papel en la victoria. El ordenador Deep Blue ganó antes de lo previsto y se anotó un punto por su elegancia.</p>
+
+  <p>Sin embargo, la reacción pública a la derrota de Kaspárov planteó una importante pregunta a la comunidad informática. ¿Es útil retratar a los ordenadores como inteligentes o similares a los humanos en algún aspecto? ¿Sirve esa presentación para aclarar u oscurecer el papel de los ordenadores en nuestras vidas?</p>
+
+  <p>Cada vez que un ordenador es considerado inteligente, lo que en realidad ocurre es que los humanos omiten aspectos del tema en cuestión para dejar fuera de consideración aquello a lo que la computadora es ciega. Esto fue lo que ocurrió con el ajedrez en el torneo entre el ordenador Deep Blue y Kaspárov.</p>
+
+  <p>Hay un aspecto del ajedrez parecido al póquer: la mirada fija de un contrincante, la proyección de confianza. Aunque es relativamente más fácil crear un programa para «jugar» al póquer que para jugar al ajedrez, el póquer es un juego centrado realmente en las sutilezas de la comunicación no verbal entre las personas, como <em>bluffear</em>, ocultar la emoción, entender la psicología del contrincante y saber apostar en consecuencia. Tras la victoria del Deep Blue, la parte del ajedrez similar al póquer se ha visto ampliamente eclipsada por el aspecto abstracto y algorítmico. Pero, irónicamente, fue en realidad en la parte del juego semejante al póquer donde Kaspárov falló críticamente.</p>
+
+  <p>A pesar de que Kaspárov se dejó intimidar por el ordenador, había demostrado que podía ganarle al ordenador al menos en algunas ocasiones. Podría haber ganado perfectamente si hubiera jugado como si lo hiciera con un jugador humano con las mismas habilidades de elección de movimientos que el Deep Blue (o por lo menos que el Deep Blue que existía en 1997). En cambio, Kaspárov percibió una cara de piedra siniestra donde en realidad no había absolutamente nada. Aunque la partida no estaba pensada como una prueba de Turing, acabó funcionando como tal, y Kaspárov se dejó engañar.</p>
+
+  <p>Como he señalado antes, la idea de la inteligencia artificial trasladó la proyección psicológica de cualidades encantadoras desde los programas informáticos hacia un objetivo distinto: las estructuras ordenador más multitud. De modo que en 1999, un grupo de gente tipo wiki, entre los que se encontraban campeones de ajedrez, se reunió para jugar contra Kaspárov en una partida en red llamada «Kaspárov contra el Mundo». En esta ocasión Kaspárov ganó, aunque muchos creyeron que lo logró gracias a las traiciones de algunos miembros del grupo. A los tecnólogos siempre nos intrigan los rituales en los que tratamos de fingir que las personas están obsoletas.</p>
+
+  <p>La atribución de inteligencia a las máquinas, a las multitudes de fragmentos o a otras deidades tecnológicas más que iluminar el tema, lo oscurecen. Cuando a las personas se les dice que un ordenador es inteligente, tienden a cambiarse a sí mismas para que parezca que el ordenador funciona mejor, en lugar de exigir que el ordenador cambie para resultar más útil. Las personas ya sienten deferencia hacia los ordenadores y se culpan a sí mismas cuando un <em>gadget</em> digital o un servicio online es difícil de usar.</p>
+
+  <p>Tratar a los ordenadores como entidades inteligentes y autónomas acaba trastocando el proceso de la ingeniería. No podemos permitirnos respetar tanto nuestros propios diseños.</p>
+
+  <h3 id="sigil_toc_id_27">El círculo de empatía</h3>
+
+  <p class="asangre">La pregunta más importante que hay que hacerse con respecto a toda tecnología es cómo cambia a las personas. Y para responder esta pregunta, durante muchos años he empleado una estratagema mental llamada «círculo de empatía». Tal vez a ti también te resulte útil. (Peter Singer, el filósofo de Princeton asociado a menudo con los derechos de los animales, emplea un término similar, aparentemente una coincidencia en la acuñación).</p>
+
+  <p>Cada persona dibuja un círculo imaginario de empatía. El círculo circunscribe a la persona a cierta distancia, y se corresponde con las cosas del mundo que merecen empatía. Me gusta la palabra «empatía» porque tiene connotaciones espirituales. Palabras como «solidaridad» o «lealtad» serían más precisas, pero me interesa que la palabra elegida sea ligeramente mística para dar a entender que es posible que no acabemos de comprender lo que ocurre entre nosotros y los demás, y que deberíamos dejar abierta la posibilidad de que esa relación no pueda ser representada en una base de datos digital.</p>
+
+  <p>Si alguien cae dentro de tu círculo de empatía, no te gustaría que muriera. Para los elementos situados claramente fuera del círculo, vale todo. Por ejemplo, la mayoría de las personas situarían al resto de los humanos dentro del círculo, pero por supuesto muchos de nosotros estamos dispuestos a matar a las bacterias al cepillarnos los dientes, y desde luego no nos preocupa que una roca inanimada sea apartada para despejar el camino.</p>
+
+  <p>La complicación radica en las entidades que residen cerca del borde del círculo. Las controversias más profundas suelen girar en torno a si algo o alguien queda justo dentro o justo fuera del círculo. Por ejemplo, la idea de la esclavitud pasa por situar al esclavo fuera del círculo para deshumanizar a la persona. La ampliación del círculo para incluir a todas las personas y acabar con la esclavitud ha sido una de las tendencias épicas en la historia de la humanidad, y todavía no ha acabado.</p>
+
+  <p>Muchas otras controversias encajan perfectamente en el modelo. La lucha en torno al aborto plantea la pregunta de si un feto o un embrión debería estar en el círculo o no, y el debate sobre los derechos de los animales plantea la misma pregunta.</p>
+
+  <p>Cuando cambias el contenido de tu círculo, cambias tu concepción de ti mismo. El centro del círculo se mueve en la medida en que su perímetro cambia. El impulso liberal es ampliar el círculo, mientras que los conservadores tienden a querer mantenerlo o incluso reducirlo.</p>
+
+  <h3 id="sigil_toc_id_28">Inflación de empatía y ambigüedad metafísica</h3>
+
+  <p class="asangre">¿Hay algún motivo legítimo para no ampliar el círculo lo máximo posible? Sí, lo hay.</p>
+
+  <p>Ampliar el círculo indefinidamente puede llevar a la opresión, pues los derechos de entes potenciales (tal como son percibidos solo por algunas personas) pueden entrar en conflicto con los derechos de personas indiscutiblemente reales. Un ejemplo obvio de ello lo tenemos en el debate sobre el aborto. Si declarar el aborto ilegal no implicara requisar los cuerpos de otras personas (las mujeres embarazadas, en este caso), no habría mucha polémica. En ese caso, no nos costaría mucho llegar a un acuerdo.</p>
+
+  <p>La inflación de empatía también puede conducir a males menores, pero aun así importantes, como la incompetencia, la trivialización, la deshonestidad y el narcisismo. Por ejemplo, no se puede vivir sin matar a las bacterias. Si te negaras, ¿no estarías proyectando tus fantasías en organismos unicelulares indiferentes a ellas? ¿No sería una cuestión tuya más que de la causa que persigues? ¿Vas por ahí destruyendo los cepillos de dientes de los demás? ¿Crees que las bacterias que salvarías serían moralmente equivalentes a los antiguos esclavos, y de ser así, no crees que lo que haces es rebajar la condición de esos seres humanos? Aun si pudieras seguir adelante, con tu corazón puro, con tu pasión por la liberación y protección de las bacterias del mundo, ¿no te habrías apartado de la realidad, hecha de la interdependencia y la transitoriedad de todas las cosas? Puedes tratar de evitar matar bacterias en ocasiones especiales, pero necesitas matarlas para poder vivir. Y aunque estés dispuesto a morir por la causa, no podrás impedir que las bacterias devoren tu cuerpo cuando mueras.</p>
+
+  <p>Evidentemente, el ejemplo de las bacterias es extremo, pero demuestra que el círculo solo tiene sentido si es finito. Si perdemos la finitud, perdemos nuestro centro e identidad. La fábula del Frente de Liberación de Bacterias puede servir como una parodia de gran número de movimientos extremistas de la izquierda o la derecha.</p>
+
+  <p>Al mismo tiempo, tengo que admitir que me resulta imposible adoptar una postura definitiva con respecto a muchas de las polémicas más familiares. Estoy totalmente a favor de los derechos de los animales, por ejemplo, pero de forma hipócrita. Como pollo, pero no puedo comer cefalópodos (pulpo y calamar) porque admiro profundamente su evolución neurológica. (Además, los cefalópodos sugieren una forma alternativa de pensar en el futuro de largo plazo de la tecnología que evita ciertos dilemas morales; algo que explicaré más adelante).</p>
+
+  <p>¿Cómo dibujo mi círculo? Solo tengo que pasar tiempo con las distintas especies y decidir si merecen estar en mi círculo o no. He criado pollos y por algún motivo no he sentido ninguna empatía hacia ellos. Para mí, no son más que mecanismos plumíferos servocontrolados comparados con las cabras, por ejemplo, que también he criado, y me niego a comer. En cambio, un colega mío, el investigador en realidad virtual Adrian Cheok, siente tal empatía por los pollos que les ha fabricado trajes de teleinmersión para poder telemimarlos desde el trabajo. Todos tenemos que vivir con nuestra capacidad limitada para discernir los límites de nuestros círculos de empatía. Siempre habrá casos de personas razonables que no estén de acuerdo. Yo no voy por ahí diciendo que no se deben comer cefalópodos ni cabras.</p>
+
+  <p>El límite entre la persona y la no persona podría hallarse en algún punto de la secuencia embriónica que va desde la concepción hasta el bebé, o en el desarrollo del niño, o del adolescente. O tal vez se encuentre mejor definido en el pasaje filogenético que lleva del simio al humano primitivo, o quizá en la historia cultural de los antiguos campesinos que desembocaron en los ciudadanos modernos. Puede que se halle en un punto del continuo entre los ordenadores pequeños y los grandes. Puede que tenga que ver con los pensamientos de uno; tal vez los pensamientos reflexivos o la capacidad moral para la empatía es lo que te hace humano. Estas son algunas de las muchas entradas a la condición de persona que han sido propuestas, pero ninguna me parece definitiva. Las fronteras de la condición de persona siguen siendo variopintas y borrosas.</p>
+
+  <h3 id="sigil_toc_id_29">Puliendo el círculo</h3>
+
+  <p class="asangre">El hecho de que seamos incapaces de saber con exactitud dónde situar el círculo de empatía no significa que seamos incapaces de saber algo sobre él. Si solo somos capaces de ser más o menos morales, no significa que debamos renunciar a la moral por completo. El término «moralidad» se emplea a menudo para describir cómo tratamos a los demás, pero en este caso lo aplico igualmente a nosotros mismos.</p>
+
+  <p>La cultura digital abierta que hoy manda sitúa el proceso de la información digital en el papel del embrión tal y como lo entiende la derecha religiosa, o en el papel de las bacterias de mi reducción al absurdo. El error es clásico, pero las consecuencias son nuevas. Me temo que estamos empezando a diseñarnos a nosotros mismos para adecuarnos a nuestros modelos digitales, y me preocupa que en ese proceso se pierda empatía y humanidad.</p>
+
+  <p>Los derechos de los embriones se basan en la extrapolación, mientras que los derechos de una persona adulta competente son totalmente demostrables, pues las personas pueden hablar por sí mismas. Hay muchos ejemplos en los que resulta difícil decidir en qué basar la fe en la condición de persona, ya que el ser en cuestión puede generar empatía, pero no puede hablar por sí mismo.</p>
+
+  <p>¿Los animales deberían tener los mismos derechos que los humanos? Existen peligros especiales cuando algunas personas oyen voces que otros no oyen y extienden entonces la empatía. Estas situaciones son las que deben quedar en manos de aquellas personas a quienes afecta más directamente una situación, pues de lo contrario destruiremos la libertad personal imponiendo ideas metafísicas los unos a los otros.</p>
+
+  <p>En el caso de la esclavitud resultó que, cuando se les dio la oportunidad, los esclavos no solo podían hablar por sí mismos, sino que podían hacerlo muy bien. Moisés era una persona, sin duda. Descendientes de esclavos más recientes, como Martin Luther King Jr., han demostrado una elocuencia y empatía sublimes.</p>
+
+  <p>En un nuevo giro que se registra en Silicon Valley, algunas personas —personas muy influyentes— creen oír hablar por sí mismos a los algoritmos y a las multitudes y a otras entidades no humanas de internet. Yo no oigo esas voces, y creo que los que las oyen se están engañando a sí mismos.</p>
+
+  <h3 id="sigil_toc_id_30">Experimentos mentales: el barco de Teseo frente a la biblioteca infinita de Borges</h3>
+
+  <p class="asangre">Para que aprendas a dudar de las fantasías de los totalitarios cibernéticos, propongo dos experimentos mentales.</p>
+
+  <p>El primero se practica desde hace mucho tiempo. Como explica Daniel Dennett, imagina que un programa de ordenador puede simular una neurona, o incluso una red de neuronas. (Esos programas existen desde hace años y, de hecho, están mejorando mucho). Ahora imagina un pequeño aparato inalámbrico que puede enviar y recibir señales de las neuronas del cerebro. Ya existen aparatos rudimentarios de ese tipo; hace años ayudé a Joe Rosen, un cirujano plástico reconstructivo de la Facultad de Medicina de Dartmouth, a fabricar uno: el «neurochip», un intento temprano de reparar nervios dañados utilizando prótesis.</p>
+
+  <p>Para realizar el experimento, contrata a un neurocirujano para que te abra el cráneo. Si eso supone un inconveniente, trágate un nanorrobot que pueda hacer intervenciones de neurocirugía. Sustituye un nervio de tu cerebro por uno de los <em>gadgets</em> inalámbricos. (Aunque esos aparatos ya se hubieran perfeccionado, conectarlos no sería posible hoy día. La neurona artificial tendría que involucrarse en las mismas sinapsis —cerca de siete mil, por término medio— del nervio biológico que sustituye).</p>
+
+  <p>Luego la neurona artificial se conectará a una simulación de neuronas en un ordenador cercano por medio de un enlace inalámbrico. Cada neurona tiene características químicas y estructurales únicas que deben ser incluidas en el programa. Haz lo mismo con las neuronas que te queden. En el cerebro humano hay entre cien mil y doscientos mil millones de neuronas, de modo que incluso dedicando un segundo por neurona, llevaría decenas de miles de años.</p>
+
+  <p>Y ahora la gran pregunta: ¿sigues consciente una vez que el proceso ha sido completado?</p>
+
+  <p>Además, como el ordenador es totalmente responsable de la dinámica de tu cerebro, puedes renunciar a las neuronas artificiales físicas y dejar que los programas de control neuronal se conecten entre ellos únicamente a través del software. ¿El ordenador se convierte así en una persona? Si crees en la conciencia, ¿está tu conciencia ahora en el ordenador, o tal vez en el software? La misma pregunta se puede hacer con respecto al alma, si crees en su existencia.</p>
+
+  <h3 id="sigil_toc_id_31">Borges ampliado</h3>
+
+  <p class="asangre">Ahí va el segundo experimento mental. Plantea la misma pregunta desde la perspectiva contraria. En lugar de cambiar el programa que corre en el ordenador, este experimento cambia el diseño del ordenador.</p>
+
+  <p>Primero, imagina una tecnología maravillosa: una serie de escáneres láser voladores capaces de medir las trayectorias de todas las piedras de granizo en una tormenta. Los escáneres envían toda la información de la trayectoria a tu ordenador mediante una conexión inalámbrica.</p>
+
+  <p>¿Qué haría alguien con esos datos? Resulta que hay una tienda superespecializada llamada Tienda de Informática Definitiva, donde se vende una gran variedad de diseños de ordenadores. De hecho, tienen un stock de todos los diseños de ordenador posible que poseen un número limitado de compuertas lógicas.</p>
+
+  <p>Llegas a la Tienda de Informática Definitiva con un programa en la mano. Un vendedor te da un carrito, y empiezas a probar tu programa en varios ordenadores mientras recorres los pasillos. De vez en cuando tienes suerte, y el programa que llevas de casa corre durante un período razonable de tiempo sin colgarse en el ordenador. Cuando eso ocurre, metes el ordenador en el carrito.</p>
+
+  <p>Como programa puedes utilizar los datos de la tormenta de granizo. Recuerda que un programa informático no es más que una lista de números; ¡debe haber algún ordenador en la tienda que lo ejecute! Lo extraño es que cada vez que encuentras un ordenador que ejecuta los datos del granizo como programa, el programa hace algo distinto.</p>
+
+  <p>Al cabo de un rato, acabas con varios millones de procesadores de texto, unos videojuegos increíbles y un software para la elaboración de la declaración de impuestos; todos son el mismo programa, ejecutado en distintos diseños de ordenador. Eso lleva tiempo; en el mundo real el universo seguramente no proporcionaría las condiciones de vida durante el tiempo necesario para que pudiera hacer esta compra. Pero esto es un experimento mental, así que no te pongas quisquilloso.</p>
+
+  <p>El resto es sencillo. Una vez que tu carrito esté lleno de ordenadores que ejecutan los datos del granizo, siéntate en el café de la tienda. Configura el ordenador del primer experimento mental, el que está ejecutando una copia de tu cerebro. Repasa todos tus ordenadores y compara lo que hace cada uno con lo que hace el ordenador del primer experimento. Sigue haciéndolo hasta que encuentres un ordenador que ejecute los datos del granizo como un programa equivalente a tu cerebro.</p>
+
+  <p>¿Cómo sabes cuándo has encontrado una coincidencia? Hay infinidad de opciones. Por motivos matemáticos, nunca puedes estar del todo seguro de lo que hace un programa grande o de si se colgará, pero si encontraste una forma de quedar satisfecho con los reemplazos neuronales de software del primer experimento mental, ya has elegido el método de evaluar un gran programa de forma aproximada. O podrías buscar un ordenador en tu carrito que interprete el movimiento del granizo durante un período de tiempo arbitrario como equivalente de la actividad del programa del cerebro durante el mismo período de tiempo. De esa forma, la dinámica del granizo coincide con el programa del cerebro más allá de un instante.</p>
+
+  <p>Después de hacer todo esto, ¿podemos pensar ahora que el granizo es consciente? ¿Tiene alma?</p>
+
+  <h3 id="sigil_toc_id_32">El juego de trile metafísico</h3>
+
+  <p class="asangre">La alternativa a tocar a las personas con la varita mágica es hacerlo con los ordenadores, la mente de colmena, la nube, el algoritmo u otro elemento cibernético. La pregunta es: ¿qué opción es más disparatada?</p>
+
+  <p>Si finges creer que la conciencia no esconde misterio alguno, el misterio te puede saltar en cualquier parte de forma inoportuna y así echar por tierra tu objetividad como científico. Entras en un juego de trile metafísico, ese juego en que tienes que adivinar bajo cuál cubilete, entre tres, se esconde una bolita mientras el trilero mueve los cubiletes de un lado hacia el otro, que puede terminar mareándote. Por ejemplo, puedes proponer que la conciencia es una ilusión, pero, por definición, la conciencia es lo único que no pierde nada aunque se trate de una ilusión.</p>
+
+  <p>Hay una estrecha relación entre la conciencia y el tiempo. Si intentas quitar el más mínimo asomo de misterio de la conciencia, acabas mistificando al tiempo de manera absurda.</p>
+
+  <p>La conciencia se sitúa en el tiempo, porque no puedes experimentar una falta de tiempo, ni tampoco puedes experimentar el futuro. Si tu conciencia no es más que un pensamiento falso en el ordenador que es tu cerebro, o el universo, entonces, ¿qué es exactamente lo que está situado en el tiempo? El momento presente, el otro único elemento que podría estar situado en el tiempo, debe de ser en ese caso un elemento autónomo, independiente de la forma en que se experimenta.</p>
+
+  <p>El momento presente es un concepto vago desde un punto de vista científico, debido a la relatividad y la latencia de los pensamientos que circulan por el cerebro. No tenemos ningún modo de definir ni un solo momento presente físico y global, ni un momento presente exacto y cognitivo. No obstante, tiene que haber algún ancla, por muy vaga que resulte, para que sea posible hablar de él.</p>
+
+  <p>Tal vez se podría imaginar el momento presente como un marcador metafísico que recorre una versión eterna de la realidad, en la que el pasado y el futuro están inmóviles, como un cabezal de grabación pasando a través de un disco duro.</p>
+
+  <p>Si uno está seguro de que la experiencia temporal es una ilusión, lo único que te queda es el propio tiempo. Hay que situar <em>Algo</em> —en una especie de metatiempo o algo parecido— para que la ilusión del momento presente se produzca. Te obligas a decir que el tiempo mismo viaja a través de la realidad, lo cual es un pensamiento absurdo y circular.</p>
+
+  <p>Llamar conciencia a una ilusión supone atribuir al tiempo una cualidad sobrenatural: quizá una especie de no determinismo espeluznante. O puedes elegir otro cubilete del trile y decir entonces que el tiempo es natural (no sobrenatural) y que el momento presente únicamente es un concepto posible gracias a la conciencia.</p>
+
+  <p>La cosa misteriosa se puede desplazar una y otra vez, pero es mejor admitir que queda un rastro de misterio, para así poder hablar lo más claro posible de las múltiples cosas que realmente se pueden estudiar o crear metódicamente.</p>
+
+  <p>Reconozco que hay peligros cuando das lugar a la legitimidad de una idea metafísica (como el potencial de la conciencia para estar más allá de la computación). Independientemente del cuidado que tengas para evitar no «llenar» el misterio de supersticiones, podrías alentar a los fundamentalistas o a los románticos new age a aferrarse a creencias extrañas. «¿Que un informático con rastas dice que la conciencia podría ser más que un ordenador? ¡Entonces mi suplemento alimenticio tiene que dar resultado!».</p>
+
+  <p>Pero el mayor peligro es el de un ingeniero que finge saber más de lo que sabe, sobre todo si puede reforzar la ilusión mediante el uso de la computación. Los totalitarios cibernéticos que esperan la Singularidad están más locos que los tipos de los suplementos alimenticios.</p>
+
+  <h3 id="sigil_toc_id_33">El ejército zombi</h3>
+
+  <p class="asangre">¿Afectan las creencias metafísicas fundamentales —o supuestamente antimetafísicas— a los aspectos prácticos de nuestro pensamiento o nuestra personalidad? Sí. Pueden convertir a una persona en lo que los filósofos llaman un «zombi».</p>
+
+  <p>Los zombis son personajes habituales en los experimentos mentales filosóficos. Son similares a las personas en todos los aspectos, excepto que carecen de experiencia interior. Son inconscientes, pero no dan ninguna muestra de ello. Los zombis han desempeñado un papel distinguido como herramientas de la retórica vertida en torno a la relación del cuerpo y la mente y de la investigación de la conciencia. Se ha debatido mucho acerca de si podría existir un auténtico zombi, o si la experiencia subjetiva interior colorea inevitablemente la conducta externa o los hechos mensurables en el cerebro.</p>
+
+  <p>Yo a firmo que hay una diferencia mensurable entre un zombi y una persona: un zombi tiene una filosofía distinta. Por lo tanto, los zombis solo se pueden detectar si da la casualidad de que son filósofos profesionales. Un filósofo como Daniel Dennett es evidentemente un zombi.</p>
+
+  <p>Los zombis y el resto de nosotros no tenemos una relación simétrica. Por desgracia, solo los no zombis pueden observar el signo distintivo de la condición de zombi. Para los zombis, todo el mundo se ve igual.</p>
+
+  <p>Si en nuestro mundo se reclutan suficientes zombis, me preocupa la posibilidad de que acabemos con una profecía autocumplida. Tal vez si las personas fingen que no son conscientes o que no tienen libre albedrío —o que la nube de personas conectadas a internet es una persona; si fingen que no hay nada especial en la perspectiva de cada individuo—, quizá podamos conseguirlo. Puede que consigamos antimagia de forma colectiva.</p>
+
+  <p>Los humanos somos libres. Podemos suicidarnos en beneficio de una Singularidad. Podemos modificar nuestros genes para apoyar mejor la idea de una mente colmena colectiva imaginaria. Podemos convertir la cultura y el periodismo en actividades de segunda fila y pasarnos siglos remezclando los desechos de los sesenta y otras eras cuando la creatividad todavía no había pasado de moda.</p>
+
+  <p>O podemos creer en nosotros mismos. Podría resultar que, casualmente, fuéramos reales.</p>
+
+  <h2 id="sigil_toc_id_34">3. La noosfera solo es otro nombre para el troll que todos llevamos dentro</h2>
+
+  <p class="asangre">Algunos de los elementos fantásticos que surgen del totalitarismo cibernético (como la noosfera, que supuestamente es un cerebro global formado por todos los cerebros humanos conectados a través de internet) han inspirado diseños tecnológicos poco felices. Por ejemplo, los diseños que celebran la noosfera tienden a estimular al troll interior, o al agitador, que los humanos llevamos dentro.</p>
+
+  <h3 id="sigil_toc_id_35">El imperativo moral de crear la Biblia más moderada posible</h3>
+
+  <p class="asangre">De acuerdo con un nuevo credo, los tecnólogos estamos convirtiéndonos a nosotros mismos, al planeta, a nuestra especie, todo, en periféricos de ordenadores conectados a las grandes nubes computacionales. Las noticias ya no son sobre nosotros, sino sobre el nuevo objeto computacional, que es más grande que nosotros mismos.</p>
+
+  <p>Los colegas con los que a menudo disiento conciben nuestras discusiones como un enfrentamiento entre un ludita (¿quién, yo?) y el futuro. Pero hay más de un futuro tecnológico posible, y el debate debería girar en torno a cómo identificar y mejorar aquellas libertades de elección que todavía tenemos para obrar en consecuencia, y no en torno a quién es el ludita.</p>
+
+  <p>Algunas personas dicen que los escépticos del camino verdadero y único, yo entre ellos, somos como los ajados servidores de la Iglesia medieval que luchaban contra la pobre imprenta de Johannes Gutenberg. Nos acusan de temer el cambio, tal como la Iglesia medieval temía a la imprenta. (También llegan a decirnos que somos la clase de personas que habría reprimido a Galileo o Darwin).</p>
+
+  <p>Lo que olvidan esos críticos es que las imprentas por sí mismas no ofrecen ninguna garantía de un resultado ilustrado. Las personas, y no las máquinas, son quienes crearon el Renacimiento. En Corea del Norte hoy, por ejemplo, las imprentas solo producen propaganda política que rinde culto a la personalidad. Lo que importa de las imprentas no es el mecanismo, sino los autores.</p>
+
+  <p>Una sordera impenetrable domina Silicon Valley en lo tocante a la idea de autoría. Quedó más claro que nunca cuando en 2006 John Updike y Kevin Kelly cruzaron algunas palabras sobre el concepto de autoría. Kevin propuso que no solo era buena idea, sino un «imperativo moral» que todos los libros del mundo se convirtieran dentro de poco en «un libro», una vez que fueran escaneados, localizables y remezclables en la nube informática universal.</p>
+
+  <p>Updike empleó la metáfora de los bordes del papel de un libro físico para expresar la importancia de consagrar los bordes entre los autores individuales. Fue inútil. Los entusiastas de la web 2.0 más doctrinarios solo pudieron concluir que Updike se estaba poniendo sentimental con respecto a una tecnología antigua.</p>
+
+  <p>El enfoque de la cultura digital que detesto sería capaz de convertir efectivamente todos los libros del mundo en uno solo, como propuso Kevin. Puede que el proceso se inicie en la próxima década, aproximadamente. Google y otras empresas están escaneando los libros de las bibliotecas en el proyecto Manhattan de digitalización cultural, de escala masiva. Lo importante es lo que ocurrirá después. Si se accede a los libros de la nube a través de interfaces que alienten la mezcolanza de fragmentos que difumine el contexto y la autoría de cada fragmento, habrá un solo libro. Es lo que ocurre hoy día con muchos contenidos; a menudo uno no sabe de dónde procede un fragmento citado en una noticia, quién ha escrito un comentario, o quién ha grabado un vídeo. La evolución de la tendencia actual nos hará semejantes a ciertos imperios religiosos de la Edad Media, o a Corea del Norte, una sociedad con un solo libro<a href="#nt7" id="rf7"><sup>[7]</sup></a>.</p>
+
+  <p>La tecnología etérea y digital que reemplazó a la imprenta ha alcanzado la mayoría de edad en un momento en que esta ideología lamentable que critico domina la cultura tecnológica. La autoría —la mismísima idea del punto de vista individual— no es una de las prioridades de la nueva ideología.</p>
+
+  <p>La homogeneización digital de la expresión en una papilla global no está impuesta en realidad desde lo alto, como en el caso de la imprenta en Corea del Norte. En cambio, el diseño de software introduce la ideología a través de las acciones más fáciles de llevar a cabo en los softwares, cada vez más ubicuos. Es cierto que utilizando esas herramientas los individuos pueden escribir libros o blogs o lo que sea, pero la economía del contenido libre, la dinámica de masas y los agregadores dominantes animan a las personas a ofrecer fragmentos en lugar de expresiones o argumentos completos. Los esfuerzos de los autores se valoran de una forma que difumina la distancia entre ellos.</p>
+
+  <p>El libro único colectivo no será para nada igual que la biblioteca de libros individuales que está llevando a la ruina. Algunos creen que será mejor; otros, entre los que me incluyo, creen que será muchísimo peor. Como dice la famosa frase de <em>Inherit the wind</em>: «La Biblia es un libro… pero no es el único libro». Cualquier libro por más singular y exclusivo que sea, incluso el libro colectivo que se acumula en la nube, se convertirá en un libro cruel si es el único disponible.</p>
+
+  <h3 id="sigil_toc_id_36">Reduccionismo nerd</h3>
+
+  <p class="asangre">Uno de los primeros libros impresos que no era una Biblia fue <em>Hypnerotomachia Poliphili</em>, o <em>El sueño de Polifilo</em>, de 1499, una aventura ilustrada, erótica y misteriosa que transcurría en escenarios arquitectónicos fantásticos. Lo más interesante del libro, que se ve y se lee como una fantasía sobre la realidad virtual, es que hay algo fundamental en su punto de vista de la vida —su inteligencia, su cosmovisión— que resulta ajeno a la Iglesia y la Biblia.</p>
+
+  <p>Es fácil imaginar una historia alternativa en la que todo lo impreso en las primeras imprentas tenía que ser aprobado por la Iglesia y concebido como una extensión de la Biblia. <em>El sueño de Polifilo</em> podría haber existido en ese mundo alternativo, y podría haber sido bastante parecido. Las «ligeras» modificaciones habrían consistido en recortar los fragmentos extraños. El libro ya no habría resultado tan raro. Y ese pequeño cambio, si bien minúsculo en términos de recuento de palabras, habría sido funesto.</p>
+
+  <p>Eso es lo que pasó cuando los elementos de las culturas indígenas fueron conservados pero al mismo tiempo desalienados por los misioneros. Sabemos algo acerca de cómo sonaba la música azteca o inca, por ejemplo, pero los fragmentos eliminados para adaptarla a la idea europea de lo que tenía que ser una canción religiosa eran los más valiosos. Los fragmentos extraños son los que confieren un sabor especial. Son los portales a filosofías distintas. ¡Qué gran pérdida no tener acceso a la extrañeza que nos habría despertado la música del Nuevo Mundo! Sobrevivieron algunas melodías y ritmos, pero el conjunto se ha perdido.</p>
+
+  <p>Con el surgimiento de la web 2.0 ha ocurrido en internet algo similar al reduccionismo misionero. La remezcla y uniformización están haciendo perder la extrañeza. Las páginas web personales que aparecieron a principios de los noventa tenían un sabor humano. MySpace conservó parte de aquel sabor, aunque ya se había iniciado un proceso de formateo regular. Facebook llegó más lejos, organizando a las personas en identidades de tipo <em>multiple-choice</em>, mientras que, por su parte, Wikipedia trata de borrar por completo el punto de vista.</p>
+
+  <p>Si una Iglesia o un gobierno estuviera haciendo esas cosas, sería considerado autoritario, pero cuando la culpa es de los tecnócratas, parecemos modernos, frescos e innovadores. La gente acepta unas ideas presentadas de forma tecnológica que serían detestables bajo cualquier otra forma. Me resulta muy extraño oír a muchos de mis viejos amigos del mundo de la cultura digital afirmar que son los auténticos hijos del Renacimiento, sin darse cuenta de que utilizar los ordenadores para reducir la expresión individual es una actividad primitiva y retrógrada, por muy sofisticadas que sean las herramientas empleadas.</p>
+
+  <h3 id="sigil_toc_id_37">El rechazo de la idea de calidad da lugar a una pérdida de calidad</h3>
+
+  <p class="asangre">Algunos consideran que los fragmentos de iniciativa humana que han inundado internet forman una mente de colmena o noosfera. Esas son algunas de las palabras empleadas para describir lo que se cree que es una nueva superinteligencia que está surgiendo a nivel mundial en la red. Algunas personas, como Larry Page, uno de los fundadores de Google, esperan que internet cobre vida en algún momento, mientras que otros, como el historiador de la ciencia George Dyson, creen que eso ya puede haber sucedido. Palabras derivadas de mucha popularidad como «blogosfera» se han vuelto de uso común.</p>
+
+  <p>Una idea en boga en los círculos técnicos es que la cantidad no solo se convierte en calidad cuando se alcanza cierta escala, sino que también lo hace según principios que ya somos capaces de entender. Algunos de mis colegas creen que un millón, o mil millones de insultos fragmentarios, constituirán con el tiempo una sabiduría superior a la de cualquier ensayo bien meditado, siempre que haya algoritmos estadísticos secretos y sofisticados que recombinen los fragmentos. Yo no estoy de acuerdo. Me viene a la cabeza una expresión de los primeros días de la informática: «Basura que entra, basura que sale».</p>
+
+  <p>Hay tantos ejemplos de desprecio por la idea de calidad dentro de la cultura de los entusiastas de la web 2.0 que cuesta elegir uno. Optaré por la idea de Clay Shirky, un entusiasta de la colmena, según la cual hay un enorme excedente cognitivo esperando a ser aprovechado.</p>
+
+  <p>Desde luego, estamos todos de acuerdo en que hay un número enorme de personas con un bajo nivel de educación formal. De entre los instruidos, muchos están subempleados. Si queremos hablar de potencial humano desaprovechado, también deberíamos hablar del gran número de personas que viven en la más absoluta pobreza. El desperdicio de potencial humano es abrumador. Pero ese no es el problema del que habla Shirky.</p>
+
+  <p>Lo que él quiere decir es que la cantidad puede superar la calidad en la expresión humana. A continuación reproduzco una cita de un discurso que Shirky pronunció en abril de 2008:</p>
+
+  <p class="cita">Y esa es la otra característica del tamaño del excedente cognitivo del que estamos hablando. Es tan grande que el más mínimo cambio podría tener enormes consecuencias. Digamos que todo sigue igual en un 99 por ciento; la gente ve el 99 por ciento de televisión que veía antes, pero el 1 por ciento restante se extrae y se destina a la producción y el intercambio. La población conectada a internet ve aproximadamente un billón de horas de televisión al año. Un 1 por ciento de esa cifra equivale a noventa y ocho proyectos del estilo Wikipedia por año.</p>
+
+  <p>De modo que ¿cuántos segundos del tiempo recuperado que antes se dedicaba a la televisión harían falta para reproducir los logros de, por ejemplo, Albert Einstein? Me parece que aunque pudiéramos conectar a la red a todos los posibles extraterrestres de la galaxia —cuatrillones, quizá— y consiguiéramos que cada uno contribuyera unos segundos a un wiki sobre física, no igualaríamos los logros ni siquiera de un físico mediocre, y no digamos ya de uno brillante.</p>
+
+  <h3 id="sigil_toc_id_38">Modestia intelectual ausente</h3>
+
+  <p class="asangre">Hay al menos dos formas de creer en la idea de calidad. Se puede creer que hay algo inefable en la mente humana, o se puede creer que todavía no entendemos el carácter la calidad en una mente, aunque puede que algún día lo logremos. Cualquiera de estas dos opiniones permiten distinguir la cantidad de la calidad. Para confundir cantidad y calidad, hay que rechazar ambas posibilidades.</p>
+
+  <p>La mera posibilidad de que haya algo inefable en el carácter de persona es lo que lleva a muchos tecnólogos a rechazar el concepto de calidad. Quieren vivir en una realidad hermética que se asemeja a un programa informático idealizado, en el que todo se entiende y no hay misterios fundamentales. Rehúyen el más mínimo asomo de misterio o de un cabo suelto en la visión del mundo de alguien.</p>
+
+  <p>Este deseo de orden absoluto generalmente acaba mal en los asuntos humanos, por lo que hay razones históricas para desconfiar de él. Desde hace mucho tiempo, los extremistas materialistas parecen decididos a ganarles una carrera a los fanáticos religiosos: ¿quién puede hacer más daño al mayor número de gente?</p>
+
+  <p>En todo caso, no hay pruebas que demuestren que, en asuntos de expresión o logro humano, la cantidad se convierte en calidad. Lo que importa, en mi opinión, es la capacidad de atención, una mente concentrada de forma efectiva y una imaginación individual y audaz distinta de la multitud.</p>
+
+  <p>Por supuesto, no puedo describir lo que hace la mente, ya que nadie puede hacerlo. No sabemos cómo funciona el cerebro. Entendemos mucho acerca del funcionamiento de algunas partes del cerebro, pero todavía sigue habiendo preguntas fundamentales que ni siquiera se han formulado, y mucho menos respondido.</p>
+
+  <p>Por ejemplo, ¿cómo funciona la razón? ¿Cómo funciona el significado? Las ideas que se barajan hoy por hoy son variaciones de la hipótesis según la cual dentro del cerebro se produce una selección pseudodarwiniana. El cerebro prueba distintos patrones de pensamiento, y los que funcionan mejor son reforzados. Es una idea muy vaga. Pero no hay motivo para pensar que esa evolución darwiniana no haya dado lugar a procesos en el cerebro humano que se apartaron de la progresión darwiniana. Mientras que, por lo que vamos descubriendo, el cerebro físico es producto de la evolución, el cerebro cultural podría ser una forma de transformar el cerebro evolucionado de acuerdo con principios que no se pueden explicar en términos evolutivos.</p>
+
+  <p>Otro modo de decirlo es que podría haber otra forma de creatividad además de la selectividad. Desde luego yo no lo sé, pero me parece inútil insistir en que lo que ya sabemos debería bastar para explicar lo que no sabemos.</p>
+
+  <p>Lo que me sorprende es la falta de modestia intelectual de la comunidad informática. Estamos felices de consagrar en diseños de ingeniería lo que son meras hipótesis —y vagas, además— sobre las preguntas más difíciles a las que se enfrenta la ciencia del futuro, como si poseyéramos el conocimiento absoluto.</p>
+
+  <p>Si al final resulta que en la mente humana individual hay algo distinto de lo que puede alcanzar una noosfera, ese «elemento especial» podría tener gran cantidad de cualidades. Lo más probable es que para poder valorar suficientemente nuestro cerebro, debamos esperar a que lleguen avances científicos, que no se producirán hasta dentro de cincuenta, quinientos, o cinco mil años.</p>
+
+  <p>O podría resultar que siempre existirá una distinción basada en principios que nunca podremos manipular. Esto podría conllevar formas de computación que se dan únicamente en el cerebro físico, basadas tal vez en formas de causalidad que dependen de condiciones físicas extraordinarias e irreproducibles. O podría implicar un software que solo se pueda crear con la evolución a largo plazo, al que no se pueda aplicar un proceso de retroingeniería o que no se pueda compartir de forma accesible. O incluso podría conllevar la perspectiva, temida por algunos, del dualismo, una realidad en que la conciencia exista al margen del mecanismo.</p>
+
+  <p>El caso es que no lo sabemos. Me encanta especular sobre el funcionamiento del cerebro. Más adelante plantearé cómo utilizar las metáforas informáticas con el fin de imaginar aunque sea vagamente cómo funciona en el cerebro un proceso como el del significado. Pero detestaría que alguien utilizara mis conjeturas como la base para diseñar una herramienta que sea utilizada por personas reales. Un ingeniero aeronáutico jamás metería pasajeros en un avión basado en una teoría especulativa sin demostrar, pero los informáticos incurren en pecados comparables constantemente.</p>
+
+  <p>Un problema de fondo es que las personas con preparación técnica reaccionan de manera exagerada a los extremistas religiosos. Si un informático dice que no entendemos cómo funciona el cerebro, ¿eso le da derecho a un ideólogo a afirmar que se está apoyando una religión determinada? Se trata de un peligro real, pero el mayor peligro son las afirmaciones excesivas por parte de las personas con preparación técnica, pues acabamos confundiéndonos.</p>
+
+  <h3 id="sigil_toc_id_39">Todavía es posible librarse de la ideología de masas en internet</h3>
+
+  <p class="asangre">Desde el punto de vista de la ingeniería, la diferencia entre un sitio de redes sociales y la red tal como era antes de que surgieran esos sitios es cuestión de pequeños detalles. En tu sitio web también podías crear listas de enlaces de tus amigos, y enviar correos electrónicos a un grupo para anunciarles lo que te interesaba. Lo único que ofrecen las redes sociales es un estímulo para utilizar la red de una forma determinada, de acuerdo con una filosofía determinada.</p>
+
+  <p>Si alguien se propusiera reconsiderar los diseños de las redes sociales, bastaría con adoptar una perspectiva distante para describir lo que ocurre entre la gente. Se podría dejar que las personas se comunicaran con sus relaciones a su manera.</p>
+
+  <p>Si alguien quiere usar las palabras «soltero» o «disponible» en una descripción de sí mismo, nadie va a impedírselo. Los buscadores encontrarán fácilmente ejemplos de esas palabras. No hay necesidad de imponer una categoría oficial.</p>
+
+  <p>Si lees algo escrito por alguien que ha utilizado la palabra «soltero» en una frase original compuesta por el mismo usuario, seguro que te llevarás una primera impresión de la sutil experiencia del autor, algo que no conseguirías con una descripción elegida en una base de datos basada en un <em>multiple-choice</em>. Sí, supondría un poco más de trabajo para todo el mundo, pero las ventajas de la presentación semiautomatizada de uno mismo son ilusorias. Si arrancas siendo falso, acabarás teniendo que invertir el doble de esfuerzo para deshacer la ilusión y finalmente sacar algo bueno de ello.</p>
+
+  <p>Este es un ejemplo sencillo de cómo los diseñadores digitales podrían mostrarse modestos a la hora de afirmar que entienden la naturaleza de los seres humanos. Los diseñadores inteligentes dejan abierta la posibilidad de la singularidad metafísica en los humanos o de los procesos creativos inesperados que no se pueden explicar con ideas como la evolución que creemos poder plasmar en los programas informáticos. Esa clase de modestia es la cualidad característica de quienes priorizan al ser humano.</p>
+
+  <p>Comportaría desventajas. Ser modesto desde un punto de vista metafísico dificultaría la utilización de técnicas de bases de datos para crear listas instantáneas de personas que son, por ejemplo, emo, solteras y pudientes. Pero no creo que sea una gran pérdida. Un flujo de información engañosa no es ninguna ventaja.</p>
+
+  <p>Depende de cómo te definas a ti mismo. Un individuo que recibe un flujo de informaciones sobre la situación sentimental de un grupo de amigos debe aprender a pensar en términos del flujo para poder considerarla digna de atención. De modo que aquí tenemos otro ejemplo de cómo la gente se rebaja para que un ordenador parezca preciso. ¿Estoy acusando a los cientos de millones de usuarios de redes sociales de rebajarse para poder usar sus servicios? Pues sí, lo estoy haciendo.</p>
+
+  <p>Conozco a bastantes personas, sobre todo jóvenes adultos pero no exclusivamente, que se enorgullecen de tener miles de amigos en Facebook. Evidentemente, esa afirmación solo puede ser cierta si rebajamos el concepto de amistad. Una verdadera amistad sería aquella que nos permite conocer los rincones más insospechados del otro. Cada conocido es un extraño, un pozo inexplorado lleno de una experiencia vital diferente, inimaginable e inalcanzable si no es a través de interacción genuina. La idea de la amistad en las redes sociales filtradas por bases de datos es obviamente una reducción de ese concepto.</p>
+
+  <p>También es importante reparar en la semejanza entre los señores y los campesinos de la nube. Un gestor de fondos de inversión podría ganar dinero utilizando el poder computacional de la nube para calcular instrumentos de inversión increíbles que apuesten por derivados inventando de la nada garantías virtuales falsas corriendo riesgos formidables. Es una forma sutil de falsificación, y es exactamente la misma maniobra que realiza un adolescente socialmente competitivo al acumular cantidades increíbles de «amigos» en Facebook.</p>
+
+  <h3 id="sigil_toc_id_40">Las relaciones simuladas atraen a mesías que quizá no lleguen nunca</h3>
+
+  <p class="asangre">Supongamos que no estás de acuerdo con que la idea de amistad se está viendo rebajada y que estás convencido de que podemos distinguir los dos usos de la palabra, el viejo y el nuevo. Incluso entonces conviene recordar que los clientes de las redes sociales no son los miembros de esas redes.</p>
+
+  <p>El auténtico cliente es el anunciante del futuro, pero esa figura aún no ha irrumpido en el momento en que se redacta este libro. Ese artificio, la idea de la falsa amistad, no es más que una carnada dejada por los señores de las nubes para atraer a los hipotéticos anunciantes —podríamos llamarlos anunciantes mesiánicos— que tal vez aparezcan algún día.</p>
+
+  <p>Las esperanzas de miles de empresas <em>start-ups</em> de Silicon Valley es que compañías como Facebook estén capturando información sumamente valiosa en el llamado «mapa social». Utilizando esa información, un anunciante podría, hipotéticamente, dirigir su publicidad a todos los miembros de un grupo de edad justo en el mismo momento en que se está formando una opinión sobre las marcas, las costumbres, etc.</p>
+
+  <p>Se suele argumentar que la presión del grupo es la gran fuerza que se esconde detrás del comportamiento de los adolescentes, y que las decisiones de los adolescentes se convierten en decisiones de por vida. De modo que si alguien pudiera resolver el misterio de cómo crear anuncios perfectos utilizando el mapa social, un anunciante podría diseñar una presión de grupo sesgada para influir sobre una población de personas reales a las que se prepararía para comprar el producto en cuestión durante toda la vida.</p>
+
+  <p>La situación de las redes sociales se caracteriza por numerosos disparates. Hasta la fecha, la publicidad no ha generado beneficios, pues el dinero destinado a publicidad parece mejor invertido en investigaciones y páginas web. Si las ganancias nunca llegan, la imposición de una ideología extraña que concibe una base de datos como realidad habrá influido en generaciones de adolescentes y experiencias románticas sin ningún motivo, ni siquiera para hacer negocios.</p>
+
+  <p>En cambio, si se generan ganancias, todo hace pensar que el impacto será verdaderamente negativo. Cuando Facebook intentó convertir el mapa social en un centro de beneficios, fue un desastre a nivel ético.</p>
+
+  <p>Un ejemplo famoso lo tenemos en el proyecto Beacon de 2007. Se trataba de un programa impuesto de repente y que era difícil de rechazar. Cuando un usuario de Facebook hacía una compra en internet, el acto se transmitía a todos los llamados amigos de su red. El objetivo era hallar una forma de presentar la presión de grupo como un servicio que se podía vender a los anunciantes. Pero esto significaba, por ejemplo, que ya no había forma de comprar un regalo sorpresa de cumpleaños. Las vidas comerciales de los usuarios de Facebook ya no les pertenecían.</p>
+
+  <p>La idea fue un desastre inmediato y provocó una revuelta. La red MoveOn, por ejemplo, que suele participar en la política electoral, instó a sus numerosos miembros a protestar enérgicamente. Facebook se echó atrás rápidamente.</p>
+
+  <p>El episodio de Beacon me alegró y reforzó mi creencia en que las personas todavía podían dirigir la evolución de la red. Se trataba de una buena evidencia contra el determinismo tecnológico metahumano. La red no se diseña a sí misma. Nosotros la diseñamos.</p>
+
+  <p>Pero incluso después del desastre de Beacon, la ansiedad por invertir dinero en los sitios de redes sociales siguió adelante. Desde el punto de vista comercial, la única esperanza de dichos sitios es que aparezca una fórmula mágica para que se vuelva aceptable un método de violar la privacidad y la dignidad. El episodio de Beacon demostró que eso no puede ocurrir muy rápido, de modo que la cuestión ahora es si el imperio de usuarios de Facebook se dejará convencer, pero esta vez poco a poco.</p>
+
+  <h3 id="sigil_toc_id_41">La verdad sobre la multitud</h3>
+
+  <p class="asangre">La expresión «sabiduría de la multitud» es el título de un libro de James Surowiecki y se suele presentar con el cuento del buey en el mercado. En dicho cuento, un grupo de personas calcula el peso del animal, y el promedio de los cálculos resulta ser en general más fiable que la estimación de cualquier persona tomada individualmente.</p>
+
+  <p>Una explicación común a este fenómeno es que los errores que cometen varias personas se anulan mutuamente; una explicación adicional, y todavía más importante, es que la lógica y las conjeturas en que se basan muchos cálculos tienen al menos algo de exactitud, de modo que giran en torno a la respuesta correcta. (Esta última formulación hace hincapié en que la inteligencia individual sigue estando en el centro del fenómeno colectivo). De todas formas, el fenómeno es repetible y es considerado ampliamente como uno de los fundamentos de las economías de mercado y de las democracias.</p>
+
+  <p>En los últimos años, la gente ha intentado utilizar las nubes informáticas para explotar ese efecto de la sabiduría colectiva con fanatismo. Por ejemplo, existen proyectos muy bien financiados —y considerados fiables con demasiada premura— para aplicar sistemas del mercado bursátil a programas en los que la gente apuesta por la viabilidad de respuestas a preguntas aparentemente sin respuesta, como cuándo se producirán atentados terroristas o cuándo la terapia basada en las células madre permitirá que le crezcan nuevos dientes a una persona. También se está invirtiendo mucha energía en la agregación de opiniones de usuarios de internet para crear «contenido», como en el sitio web Digg desarrollado colectivamente.</p>
+
+  <h3 id="sigil_toc_id_42">Cómo utilizar bien a la multitud</h3>
+
+  <p class="asangre">El motivo por el que el colectivo puede ser valioso es precisamente porque sus picos de inteligencia y estupidez no son los mismos que los que muestran los individuos normalmente.</p>
+
+  <p>Por ejemplo, lo que hace que un mercado funcione es la comunión entre la inteligencia colectiva y la individual. Un mercado no puede existir solo en base a la capacidad de la competencia para determinar los precios. También necesita emprendedores a los que se le ocurran los productos que compiten en el primer lugar.</p>
+
+  <p>En otras palabras, hay individuos inteligentes, los héroes del mercado, que se hacen las preguntas a las que responde el comportamiento colectivo. Ellos llevan el buey al mercado.</p>
+
+  <p>Hay determinadas clases de respuestas que un individuo no debería dar. Cuando un burócrata del gobierno fija un precio, por ejemplo, el resultado suele ser peor que la respuesta que habría dado un colectivo razonablemente informado y razonablemente libre de manipulación o resonancias internas desmedidas. Pero cuando un colectivo diseña un producto, el diseño lo proporciona un comité, que con razón es una expresión despectiva.</p>
+
+  <p>Los colectivos pueden ser tan estúpidos como cualquier individuo; y, en casos importantes, más estúpidos aún. Lo interesante es saber si se puede determinar cuándo el individuo es más listo que la multitud.</p>
+
+  <p>Este tema tiene una historia por detrás, y diversas disciplinas han acumulado resultados aleccionadores en este punto. Todos los ejemplos de inteligencia colectiva auténticos de los que tengo noticia también muestran que ese colectivo estaba guiado o inspirado por individuos bienintencionados. Esas personas ponían el foco en el colectivo y, en algunos casos, también corregían algunos de los errores comunes de la mente colmena. El balance de influencia entre las personas y los colectivos se encuentra en el seno del desarrollo de las democracias, las comunidades científicas y muchas otras historias de éxito.</p>
+
+  <p>El mundo existente antes de internet nos ofrece muchos buenos ejemplos de cómo el control de calidad individual dirigido por humanos puede mejorar la inteligencia colectiva. Por ejemplo, la prensa independiente ofrece noticias jugosas sobre políticos de la mano de reporteros dueños de voces y reputaciones firmes, como la cobertura del Watergate llevada a cabo por Bob Woodward y Carl Bernstein. Sin prensa independiente, compuesta por voces heróicas, el colectivo se vuelve estúpido y poco fiable, como ha quedado demostrado en muchos ejemplos históricos, el más reciente de ellos durante el gobierno de George W. Bush.</p>
+
+  <p>De igual modo, las comunidades científicas logran la calidad mediante un proceso cooperativo que incluye controles y balances, que descansa en última instancia en una base de buena voluntad y elitismo «ciego» (en el sentido de que lo ideal es que cualquiera pueda acceder, pero solo en base a la meritocracia). El sistema de titularidad de cátedras y muchos otros aspectos de la vida académica se desarrollan para apoyar la idea de que cada investigador es importante, y no solo el proceso o el colectivo.</p>
+
+  <p>Sí, ha habido muchos escándalos en el gobierno, el ámbito académico y la prensa. Ningún mecanismo es perfecto. Pero, aun así, aquí estamos, beneficiándonos de todas esas instituciones. Sin duda ha habido muchos malos reporteros, científicos autoengañados, burócratas incompetentes, etc. ¿Puede la mente colmena ayudar a mantenerlos a raya? La respuesta dada por experimentos del mundo anterior a internet es que sí, pero únicamente si se ha colocado algún tipo de procesamiento de señales en el <em>loop</em>.</p>
+
+  <p>El procesamiento de señales es una serie de trucos que los ingenieros usan para retocar ligeramente los flujos de información. Un ejemplo común es la manera en que se pueden ajustar los agudos y los bajos de una señal de audio. Si bajas los agudos, reduces la cantidad de energía que alcanza las frecuencias más altas, compuestas de ondas de sonido más pequeñas y estrechas. Asimismo, si subes los bajos, aumentas las ondas de sonido más grandes y anchas.</p>
+
+  <p>Algunos de los mecanismos de regulación de colectivos que han tenido más éxito en el mundo previo a internet se pueden entender si pensamos en ellos como controles de agudos y bajos. Por ejemplo, ¿qué pasa si un colectivo avanza demasiado rápido y actúa precipitadamente en lugar de calmarse para ofrecer una respuesta estable? Esto ocurre en la mayoría de las entradas de Wikipedia más activas, por ejemplo, y también se lo ha visto en el frenesí especulativo de algunos mercados libres.</p>
+
+  <p>Un servicio desempeñado por la democracia representativa es el filtro de paso bajo, que es como subir los bajos y bajar los agudos. Imagínate los cambios extremos que tendrían lugar si se encargara a un sitio wiki la redacción de las leyes. Da miedo pensarlo. Gente sobreestimulada se pelearía por cambiar la redacción del código impositivo de forma frenética e interminable. Internet se desbordaría.</p>
+
+  <p>Ese caos se puede evitar empleando un método que ya se pone en práctica, si bien de forma imperfecta: los procesos más lentos de elecciones y diligencias judiciales. Funcionan como las ondas de bajos. El efecto tranquilizante de la democracia organizada consigue algo más que la resolución de las pugnas peripatéticas por el consenso. También reduce la posibilidad de que el colectivo de repente se sobreexcite justo cuando coinciden tantos cambios rápidos que no alcanzan a contrarrestarse.</p>
+
+  <p>Por ejemplo, las bolsas podrían adoptar interruptores bursátiles automáticos, que se activan con los cambios excesivamente abruptos en el precio o el volumen de compraventa. (En el capítulo 6 explicaré el papel que hace poco desempeñaron los ideólogos de Silicon Valley a la hora de convencer a Wall Street de que podía manejarse sin este tipo de controles sobre la multitud, lo que terminó con consecuencias desastrosas).</p>
+
+  <p>Wikipedia ha tenido que añadir un burdo filtro de paso bajo en las entradas más cuestionables, como la del «presidente George W. Bush». Ahora está limitada la frecuencia con que un particular puede eliminar fragmentos de texto de otra persona. Sospecho que esa clase de ajustes evolucionará con el tiempo hasta convertirse en un espejo aproximado de la democracia como era antes de la llegada de internet.</p>
+
+  <p>También puede darse el problema contrario. La mente colmena puede estar en el camino correcto, pero moviéndose demasiado despacio. A veces los colectivos pueden dar resultados brillantes si se les concede suficiente tiempo, pero a veces el tiempo no es suficiente. Un problema como el calentamiento global se podría abordar automáticamente si el mercado tuviera tiempo suficiente para reaccionar. (Las tasas de los seguros, por ejemplo, aumentarían). Desgraciadamente, en este caso no parece haber tiempo suficiente, ya que la discusión en el mercado es frenada por el legado de las inversiones existentes. Por lo tanto, tienen que intervenir otros procesos, como las políticas propuestas por los individuos.</p>
+
+  <p>Otro ejemplo de lentitud de la colmena: antes de que se tuviera una idea clara de cómo ser empíricos, antes de que supiéramos cómo tener una literatura técnica revisada por pares y una educación basada en ella, y antes de que hubiera un mercado eficaz para determinar el valor de los inventos, antes de todo eso, durante milenios, ya se había desarrollado mucha tecnología.</p>
+
+  <p>Un aspecto crucial de la modernidad es que fueron las estructuras y las restricciones las que contribuyeron a acelerar el proceso de desarrollo tecnológico, y no únicamente la apertura y las concesiones al colectivo. Esta idea será examinada en el capítulo 10.</p>
+
+  <h3 id="sigil_toc_id_43">Una extraña falta de curiosidad</h3>
+
+  <p class="asangre">El efecto de la «sabiduría de la multitud» debería ser considerado una herramienta. El valor de una herramienta radica en su utilidad para desempeñar una tarea. El objetivo nunca debería ser la glorificación de la herramienta. Por desgracia, los simplistas ideólogos del mercado libre y los noosferianos tienden a apoyarse mutuamente en sus sentimentalismos injustificados respecto de las herramientas elegidas.</p>
+
+  <p>Puesto que internet favorece el acceso a la multitud, sería beneficioso contar con una serie de reglas claras de gran alcance que explicaran cuándo la sabiduría de la multitud es capaz de dar resultados significativos. En su libro, Surowiecki propone cuatro principios, formulados desde la perspectiva de la dinámica interna de la multitud. Él propone que debería haber límites en la capacidad de los miembros de la multitud para ver cómo los demás toman una decisión para preservar así la independencia y evitar la conducta propia de la turba. Entre otras medidas de seguridad, yo añadiría que no se debería permitir que la multitud formulara sus propias preguntas, y sus respuestas no deberían ser más complejas que un número o una respuesta de <em>multiple-choice</em>.</p>
+
+  <p>Más recientemente, Nassim Nicholas Taleb ha sostenido que las aplicaciones de la estadística, como los esquemas de la sabiduría de la multitud, deberían dividirse en cuatro cuadrantes. Define el peligroso «cuarto cuadrante» como el que contiene problemas que poseen tanto resultados complejos como distribuciones desconocidas de resultados. Propone que ese cuadrante sea declarado tabú para la multitud.</p>
+
+  <p>Tal vez combinando todas nuestras perspectivas se obtendría una serie de normas prácticas para evitar los fallos de la multitud. Pero por otra parte, tal vez todos vamos mal encaminados. El problema es que esas ideas no han sido puestas a prueba con suficiente cuidado.</p>
+
+  <p>Hay una extraña falta de curiosidad con respecto a los límites de la sabiduría de la multitud. Se trata de un indicio de las motivaciones basadas en la fe que hay detrás de esos planes. Numerosos proyectos han estudiado cómo mejorar los mercados específicos y otros sistemas de sabiduría de la multitud, pero muy pocos proyectos han formulado la cuestión en términos más generales o han testeado hipótesis generales sobre cómo funcionan los sistemas de la multitud.</p>
+
+  <h3 id="sigil_toc_id_44">Trolls</h3>
+
+  <p class="asangre">«Troll» es una palabra para referirse a una persona anónima que comete abusos en el entorno de internet. Sería bonito creer que la población de trolls que vive entre nosotros es diminuta. Pero, en realidad, muchísimas personas se han visto arrastradas a intercambios desagradables en la red. Todo el que lo ha experimentado ha conocido al troll que lleva dentro.</p>
+
+  <p>Yo he intentado aprender a ser consciente de mi troll interior. Me doy cuenta de que me siento aliviado cuando veo que otra persona es vapuleada o humillada en una conversación en red, porque eso significa que de momento estoy a salvo. Si el vídeo de otra persona está siendo ridiculizado en YouTube, quiere decir que el mío está temporalmente protegido. Pero eso también significa que soy cómplice de una dinámica propia de la turba. ¿Alguna vez he hecho aunque sea una mínima señal del ridículo, el estilo que prefiere la turba, para desviar a la turba de mi camino y guiarla hacia otro objetivo? Sí, lo hice aunque no debería haberlo hecho. A menudo, en sitios online de encuentros anónimos, veo cómo otros también lo hacen.</p>
+
+  <p>También he descubierto que puedo verme arrastrado a enfrentamientos ridículos en la red que en otro contexto no ocurrirían, y nunca he notado beneficio alguno. Nunca se obtiene una lección, o una catarsis producto de la victoria o la derrota. Si vences a alguien de forma anónima, nadie lo sabe, y si pierdes, solo tienes que cambiar de seudónimo y empezar otra vez, sin haber modificado en lo más mínimo tu punto de vista.</p>
+
+  <p>Si el troll es anónimo y el objetivo es conocido, la dinámica es todavía peor que en un encuentro entre pseudopersonas anónimas, fragmentarias. Entonces es cuando la colmena se vuelve contra la condición de persona. Por ejemplo, en 2007, en China, una serie de comentarios a modo de «letra escarlata» incitó a la muchedumbre de internet a dar caza a los adúlteros acusados. En 2008, el foco se desplazó a los simpatizantes del Tíbet. Corea tiene una de las culturas online más intensas del mundo, de modo que también ha sufrido algunos de los casos de trolls más extremos. En ese mismo año, la estrella cinematográfica Choi Jin-sil, considerada «la actriz nacional», se suicidó después de ser acosada por trolls de internet. Pero el suyo solo fue el más famoso de una serie de suicidios.</p>
+
+  <p>En Estados Unidos, los usuarios anónimos de internet se han unido contra blancos como Lori Drew, la mujer que se hizo pasar por un joven para partirle el corazón a una compañera de clase de su hija, lo que terminó en el suicidio de la chica.</p>
+
+  <p>Sin embargo, es más habitual que los objetivos se elijan al azar, siguiendo la pauta descrita en el relato «La lotería», de Shirley Jackson. En la historia, los habitantes de un plácido pueblecito echan a suertes la decisión de qué individuo será lapidado cada año. Es como si hubiera que liberar una dosis de crueldad humana, y el hecho de hacerlo de una forma contenida pero fortuita limitara el daño al emplear el método más justo posible.</p>
+
+  <p>Entre las víctimas fortuitas de trolls más famosas se encuentra la blogger Kathy Sierra. De repente se convirtió en objetivo de múltiples formas de acoso, como el envío de imágenes en que aparecía como un cadáver mutilado sexualmente, al parecer con la esperanza de que sus hijos las vieran. No había un motivo aparente para la elección de Sierra como blanco. De algún modo, le tocó a ella en la lotería.</p>
+
+  <p>Otro ejemplo famoso es el tormento que sufrieron los padres de Mitchell Henderson, un chico que también se suicidó. Fueron sometidos a vídeos espantosos y otras herramientas al alcance de sádicos virtuales. Otro caso habitual son los ataques a personas epilépticas con páginas web parpadeantes, con la esperanza de provocarles ataques.</p>
+
+  <p>Hay una enorme cantidad de vídeos de agresiones humillantes contra víctimas indefensas. La cultura del sadismo online tiene su propio vocabulario y se ha popularizado. La palabra <em>lulz</em>, por ejemplo, alude a la satisfacción de ver sufrir a los demás en la nube<a href="#nt8" id="rf8"><sup>[8]</sup></a>.</p>
+
+  <p>Cuando critico este tipo de cultura online, a menudo me acusan de ser un vejestorio o un defensor de la censura. No soy ninguna de esas dos cosas. No me considero necesariamente mejor, o más moral, que las personas que se ocupan de esos sitios web. Pero lo que estoy diciendo es que los diseños de interfaz de usuario que se derivan de la ideología de la nube informática convierten a las personas —todos nosotros— en seres menos amables. La acción de trolls no es una serie aislada de incidentes, sino el <em>statu quo</em> del mundo online.</p>
+
+  <h3 id="sigil_toc_id_45">La secuencia habitual de invocación de un troll</h3>
+
+  <p class="asangre">Se pueden reconocer distintas fases en la degradación de la comunicación anónima y fragmentaria. Si no surge ningún grupo, los individuos empiezan a pelearse. Es lo que ocurre constantemente en los entornos en red. Una vez que se ha impuesto una jerarquía, aparece una fase posterior. Entonces los miembros del grupo se vuelven amables y comprensivos entre ellos, al mismo tiempo que incitan el odio más enconado hacia los no miembros.</p>
+
+  <p>De aquí puede derivarse una hipótesis que viene a sumarse a las ideas sobre cómo las circunstancias de nuestra evolución han influido en nuestra naturaleza. Nosotros, la especie dotada de gran cerebro, probablemente no hemos alcanzado ese estado para ocupar un nicho muy especializado. En lugar de ello, hemos evolucionado con la capacidad de cambiar de nicho. Evolucionamos para ser las dos cosas, solitarios y al mismo tiempo miembros del grupo. Estamos optimizados no tanto para ser uno u otro, sino para poder oscilar entre ambos.</p>
+
+  <p>Las nuevas pautas de relación social exclusivas de la cultura online han desempeñado un papel en la expansión del moderno terrorismo en red. Si echas un vistazo a un chat sobre cualquier tema, de las guitarras a los caniches pasando por los aerobics, encontrarás un patrón uniforme: un chat sobre la <em>yihad</em> tiene el mismo aspecto que un chat sobre caniches. Surge un grupo y o estás con él o estás contra él. Si te unes al grupo, adoptas el odio ritual colectivo.</p>
+
+  <p>Si vamos a seguir centrando los poderes de la tecnología digital en un proyecto destinado a hacer los asuntos humanos menos personales y más colectivos, deberíamos reflexionar sobre cómo ese proyecto puede interactuar con la naturaleza humana.</p>
+
+  <p>Los aspectos genéticos del comportamiento que han recibido la mayor atención (por parte de disciplinas como la sociobiología o la psicología evolutiva) han tendido a centrarse en elementos como las diferencias de género y las conductas de apareamiento, pero yo creo que la orientación de clan y su relación con la violencia acabarán siendo el área de estudio más importante.</p>
+
+  <h3 id="sigil_toc_id_46">El diseño es la base de la ética en el mundo digital</h3>
+
+  <p class="asangre">No todas las personas son desagradables en el mundo online. El comportamiento varía considerablemente de un sitio a otro. Existen teorías razonables respecto a lo que hace aflorar el mejor o el peor comportamiento: la demografía, la economía, las tendencias en la crianza de los hijos, tal vez incluso el promedio de tiempo de uso al día puede desempeñar un papel. Sin embargo, en mi opinión, los factores más importantes son ciertos detalles en el diseño de la experiencia de la interfaz por parte del usuario en un sitio web.</p>
+
+  <p>Las personas capaces de inventarse un seudónimo espontáneamente para hacer un comentario en un blog o en YouTube suelen ser malvadas. Los compradores y vendedores de eBay son un poco más civilizados, pese a alguna que otra decepción, como los fraudes. A partir de esos datos, se podría concluir que no es exactamente el anonimato, sino un anonimato fugaz, junto con una falta de consecuencias, lo que saca a la luz la imbecilidad en el mundo online.</p>
+
+  <p>Las hipótesis se pueden refinar cuando se dispone de más datos. Los participantes de Second Life (un mundo virtual online) en general no son tan malos entre ellos como las personas que suben comentarios a Slashdot (un famoso sitio de noticias sobre tecnología) o como los que entablan combates de edición en Wikipedia, aunque todos emplean seudónimos. La diferencia podría ser que en Second Life la propia personalidad del seudónimo es muy valiosa y su creación requiere mucho trabajo.</p>
+
+  <p>De modo que una descripción más precisa del diseño que favorece la aparición de trolls debe agregar que el anonimato es fugaz, que no demanda esfuerzos, que está exento de consecuencias, que está al servicio de un objetivo, como puede ser el apoyo de un punto de vista, que se aparta por completo de la identidad o la personalidad de alguien. Llamémoslo anonimato superficial.</p>
+
+  <p>Los ordenadores presentan la lamentable tendencia a plantearnos opciones binarias en cada nivel, no solo en el más bajo, donde se intercambian los bits. Es fácil ser anónimo o descubrirse del todo, pero es difícil descubrirse lo justo. Aun así, sí que ocurre, en mayor o menor grado. Sitios como eBay y Second Life brindan pistas acerca de cómo el diseño puede promover un camino intermedio.</p>
+
+  <p>El anonimato sin duda tiene su sitio, pero ese sitio debe ser planificado con cuidado. El voto y la revisión por pares de épocas anteriores a internet son ejemplos de anonimato beneficioso. A veces es deseable que las personas estén libres del miedo a represalias o a ser estigmatizadas si lo que queremos es obtener opiniones honestas. Sin embargo, para que se produzca un intercambio sustancial, hace falta estar presente del todo. Ese es el motivo por el que encontrarse frente a frente al acusador es un derecho fundamental del acusado.</p>
+
+  <h3 id="sigil_toc_id_47">¿Podría el anonimato superficial alcanzar la dimensión del comunismo y el fascismo?</h3>
+
+  <p class="asangre">En general, la red ha dado sorpresas agradables con respecto al potencial humano. Como he señalado antes, el surgimiento de la red a principios de los noventa se produjo sin líderes, ideología, publicidad, comercio ni otra cosa que una sensibilidad positiva compartida por millones de personas. ¿Quién iba a decir que fuera posible? Desde entonces, ha habido un continuo aluvión de extrapolaciones utópicas a partir de los acontecimientos positivos del mundo online. Cada vez que un blogger humilla a una corporación aportando documentación probando que ofrece un servicio de atención al cliente inadecuado, se oyen gritos de triunfo celebrando el fin de una era de abusos corporativos.</p>
+
+  <p>Sin embargo, es evidente que la red también puede subrayar las pautas de conducta negativas o incluso provocar patologías sociales inesperadas. Durante el último siglo, las nuevas tecnologías usadas por los medios de comunicación han destacado a menudo como componentes de grandes estallidos de violencia organizada.</p>
+
+  <p>Por ejemplo, el régimen nazi fue un importante pionero en el uso de la propaganda radiofónica y cinematográfica. Los soviéticos también estaban obsesionados con las tecnologías propagandísticas. Stalin incluso apoyó un «Proyecto Manhattan» para desarrollar un cine en tres dimensiones con efectos ópticos colosales e increíbles que proyectarían propagada perfeccionada. Si se hubiera llevado a cabo, habría sido el gemelo maligno de la realidad virtual. Mucha gente del mundo islámico ha tenido acceso a la televisión por satélite e internet en la última década. Sin duda, esos medios han contribuido a la oleada actual de radicalismo violento. En todos los casos mencionados, había una intención propagandística, pero la intención no lo es todo.</p>
+
+  <p>No es disparatado pensar que, con millones de personas conectadas a un medio que a veces saca a la luz sus peores tendencias, de pronto podrían aparecer grandes masas de orientación fascista. Me preocupan las próximas generaciones de jóvenes de todo el mundo creciendo con una tecnología basada en internet que hace hincapié en la agregación de la multitud, como es la moda actual. ¿Serán más propensos a sucumbir a la dinámica de grupo cuando lleguen a la mayoría de edad?</p>
+
+  <p>¿Qué puede impedir que aumente la acritud? Desgraciadamente, la historia nos dice que los ideales colectivistas pueden convertirse rápidamente en catástrofes sociales a gran escala. Las «fascias» y las comunas nacieron con pequeñas cantidades de revolucionarios idealistas.</p>
+
+  <p>Me temo que es posible que estemos preparando el terreno para que la historia se repita. La fórmula que condujo a la catástrofe social en el pasado fue la humillación económica combinada con la ideología colectivista. Ya tenemos la ideología en su nueva formulación digital, y es del todo posible que en las décadas por venir tengamos que enfrentarnos a shocks económicos peligrosos.</p>
+
+  <h3 id="sigil_toc_id_48">Una ideología de la violación</h3>
+
+  <p class="asangre">Internet ha llegado a estar saturada de una ideología de la violación. Por ejemplo, cuando algunas de las figuras más carismáticas del mundo online, incluidos Jimmy Wales, uno de los fundadores de Wikipedia, y Tim O’Reilly, el acuñador del término «web 2.0», propusieron un código de conducta voluntario tras el episodio de <em>bullying</em> contra Kathy Sierra, se produjo una protesta general, y las propuestas se quedaron en nada.</p>
+
+  <p>La ideología de la violación no es irradiada desde las profundidades más abisales del dominio del troll, sino desde las alturas superiores de la academia. Hay congresos académicos respetables dedicados a métodos de violación de toda clase de privilegios. El único criterio es que los investigadores propongan alguna forma de tecnología digital para perjudicar a personas inocentes que se creían a salvo.</p>
+
+  <p>En 2008, investigadores de la Universidad de Massachusetts en Amherst y de la Universidad de Washington presentaron trabajos en dos de esos congresos (llamados Defcon y Black Hat), en los que dieron a conocer una extraña forma de agresión que al parecer no había sido comentada antes en público, ni siquiera en obras de ficción. Habían pasado dos años trabajando en equipo, averiguando cómo utilizar la tecnología de un teléfono móvil para hackear un marcapasos y detenerlo por control remoto con el fin de matar a una persona. (Aunque ocultaron algunos datos en su presentación pública, realizaron una descripción lo bastante completa como para garantizar a su audiencia que era posible).</p>
+
+  <p>Considero que esto es una expresión de ideología porque hay un entramado de argumentos construido con afán que decora esta conducta homicida y hace que parezca maravillosa y original. Si los mismos investigadores hubieran hecho algo parecido sin tecnología digital, como mínimo habrían perdido sus trabajos. Imagínate que hubieran invertido un par de años y unos fondos considerables en averiguar cómo equipar una lavadora para que envenenara la ropa, con el fin (hipotéticamente) de matar a un niño una vez vestido. ¿Y si hubieran dedicado un laboratorio de una universidad de élite a encontrar una forma de manipular los esquís para causar accidentes fatales en las pendientes? Sin duda son proyectos viables, pero como no son digitales, no cuentan con una ilusión de ética.</p>
+
+  <p>Esta ideología se podría resumir de la siguiente forma: esa gente inocente, ignorante y sin preparación técnica vive creyendo que está a salvo, cuando en realidad es muy vulnerable a los más inteligentes. Por lo tanto, nosotros, las personas con preparación técnica que somos más inteligentes, deberíamos inventar formas de atacar a los inocentes y hacer públicos los resultados, a fin de advertir a todo el mundo de los peligros de nuestros poderes superiores. Después de todo, podría aparecer una persona inteligente y mala.</p>
+
+  <p>Hay casos en los que la ideología de la violación ha conducido a resultados prácticos y positivos. Por ejemplo, cualquier persona joven y brillante con formación técnica tiene la capacidad de descubrir una nueva forma de contagiar un ordenador personal con un virus. Cuando eso ocurre, hay varios pasos posibles. El menos ético es que el «hacker» se dedique a contagiar ordenadores. El más ético es que el hacker se lo comunique discretamente a las empresas encargadas del mantenimiento de los ordenadores, para que los usuarios puedan descargar actualizaciones y así eliminar el virus. Una opción intermedia es hacer pública la «hazaña» en busca de gloria. En todo caso, siempre se puede distribuir una actualización antes de que la hazaña cause daños.</p>
+
+  <p>Pero el ejemplo de los marcapasos es totalmente distinto. Las reglas de la nube no se aplican bien a la realidad. Dos importantes laboratorios académicos necesitaron dos años de intensos esfuerzos para demostrar la hazaña, y solo fue posible porque un tercer laboratorio de una Facultad de Medicina pudo proporcionar los marcapasos y aportar información sobre ellos que normalmente sería muy difícil de conseguir. ¿Habrían podido unos estudiantes de secundaria o unos terroristas, o cualquier otro grupo, reunir los recursos necesarios para averiguar si era posible matar a personas de esa forma?</p>
+
+  <p>El arreglo en este caso requeriría muchas intervenciones quirúrgicas: más de una para cada persona con un marcapasos. Los nuevos diseños de marcapasos no harán más que inspirar nuevas hazañas. Siempre habrá una nueva hazaña a alcanzar, porque la seguridad absoluta no existe. ¿Tendrá que someterse cada paciente del corazón a intervenciones cardíacas anuales para adelantarse a los bienhechores del mundo académico, solo para poder seguir con vida? ¿Cuánto costaría eso? ¿Cuántos morirían debido a los efectos secundarios de las cirugías? Dada la oportunidad ilimitada de hacer daño, nadie podría obrar de acuerdo con la información proporcionada amablemente por los investigadores, de modo que todas las personas que llevan marcapasos correrían siempre un peligro mayor que el que habrían corrido si no existiera esa información. No se habría producido ninguna mejora, solo daño.</p>
+
+  <p>Se dice que aquellos que no están de acuerdo con la ideología de la violación son partidarios de una idea falaz conocida como «seguridad mediante oscuridad». No se supone que las personas inteligentes tengan que aceptar esta estrategia por una cuestión de seguridad, desde que, con internet, la oscuridad se ha vuelto obsoleta.</p>
+
+  <p>Por consiguiente, otro grupo de investigadores de élite se pasó años averiguando cómo forzar una de las cerraduras de puerta más difíciles de forzar, y publicó los resultados en internet. Se trata de una cerradura que los ladrones no habían aprendido a forzar por sí mismos. Los investigadores compararon su triunfo con el desciframiento del código Enigma llevado a cabo por Turing. El método utilizado para derrotar la cerradura habría quedado en las sombras de no haber sido por la ideología que ha embelesado a gran parte del mundo académico, sobre todo en las facultades de informática.</p>
+
+  <p>Sin duda la oscuridad es la única forma fundamental de seguridad que existe, e internet por sí sola no la deja obsoleta. Una forma de desprogramar a los académicos que compran la ideología dominante de la violación es señalar que la seguridad mediante la oscuridad recibe otro nombre en el mundo de la biología: biodiversidad.</p>
+
+  <p>El motivo por el que algunas personas son inmunes a un virus como el sida es que sus cuerpos resultan oscuros a ese virus. El motivo por el que los virus informáticos infectan los PC más que los Mac no es que un Mac esté mejor diseñado, sino que es relativamente oscuro. Los PC son más comunes. Eso significa que se dispone de más información sobre cómo piratearlos.</p>
+
+  <p>Las cerraduras imposibles de forzar no existen. De hecho, la amplia mayoría de sistemas de seguridad no son demasiado difíciles de forzar. Pero siempre se requiere esfuerzo para averiguar el modo de forzarlos. En el caso de los marcapasos, fueron necesarios dos años de trabajo en dos laboratorios, lo que debió acarrear costes considerables.</p>
+
+  <p>Otro elemento predecible de la ideología de la violación es que todo aquel que se queja de los rituales de los violadores de élite es acusado de sembrar miedo, incertidumbre y duda. Pero en realidad son los ideólogos los que buscan publicidad. El objetivo de hacer públicas hazañas como el ataque de los marcapasos es la gloria. Si esa notoriedad no está basada en la siembra de miedo, incertidumbre y duda, ¿qué lo está?</p>
+
+  <h3 id="sigil_toc_id_49">El MIDI del anonimato</h3>
+
+  <p class="asangre">Del mismo modo en que la idea de nota musical fue formalizada y fijada por MIDI, también el software está arrancando la idea del anonimato superficial caracterizado por la presencia de trolls y el espíritu de grupo de la esfera platónica para convertirla en estructura inamovible y eterna. Afortunadamente, el proceso todavía no se ha completado, de modo que todavía hay tiempo para promover diseños alternativos en los que resuena la bondad humana.</p>
+
+  <p>Cuando las personas no son conscientes de su papel, o no se hacen responsables de su rol, los accidentes de tiempo y espacio pueden determinar el curso de las guerras de estándares entre ideologías digitales. Cada vez que reparamos en un ejemplo de viraje accidental en la historia, también notamos la flexibilidad con la que contamos para moldear el futuro.</p>
+
+  <p>La ideología de mente colmena no era la que imperaba en los primeros tiempos de internet. Esta ideología se volvió dominante después de que se establecieran determinados patrones, pues convivía perfectamente con esas pautas. Los orígenes de los actuales estallidos de violencia en el mundo online se remontan bastante en el tiempo, hasta la época de la contracultura en Estados Unidos, y en concreto a la guerra contra las drogas.</p>
+
+  <p>Antes de la existencia de la red global había otros tipos de conexiones online, entre las cuales Usenet era probablemente la más influyente. Usenet era un directorio de temas en red en el que cualquiera podía subir comentarios al estilo del anonimato superficial. Una parte de Usenet, llamada «alt», estaba reservada a los temas no académicos, incluidos los que eran raros, pornográficos, ilegales u ofensivos. Una gran parte del material de alt era maravillosa, como por ejemplo la información sobre instrumentos musicales desconocidos, mientras que otra era repugnante, como los seminarios sobre canibalismo.</p>
+
+  <p>En aquel entonces, para acceder al mundo online normalmente había que tener una conexión académica, corporativa o militar, de modo que la población de Usenet era en su mayor parte adulta y culta. Pero no servía de nada. Aun así, algunos usuarios se convertían en idiotas malvados en la red. Eso demuestra que es el diseño, no las circunstancias demográficas, lo que concentra la mala conducta. Sin embargo, como había tan pocas personas online, los casos de «netiqueta» eran entonces más una curiosidad que un problema.</p>
+
+  <p>¿Por qué Usenet apoyaba el anonimato superficial? Se podría argumentar que era el diseño más fácil de poner en funcionamiento en aquella época, pero no estoy seguro de que sea verdad. Todos aquellos usuarios académicos, corporativos y militares pertenecían a grandes organizaciones bien estructuradas, de modo que existía todo para crear un diseño que no fuera anónimo. Si eso hubiera ocurrido, puede que los sitios web de hoy no hubieran heredado la estética del diseño superficial.</p>
+
+  <p>Así que si la pereza no fue la que estimuló el anonimato en la red, ¿quién lo hizo?</p>
+
+  <h3 id="sigil_toc_id_50">Facebook se parece a la ley de alfabetización de Bush</h3>
+
+  <p class="asangre">El reduccionismo de la persona siempre ha estado presente en los sistemas de información. Cuando llenas tu declaración de impuestos tienes que declarar tu estado de forma reduccionista. Tu vida real está representada por una serie ridícula y falsa de entradas en una base de datos para que hagas uso de un servicio de una forma aproximada. Cuando cumplen con sus declaraciones impositivas, la mayoría de las personas son conscientes de la diferencia entre la realidad y las entradas de una base de datos.</p>
+
+  <p>Pero el orden se invierte cuando realizas un acto igualmente reduccionista para crear un perfil en un sitio de redes sociales. Completas los datos: profesión, estado civil y residencia. Pero en este caso, la reducción digital se convierte en un elemento informal que media entre tus nuevos amigos. Eso es nuevo. El gobierno era famoso por su impersonalidad, pero en un mundo pospersonal eso ya no supondrá una diferencia.</p>
+
+  <p>A primera vista podría parecer que la experiencia de los jóvenes se encuentra ahora claramente dividida entre el viejo mundo de la escuela y los padres, y el nuevo mundo de las redes sociales de internet, pero en realidad la escuela pertenece ahora al nuevo lado de la balanza. La educación ha experimentado una transformación paralela, y por motivos similares.</p>
+
+  <p>Los sistemas de información necesitan información para ejecutarse, pero la información representa la realidad de forma insuficiente. Exige más a la información de lo que puede ofrecer, y acabarás con diseños monstruosos. Por ejemplo, conforme a la ley de alfabetización de 2002, llamada «Que ningún niño se quede atrás», los profesores de Estados Unidos se ven obligados a elegir entre enseñar conocimientos generales y «enseñar para el examen». De ese modo, con frecuencia los mejores profesores se ven marginados por el uso impropio de los sistemas de información educativos.</p>
+
+  <p>Lo que el análisis informatizado de todos los exámenes escolares del país ha hecho a la educación es exactamente lo mismo que Facebook ha hecho a las amistades. En ambos casos, la vida se ha convertido en una base de datos. Ambas degradaciones se basan en el mismo error filosófico, la creencia en que los ordenadores pueden representar el pensamiento humano o las relaciones humanas, cuando en realidad son cosas que los ordenadores de hoy día no pueden hacer.</p>
+
+  <p>Otro tema es si se espera que los ordenadores mejoren en el futuro. En un ambiente menos idealista, está de más decir que el software solo debería diseñarse para realizar tareas que se puedan realizar en un momento dado. Sin embargo, ese no es el ambiente en el que se diseña el software de internet.</p>
+
+  <p>Si creamos un modelo informático del motor de un automóvil, sabemos cómo evaluar si es bueno. ¡Resulta más fácil crear modelos malos! Pero también es posible crear modelos buenos. Debemos modelar los materiales, la dinámica de fluidos y el subsistema eléctrico. En cada caso, disponemos de una física muy sólida en la que basarnos, pero tenemos mucho margen para cometer errores en la lógica o en la concepción del acople de las piezas. Depurar una simulación seria de un sistema complicado es un trabajo pesado, largo e impredecible. Yo mismo he trabajado en diversas simulaciones de cosas tales como intervenciones quirúrgicas, y es un proceso que baja los humos a cualquiera. Puede llevar años perfeccionar una buena simulación quirúrgica.</p>
+
+  <p>En lo tocante a las personas, los tecnólogos debemos usar una metodología totalmente distinta. No entendemos el cerebro tanto como para comprender fenómenos como la educación o la amistad a partir de una base científica. De modo que cuando recurrimos a un modelo informático para representar el aprendizaje o la amistad en situaciones que impactan en la vida real, estamos apoyándonos en definitiva en la fe. ¿Cómo podemos saber lo que podemos estar perdiendo?</p>
+
+  <h3 id="sigil_toc_id_51">La persona abstracta oscurece a la persona de verdad</h3>
+
+  <p class="asangre">Lo mismo que les pasó a las notas musicales con la llegada de MIDI, les está ocurriendo a las personas.</p>
+
+  <p>Me parte el corazón hablar con jóvenes llenos de energía que idolatran los iconos de la nueva ideología digital, como Facebook, Twitter, Wikipedia y los contenidos agregados de tipo libre/abierto/Creative Commons. Siempre me sorprende la permanente tensión a la que están sometidos. Están constantemente obligados a gestionar su reputación en la red, evitando el mal de ojo incesante de la mente colmena que, en cualquier momento, puede volverse contra un individuo. Un joven de la «generación Facebook» que de repente es humillado en el mundo online no tiene salida, pues solo hay una colmena.</p>
+
+  <p>Preferiría no juzgar las experiencias o motivaciones de otras personas, pero sin duda esta nueva tendencia de fetichismo tecnológico está más impulsada por el miedo que por el amor.</p>
+
+  <p>En el mejor de los casos, los nuevos entusiastas de Facebook y Twitter me recuerdan a los anarquistas y otros idealistas un poco locos que poblaban la cultura juvenil de mi adolescencia. Las ideas pueden ser tontas, pero al menos los creyentes se divierten rebelándose contra el elemento de autoridad paterna presente en entidades como las compañías discográficas que tratan de combatir la piratería musical.</p>
+
+  <p>Sin embargo, los usuarios jóvenes de Facebook más eficientes —los que seguramente serán los ganadores si Facebook resulta ser el modelo del futuro en el que habitarán de adultos— son los que crean ficciones online satisfactorias sobre sí mismos con gran éxito.</p>
+
+  <p>Cuidan sus dobles meticulosamente. Deben administrar comentarios ligeros y vigilar la aparición de fotos inocentes tomadas en fiestas con el mismo esmero que pone un político en el cuidado de su imagen. Se premia la insinceridad, mientras que la sinceridad deja una mancha que dura toda la vida. Sin duda alguna, antes de la aparición de la red ya existía una versión de este principio en las vidas de los adolescentes, pero no con una precisión tan inflexible y clínica.</p>
+
+  <p>La energía frenética de los inicios florecientes de la red ha vuelto a aparecer en una nueva generación, pero los contactos que la gente establece en la red poseen una nueva fragilidad. Se trata de un efecto secundario que conlleva la falacia según la cual las representaciones digitales pueden reflejar una gran parte de las relaciones humanas reales.</p>
+
+  <p>El carácter binario presente en el núcleo de la ingeniería de software tiende a reaparecer en niveles más altos. Es mucho más fácil decirle a un programa que se ejecute o no se ejecute, por ejemplo, que decirle que se ejecute más o menos. Del mismo modo, es más fácil establecer una representación rígida de las relaciones humanas en las redes digitales: en un sitio de redes sociales típico, estás llamado a estar en pareja o soltero (o en uno de los otros escasos estados predeterminados), y esa reducción de la vida es lo que se difunde entre los amigos constantemente. Lo que se comunica entre las personas acaba convirtiéndose en su verdad. Las relaciones adoptan como propios los límites de la ingeniería de software.</p>
+
+  <h3 id="sigil_toc_id_52">Un recordatorio de que no estoy en contra de la red</h3>
+
+  <p class="asangre">Parece ridículo tener que decirlo, pero por si alguien me ha malinterpretado, quiero aclarar que no estoy en contra de internet. Me encanta internet.</p>
+
+  <p>Para que sirva de ejemplo, he pasado bastante tiempo en un foro poblado de intérpretes de oud. (El oud es un instrumento de cuerda de Oriente Próximo). Me da reparo comentarlo, pues temo que cualquier sitio pequeño y especial de internet termine arruinándose si recibe demasiada atención.</p>
+
+  <p>El foro del oud recupera la magia de los primeros años de internet. Se respira una ligera sensación paradisíaca. Se nota la pasión de cada participante por el instrumento, y nos ayudamos unos a otros a comprometernos más. Es maravilloso ver cómo intérpretes de oud de todo el mundo alientan a un fabricante de oudes cuando sube fotos de un instrumento en construcción. Resulta emocionante oír fragmentos de una joven intérprete registrados a medida que progresa.</p>
+
+  <p>Los elaborados diseños de la web 2.0 de comienzos del siglo <small>XXI</small> empiezan clasificando a las personas en burbujas, de forma que uno se encuentre con los de su tipo. Facebook nutre las agendas de posibles citas, LinkedIn reúne a los profesionales enfocados en sus carreras, etc.</p>
+
+  <p>El foro del oud hace lo contrario. Allí uno encuentra a turcos y armenios, viejos y niños, israelíes y palestinos, profesionales ricos y artistas que luchan por abrirse paso, académicos formales y músicos callejeros bohemios, todos hablando entre ellos de su obsesión común. Tenemos ocasión de conocernos; no nos consideramos fragmentos. Indudablemente, aparecen trolls interiores de vez en cuando, pero con menos frecuencia que en la mayoría de los entornos online. El foro del oud no resuelve los problemas del mundo, pero sí que nos permite desarrollar parte de nuestra vida al margen de los problemas.</p>
+
+  <p>Cuando le hablé a Kevin Kelly de esa confluencia mágica de personas con la misma obsesión, inmediatamente me preguntó si había una persona mágica que se ocupaba del foro. Los lugares online que funcionan siempre resultan ser un proyecto muy querido del individuo, no agregaciones automatizadas de la nube. En este caso, por supuesto, hay una persona mágica, que resulta ser un joven intérprete de oud egipcio-estadounidense residente en Los Ángeles.</p>
+
+  <p>El ingeniero que llevo dentro a veces reflexiona sobre el software bastante rudimentario del foro. El gran misterio de cómo organizar y presentar múltiples hilos de conversación en una pantalla sigue sin resolverse. Pero justo cuando estoy a punto de meterme en un nuevo proyecto de diseño para mejorar el software del foro, me detengo y me pregunto si realmente se puede mejorar.</p>
+
+  <p>Son las personas las que hacen el foro, no el software. Sin el software, la experiencia no existiría en absoluto, de modo que celebro la existencia de ese software, por deficiente que sea. Pero tampoco es que el foro mejoraría demasiado si el software se perfeccionara. Centrarse demasiado en el software incluso podría empeorar las cosas al desviar la atención de las personas.</p>
+
+  <p>Hay mucho por mejorar en las tecnologías digitales en conjunto. Me encantaría mantener sesiones telepresentes con intérpretes lejanos de oud, por ejemplo. Pero una vez que uno dispone de los principios básicos de un determinado salto tecnológico, siempre conviene retroceder, al menos por un tiempo, y centrarse en las personas.</p>
+  <br><br><hr>
+  <div class="nota">
+    <p id="nt1"><sup>[1]</sup> El estilo de los comandos de UNIX se ha convertido, por increíble que parezca, en parte de la cultura popular. Por ejemplo, los URL (localizadores uniformes de recursos) que utilizamos para buscar páginas web hoy día, como http://www.jaronlanier.com/, son ejemplos del tipo de secuencias de teclas pulsadas que son ubicuas en UNIX. <a href="#rf1">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt2"><sup>[2]</sup> «Nube» es un término para referirse a un vasto recurso de computación disponible en internet. Nunca se sabe dónde está físicamente la nube. Google, Microsoft, IBM y varios organismos gubernamentales son algunos de los propietarios de nubes informáticas. <a href="#rf2">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt3"><sup>[3]</sup> Facebook tiene publicidad, y seguro que está contemplando varias iniciativas comerciales, pero al día de hoy ha generado escasos ingresos y ningún beneficio. Es el mismo caso que se da en la mayoría de los negocios de la web 2.0. Debido a la mejora que acarrea el efecto red de lo digital, a cualquier nuevo participante le resulta difícil ser rentable con la publicidad, ya que Google se ha apoderado de un nicho digital clave (su intercambio de anuncios). Del mismo modo, sería extraordinariamente difícil empezar a competir con eBay o Craigslist. La arquitectura de la red digital incuba monopolios de forma natural. Ese es precisamente el motivo por el que la idea de noosfera, o el cerebro colectivo formado por la suma de todas de las personas conectadas en internet, ha de ser resistida mucho más que fomentada. <a href="#rf3">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt4"><sup>[4]</sup> Por ejemplo, hoy, cuando escribo estas palabras, ha aparecido un titular sobre R, un software de estadística para fanáticos de la informática que no habría recibido atención en el <em>Times</em> de no haber sido «gratis». Stata, el competidor de pago de R, ni siquiera es mencionado. (Ashlee Vance, «Data Analysts Captivated by R’s Power», <em>New York Times</em>, 6 de enero de 2009). <a href="#rf4">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt5"><sup>[5]</sup> Chris Anderson, «The End of Theory», <em>Wired</em>, 23 de junio de 2008. (www.wired.com/science/discoveries/magazine/16-07/pb_theory). <a href="#rf5">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt6"><sup>[6]</sup> Una consecuencia de la tragedia de la muerte de Turing es el hecho de que no llegara a vivir lo suficiente para abundar en su punto de vista respecto de la prueba de Turing.</p>
+
+    <p>El historiador George Dyson sostiene que Turing podría haberse opuesto a los totalitarios. Por ejemplo, aquí tenemos un extracto de un artículo que Turing escribió en 1939, titulado «Systems of Logic Based on Ordinals» («Sistemas de lógica basados en ordinales»): «Hemos estado intentando ver hasta qué punto es posible eliminar la intuición y dejar solo el ingenio. No nos importa la cantidad de ingenio requerido, y por consiguiente damos por supuesto que está disponible en cantidad ilimitada». Con esto parece decir que nos equivocamos al imaginar que el ingenio puede ser infinito, incluso con las nubes informáticas, de modo que la intuición nunca quedará obsoleta.</p>
+
+    <p>El artículo de 1950 de Turing sobre la prueba incluye este pasaje extraordinario: «Al tratar de construir estas máquinas no deberíamos usurpar irreverentemente Su poder de crear almas, no más de lo que lo hacemos en la procreación de nuestros hijos: en todo caso, somos simples instrumentos de Su voluntad ofreciendo alojamiento a las almas que Él crea». <a href="#rf6">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt7"><sup>[7]</sup> La Biblia puede servir de ejemplo prototípico. Al igual que Wikipedia, la autoría de la Biblia era compartida, en gran parte anónima y acumulativa, y la oscuridad de los autores individuales sirvió para otorgar al documento un aura digna de un oráculo, «la palabra literal de Dios». Si adoptamos un punto de vista no metafísico respecto a la Biblia, esta sirve como vínculo con nuestros antepasados, una ventana a la naturaleza humana y a nuestros orígenes culturales, y se puede usar como fuente de consuelo e inspiración. Alguien que crea en un dios personal puede creer que la Biblia refleja indirectamente a ese dios a través de las personas que la escribieron. Pero cuando la gente compra la ilusión del oráculo, la Biblia se convierte exclusivamente en una herramienta para ayudar a los líderes religiosos y políticos a manipular a la gente. <a href="#rf7">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt8"><sup>[8]</sup> Un sitio web llamado Encyclopedia Dramatica alardea en su página principal de que «ganó el segundo Premio Anual Mashable Open Web en la categoría de wiki». Al consultarlo hoy, a finales de 2008, justo cuando este libro está a punto de abandonar mis manos, veo que el artículo que encabeza la página, llamado «Artículo actual», aparece descrito de la siguiente forma: «[Tres chicos] deciden que la mejor forma de celebrar el final de la infancia es matar a unas veintiuna personas con martillos, tuberías y destornilladores y grabarlo todo con sus teléfonos [con cámara]». Esta historia también ha aparecido en Boing Boing —donde se han tomado la molestia de averiguar que no se trataba de un engaño— y otros sitios destacados esta semana. <a href="#rf8">&lt;&lt;</a></p>
+  </div>
+<br><br>
+</body>
+</html>

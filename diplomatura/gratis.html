@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Breve historia de Internet</title>
+   
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    
+body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+a, .normal { font-style:normal; font-weight:normal; text-decoration:none; }
+sup, sub { font-size:0.75em; line-height:normal; }
+
+.cubierta { margin:0; padding:0; border:0; font-size:0; text-align:center; text-indent:0; page-break-before:always; page-break-after:always; }
+  .cubierta img { height:100%; max-height:100%; }
+
+.tlogo, .tautor, .ttitulo, .tsubtitulo, .trevision, .tfirma { margin:0 0.25em; text-align:center; text-indent:0; font-family:sans-serif; font-weight:bold; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  .tlogo span { margin:3em 0 2.5em; display:inline-block; width:8em; }
+  .tautor { margin-bottom:0.5em; font-size:1.2em; font-weight:normal; color:#595959; }
+  .ttitulo { padding:0; border:0; font-size:1.8em; font-style:normal; text-decoration:none; color:black; visibility:visible; }
+  .tsubtitulo { margin-top:0.3em; }
+  .trevision { margin-top:2.5em; font-size:0.8em; color:#595959; }
+  .tfirma { margin-top:0.25em; font-size:0.65em; }
+  .tfecha { font-family:sans-serif; font-weight:normal; color:#595959; }
+
+.sinopsis, .sinopsis p, .autor, .autor p, .nota p { margin-top:0.5em; text-indent:0; }
+  .sinopsis p, .sinopsis em, .sinopsis strong, .sinopsis big, .sinopsis small, .sinopsis span { font-family:sans-serif; }
+.info { margin:3.5em 1.5em 2.5em; font-size:0.8em; width:90%; }
+  .info p { text-align:left; text-indent:0; }
+.vineta { padding:1em 0; text-align:center; text-indent:0; display:block; }
+.nota { padding-top:3%; page-break-before:always; }
+
+
+/* ----- ESTILOS GENERALES (ADAPTABLES) ----- */
+
+/* encabezados */
+h1, h2, h3, h4, h5, h6 { margin:15% 0.25em 1em; text-align:center; text-indent:0; page-break-after:avoid; page-break-inside:avoid; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  h1 { font-size:1.5em; }
+  h2 { font-size:1.5em; }
+  h3 { font-size:1.4em; }
+  h4 { font-size:1.3em; }
+  h5 { font-size:1.2em; }
+  h6 { font-size:1.1em; }
+
+/* dedicatoria */
+.dedicatoria { margin:5em 1em 0 3em; text-align:right; }
+  .dedicatoria p { text-align:right; text-indent:0; }
+
+/* tipografía */
+.sans, .sans p, .sans em, .sans strong, .sans big, .sans small { font-family:sans-serif; }
+.serif, .serif p, .serif em, .serif strong, .serif big, .serif small { font-family:serif; }
+code, kbd, .mono, .mono p, .mono em, .mono strong, .mono big, .mono small { font-family:monospace; }
+
+i, em, cite, dfn, .cursiva { font-style:italic; }
+b, strong, .negrita { font-weight:bold; }
+ins, .subrayado { text-decoration:underline; }
+del, .tachado { text-decoration:line-through; }
+.oculto { display:none; visibility:hidden; }
+
+big, .grande { font-size:1.2em; }
+small, .versalita { font-size:0.8em; }  /* para texto en mayúsculas, de tamaño similar al de las minúsculas */
+
+/* alineación */
+.izquierda, .izquierda p { text-align:left; }
+.derecha, .derecha p { text-align:right; text-indent:0; }
+.centrado, .centrado p { text-align:center; text-indent:0; }
+.justificado, .justificado p { text-align:justify; }
+.asangre, .asangre p { text-indent:0; }
+
+/* saltos */
+.sintop { margin-top:0; }
+.saltoinicio { margin-top:33%; }
+.salto05 { padding-top:0.5em; }
+.salto10 { padding-top:1em; }
+.salto25 { padding-top:2.5em; text-indent: 0; }
+
+/* bloques */
+.sinmargen { margin:0; }
+blockquote, .cita { margin:1.5em; }
+.bloque { page-break-inside:avoid; }  /* evita dividir un elemento entre páginas */
+.nosep { text-indent:0; display:inline-block; } /* evita dividir una palabra entre líneas */
+.extenso { orphans:0; widows:0; } /* evita división aleatoria de párrafos muy extensos (bug ADE) */
+.banner { margin:1.5em 12%; padding:0.5em 1em; text-align:center; text-indent:0; border:2px solid black; border-left:none; border-right:none; }
+  .banner p { text-align:center; text-indent:0; }
+
+/* listas */
+li { margin:0; text-align:justify; text-indent:0; line-height:1.3em; }
+
+/* imágenes simples */  /* para láminas verticales (página completa), usar el estilo fijo «cubierta» */
+.ilustra { margin:1em 0; text-align:center; text-indent:0; display:block; }
+  .ilustra img { max-height:100%; max-width:100%; }
+
+
+/* ----- ESTILOS PERSONALES ----- */
+
+.capitular { font-size:300%; float: left; margin:-0.1em 0.125em -0.2em 0; text-indent: 0; line-height: 1em; height: 1em; }
+
+.titulocap { text-indent:0em; font-size:1.1em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap2 { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:underline; }
+.titulobib { text-indent:0em; font-size:1.3em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+
+.pinguino { max-width: 66%; max-height: 50%; }
+
+.bibliografia p { text-indent: -1.5em; margin-left: 1.5em; margin-top: 0.5em; }
+.sitiosypag p { text-indent: 0; margin-top: 0.5em; }
+
+.lista, .listasin { margin: 0; }
+.lista li, .listasin li { }
+
+.fuentess { margin-top: 1em; }
+.fuentess p { margin-bottom: 0.5em; text-indent: 0; }
+
+.frase2 { text-indent: 0; margin-left: 2em; }
+.frase3 { text-indent: 0; margin-left: 4em; }
+.frase4 { text-indent: 0; margin-left: 6em; }
+.frase5 { text-indent: 0; margin-left: 8em; }
+.frase6 { text-indent: 0; margin-left: 10em; }
+
+.codigo { margin: 1.5em; }
+.codigo p { text-indent: 0; font-size: 0.8em; text-align: left; }
+.codigo .primera { text-indent: -1.5em; }
+
+  h4 {text-indent:0em; font-size:1.3em; text-align:center;margin-top:2em;margin-bottom:2em;font-style:normal; font-weight:normal; text-decoration:none;}
+
+    h5, h6 {text-indent:0em; font-size:1.2em; text-align:left;margin-top:2em;margin-bottom:1.5em;font-style:normal; font-weight:bold; text-decoration:none;}
+
+  .mini { font-size: 1em;   }
+     code {margin-left: 0.7em ; margin-right:0.4em } 
+
+.bio { font-size:0.9em; width:86%; margin-left:7%; padding: 2.5em 0; } 
+
+cite {margin: 1.1em }
+
+
+.legal { font-size: 0.8em; font-family:"Courier New", Courier, monospace; width:90%; margin-top: 2.5em; }
+
+  
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  .h2 {text-indent: 0em !important; margin: -0.5em 0 -1.5em 0 !important;}
+  </style>
+</head>
+
+<body>
+  <h2>2 - Gratis 101</h2>
+
+  <p class="centrado cursiva">Curso abreviado sobre una palabra muy mal interpretada</p><br><br>
+
+  <p>«Gratis» puede significar muchas cosas, y ese significado ha ido cambiando a lo largo del tiempo. Aunque despierta sospechas, tiene el poder de llamar la atención casi como ninguna otra cosa. Nunca resulta tan sencilla como parece, y sin embargo es la transacción más natural de todas. Si ahora estamos creando una economía en torno a lo Gratis, deberíamos comenzar por entender lo que es y cómo funciona.</p>
+
+  <p>Comencemos por la definición. En las lenguas latinas, como el francés, el castellano y el italiano, el significado de gratis resulta menos enrevesado porque tienen dos palabras para ello. Una se deriva del latín <em>liber</em> («libre») y la otra del latín <em>gratis</em> (contracción de <em>gratiis</em>, «por nada» y de ahí, «sin recompensa» o precio cero). En castellano, por ejemplo, <em>libre</em> es una cosa buena (libertad de expresión, por ejemplo), mientras que <em>gratis</em> suele ser tomado a menudo por un truco de marketing.</p>
+
+  <p>En inglés, sin embargo, las dos palabras están entrelazadas en una única palabra: «Free». Esto tiene ventajas de marketing: la connotación positiva de «libertad» hace que bajen nuestras defensas ante los trucos de los vendedores. Pero también introduce ambigüedad. (Razón por la que los anglohablantes utilicen a veces la palabra «gratis» para dar más énfasis, para resaltar que algo es <em>realmente</em> libre).</p>
+
+  <p>En el mundo del <em>software</em> de fuente abierta que es libre (se anima a su utilización y reutilización) y <em>también</em> gratis (sin recargo), la gente distingue los dos sentidos de esta manera: «<em>Free</em> (gratis) como en cerveza frente a <em>free</em> (libre) como en libertad de expresión». (Es inevitable que algunos tipos que se pasen de listos consideren que sería divertido aumentar la ambigüedad de estas dos palabras lanzando una receta de cerveza bajo una licencia de distribución ilimitada y cobrando luego por el producto acabado en las conferencias de <em>software. Geeks</em>!<a href="#nota7" id="nota7"><sup>[7]</sup></a>).</p>
+
+  <p>De modo que, ¿cómo terminamos con una única palabra, y por qué esa palabra es «<em>free</em>»? Sorprendentemente, proviene de la misma antigua raíz inglesa que «<em>friend</em>» (amigo). Según el etimologista Douglas Harper<a href="#nota8" id="nota8"><sup>[8]</sup></a>:</p>
+
+  <div class="cita">
+    <p>Ambas provienen de la antigua palabra inglesa <em>freon, freogan</em> «liberar, amar». El sentido primario parece haber sido «querido, amigo, amar»; que en algunas lenguas (en particular en germánico y en celta) desarrolló también un sentido de «libre», tal vez a partir de los términos «querido» o «amigo» aplicados a los miembros libres del propio clan (en oposición a los esclavos).</p>
+
+    <p>El sentido de «dado sin coste» es de 1585, y procede de la noción de «libre de coste».</p>
+  </div>
+
+  <p>De manera que «gratis» procede de la noción social de libertad, tanto de la esclavitud como de coste.</p>
+
+  <p>Este libro trata del significado del coste: gratis, como en cerveza. O en realidad, como en un almuerzo<a href="#nota9" id="nota9"><sup>[9]</sup></a>.</p>
+
+  <p class="h2 negrita salto25">Millones de tipos de gratis</p>
+
+  <p class="salto25">Incluso dentro del significado comercial de «gratis» existe una amplia gama de significados y modelos de negocio. A veces «gratis» no es realmente gratis. «Compre uno y llévese otro gratis» es simplemente otra manera de decir descuento del 50 por ciento cuando usted compra dos. «Regalo gratis en el interior» significa realmente que el coste del regalo ha sido incluido en el precio del producto. «Portes gratis» suele significar que el precio del transporte ha sido incorporado en el margen del producto.</p>
+
+  <p>Evidentemente, a veces lo gratis <em>es</em> realmente gratis, aunque pocas veces constituye un nuevo modelo económico: una «muestra gratuita» es marketing puro y duro, previsto tanto para introducir un producto e instilar un ligero sentimiento de deuda moral que le puede animar a usted a comprar el artículo a su precio normal. Una «prueba gratis» puede ser realmente gratuita, pero sólo durante un tiempo limitado, y luego puede ser difícil retractarse hasta que el producto no esté totalmente pagado. Y el «aire gratis» en una gasolinera es lo que los economistas denominan un «bien complementario»: un producto gratuito («compruebe la presión de los neumáticos usted mismo»), cuya intención es reforzar el interés del consumidor en un producto de pago (todo lo demás en la gasolinera, desde un paquete de chicle hasta la gasolina).</p>
+
+  <div class="banner">
+    <p class="negrita">¿CÓMO PUEDE SER GRATIS UN VIAJE EN AVIÓN?</p>
+
+    <p class="salto10">Cada año, 1.300.000 pasajeros aproximadamente vuelan de Londres a Barcelona. Un billete con la línea aérea de bajo coste Ryanair vale sólo 20 dólares (12£ o 14,36€). Otras rutas son igual de baratas, y el consejero delegado de Ryanair ha dicho que espera ofrecer un dia todos los billetes gratis (compensado tal vez por el juego durante el vuelo al convertir sus aviones en casinos volantes). ¿Cómo puede costar menos un vuelo a través del canal de la Mancha que la carrera del taxi hasta el hotel?</p>
+
+    <p class="negrita salto10">A Ryanair le cuesta $70 llevar a alguien de Londres a Barcelona. Así es como recupera ese dinero:</p>
+
+    <div class="ilustra"><img alt="" src="Images/imagen1.jpg" /></div>
+
+    <ul>
+      <li><strong>Recorte de costes:</strong> Ryanair embarca y desembarca a los pasajeros desde la pista para recortar gastos de embarque. La linea aérea también negocia la reducción de las cuotas de acceso en aeropuertos menos populares deseosos de aumentar su tráfico.</li>
+
+      <li><strong>Aumenta los gastos accesorios:</strong> Ryanair cobra la comida y bebida durante el vuelo; cobra por prioridad de embarque; cobra un extra por facturar equipaje y volar con niños; cobra una cuota por los alquileres de coches y reservas de hotel realizados a través de su página Web; cobra por la publicidad dentro del avión, y cobra una comisión por la gestión de la tarjeta de crédito en todas las compras de billetes.</li>
+
+      <li><strong>Compensa pérdidas con tarifas más altas:</strong> durante la temporada alta, ese mismo vuelo puede costar más de $100.</li>
+    </ul>
+  </div>
+
+  <p>Luego está todo el mundo de los medios apoyados por la publicidad, desde la radio y TV de libre difusión hasta la mayor parte de los contenidos de Internet. El contenido gratuito apoyado por publicidad es un modelo de negocio que data de hace más de un siglo: un tercero (los anunciantes) paga para que una segunda parte (el consumidor) consiga el contenido gratis.</p>
+
+  <p>Por último, a veces lo gratis es realmente gratis y sí representa un nuevo modelo. La mayoría se encuentra en Internet, donde la economía digital, con costes marginales cercanos a cero, mantiene su dominio. Flickr, el servicio para intercambiar o compartir fotos, es realmente gratuito para la mayoría de sus usuarios (ni siquiera utilizan publicidad). De manera similar, casi todo lo que Google ofrece es gratis o carente de publicidad, y aplica el modelo de publicidad en los medios de una nueva manera para el <em>software</em> y servicios (como Gmail), no para el contenido. Y luego está la asombrosa «economía del regalo» de Wikipedia y la blogosfera, impulsados por incentivos no monetarios como reputación, atención, expresión, y otros de tipo similar.</p>
+
+  <p>Todos ellos pueden ser clasificados en cuatro clases amplias de lo Gratis, dos que son antiguas pero en evolución, y dos que están surgiendo con la economía digital. Antes de centrarnos en ellas, volvamos atrás y observemos que todas las formas de lo Gratis corresponden a variaciones del mismo tema: cambiar de sitio el dinero de un producto a otro, de una persona a otra, entre ahora y más tarde, o en los mercados no monetarios y vuelta a empezar otra vez. Los economistas lo llaman «subvenciones cruzadas» o traslado de costes.</p>
+
+  <p class="h2 negrita salto25">Todo el mundo es un subsidio cruzado</p>
+
+  <p class="salto25">Los subvenciones cruzadas son la esencia de la frase «nadie te da de comer gratis». Significa que, de un modo u otro, no te regalan nada, que la comida hay que pagarla, si no por ti mismo directamente, por aquel que esté interesado en que haya comida gratuita.</p>
+
+  <p>A veces la gente paga por los productos de manera indirecta. El periódico gratuito que está leyendo está sufragado por la publicidad, que es parte del presupuesto de marketing de un minorista y que está incorporada en su margen de beneficio, que usted (o alguien a su alrededor) terminará pagando en forma de artículos más caros. También está pagando con un poco de su tiempo y, al ser visto leyendo ese periódico, de su reputación. El aparcamiento gratuito en el supermercado se paga en el margen de beneficio del producto, y las muestras gratuitas están subvencionadas por aquellos que pagan por las versiones de pago.</p>
+
+  <div class="banner">
+    <p class="negrita">¿CÓMO PUEDE SER GRATIS UNA GRABADORA DIGITAL DE VÍDEO?</p>
+
+    <p class="salto10">Las compañías telefónicas venden llamadas; las empresas de electrónica venden aparatos. Pero el gigante del cable Comcast está en ambos negocios y en otros muchos. Ello le da la flexibilidad para hacer subvención cruzada de productos, regalando una cosa para vender otra. Para ello, Comcast ha regalado a 9 millones de abonados grabadoras digitales de video. ¿Cómo puede recuperar el dinero?</p>
+
+    <p class="negrita salto10">Comcast recupera el coste de sus grabadoras en 18 meses</p>
+
+    <div class="ilustra"><img alt="" src="Images/imagen2.jpg" /></div>
+
+    <ul>
+      <li><strong>Añade gastos ocultos:</strong> Comcast cobra una cuota de instalación de $20 a cada nuevo cliente GDV.</li>
+
+      <li><strong>Cobra un abono mensual:</strong> Los clientes de Comcast pagan $14 al mes por utilizar la caja GDV. Aunque Comcast pagó 250$ por sus GDV —una estimación muy elevada—, las cajas le devolverán el dinero en 18 meses.</li>
+
+      <li><strong>Vende otros servicios más caros:</strong> Comcast espera ganar clientes con las GDV e interesarlos a continuación en servicios como Internet de alta velocidad ($43 al mes por 8 MBps) y telefonía digital ($40 al mes). No están incluidas aquí las películas de pago, que pueden costar $5 cada una.</li>
+    </ul>
+  </div>
+
+  <p>En la economía del regalo, las subvenciones cruzadas son más sutiles. Los blogs son gratuitos y por lo general no tienen anuncios, pero eso no significa que no se esté intercambiando valor cada vez que usted los visita. A cambio del contenido gratuito, la atención que usted presta a un <em>blogger</em>, ya sea en una visita o en un enlace, aumenta la reputación de él, que puede utilizarla para conseguir un trabajo mejor, mejorar su red social o encontrar más clientes. A veces esos créditos en reputación se convierten en pagos en efectivo, pero raramente podemos predecir el recorrido exacto: es diferente cada vez.</p>
+
+  <p>Las subvenciones cruzadas pueden funcionar de varias maneras diferentes:</p>
+
+  <ul>
+    <li><strong>Productos de pago que subvencionan productos gratuitos.</strong> Los líderes con pérdidas son un elemento esencial del negocio, desde las palomitas de maíz que subvenciona la película que no funciona en taquilla hasta el vino caro que subvenciona la comida barata en un restaurante. Lo Gratis lleva esto aún más lejos haciendo que un artículo no se venda a una fracción de su coste, sino que sea regalado por completo. Esto puede ser tan efectista como un «regalo gratis en el interior», o tan común como las muestras gratuitas. Esta forma de lo Gratis es antigua, familiar y relativamente sencilla como modelo económico, de manera que no nos centraremos mucho en ella aquí.</li>
+
+    <li><strong>Pagar más tarde y dar algo gratis ahora.</strong> El teléfono móvil gratuito con un contrato de suscripción a dos años es un ejemplo clásico de subvención a lo largo del tiempo. Consiste simplemente en desplazar el servicio telefónico desde una corriente de ingresos de punto de venta hacia una anualidad continuada. En este caso, tu yo futuro está subvencionando a tu yo actual. La esperanza del operador es que no pienses en lo que vas a pagar cada año por el servicio telefónico sino que te quedes deslumbrado por el teléfono gratuito que consigues hoy.</li>
+
+    <li><strong>Gente que paga subvenciona a gente que no paga.</strong> Desde los hombres que pagan por entrar en clubs nocturnos en los que las mujeres entran gratis, a los «niños gratis», o hasta la contribución fiscal progresiva en la que los ricos pagan más para que los menos ricos paguen menos (y a veces nada), la táctica de segmentar un mercado en grupos basados en su disposición o capacidad de pagar es una parte convencional de la teoría de los precios. Lo Gratis lo lleva al extremo, ampliando el concepto a una clase de consumidores que obtendrán el producto o servicio por nada. La esperanza es que los consumidores que no pagan atraerán (en el caso de las mujeres), o traerán con ellos (en el caso de los niños), a consumidores de pago, o que cierta fracción de los consumidores que no pagan se conviertan en consumidores de pago. Cuando uno pasea por las llamativas atracciones de Las Vegas, todo se puede ver gratuitamente; a cambio, los propietarios esperan que algunos se paren y jueguen o compren (o ambos, de manera ideal).</li>
+  </ul>
+
+  <p>Dentro del amplio mundo de las subvenciones cruzadas, los modelos de lo Gratis tienden a entrar en cuatro categorías principales:</p>
+
+  <p class="h3 negrita salto10">GRATIS 1: Subsidios cruzados directos</p>
+
+  <p class="salto10"><strong>Qué es gratis:</strong> Cualquier producto que te engatusa para que pagues por otra cosa.</p>
+
+  <p><strong>Gratis para quién:</strong> Para todo el mundo que esté dispuesto a pagar andando el tiempo, de un modo u otro.</p>
+
+  <div class="ilustra"><img alt="" src="Images/imagen3.jpg" /></div>
+
+  <p class="salto10">Cuando Wal-Mart ofrece «compra un DVD y llévate otro gratis», es un líder con pérdidas. La empresa está ofreciendo el DVD a un precio por debajo de su coste para que entres en la tienda, donde espera poder venderte una lavadora o una cesta de la compra llena de otros productos a su precio. En cualquier paquete de productos y servicios, desde la banca a planes de llamada con móviles, el precio de cada componente individual suele estar determinado por la psicología, no por el coste. Tu compañía de móviles puede no ganar dinero con tus facturas mensuales —mantiene esa cuota tan baja porque sabe que es lo primero que miras cuando eliges un operador—, pero su cuota de correo de voz mensual es puro beneficio. Las empresas examinan una cartera de productos y algunos los venden a precio cero (o casi) para hacer que los otros productos, sobre los que obtienen jugosos beneficios, resulten más atractivos.</p>
+
+  <p>Así se propaga cada vez a más industrias la subvención cruzada de King Gillette. La tecnología está dando a las empresas una mayor flexibilidad a la hora de definir sus mercados, permitiéndoles más libertad de regalar algunos de sus productos o servicios para promocionar otros. Ryanair, por ejemplo, ha trastocado su industria al definirse más como una agencia de viajes de servicios completos que como un vendedor de asientos aéreos. Su tarjeta de crédito es gratuita porque el banco gana dinero con la cuota por servicio que cobra a los minoristas a los que usted compra. Ellos, a su vez, le pasan a usted el recargo. (Evidentemente, si usted no paga a final de mes, el banco ganará aún más dinero con los intereses que le aplique).</p>
+
+  <p class="h3 negrita salto10">Gratis 2: El mercado trilateral</p>
+
+  <p class="salto10"><strong>Qué es gratis:</strong> Contenido, Servicios, <em>Software</em>, y otros.</p>
+
+  <p><strong>Gratis para quién:</strong> Para todo el mundo.</p>
+
+  <div class="ilustra"><img alt="" src="Images/imagen4.jpg" /></div>
+
+  <p class="salto10">La más común de las economías construidas en torno a lo Gratis es el sistema de terceros. En este caso, una tercera parte paga para participar en un mercado creado por un intercambio libre entre las dos primeras partes. ¿Le parece complicado? Se lo encuentra cada día. Es la base de prácticamente todos los medios de comunicación.</p>
+
+  <p>En el modelo de medios de comunicación tradicional, un editor ofrece un producto gratis (o casi gratis) a los consumidores y los anunciantes se apuntan con gusto. La radio es de libre difusión, y también lo es gran parte de la televisión. Igualmente, los editores de periódicos y revistas no cobran a los lectores ni por aproximación el coste de crear, imprimir y distribuir sus productos. No están vendiendo periódicos y revistas a los lectores, están vendiendo lectores a los anunciantes. Es un mercado entre tres partes.</p>
+
+  <p>En cierto sentido, Internet representa la extensión del modelo del negocio de los medios de comunicación a industrias de todo tipo. No se trata simplemente de la noción de que la publicidad lo pagará todo. Las empresas de medios de comunicación hacen dinero con contenido gratuito de cientos de maneras, desde vendiendo información sobre los consumidores hasta la licencia de la marca, suscripciones de «valor añadido» y comercio electrónico directo (véase capítulo 9 para una lista más completa). Ahora, todo un nuevo ecosistema de empresas en Internet está creciendo en torno a la misma serie de modelos.</p>
+
+  <p>Los economistas llaman a esos modelos «mercados bilaterales» porque hay dos grupos de usuarios distintos que se apoyan entre sí sinérgicamente: los anunciantes pagan para que los medios lleguen a los consumidores, quienes a su vez financian a los anunciantes. En ultima instancia, los consumidores pagan, pero sólo de manera indirecta a través de los precios más altos de los productos debido a sus costes de marketing. Esto también se aplica a los mercados que no son de medios de comunicación, como el de las tarjetas de crédito (tarjetas gratis a los consumidores significa más gasto en los comercios y más cuotas para los bancos emisores), a las herramientas de sistemas operativos que se dan de manera gratuita a los desarrolladores de <em>software</em> de aplicaciones para atraer más consumidores a la plataforma, y así sucesivamente. En cada caso, los costes están distribuidos y/o lo suficientemente ocultos para que los artículos primarios parezcan gratuitos a los consumidores.</p>
+
+  <p class="h3 negrita salto10">Gratis 3: “Freemium”</p>
+
+  <p class="salto10"><strong>Qué es gratis:</strong> Cualquier cosa que se corresponde con una versión de pago de buena calidad.</p>
+
+  <p><strong>Gratis para quién:</strong> Usuarios básicos.</p>
+
+  <div class="ilustra"><img alt="" src="Images/imagen5.jpg" /></div>
+
+  <p class="salto10">Este término (de <em>free</em>, gratis, y <em>premium</em>, prima), acuñado por el inversor de riesgo Fred Wilson, es uno de los modelos de negocio más comunes en Internet. El <em>Freemium</em> puede adoptar diferentes formas: niveles diversos de contenido desde gratuito a caros, o una versión «profesional» de calidad de algún sitio de Internet, o <em>software</em> con más funciones que la versión gratuita (pensemos en Flickr y en la versión Flickr Pro de 25 dólares al año).</p>
+
+  <p>Una vez más, esto nos suena familiar. ¿No se trata simplemente del modelo de muestra gratuita que encontramos en todas partes desde los mostradores de perfumes a las esquinas de las calles? Sí, pero con un matiz importante. La muestra gratuita tradicional es la distribución de chocolatinas de promoción o los pañales que se envían a una nueva madre. Dado que estas muestras tienen costes reales, el fabricante sólo regala una pequeña cantidad, esperando enganchar a los consumidores y estimular la demanda de muchos más.</p>
+
+  <p>Pero en los productos digitales, esta relación de gratis y de pago se invierte. Una página Web típica sigue la «Regla del 5 por ciento» (el 5 por ciento de los usuarios financia todo el resto). En el modelo <em>freemium</em>, eso significa que por cada usuario que paga por la versión premium de la página Web, otros 19 consiguen la versión básica gratuita. La razón por la que esto funciona es que el coste de atender a los 19 es próximo al cero, por no decir nulo.</p>
+
+  <p class="h3 negrita salto10">Gratis 4: Mercados no monetarios</p>
+
+  <p class="salto10"><strong>Qué es gratis:</strong> Todo lo que la gente decide dar sin esperar un pago a cambio.</p>
+
+  <p><strong>Gratis para quién:</strong> Para todos.</p>
+
+  <div class="ilustra"><img alt="" src="Images/imagen6.jpg" /></div>
+
+  <p class="salto10">Esto puede adoptar varias formas:</p>
+
+  <p class="h4 negrita cursiva salto10">La economía del regalo</p>
+
+  <p class="salto10">Desde los 12 millones de artículos de Wikipedia a los millones de artículos gratuitos de segunda mano ofrecidos en Freecycle, estamos descubriendo que el dinero no es el único motivador. El altruismo siempre ha existido, pero Internet le da una plataforma en la que las acciones de los individuos pueden tener un impacto mundial. En un sentido, la distribución de coste cero ha convertido el compartir en una industria. Desde el punto de vista de la economía monetaria, todo parece gratis —de hecho, lo que parece es competencia desleal—, pero dice más sobre nuestras miopes formas de medir el valor que sobre el valor de lo que se crea.</p>
+
+  <p>Los incentivos para compartir pueden ir desde la reputación y la atención a factores menos mensurables, como la expresión, la diversión, el buen karma, la satisfacción, o sencillamente el propio interés (dar cosas a través de Freecycle o Craigslist para ahorrarse uno la molestia de tirarlas a la basura). A veces, el hecho de dar es involuntario o pasivo. Das información a Google cuando tienes una página Web pública, lo quieras o no, y das latas de aluminio al tipo sin hogar que las recoge del contenedor de reciclado, aunque no sea lo que pretendías hacer.</p>
+
+  <p class="h4 negrita cursiva salto10">Intercambio de trabajo</p>
+
+  <p class="salto10">Puedes tener acceso a porno gratis si resuelves unos cuantos «Captchas» (casillas de texto codificadas que se utilizan para bloquear los «bots» de <em>spam</em> [correo basura]). Resulta irónico que lo que estés realmente haciendo sea utilizar tus capacidades para ajustarte a lo que hacen los demás a fin de descifrar un texto que se originó en otra página Web, una página que interesa a los difusores de <em>spam</em> y que utiliza esos Captchas para mantenerlos alejados. Una vez que los resuelves, los <em>spammers</em> pueden tener acceso a esas páginas Web, lo cual les resulta más valioso a ellos que la banda ancha que consumirás viendo imágenes excitantes. En lo que a ellos respecta, es una caja negra: ellos meten Captchas codificados y sacan textos descifrados. Pero dentro de la caja se encuentra el trabajo involuntario gratuito de miles de personas. Lo mismo pasa cuando calificas historias en Digg, votas en Yahoo Answers, o utilizas el servicio 411 de Google. Cada vez que haces una búsqueda en Google, estás ayudando a la empresa a mejorar sus algoritmos de publicidad orientada. En cada caso, el acto de utilizar el servicio crea algo de valor, ya sea mejorando el propio servicio, o creando información que puede ser útil en otro sitio. Lo sepas o no, estás trabajando gratis.</p>
+
+  <p class="h4 negrita cursiva salto10">Piratería</p>
+
+  <p class="salto10">Nada lo puede describir mejor que la música <em>online</em>. Entre la reproducción digital y la distribución entre iguales (P2P, <em>peer-to-peer</em>), el coste real de distribuir música ha tocado realmente fondo. Este es un caso en el que el producto se ha convertido en gratuito debido a la pura fuerza de gravedad económica, con o sin un modelo de negocio. Esta fuerza es tan poderosa que han fallado las leyes, la protección contra copias, los sentimientos de culpabilidad, y cualquier otra barrera contra la piratería que hayan podido concebir los sellos discográficos (y sigan haciéndolo). Algunos artistas ponen su música en Internet como una forma de comercializar conciertos, mercancías, licencias y otros artículos de pago. Pero otros han aceptado simplemente que, para ellos, la música no es un negocio para hacer dinero. Es algo que hacen por otras razones, por divertirse o por expresión creativa. Lo cual, de todas formas, ha sido siempre verdad para la mayoría de los músicos.</p>
+
+  <p class="h2 negrita salto25">Un test de lo gratis en la vida cotidiana</p>
+
+  <p class="salto25">Veamos cómo encaja esta clasificación con el tipo de cosas gratuitas que encontramos cada día. Curioseando hace poco en un quiosco, encontré este titular en la revista <em>Real Simple</em>: «36 cosas sorprendentes que puedes conseguir gratis». Es el tipo de noticia que verías en cualquier quiosco en cualquier momento, por lo que parecía una muestra bastante representativa para poner a prueba la estructura. En la página anterior se encuentra cómo está distribuida la primera mitad de los ejemplos de <em>Real Simple</em>.</p>
+
+  <div class="divcentrado">
+    <table cellpadding="10" frame="box" rules="none">
+      <tr>
+        <th class="negrita" colspan="2">TEST DE LO GRATIS EN LA VIDA COTIDIANA</th>
+      </tr>
+
+      <tr>
+        <th class="subrayado">Ejemplo de productos gratis</th>
+
+        <th class="subrayado">Modelo de gratis</th>
+      </tr>
+
+      <tr>
+        <td></td>
+
+        <td class="negrita">Gratis 1: Subvención cruzada simple</td>
+      </tr>
+
+      <tr>
+        <td>Clase en tiendas Apple</td>
+
+        <td>Apuestan a que compraras algo</td>
+      </tr>
+
+      <tr>
+        <td>Pruebas en los gimnasios</td>
+
+        <td>Idem</td>
+      </tr>
+
+      <tr>
+        <td>Clases de música para niños</td>
+
+        <td>Idem</td>
+      </tr>
+
+      <tr>
+        <td>Día del helado gratis Ben and Jerry</td>
+
+        <td>Idem</td>
+      </tr>
+
+      <tr>
+        <td>Impresión de fotos <em>online</em> (muestras gratis)</td>
+
+        <td>Idem</td>
+      </tr>
+
+      <tr>
+        <td>Clases para pequeñas empresas (con subvención pública)</td>
+
+        <td>Pagas impuestos</td>
+      </tr>
+
+      <tr>
+        <td>Clases de idiomas BBS (podcasts)</td>
+
+        <td>Subvención cruzada si eres britanico y pagas impuestos; gratuito en caso contrario</td>
+      </tr>
+
+      <tr>
+        <td>Popularity dialer (llamadas gratis)<br />
+        800-free-411<br />
+        e-mails de recordatorio gratuitos</td>
+
+        <td class="negrita">Gratis 2: financiado por publicidad</td>
+      </tr>
+
+      <tr>
+        <td></td>
+
+        <td class="negrita">Gratis 3: Fremium (version gratis y de pago)</td>
+      </tr>
+
+      <tr>
+        <td>Skype (llamadas gratis)</td>
+
+        <td>(Las versiones de pago pueden conectarse a teléfonos móviles)</td>
+      </tr>
+
+      <tr>
+        <td>Noche infantil Broadway</td>
+
+        <td>(los padres financian a los hijos)</td>
+      </tr>
+
+      <tr>
+        <td>MIT OpenCourseWare (clases gratuitas <em>online</em>)<br />
+        Mascotas gratis en Crailist<br />
+        Trueque Freecycle<br />
+        Museo (financiado por donaciones/subvenciones)<br />
+        PaperbackSwap.com</td>
+
+        <td class="negrita">Gratis 4: mercados no monetarios</td>
+      </tr>
+    </table>
+  </div>
+
+  <p class="salto10">Observará que algunos de los ejemplos tienen elementos de varios modelos, y otros tienen competidores que utilizan modelos que encajan en diferentes categorías. (Google 411, competidor del servicio gratuito 1-800-FREE411, no está subvencionado con anuncios). Igualmente, los servicios del Gobierno son una clase especial de subvención cruzada, ya que el vínculo entre sus impuestos y los servicios que recibe es indirecto y difuso.</p>
+
+  <p>Pero el asunto se sostiene: este tipo de clasificación funciona bastante bien. Ningún sistema de categorías es perfecto, y no es difícil encontrar excepciones e híbridos, pero esta estructura nos vendrá bien en los capítulos que siguen.</p>
+
+  <p class="h2 negrita salto25">Los tres precios</p>
+
+  <p class="salto25">Este libro trata fundamentalmente sobre dos precios —<em>algo</em> y <em>nada</em>—, pero a veces hay un tercer precio que no podemos pasar por alto: <em>menos que nada</em>. De acuerdo, es un precio negativo: te pagan por utilizar un producto o servicio, en lugar de que seas tú quien paga.</p>
+
+  <p>Esto es más común de lo que podría pensarse. En Internet se puede ver esta tendencia en cosas como cuando Microsoft te paga por utilizar su buscador, pero esto tiene en realidad una larga tradición en el marketing convencional. Se puede encontrar en los descuentos instantáneos y el marketing de devolución de dinero en efectivo, y en los premios en metálico, los descuentos por pasajero frecuente de avión y otros pagos que se reciben por utilizar tarjetas de crédito o de cliente.</p>
+
+  <p>Evidentemente, pocas veces se trata de algo que merece la pena; en la mayoría de los casos antes o después tendrás que abrir la cartera. Pero lo que es interesante de estas estrategias es que, aunque realmente no se trata de que te regalen dinero, los consumidores suelen considerarlo así.</p>
+
+  <p>Por ejemplo, un descuento en efectivo apela a una psicología muy diferente a la de ahorrar simplemente el dinero. Estudios sobre cómo se gasta la gente el cheque de 1000 dólares (o la cantidad que sea) que reciben cuando compran un camión nuevo (o más bien, cuando lo financian), muestran que tienden a gastarlo como si lo hubieran ganado en la lotería: un premio imprevisto, aunque en realidad se trate de un préstamo a cuenta de futuros pagos. Los maridos se compran palos de golf que sus esposas no les dejarían nunca comprarse, y éstas no les dicen nada, a pesar de que <em>saben</em> que tendrán que devolver el dinero en los próximos años, como si fuese una deuda de la tarjeta de crédito.</p>
+
+  <p>En el libro de Dan Ariely <em>Predictably Irrational</em><a href="#nota10" id="nota10"><sup>[10]</sup></a> [<em>Las trampas del deseo: cómo controlar los impulsos irracionales que nos llevan al error</em>, Ariel, Barcelona, 2008] hay un gran ejemplo de precio negativo. Una vez dijo a sus alumnos de la Sloan School of Business del MIT que iba a hacer una lectura de poesía (<em>Hojas de hierba</em>, de Walt Whitman), pero que no sabía cuánto iba a costar. Entregó un cuestionario a todos los alumnos y preguntó a la mitad de ellos si estaban dispuestos a pagar 10 dólares por escucharle leer, y a la otra mitad le preguntó si estaba dispuesta a escucharle leer si les pagaba 10 dólares a cada uno. Luego les hizo a todos la misma pregunta: ¿Qué pagarían por escucharle leer la versión corta, media o larga del poema?</p>
+
+  <p>La nota inicial es lo que los economistas conductuales denominan un «ancla», que calibra lo que piensa el consumidor que es un precio justo. Ello puede tener un efecto decisivo sobre lo que pagarán en última instancia. En este caso, los alumnos a los que les preguntaron si pagarían 10 dólares, estaban dispuestos a pagar, como media, 1 dólar por el poema corto, 2 dólares por la versión media, y 3 dólares por la versión larga.</p>
+
+  <p>Entre tanto, los alumnos a los que se les había hecho creer que Ariely les pagaría, dijeron que querían 1,30 dólares por escuchar la versión corta, 2,70 dólares por la mediana, y 4,80 por soportar la lectura larga.</p>
+
+  <p>Ariely observa que Mark Twain ya ilustró esto con Tom Sawyer, quien logró que los otros chicos sintieran tanta envidia por pintar la verja que no sólo se ofrecieron a pintarla, sino que le pagaron por el privilegio. Sin embargo, en esto existe una moraleja para aquellos que pagarían a la gente por hacer algo por lo que deberían cobrar. Twain observó: «En Inglaterra existen caballeros acomodados que conducen coches de pasajeros de cuatro caballos durante 20 o 30 millas en un recorrido diario en verano porque el privilegio les cuesta un dinero considerable; pero si les ofrecieran un salario por el servicio, eso lo convertiría en trabajo y se negarían a hacerlo».</p>
+
+  <p>Todos estos son ejemplos de lo que Derek Sivers<a href="#nota11" id="nota11"><sup>[11]</sup></a>, fundador de CD Baby, denomina «modelos de negocio reversibles». Un ejemplo del mundo real de esto son los clubs de música de Los Ángeles que están cobrando a los grupos por tocar en el club en lugar de pagarles como es lo habitual. Los grupos valoran la actuación en público más que el dinero, y si son buenos, pueden llegar a dar el tipo normal de conciertos.</p>
+
+  <p>En China, señala Sivers, «algunos doctores reciben pagos cada mes cuando sus pacientes están sanos. Si estás enfermo, el problema es de ellos, así que no tienes que pagarles ese mes. Su objetivo es curarte y mantenerte sano y así poder cobrarte».</p>
+
+  <p>En Dinamarca, un gimnasio ofrece una cuota de socio en la que no pagas nada mientras aparezcas al menos una vez a la semana. Pero si fallas una semana, tienes que pagar la cuota completa del mes. La psicología es genial. Cuando vas cada semana, te sientes bien contigo mismo y con el gimnasio. Pero de vez en cuanto estás muy ocupado y fallas una semana. Tienes que pagar, pero te culparás a ti solo. A diferencia de la situación habitual en que pagas un gimnasio al que no vas, tu instinto es no darte de baja del gimnasio sino dedicarle más tiempo.</p>
+
+  <p>FreeConferenceCall.com obtiene ingresos de las compañías telefónicas en lugar de obtenerlos de los clientes, porque sabe qué compañía telefónica está utilizando cada persona para llamarles. Negociaron un pago de afiliación por generar más llamadas de larga distancia para cada compañía telefónica. En lugar de pagar el coste de las llamadas de larga distancia ellos mismos, FreeConferenceCall cobra a las compañías telefónicas por animar a los usuarios para que hagan más llamadas de larga distancia.</p>
+
+  <p>En cada caso, una empresa inteligente ha invertido el flujo normal del dinero, ya sea haciendo algo gratis o pagando por lo que otras compañías cobran. No hay nada especialmente novedoso en ninguna de estas ideas. Simplemente supuso que un empresario se pusiera a pensar de manera creativa sobre el precio.</p>
+  <br><br><hr>
+   <div class="nota">
+    <p><a id="nota6"></a><sup>[6]</sup> <em>Microcosm: The Quantum Revolution In Economics And Technology</em>, George Gilder, Free Press, 1990 <a href="../Text/cap1.xhtml#nota6">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p><a id="nota7"></a><sup>[7]</sup> <em>Geek</em>: es un término que se utiliza para referirse a la persona fascinada por la tecnología y la informática. (N. del T.) <a href="#nota7">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p><a id="nota8"></a><sup>[8]</sup> Etimología de «free»: http://www.etymonline.com/index.php?term=free <a href="#nota8">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p><a id="nota9"></a><sup>[9]</sup> Juego de palabras intraducible. El autor está ironizando, ya que en inglés, la expresión «<em>there is no such thing as a free lunch</em>» se traduce por «No te regalan nada». (N. del T.). <a href="#nota9">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p><a id="nota10"></a><sup>[10]</sup> Predictably Irrational, Revised and Expanded Edition: The Hidden Forces That Shape Our Decisions, Dan Ariely, Harper Collins, 2008 <a href="#nota10">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p><a id="nota11"></a><sup>[11]</sup> «Reversible business models», Derek Sivers: http://sivers.org/reversible <a href="#nota11">&lt;&lt;</a></p>
+  </div>
+<br><br>
+</body>
+</html>

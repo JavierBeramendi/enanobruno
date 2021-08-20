@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Breve historia de Internet</title>
+   
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    
+body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+a, .normal { font-style:normal; font-weight:normal; text-decoration:none; }
+sup, sub { font-size:0.75em; line-height:normal; }
+
+.cubierta { margin:0; padding:0; border:0; font-size:0; text-align:center; text-indent:0; page-break-before:always; page-break-after:always; }
+  .cubierta img { height:100%; max-height:100%; }
+
+.tlogo, .tautor, .ttitulo, .tsubtitulo, .trevision, .tfirma { margin:0 0.25em; text-align:center; text-indent:0; font-family:sans-serif; font-weight:bold; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  .tlogo span { margin:3em 0 2.5em; display:inline-block; width:8em; }
+  .tautor { margin-bottom:0.5em; font-size:1.2em; font-weight:normal; color:#595959; }
+  .ttitulo { padding:0; border:0; font-size:1.8em; font-style:normal; text-decoration:none; color:black; visibility:visible; }
+  .tsubtitulo { margin-top:0.3em; }
+  .trevision { margin-top:2.5em; font-size:0.8em; color:#595959; }
+  .tfirma { margin-top:0.25em; font-size:0.65em; }
+  .tfecha { font-family:sans-serif; font-weight:normal; color:#595959; }
+
+.sinopsis, .sinopsis p, .autor, .autor p, .nota p { margin-top:0.5em; text-indent:0; }
+  .sinopsis p, .sinopsis em, .sinopsis strong, .sinopsis big, .sinopsis small, .sinopsis span { font-family:sans-serif; }
+.info { margin:3.5em 1.5em 2.5em; font-size:0.8em; width:90%; }
+  .info p { text-align:left; text-indent:0; }
+.vineta { padding:1em 0; text-align:center; text-indent:0; display:block; }
+.nota { padding-top:3%; page-break-before:always; }
+
+
+/* ----- ESTILOS GENERALES (ADAPTABLES) ----- */
+
+/* encabezados */
+h1, h2, h3, h4, h5, h6 { margin:15% 0.25em 1em; text-align:center; text-indent:0; page-break-after:avoid; page-break-inside:avoid; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  h1 { font-size:1.5em; }
+  h2 { font-size:1.5em; }
+  h3 { font-size:1.4em; }
+  h4 { font-size:1.3em; }
+  h5 { font-size:1.2em; }
+  h6 { font-size:1.1em; }
+
+/* dedicatoria */
+.dedicatoria { margin:5em 1em 0 3em; text-align:right; }
+  .dedicatoria p { text-align:right; text-indent:0; }
+
+/* tipografía */
+.sans, .sans p, .sans em, .sans strong, .sans big, .sans small { font-family:sans-serif; }
+.serif, .serif p, .serif em, .serif strong, .serif big, .serif small { font-family:serif; }
+code, kbd, .mono, .mono p, .mono em, .mono strong, .mono big, .mono small { font-family:monospace; }
+
+i, em, cite, dfn, .cursiva { font-style:italic; }
+b, strong, .negrita { font-weight:bold; }
+ins, .subrayado { text-decoration:underline; }
+del, .tachado { text-decoration:line-through; }
+.oculto { display:none; visibility:hidden; }
+
+big, .grande { font-size:1.2em; }
+small, .versalita { font-size:0.8em; }  /* para texto en mayúsculas, de tamaño similar al de las minúsculas */
+
+/* alineación */
+.izquierda, .izquierda p { text-align:left; }
+.derecha, .derecha p { text-align:right; text-indent:0; }
+.centrado, .centrado p { text-align:center; text-indent:0; }
+.justificado, .justificado p { text-align:justify; }
+.asangre, .asangre p { text-indent:0; }
+
+/* saltos */
+.sintop { margin-top:0; }
+.saltoinicio { margin-top:33%; }
+.salto05 { padding-top:0.5em; }
+.salto10 { padding-top:1em; }
+.salto25 { padding-top:2.5em; }
+
+/* bloques */
+.sinmargen { margin:0; }
+blockquote, .cita { margin:1.5em; }
+.bloque { page-break-inside:avoid; }  /* evita dividir un elemento entre páginas */
+.nosep { text-indent:0; display:inline-block; } /* evita dividir una palabra entre líneas */
+.extenso { orphans:0; widows:0; } /* evita división aleatoria de párrafos muy extensos (bug ADE) */
+.banner { margin:1.5em 12%; padding:0.5em 1em; text-align:center; text-indent:0; border:2px solid black; border-left:none; border-right:none; }
+  .banner p { text-align:center; text-indent:0; }
+
+/* listas */
+li { margin:0; text-align:justify; text-indent:0; line-height:1.3em; }
+
+/* imágenes simples */  /* para láminas verticales (página completa), usar el estilo fijo «cubierta» */
+.ilustra { margin:1em 0; text-align:center; text-indent:0; display:block; }
+  .ilustra img { max-height:100%; max-width:100%; }
+
+
+/* ----- ESTILOS PERSONALES ----- */
+
+.capitular { font-size:300%; float: left; margin:-0.1em 0.125em -0.2em 0; text-indent: 0; line-height: 1em; height: 1em; }
+
+.titulocap { text-indent:0em; font-size:1.1em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap2 { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:underline; }
+.titulobib { text-indent:0em; font-size:1.3em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+
+.pinguino { max-width: 66%; max-height: 50%; }
+
+.bibliografia p { text-indent: -1.5em; margin-left: 1.5em; margin-top: 0.5em; }
+.sitiosypag p { text-indent: 0; margin-top: 0.5em; }
+
+.lista, .listasin { margin: 0; }
+.lista li, .listasin li { }
+
+.fuentess { margin-top: 1em; }
+.fuentess p { margin-bottom: 0.5em; text-indent: 0; }
+
+.frase2 { text-indent: 0; margin-left: 2em; }
+.frase3 { text-indent: 0; margin-left: 4em; }
+.frase4 { text-indent: 0; margin-left: 6em; }
+.frase5 { text-indent: 0; margin-left: 8em; }
+.frase6 { text-indent: 0; margin-left: 10em; }
+
+.codigo { margin: 1.5em; }
+.codigo p { text-indent: 0; font-size: 0.8em; text-align: left; }
+.codigo .primera { text-indent: -1.5em; }
+
+  h4 {text-indent:0em; font-size:1.3em; text-align:center;margin-top:2em;margin-bottom:2em;font-style:normal; font-weight:normal; text-decoration:none;}
+
+    h5, h6 {text-indent:0em; font-size:1.2em; text-align:left;margin-top:2em;margin-bottom:1.5em;font-style:normal; font-weight:bold; text-decoration:none;}
+
+  .mini { font-size: 1em;   }
+     code {margin-left: 0.7em ; margin-right:0.4em } 
+
+.bio { font-size:0.9em; width:86%; margin-left:7%; padding: 2.5em 0; } 
+
+cite {margin: 1.1em }
+
+
+.legal { font-size: 0.8em; font-family:"Courier New", Courier, monospace; width:90%; margin-top: 2.5em; }
+
+  
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  </style>
+</head>
+
+<body>
+  <h1 class="capitulo" title="2. Una red de redes"><span class="num"></span>Una red de redes</h1>
+  <p style="text-align: center; font-style:italic; margin-top: -0.8em; margin-bottom: 3em; text-indent: 0em;">por Andrew Blum</p>
+
+  <p class="asangre"><span class="capital">Q</span>uería saber dónde había empezado Internet, pero la pregunta resultó ser más compleja de lo que había supuesto. A pesar de tratarse de un invento que domina nuestra vida cotidiana —reconocido como una fuerza transformadora de la sociedad global, constitutivo de una época—, la historia de Internet está sorprendentemente muy poco documentada.</p>
+
+  <p>Las historias más sesudas, en formato de libro parecen haber sido publicadas, todas ellas, en 1999, como si Internet terminara en ese año, como si ya estuviera culminada. Pero, más allá de esa coincidencia en el tiempo, todas parecen destacar sus propios héroes, sus propios hitos, sus propios principios. La historia de Internet, como la propia red, también era variada. Como dijo un historiador de historiadores (en 1998), «Internet carece de una figura fundadora central, de un Thomas Edison o de un Samuel F. B. Morse».<a href="#nt19" id="rf19"><sup>[19]</sup></a> Ya debí suponer que las cosas no estarían tan claras cuando el autor de <em>Inventing the Internet</em>, ampliamente considerado como el más autorizado de todos ellos, iniciaba su obra sugiriendo que «la historia de Internet guarda varias sorpresas y rebate algunas ideas muy extendidas».<a href="#nt20" id="rf20"><sup>[20]</sup></a> Me sentía como alguien que se pasea por una fiesta a la que no ha sido invitado, preguntando quién es el anfitrión y nadie lo sabe. ¿O tal vez era que no había anfitrión? ¿Tal vez el problema era más filosófico? Había algo en Internet que era como lo del huevo y la gallina: si Internet es una red de redes, entonces hacen falta dos redes para constituirlo. Así, pues, ¿cómo podía una de ellas haber sido la primera?</p>
+
+  <p>No es necesario decir que nada de todo aquello inspiraba confianza. Yo había partido en busca de lo real, lo concreto, lo verificable, y al llegar a la puerta me recibía el equivalente historiográfico de un hilo de comentarios. Así, pues, iba a tener que acotar más mi pregunta, fijarla más al tiempo y al lugar. Preguntar sobre el objeto. «No ideas sobre la cosa, sino la cosa misma», como había escrito Wallace Stevens.<a href="#nt21" id="rf21"><sup>[21]</sup></a> No «¿dónde empezó Internet?», sino «¿dónde estaba la primera caja?». Y aquello, al menos, sí estaba claro.</p>
+
+  <p>En verano de 1969, una máquina llamada Procesador de Mensajes de Interfaz (IMP, por sus siglas en inglés) se instaló en la Universidad de California en Los Angeles, bajo la supervisión de un joven profesor llamado Leonard Kleinrock. Y ahí sigue, algo menos joven, pero con su sonrisa de niño y una página web que parecía animar a los visitantes a establecer contacto. «Tiene que venir a mi oficina —me respondió cuando le envié un email—. La ubicación original de la IMP se encuentra al fondo del pasillo». Concertamos una cita. Pero hasta que me encontraba en el avión que había de llevarme a Los Angeles, rodeado de consultores exhaustos de camisas arrugadas y aspirantes a actriz parapetadas tras sus gafas de sol, no comprendí las verdaderas implicaciones de mi viaje: iba a visitar Internet, a realizar un peregrinaje de cinco mil kilómetros rumbo a un lugar medio imaginado. ¿Y qué esperaba encontrar? ¿Qué era lo que, en realidad, estaba buscando?</p>
+
+  <p>Supongo que todos los peregrinos se sienten así en algún momento. Somos criaturas optimistas. Según el judaísmo, el Monte del Templo, en Jerusalén, es el lugar a partir del cual se esparció la población del mundo, el lugar más cercano a Dios y el punto de oración más importante. Para los musulmanes la pequeña construcción cúbica de La Meca conocida como La Kaaba es el lugar más sagrado, tan dominante en la geografía física del devoto que éste se orienta hacia él cinco veces todos los días para rezar, desde cualquier lugar del mundo en el que se encuentre, o incluso cuando sobrevuela el mar a bordo de un avión. Todos, culto, grupo, equipo, banda, sociedad, gremio —lo que sea—, tienen su lugar importante, marcado de memoria y significado. Y casi todos nosotros contamos también con nuestros lugares individuales: una ciudad, un estadio, una iglesia, una playa, una montaña que se alza épicamente sobre nuestras vidas.</p>
+
+  <p>Sin embargo, esa importancia siempre es, en cierto modo, personal, incluso cuando es compartida por millones de personas. A los filósofos les gusta señalar que el «lugar» está tanto en nosotros como fuera de nosotros. Podemos marcar un lugar en un mapa, establecer su latitud y su longitud con satélites de posicionamiento global y dar un puntapié al barro acumulado sobre un suelo muy real. Pero eso, inevitablemente, sólo va a ser la mitad del todo. La otra mitad la ponemos nosotros, a partir de las historias que contamos sobre los lugares, sobre nuestra experiencia de ellos. Como escribe el filósofo Edward Casey: «Aunque retiremos añadidos culturales o lingüísticos, nunca encontraremos, debajo, un lugar puro».<a href="#nt22" id="rf22"><sup>[22]</sup></a> Lo que encontraremos, en cambio, son «calificaciones continuas y cambiantes de lugares concretos». Cuando viajamos, fijamos el significado de un lugar en nuestra mente. Es a los ojos del peregrino que un lugar sagrado se vuelve el más sagrado. Y, con su presencia en el lugar, afirma no sólo la importancia del lugar, sino la suya propia. Nuestro lugar físico nos ayuda a conocer mejor nuestro lugar psíquico —nuestra identidad—. Pero ¿era eso cierto también para mí en mi ruta hacia Internet? Anhelaba ver sus lugares más significativos pero ¿eran aquellos lugares, lugares en realidad? Y si lo eran, ¿era Internet parecido a la religión —un modo de entender el mundo— hasta el punto que ver aquellos lugares me resultaría significativo?</p>
+
+  <p>La pregunta se complicó más a la mañana siguiente, en Los Angeles. Desperté al alba, mi reloj biológico adaptado aún a Nueva York, en un hotel inmenso cercano al aeropuerto, de fachada de espejo y panorámica de las pistas de aterrizaje. Me planté delante de la ventana, a ver unos aviones aterrizar pisándose sus propias sombras. En la habitación, prácticamente, todas las superficies incorporaban una tarjetita doblada que me advertía de las marcas que contribuían a que el hotel alcanzara unos máximos de calidad internacional: La cama «Suite Dreams®», la «Colección Serenity Bath™», el «Signature Service». Allí no había nada singular, ni local; todo procedía de lugares lejanos, como en una empresa multinacional. El novelista Walter Kirn llama a eso «mundo aéreo» —esos no lugares que son los aeropuertos y sus alrededores—. Yo intentaba sacar algo de partido posmoderno de todo aquello e invocar al Ryan Bingham que llevaba dentro, el protagonista de la novela de Kirn, <em>Up in the Air</em> (interpretada por George Clooney en la adaptación cinematográfica), que sólo se siente bien en ese mundo homogéneo, supuestamente cómodo, incluso si las «ciudades no se me quedan en la mente como antes».<a href="#nt23" id="rf23"><sup>[23]</sup></a> Pero estaba hueco. Camino de Internet ya había empezado a subir por una empinada pendiente hacia lo singular y lo local. Y era desesperante descubrir que los lugares ostensiblemente reales también se confundían los unos con los otros. Había acudido a Los Angeles con la intención de llevar a Internet de vuelta al mundo real, pero, de hecho, parecía que el mundo hubiera sucumbido a la lógica de la red.</p>
+
+  <p>Con todo, no había motivos para preocuparse. Esa tarde en la UCLA, el momento del nacimiento físico de Internet apareció vívidamente ante mí, anclado en un lugar muy específico. Aquella tranquila tarde de sábado, durante el puente del Día del trabajo de 1969,<a href="#nt24" id="rf24"><sup>(24)</sup></a> un reducido grupo de alumnos de posgrado que estudiaban computación se reunieron en el patio del Boelter Hall con una botella de champagne. Yo, desde ese mismo lugar, evocaba la escena. Celebraban la llegada de su nuevo artilugio, grande, costoso, que arribaba ese día, desde Boston, por correo aéreo: una versión modificada y ampliada para usos militares de una minicomputadora Honeywell DDP-516 —«mini», para la época, significaba que la máquina pesaba más de novecientas libras, con un costo de 80.000 dólares, el equivalente a casi medio millón de dólares actuales—. Provenía de la empresa de ingeniería Bolt, Beranek &amp; Newman, ubicada en Cambridge, Massachusetts, la cual había firmado un contrato de un millón de dólares con el Departamento de Defensa para que construyera una red de computadoras experimental, conocida como ARPANET. Entre las muchas adaptaciones de Bolt estaba un nuevo nombre para aquel aparato: Procesador de Mensajes de Interfaz. Aquella computadora concreta, que ascendía por la cuesta del campus de la UCLA, fue la primera de todas: la IMP #1</p>
+
+  <p>En su mayoría, aquellos alumnos eran de la edad de mis padres; nacidos cuando terminaba la segunda guerra mundial —inmediatamente anteriores al <em>baby-boom</em>, que por aquel entonces tenían en torno a los 25 años (yo mismo conservo imágenes más o menos claras de fotos familiares de la época). Era el verano de Woodstock y de la llegada del hombre a la Luna, e incluso aquellos informáticos iban despeinados y llevaban pantalones de pata de elefante —moda de la época—. Alguno de ellos, seguramente, llevaba un distintivo con la palabra <small>RESIST</small> grabada en él, junto a un signo de interrogación, la versión científica en favor de la resistencia eléctrica, popular símbolo antibélico entre ingenieros. Todos sabían que los 200.000 dólares con los que se financiaba el trabajo de los cuarenta estudiantes de posgrado y personal universitario de la UCLA provenían del Departamento de Defensa. Pero también sabían que no estaban construyendo un arma.</p>
+
+  <p>El proyecto ARPANET lo dirigía la Agencia de Proyectos Avanzados de Investigación del Departamento de Defensa (ARPA, por sus siglas en inglés), fundada tras la estela del lanzamiento del <em>Sputnik</em> para apoyar la investigación científica; cosas esotéricas que se encontraran en los confines de la tecnología. Y, sin duda, ARPANET estaba ahí. Se habían producido muy pocos intentos de conectar computadoras situadas en un mismo continente, y mucho menos se había intentado crear una red interconectada con ellas. Si en algún rincón del Pentágono, algún general de alta graduación tuvo la siniestra idea de que el incipiente ARPANET evolucionaría hasta convertirse en una red de comunicaciones capaz de sobrevivir una guerra nuclear —mito muy extendido sobre los orígenes de Internet—, aquel grupo estaba al margen de ello. Y, en todo caso, lo desconocía. A todos les obsesionaban los retos técnicos que llegaban en el interior de aquella camioneta, sus esposas, sus hijos recién nacidos, las infinitas posibilidades de las comunicaciones por computadora. Es decir, sus intenciones eran pacíficas.</p>
+
+  <p>Por entonces, Boelter Hall era un lugar nuevo, reluciente, como gran parte de Los Angeles. Construido a principios de 1960 para albergar un departamento de ingeniería en rápida expansión, sus líneas modernas, sobrias, eran el <em>súmmum</em> de la tendencia arquitectónica de la época, y estaban en consonancia con la modernísima labor que se desarrollaba en su interior —algo parecido a lo que ocurre con el edificio destinado a la ciencia biomolecular que hoy se alza junto a él—. En la actualidad, Boelter Hall está algo envejecido, las persianas se ven descoloridas por efecto del sol, y las barandillas de los balcones que dan a un patio central lleno de eucaliptos se han oxidado un poco. La fiesta de bienvenida de la IMP debió de celebrarse allí mismo, bajo su sombra, un día caluroso típico del sur de California. Mucho antes de que existieran los teléfonos móviles, habrían calculado aproximadamente a qué hora saldría el camión del aeropuerto. Un remolque esperaba en las inmediaciones, listo para meter la inmensa máquina en el edificio. ¿Sirvieron el champagne en vasos de poliestireno? ¿Tomaron fotografías con una de aquellas nuevas cámaras japonesas baratas que empezaban a importarse? (Si fue así, hace mucho que desaparecieron). La emoción del momento debió de ser evidente, aunque las implicaciones históricas no lo fueran tanto: ésa fue la primera pieza de Internet.</p>
+
+  <p>Pero mientras los alumnos del posgrado celebraban su llegada en el exterior, su profesor seguía encerrado en una gran oficina que, en un arrebato expansivo, había ampliado recientemente y aquella tarde de sábado consultaba sus papeles una y otra vez. Eso puedo imaginarlo con precisión, porque cuando entré en aquel espacio cuarenta y un años después, Leonard Kleinrock seguía sentado allí, vital a sus setenta y cinco años, con una camisa rosa almidonada, pantalones negros y una BlackBerry sujeta al cinturón de cuero. Tenía el rostro bronceado y conservaba todo el pelo. Sobre su escritorio había abierto una laptop de última generación y en ese momento gritaba al teléfono:</p>
+
+  <p>—¡No se conecta!</p>
+
+  <p>Al otro lado de la línea, la voz incorpórea del servicio técnico respondía despacio, pacientemente. «Pulse aquí. Y ahora, pulse ahí. Teclee esto». Kleinrock me miró por encima de la montura de sus gafas de lectura y señaló una silla. Después pulsó una tecla. Y volvió a pulsarla.</p>
+
+  <p>«Inténtelo ahora», ordenó la voz.</p>
+
+  <p>Mi anfitrión torció el gesto.</p>
+
+  <p>—Dice que no estoy conectado a Internet. Eso es lo que dice —y acto seguido, soltó una carcajada tan sonora que le temblaron los hombros.</p>
+
+  <p>Kleinrock es el padre de Internet —o, mejor dicho, <em>uno</em> de ellos, porque el éxito tiene muchos padres—. En 1961, cuando era alumno de posgrado en el Massachusetts Institute of Technology (MIT), publicó su primer trabajo sobre «conmutación de paquetes», la idea de que los datos podían transmitirse eficazmente en pequeños pedazos, más que en un caudal continuo —una de las nociones fundamentales que sustentan Internet—. La idea ya estaba en el aire. Un profesor del British National Physical Laboratory llamado Donald Davies, sin que Kleinrock tuviera conocimiento de ello, llevaba tiempo depurando unos conceptos similares, lo mismo que Paul Baran, que realizaba una investigación de la RAND Corporation de Los Angeles. El trabajo de este último, iniciado en 1960, a petición de la Fuerza Aérea de Estados Unidos, se encaminaba explícitamente a diseñar una red de comunicación capaz de sobrevivir un ataque nuclear. Davies, que trabajaba en un marco académico, sólo pretendía mejorar el sistema de comunicaciones británico. Hacia mediados de la década de 1960 —en el momento en que Kleinrock se encontraba en la UCLA, a punto de obtener su plaza—, sus ideas circulaban entre la pequeña comunidad global de científicos que se dedicaba a la computación y se divulgaban en conferencias y en las pizarras de las oficinas. Pero eran sólo ideas. Nadie había hecho encajar aún todas las piezas del rompecabezas para formar con ellas una red que funcionara. El reto fundamental al que se enfrentaban esos pioneros de la red —y que sigue estando en el núcleo del ADN de Internet— era diseñar no sólo una red, sino una red de redes. Ellos no intentaban conseguir que dos, o tres, o ni siquiera mil computadoras hablaran entre sí, sino que dos, o tres, o mil computadoras de distintas clases, agrupadas de muchas maneras distintas, se expandieran lo más posible. Ese desafío, de un nivel superior, pasó a conocerse como «internetworking».</p>
+
+  <p>El Departamento de Defensa intervino. En 1967, un joven especialista en computación llamado Larry Roberts —compañero de Kleinrock en el MIT— fue contratado por la ARPA específicamente para desarrollar una red de computadoras experimental que abarcara todo el país. En el mes de julio siguiente, envió una petición detallada de propuestas a 140 empresas tecnológicas para construir lo que al principio llamó la «ARPANET». Empezaría por cuatro universidades, todas de la costa oeste: la UCLA, el Stanford Research Insitute, la Universidad de Utah y la Universidad de California en Santa Barbara. El sesgo geográfico no era casual. Conectar computadoras de universidades era una idea inquietante —las escuelas tendrían, inevitablemente, que compartir sus valiosas máquinas, ya de por sí sobreexplotadas—. Las facultades de la costa este tendían a ser más conservadoras, o como mínimo menos receptivas a la capacidad de Robert de influirlos con su control sobre la financiación ARPA. California ya contaba con una floreciente cultura tecnológica y con grandes universidades, pero los inicios de la incipiente ARPANET en la costa oeste tenían también mucho que ver con el hambre cultural de nuevas ideas.</p>
+
+  <p>Bajo la dirección de Kleinrock, la UCLA tendría la responsabilidad adicional de acoger el Centro de Mediciones de la Red, encargado de estudiar el funcionamiento de aquella nueva creación. Ello fue así tanto por razones personales como profesionales: Kleinrock no sólo era el experto reinante en teoría de redes, sino que Roberts confiaba en su viejo amigo. Si la misión de Bolt, Beranek &amp; Newman era construir la red, la de Kleinrock sería la de averiarla, poner a prueba los límites de su funcionamiento. Y ello significaba, además, que la UCLA recibiría aquel primer IMP, que se instalaría entre la gran computadora compartida del departamento de informática, llamado Sigma-7, y las líneas telefónicas especialmente modificadas que conectaban con las otras universidades, que AT&amp;T había dispuesto para cuando, finalmente, la red fuera una realidad. Durante su primer mes de estancia en California, la IMP #1 estuvo sola en el mundo; una isla a la espera de su primera conexión.</p>
+
+  <p>—¿Quiere verla? —me preguntó Kleinrock emocionado, dando un respingo en su silla. Me condujo por el corredor hasta una pequeña sala de conferencias, a menos de cinco metros de su oficina—. Ahí la tiene, una máquina preciosa. ¡Una máquina magnífica!</p>
+
+  <p>La IMP se veía —como sucede con todas las cosas famosas— exactamente igual que en las fotografías: del tamaño de un refrigerador, de color beige, de acero, con botones frontales, algo así como un archivador disfrazado de R2-D2.<a href="#nt25" id="rf25"><sup>(25)</sup></a> Abrió y cerró el cajón e hizo girar algunas ruedas.</p>
+
+  <p>—Militarmente resistente, construida a partir de un Honeywell DDP-516, tecnología punta en su época.</p>
+
+  <p>Le comenté que había empezado a percatarme de que Internet olía; desprendía un olor raro, pero distinguible, mezcla de potentes aires acondicionados industriales y del ozono liberado por los capacitadores, y ambos nos echamos hacia delante para aspirarlo. El olor del IMP me recordaba al del sótano de mi abuelo.</p>
+
+  <p>—Es moho —dijo Kleinrock—. Si cerramos la puerta se disipará.</p>
+
+  <p>Una ausencia total de ceremonia envolvía a la IMP, allí encajada en un rincón de la pequeña sala de conferencias amueblada con sillas de distintas procedencias, las paredes llenas de carteles descoloridos. Había una bolsa de plástico llena de vasos de papel usados.</p>
+
+  <p>—¿Por qué está aquí? —se preguntó Kleinrock en voz alta—. ¿Por qué no se encuentra expuesta en una fantástica vitrina, en algún otro lugar del campus? La razón es que nadie consideró que esta máquina fuera importante. Iban a desprenderse de ella. Yo tuve que acudir en su rescate. Nadie reconocía su valor. Yo les decía: «Tenemos que conservarla. ¡Es importante!». Pero nadie es filósofo en su tierra.</p>
+
+  <p>Pero aquello estaba cambiando. Un alumno de la facultad de historia de la UCLA había investigado recientemente la importancia histórica de Boelter Hall y de la IMP y había empezado a recopilar materiales de archivo. Tras años de lidiar con la burocracia universitaria, Kleinrock había obtenido finalmente apoyos para la construcción del Museo y Archivo de Internet Kleinrock. En él no sólo se rendiría tributo a la IMP, sino al momento histórico.</p>
+
+  <p>—Fue asombroso, aquel grupo de personas tan inteligentes reunidas en un mismo momento y en un mismo lugar —comentó Kleinrock—. Es algo que se da, que ocurre con cierta periodicidad, y entonces tiene lugar una especie de edad de oro.</p>
+
+  <p>En efecto, el grupo allí reunido aquel otoño constituía el núcleo duro de los famosos de Internet; destacaban entre ellos Vint Cerf (en la actualidad «Primer evangelista de Internet», según Google), coautor del código operativo más importante de Internet —conocido como protocolo TCP/IP— junto con Steve Crocker, también alumno de Kleinrock, y Jon Postel, quien durante años dirigió la Autoridad para la Asignación de Números de Internet y fue uno de los mentores fundamentales de toda una generación de ingenieros de telecomunicaciones.</p>
+
+  <p>El museo ocuparía la oficina 3420, donde la IMP quedó instalada a partir del Día del trabajo de 1969, y donde permaneció hasta su desactivación, en 1982. Nos trasladamos hasta allí para verla.</p>
+
+  <p>—La IMP estaba contra esa pared de ahí —me contó Kleinrock, dando unas palmaditas al muro recién pintado—, aunque el espacio no era así. El techo es nuevo, el suelo también; nosotros instalamos un suelo elevado para poder instalar el aire acondicionado.</p>
+
+  <p>Nos asomamos tras un armario de acero para ver si la conexión telefónica original seguía ahí —los primeros metros de la primera ruta de Internet—, pero no estaba. No había ninguna placa conmemorativa, ninguna explicación histórica, y, evidentemente, no había turistas. Todavía no. Kleinrock albergaba la esperanza de poder restaurar la oficina para devolverle el aspecto que tenía en 1969, y que yo imaginaba como algo parecido a Graceland,<a href="#nt26" id="rf26"><sup>(26)</sup></a> detenido en el tiempo, con la IMP y los viejos teléfonos de disco, y con fotografías de hombres con lentes toscos y pelo largo y engominado.</p>
+
+  <p>—Levantar un tabique aquí y poner una puerta ahí son 40.000 dólares, y tenemos un presupuesto de 50.000 para esto y para el archivero —comentó Kleinrock—. Así que creo que voy a tener que donar un montón de dinero. No importa. Es por una buena causa.</p>
+
+  <p>Mientras conversábamos, en el despacho se estaba impartiendo una clase de laboratorio informático con alumnos de primero que acercaban soldadores a verdes tableros de circuitos; sus teléfonos celulares eran visibles en los escritorios, mientras un profesor mascullaba órdenes. Nadie nos dirigió siquiera una mirada. Kleinrock era uno de los primeros cerebros de Internet, pero para los jóvenes de diecinueve años allí congregados, cuyas vidas estaban totalmente modeladas por su existencia —Internet Explorer vio la luz antes de que ellos hubieran aprendido a leer—, aquel hombre parecía formar parte del decorado. Casi literalmente. Aquello no era un santuario, sino un aula, con mucho menos atractivo turístico que la casa de Ryan Seacrest,<a href="#nt27" id="rf27"><sup>(27)</sup></a> que no quedaba lejos. Así, pues, ¿qué estaba haciendo yo allí?</p>
+
+  <p>En determinado momento de la historia, en Boelter Hall cupo toda la Internet, en fuerte contraste con la expansión actual. Y Kleinrock seguía ahí, encarnando esa historia en su memoria. Pude haberme puesto en contacto con él por teléfono, podríamos haber organizado una videoconferencia. Pero yo había arrojado mi red a las aguas de la experiencia y había escogido (por ejemplo) ignorar la fotografía de la oficina 3420 que aparece en el buscador de imágenes de Google, y venir a verlo en persona. Aquella tarde, como había llegado antes de la hora convenida para mi encuentro con Kleinrock, me había sentado en un banco, en el exterior de Boelter Hall, y me había comido unas papas fritas mientras accionaba mi celular. Mi esposa acababa de enviarme por correo un video de nuestra hija, en el que aparecía gateando por primera vez, video que se desarrollaba con gran nitidez en la pequeña pantalla y que me devolvió mentalmente a Nueva York. Había acudido a ver el primer nodo de Internet, pero uno de sus nodos más recientes —el que llevaba en el bolsillo— me había distraído. Si Internet era un mundo nuevo, fluido, distinto del viejo mundo físico, se me ocurrió que Boelter Hall era un punto donde los dos se tocaban, y por el que pasaba una costura excepcionalmente visible. Sin embargo, la esencia que buscaba quedaba diluida por la evolución de aquello que había creado. Aquí estaba el nuevo y flamante dispositivo, conectado en cualquier parte; allí, la antigua máquina, metida en su caja de madera, y que olía a moho. ¿Cuál era la diferencia, en realidad? Allí, la IMP era real. No se trataba de una réplica, de un modelo ni de una imagen digital. Por eso estaba ahí: para que Kleinrock me contara, personalmente, los detalles, para percibir el color de las paredes, pero también para burlarme de la reproductibilidad inmediata de todo lo demás. El lugar mismo no podía ser incluido en un blog y reenviado a otro, y confieso que la ironía de aquel hecho me embriagaba un poco. En el ensayo «La obra de arte en la era de su reproductibilidad técnica», de 1936, Walter Benjamin describe la pérdida de importancia del «aura» del objeto, de su esencia única.<a href="#nt28" id="rf28"><sup>[28]</sup></a> Y ahí estaba yo, en busca del aura de aquello que amenazaba con destruir la idea de «aura» para siempre.</p>
+
+  <p>Le pregunté a Kleinrock al respecto:</p>
+
+  <p>—¿Por qué <em>esencia</em> no es una palabra que usemos generalmente en el contexto de Internet?</p>
+
+  <p>Suele ser más bien el término opuesto el que nos entusiasma: la facilidad de la red para la reproducción instantánea, su capacidad para conseguir que las cosas sean «virales», con la consecuencia de amenazar no sólo el aura, sino también nuestro deseo de ella —y que nos lleva a ver un concierto en la pantalla de un <em>smartphone</em>.</p>
+
+  <p>—Por la misma razón por la que la gente no sabe cuándo se creó, ni dónde empezó, ni cuál fue el primer mensaje enviado —respondió—. El comentario de que la gente no siente curiosidad en relación con ello resulta muy interesante desde el punto de vista psicológico y sociológico. Es como el oxígeno. La gente no se pregunta de dónde viene el oxígeno. Creo que los alumnos de hoy se pierden mucho porque no son capaces de desmontar las cosas. Esto no se puede desmontar —reiteró, dando unos golpecitos a su laptop—. ¿Dónde está la experiencia física? Desgraciadamente, ha desaparecido. No tienen ni idea de cómo funciona esto. Cuando yo era niño y fabricaba radios, sabía con lo que trataba; sabía cómo funcionaban las cosas y por qué funcionaban de esa manera.</p>
+
+  <p>El aula-laboratorio 3420 en la que en ese momento se impartía clase era una excepción, el único momento en que los alumnos de ingeniería informática se ensuciaban las manos. Le pregunté a Kleinrock sobre algunos de los recuerdos repartidos por su oficina. Entonces, de un pequeño archivador gris apoyado en lo alto de una cajonera metálica extrajo el registro original que daba fe del momento en que la IMP de la UCLA se conectó por primera vez con la IMP #2 instalada en el Sanford Research Institute, a última hora del miércoles 29 de octubre de 1969. El cuaderno se había amarilleado, y en su cubierta, escrito con rotulador, podía leerse «<small>IMP LOG</small>». Puede consultarse en la web de Kleinrock, por supuesto.</p>
+
+  <p>—Se trata del documento más valioso sobre Internet —me comentó—. Ahora hay gente que se ocupa de recopilar estos archivos, y me riñen cada vez que toco éste. Son ellos los que me han dado esta caja para que lo guarde en ella —la abrió y empezó a leer algunas de sus entradas:</p>
+
+  <p><em>SRI llamó, intentó hacer una prueba de depuración, pero no funcionó</em>.</p>
+
+  <p><em>Dan pulsó unos botones</em>.</p>
+
+  <p>—La parte importante está aquí… 29 de octubre. No debería tocar estas páginas, pero no puedo resistirme. Aquí está.</p>
+
+  <p>En bolígrafo azul, las palabras ocupaban dos líneas, y junto a ellas había escrita una hora: 22:30.</p>
+
+  <p><em>Hablamos con SRI de una computadora en red a otra</em>.</p>
+
+  <p>Se trata de la única prueba documental de la primera transmisión de ARPANET entre dos sitios culminada con éxito; el momento del primer aliento de Internet. Yo, nervioso, hacía esfuerzos por no apartar las manos de mi cuerpo.</p>
+
+  <p>—Si alguien viene a robarlo, aquí está —dijo Kleinrock—. Y aquí también se conserva una copia de mi tesis.</p>
+
+  <p>Se puso nostálgico.</p>
+
+  <p>—En aquellos tiempos, ninguno de nosotros tenía la menor idea de en qué se convertiría. Yo tenía una visión y acerté en muchas cosas. Pero se me escapó la dimensión social, no supe ver que mi madre, que tiene noventa y nueve años, llegaría a conectarse a Internet. Eso no lo preví. Creía que la cosa sería de computadoras hablando con otras computadoras. Y no es de lo que se trata. Es que tú y yo hablemos entre nosotros.</p>
+
+  <p>Le recordé que habíamos cerrado la IMP para dejar que el olor a moho «se disipara», y desanduvimos nuestros pasos para presentarle una vez más nuestros respetos. Kleinrock abrió el armario.</p>
+
+  <p>—Ahora sí —dijo—. Sí… Mmmm. Acerca la nariz —me incliné hacia delante como quien se acerca a una flor—. ¿Hueles eso? Ahora sí se huelen los componentes. Hay goma. Ése es el material que usaba de niño para reconstruir radios viejas, con tubos de aspiradora, y olía mucho las soldaduras, la resina.</p>
+
+  <p>Me vinieron a la mente los cursillos de electrónica a los que asistí en tercero, después de clase. Fabricábamos LED que parpadeaban siguiendo un patrón concreto. Me paso el día conectado a máquinas electrónicas, pero desde entonces apenas había vuelto a percibir ese olor.</p>
+
+  <p>—Eso no puede grabarse —dijo Kleinrock—. Todavía. Pero algún día se podrá.</p>
+
+  <p class="salto25">La adolescencia de Internet fue prolongada. Desde el nacimiento de ARPANET en la UCLA, en 1969, hasta mediados de la década de 1990, la red de redes fue saliendo muy despacio de universidades y bases militares y entrando en empresas de informática, bufetes de abogados y bancos, mucho antes de abrirse paso hasta todos nosotros. Pero en aquellos largos años del principio, en realidad no había gran cosa de la que poder hablar. Durante un cuarto de siglo, Kleinrock y sus colegas eran como exploradores que plantaban la bandera de una Internet incipiente en una serie de colonias remotas, conectadas apenas tenuemente unas con otras, y a menudo no con su entorno más inmediato. Internet era escasa.</p>
+
+  <p>Los primeros mapas de ARPANET publicados frecuentemente por Bolt, Beranek &amp; Newman muestran hasta qué punto. Parecen mapas de constelaciones. En cada una de las versiones, se muestra una silueta de Estados Unidos y, sobre ella, unos círculos negros que indican cada IMP, unidos por unas líneas rectísimas. ARPANET inició su existencia como la Osa Menor, que abarcaba una porción de California y tenía los enganches del carro en Utah. En verano de 1970, se había expandido hacia el este, atravesando todo el país, para sumar la oficina del MIT, en Harvard, y la de Bolt, en Cambridge. Washington no apareció hasta el otoño siguiente. En septiembre de 1973, ARPANET ya era internacional, con el establecimiento de una conexión satelital con el University College de Londres. A finales de la década, la geografía de la red se encontraba plenamente asentada alrededor de cuatro regiones: Silicon Valley, Los Angeles, Boston y Washington. La ciudad de Nueva York apenas aparecía, y sólo la Universidad de Nueva York contaba con una colonia. Algunos nodos diseminados salpicaban el centro de Estados Unidos. Fiel a sus raíces filosóficas como sistema de comunicaciones pensado para la era posnuclear, ARPANET resultaba asombrosamente desurbanizada y descentralizada. Carecía de lugares especiales, de monumentos. Físicamente hablando, había IMP como la que ocupaba el despacho contiguo al de Kleinrock, unidas por conexiones telefónicas permanentes que AT&amp;T proporcionaba bajo condiciones especiales. Existía en aulas poco frecuentadas de departamentos universitarios de informática, en barracones de bases militares, y a través de los cables de cobre y las conexiones por microondas de la red telefónica ya existente. ARPANET no era siquiera una nube. Era una serie de destacamentos aislados unidos por carreteras estrechas, como un Pony Express<a href="#nt29" id="rf29"><sup>(29)</sup></a> de nuestro tiempo.</p>
+
+  <p>Seguía investigándose, claro está, pero el uso de ARPANET como instrumento de comunicación seguía manteniendo un aire de novedad. En septiembre de 1973, una conferencia celebrada en la Universidad de Sussex —Brighton, Inglaterra— congregó a ingenieros de telecomunicaciones de todo el mundo que, por separado, desarrollaban sus propias redes de computadoras financiadas por sus respectivos gobiernos. Como ARPANET era la mayor de ellas, se estableció una conexión especial de demostración con Estados Unidos. No fue nada fácil conseguirla. Hubo que activar una línea telefónica entre uno de los nodos de ARPANET, en Virginia, y una antena satelital cercana. Desde allí, la señal se hizo rebotar a un satélite en órbita, y desde allí hasta otra estación terrestre situada en Goonhilly Downs, Cornualles, desde donde, vía telefónica, llegó hasta Londres y, finalmente, hasta Brighton. No fue tanto un prodigio tecnológico como lo que los ingenieros llaman un <em>kludge</em>, un vínculo temporal y tenue a través del océano.</p>
+
+  <p>Pero la historia recuerda ese congreso por motivos más prosaicos. Según un relato que con el tiempo se ha convertido en leyenda, cuando Kleinrock regresó a Los Angeles, tras haber asistido a la conferencia, se dio cuenta de que había olvidado su rasuradora eléctrica en el baño de su habitación de Sussex. Se conectó a ARPANET desde la terminal de su computadora de la UCLA, introdujo la orden <small>WHERE ROBERTS</small>, que le indicaba si su amigo Larry Roberts —adicto al trabajo e insomne reconocido— estaba también conectado. Y, en efecto, lo estaba, despierto a las tres de la madrugada. Usando un rudimentario programa de chat, los dos amigos realizaron las disposiciones necesarias para que la rasuradora regresara a casa. Aquella clase de comunicación era «algo así como ser polizones en un avión», según descripción de los historiadores Katie Hafner y Matthew Lyon.</p>
+
+  <p>ARPANET, en la década de 1970, era propiedad del gobierno estadunidense, y conectaba a investigadores de defensa con el ejército, o con los departamentos universitarios financiados por la ARPA. Pero, socialmente, ARPA era una ciudad pequeña. La edición de 1980 del directorio de ARPANET es un libro de cubiertas amarillas, encuadernado de manera sencilla, del grosor de una revista de moda. En él figuran unos cinco mil nombres, la totalidad de los usuarios de ARPANET, con sus códigos postales, los códigos de letras de sus nodos, sus direcciones de correo electrónico —sin «.com» ni «.edu», que todavía tardarían unos años en inventarse—. Kleinrock figura ahí, por supuesto, con la misma dirección de oficina y el mismo número de teléfono que tiene hoy (aunque su código de área, su código postal y su dirección de correo electrónico han cambiado). Compartiendo página con él están algunos ingenieros de telecomunicaciones del MIT, el University College de Londres y la Universidad de Pensilvania; un comandante del Mando del Ejército para la Investigación y el Desarrollo de las Comunicaciones de Fort Monmouth, Nueva Jersey, y el jefe de la División de Programación de Estudios Estratégicos de la Base Aérea de Offutt, Nebraska, famosa por haber sido el lugar de fabricación del <em>Enola Gay</em>,<a href="#nt30" id="rf30"><sup>(30)</sup></a> y principal centro de mando durante la guerra fría, además del sitio en que el entonces presidente Bush buscó temporalmente refugio durante el 11 de septiembre de 2001.</p>
+
+  <p>ARPANET era así: un lugar de encuentro accidental para profesores universitarios y soldados especializados en últimas tecnologías, unidos bajo el paraguas de las redes informáticas. En el interior de la cubierta del directorio aparece un mapa lógico de ARPANET, con los nodos referenciados en letra muy pequeña, y conectados entre sí mediante líneas gruesas y finas, como un complejo y enmarañado mapa de vuelo. Todas las computadoras que lo componen caben, sin problemas, en la página. Con todo, esa intimidad no iba a durar mucho.</p>
+
+  <p>A principios de la década de 1980, las grandes empresas de telecomunicaciones —como IBM, XEROX o Digital Equipment Corporation—, así como las grandes agencias gubernamentales —entre ellas la NASA y el Departamento de Energía—, operaban sus propias redes informáticas, cada una de ellas con su propio acrónimo. Los físicos especializados en las altas energías contaban con HEPnet. Los físicos del espacio, con SPAN. Los investigadores de la fusión magnética disponían de MFENET. También surgió un puñado de redes europeas, entre ellas EUnet y EARN (la Red de Investigación Académica Europea). Y existía un número creciente de redes académicas regionales, llamadas como los doce hijos del señor y la señora Net: BARNet, MIDnet, Westnet, NorthWestNet, SESQUINet.</p>
+
+  <p>El problema era que todas aquellas redes no estaban conectadas entre sí. Aunque se extendían por todo el país y, ocasionalmente, cruzaban el océano, operaban, de hecho, como autopistas privadas tendidas sobre el sistema telefónico público. Se traslapaban geográficamente y, a veces, servían a los mismos campus universitarios. Incluso, es posible que algunas se traslaparan físicamente, que compartieran los mismos cables telefónicos de larga distancia. Pero, en términos de redes, eran «lógicamente» diferentes. Estaban desconectadas, tan desconectadas como el sol y la luna.</p>
+
+  <p>Y así siguió siendo hasta el día de año nuevo de 1983, cuando, en una transición planificada con años de antelación, todas las computadoras centrales de ARPANET adoptaron las reglas electrónicas que siguen siendo la piedra angular básica de Internet. En términos técnicos, modificaron su protocolo de comunicaciones, o lenguaje, y dejaron de usar el NCP (Network Control Protocol) para sustituirlo con el TCP/IP (Transmission Control Protocol/Internet Protocol). Ése fue el momento de la historia de Internet en que el niño se hizo hombre. El cambio, encabezado por ingenieros de Bolt, Beranek &amp; Newman, hizo que docenas de administradores de sistemas debieran permanecer clavados a sus escritorios el día de fin de año, haciendo lo imposible por cumplir con el plazo pactado, lo que llevó a uno de ellos a encargar unos pines conmemorativos en los que podía leerse «Yo sobreviví a la transición a TCP/IP». Los nodos que no se habían actualizado quedaron desconectados hasta que se actualizaron. Pero, transcurridos unos meses, una vez que el polvo se hubo asentado, el resultado fue el equivalente informático a la implantación de una única lengua internacional. TCP/IP pasó de ser un dialecto dominante a una lengua franca oficial.</p>
+
+  <p>Como destaca la historiadora Janet Abbate, esa transición marcó no sólo una transformación administrativa, sino un cambio conceptual importantísimo: «Ya no bastaba con pensar en cómo puede conectarse una serie de computadoras; a partir de entonces, los creadores de redes también debían tener en cuenta cómo podían interactuar las distintas redes». ARPANET había dejado de ser un jardín tapiado con un directorio oficial, gubernamental, de participantes, y se había convertido, simplemente, en una red entre muchas otras, unidas en una «internetwork».</p>
+
+  <p>La estandarización de TCP/IP que tuvo lugar durante el año nuevo de 1983 fijó de manera permanente la estructura repartida de Internet, asegurando, hasta hoy, su falta de control central. Cada una de las redes actúa de manera independiente, o «autónoma», porque TCP/IP proporciona el vocabulario que permite «interactuar». Como señala Tim Wu, profesor de la facultad de derecho de Columbia y autor de diversos ensayos, ésta es la ideología fundacional de Internet, y presenta claras similitudes con otros sistemas descentralizados —sobre todo los sistemas federales estadunidenses—.<a href="#nt31" id="rf31"><sup>[31]</sup></a> Como al principio Internet operaba sobre los cables ya existentes de las redes telefónicas, sus fundadores se vieron obligados a «inventar un protocolo que tuviera en cuenta la existencia de muchas redes, sobre las cuales tenían un poder limitado», escribe Wu. Se trataba de un «sistema de diferencias toleradas, de un sistema que reconocía y aceptaba la autonomía de los miembros de la red».</p>
+
+  <p>Pero, si bien esa autonomía surgió a causa de la infraestructura que Internet había encontrado, no tardó en convertirse en la fuerza fundamental que dio forma a la infraestructura que Internet creó. Winston Churchill dijo, en relación con la arquitectura, que «nosotros damos forma a nuestros edificios, y después nuestros edificios nos dan forma a nosotros», y lo mismo puede aplicarse a Internet.<a href="#nt32" id="rf32"><sup>[32]</sup></a> Con TCP/IP en funcionamiento y con nuevas redes autónomas surgiendo cada vez con más frecuencia, Internet crecía físicamente, pero sin orden ni concierto. Se iba formando <em>ad hoc</em>, como una ciudad, con una estructura flexible que daba paso a un crecimiento espontáneo, orgánico. La geografía y la forma de Internet no se diseñaban desde alguna oficina de ingeniería de AT&amp;T, sino que surgían a partir de las acciones independientes de centenares y después miles de redes.</p>
+
+  <p>Con TCP/IP en marcha, Internet —más o menos tal como la conocemos hoy— había llegado, y se inició un proceso de crecimiento notable. En 1982 había sólo quince redes o «sistemas autónomos» en Internet, es decir, que se comunicaban con TCP/IP; en 1986 había ya más de cuatrocientos. (En 2011 eran más de 35.000). El número de computadoras asociadas a esas redes crecía aún más rápido. En el otoño de 1985 había 2000 computadoras con acceso a Internet; a finales de 1987 eran 30.000, y a finales de 1989, 159.000. (En 2011, el número de usuarios de Internet era de dos mil millones, y el de aparatos, mayor aún). Internet, que durante casi veinte años había sido una ciudad universitaria llamada ARPANET, había empezado a parecerse más a una metrópoli. Si antes uno podía imaginar cada enrutador como un claustro en lo alto de una montaña tranquila, el increíble crecimiento en el número de máquinas implicaba que aquellos enrutadores se amontonaban ahora muy cerca los unos de los otros, formando pueblos. Algunos de ellos, incluso, empezaban a mostrar la vaga promesa de un horizonte. Para mí, ése es el momento más emocionante de esa historia temprana: Internet se estaba convirtiendo en un lugar.</p>
+
+  <p>Hacia finales de la década de 1980, un puñado de empresas inició la construcción de sus propias autopistas de larga distancia para la transmisión de datos, o «espinas dorsales», así como calles urbanas o redes «metropolitanas». Pero conviene alejar de la mente imágenes de excavadoras recorriendo el campo de Pensilvania tendiendo cables —aunque éstas no tardarían en llegar. Aquellas primeras redes locales y de larga distancia seguían operando a través de las líneas telefónicas existentes, con equipos especializados instalados en cualquiera de los dos extremos. Hacia principios de la década de 1990, el goteo se convirtió en oleada, porque empresas como MCI, PSI, UUNet, MFS y Sprint atraían cada vez más inversiones, y las usaban para cavar sus propias trincheras y llenarlas con la nueva tecnología de fibra óptica, que se comercializaba desde la década anterior. La red de redes acumulaba una infraestructura propia. Empezó a colonizar lugares clave de todo el mundo; de hecho, aquellos en los que todavía existe de manera predominante: la Virginia suburbana y Silicon Valley, en California; el distrito londinense de los Docklands; Amsterdam, Frankfurt y la zona de Tokio conocida como Otemachi. Internet se había propagado hasta el punto de resultar perceptible a simple vista, convirtiéndose en un paisaje por sí misma. Lo que durante los primeros veinte años de existencia de Internet había sido fácil de relegar a espacios intermedios —los recintos de telecomunicaciones y las aulas libres—, ahora tenía carácter. Hacia mediados de la década de 1990, la oleada de construcción había pasado a ser un torrente y la «banda ancha» se convirtió en una de las burbujas más infames de la historia económica de Estados Unidos. Con todo, fue ese gasto, por más sobredimensionado y económicamente destructivo que resultara, lo que permitió la construcción de la Internet que usamos hoy.</p>
+
+  <p>En 1994, yo estaba terminando la secundaria, dedicando muchas horas a trabajar con la Macintosh de la familia, bloqueando interminablemente la línea telefónica para explorar los tableros de mensajes y las salas de chat de America Online (AOL). Entonces, en algún momento de ese invierno, mi padre trajo a casa un pequeño disco de 3.5 cargado con un nuevo programa llamado «Mosaic» —el primer navegador web—. Y una mañana soleada de fin de semana, sentado a la mesa del comedor, tras suspender momentáneamente mis tareas de física, con un largo cable de teléfono recorriendo la habitación de punta a punta, oímos los tonos, agudos como gritos, del módem, que indicaban la conexión con una computadora remota. Mi madre apartó la vista del periódico y nos miró con desdén. En la pantalla, en vez del menú de America Online, con su breve oferta de opciones, había aparecido un cursor parpadeante en el interior de una «barra de direcciones», el punto de partida de todas nuestras exploraciones digitales.</p>
+
+  <p>Pero ¿dónde ir? En aquel momento, las opciones eran limitadas. Eran pocas las organizaciones que contaban con páginas web —sólo las universidades, unas pocas empresas informáticas, el Servicio Meteorológico Nacional—. ¿Y cómo se sabía la manera de encontrarlas? No existían Google, Yahoo! MSN, y ni siquiera Ask Jeeves. A diferencia del recinto cerrado de AOL, a diferencia de cualquier otra computadora que hubiera usado, me sentía tan sin límites como en el mundo. La sensación era muy reconocible: me sentía como cuando viajaba. Y se trataba de una emoción compartida. Aquella fue una temporada embriagadora para Internet. Netscape lanzó su navegador en octubre, mientras Microsoft lanzaba su campaña publicitaria para su propio «Internet Explorer». Internet estaba a punto de popularizarse de una vez por todas. El techo estaba a punto de saltar por los aires.</p>
+
+  <p>Pero, en realidad, ¿qué techo? El <em>boom</em> tensaría la infraestructura de Internet existente y la llevaría al colapso. ¿Quién la salvaría? ¿Cómo se expandiría? ¿Hacia dónde? Yo había oído contar las historias empresariales del éxito fulgurante de las empresas «punto com», había oído hablar de que Jim Clark y Marc Andreesen habían fundado Netscape, y de que Bill Gates luchaba por mantener Internet Explorer como parte integral del sistema operativo Windows de Microsoft. Pero ¿qué había de las propias redes y de sus lugares de conexión? En un negocio que siempre se había mostrado obsesionado con las últimas novedades, ¿quién seguía ahí para contar la historia?</p>
+
+  <p>Regresé a California, pero me hablaron acerca de Virginia.</p>
+
+  <p class="salto25">En uno de esos días húmedos, tan típicos de San Francisco, conocí a un ingeniero de redes llamado Steve Feldman, en un café situado a pocas calles de su oficina, en el corazón del conjunto de empresas de Internet, ubicadas al sur de Market Street. Parecía un profesor de matemáticas de bachillerato, con sus pantalones color caqui, sus resistentes botas de montaña y su barba poblada. Llevaba el distintivo de su empresa atado al cuello, con el logotipo de NANOG (North American Network Operators’ Group), la exclusiva asociación de ingenieros que controla las mayores redes de Internet, y cuya junta directiva preside Feldman. Actualmente, su trabajo consiste en dirigir la red de datos de CBS Interactive, y en asegurarse, entre otras cosas, de que el último capítulo de <em>Survivor</em>, o el partido de baloncesto de la NCAA, se emitan correctamente en <em>streaming</em> por nuestras pantallas (aunque a él mismo no le entusiasme ni lo uno ni lo otro). Sin embargo, durante un tiempo, en la década de 1990, Feldman dirigió el lugar más importante de Internet, un cruce de caminos global insólitamente ubicado en el estacionamiento de un edificio de oficinas de las afuera de Washington D. C. Fue un momento emocionante para la evolución de Internet… durante un tiempo. Al final, las cosas se salieron de control.</p>
+
+  <p>Estábamos sentados entre dos jóvenes absortos en sus laptops, sus mentes en la nube. Nuestra conversación debía de sonarles extraña: era una historia tan antigua. En 1993, Feldman —graduado en ingeniería de telecomunicaciones en Berkeley— empezó a trabajar para una joven empresa dedicada a las redes llamada MFS Datanet, que había iniciado sus actividades realizando el tendido de fibra óptica en los túneles de carbón de Chicago, y que más recientemente había estado construyendo redes privadas para unir oficinas de empresas, sirviéndose, fundamentalmente, de las líneas telefónicas ya existentes. MFS no proporcionaba acceso a Internet, sino que ayudaba a las empresas con sus redes internas, pero había aprendido a hacerlo muy bien dentro de las ciudades. Y eso era precisamente lo que necesitaba un puñado de empresas que proporcionaban accesos a Internet. Éstas tenían un problema: por aquel entonces, la espina dorsal <em>de facto</em> de Internet la gestionaba la National Science Foundation, y era conocida como NSFNET, pero, técnicamente, a las empresas comerciales se les prohibía usarla por la «política de uso aceptable», que teóricamente limitaba el tráfico a finalidades académicas y educativas. Para poder crecer, los proveedores comerciales debían encontrar la manera de intercambiar tráfico por sus propias carreteras privadas, para así evitar atravesar esa autopista gestionada por el gobierno. Ello implicaba conectarse unos con otros —físicamente. Pero ¿dónde?</p>
+
+  <p>El negocio florecía para todo el mundo, pero la iniciativa se veía amenazada por la ausencia de local. ¿Dónde podían conectarse? Expresado de un modo bastante literal: ¿dónde había un lugar barato, con mucha electricidad, en el que los ingenieros pudieran lanzar un cable desde el enrutador de una red al de otra?</p>
+
+  <p>Las afueras de Virginia, al oeste de Washington D. C., era un lugar atractivo para muchos de los primeros proveedores comerciales de Internet, sobre todo a causa de la concentración de contratistas militares y empresas de nuevas tecnologías en la zona.</p>
+
+  <p>—Era el centro tecnológico —me dijo Feldman.</p>
+
+  <p>Durante un tiempo, algunos de los primeros proveedores de Internet interconectaban sus redes en el interior de un edificio de Sprint, al noroeste de Washington, pero se trataba de una solución imperfecta. A Sprint no le gustaba que sus competidores instalaran una tienda en su propio edificio (sobre todo porque Sprint carecía de una estructura comercial que le permitiera cobrarles adecuadamente por ello). Y a los proveedores de Internet —empresas como UUNet, PSI o Netcom— les resultaba caro instalarse ahí, por el costo de llevar las líneas de datos locales hasta sus propios POP (Points of Presence) de sus oficinas o redes. MFS ofreció una solución: convertiría sus oficinas en un <em>hub</em>. La empresa ya disponía de numerosas líneas de datos locales, que usaría para unir a cada uno de los proveedores de Internet, como a bailarines en torno a una estaca. Entonces, MFS proporcionaría un conmutador, llamado Catalyst 1200, que distribuiría el tráfico entre las redes. No se trataba meramente de una carretera local; era una rotonda. Al conectarse a ese <em>hub</em>, cada red tendría acceso inmediato y directo a las otras redes participantes, sin tener que pagar peaje. Pero para que el plan fuera viable, varios proveedores de Internet debían comprometerse simultáneamente, pues de otro modo la rotonda quedaría instalada en medio de la nada. Algunos de ellos tomaron la decisión un día de 1992 en un Tortilla Factory de Herndon, Virginia. A la mesa estaban sentados Bob Collet, que dirigía la red de Sprint; Marty Schoffstall, cofundador de PSI; y Rick Adams, fundador de UUNet (que posteriormente ganaría cientos de millones de dólares hablando en público). Cada una de esas redes operaba independientemente, pero sabía muy bien que no era nada sin las demás. Internet seguía siendo un pasatiempo para un subgrupo muy minoritario de la población, compuesto fundamentalmente por personas que habían usado la red en la universidad y deseaban seguir haciéndolo. (En Estados Unidos, el porcentaje de hogares con acceso a Internet no empezó a medirse hasta 1997). Pero la tendencia de crecimiento era clara: por el bien de Internet —si en realidad tenía que ponerse en marcha una Internet extraacadémica—, las redes debían actuar como una sola. MFS llamó a ese nuevo <em>hub</em>, un «intercambio para área metropolitana». Para subrayar su intención de crear varias por todo el país, a las siglas en inglés de ese nombre: «MAE», le añadieron la indicación geográfica «este», y de ese modo pasó a ser conocido como MAE-East.</p>
+
+  <p>Y funcionó enseguida.</p>
+
+  <p>—MAE-East se hizo tan popular que la tecnología nos quedaba pequeña antes de que tuviéramos tiempo de actualizarla —me contó Feldman.</p>
+
+  <p>Cuando un nuevo proveedor de servicios de Internet iniciaba sus operaciones, sus clientes, principalmente, se conectaban a través de una línea telefónica ordinaria, usando un módem. Pero, a partir de ahí, el proveedor debía conectarse al resto de Internet (como hacía Jon Auer en Milwaukee). Y, durante un tiempo, MAE-East era el resto de Internet.</p>
+
+  <p>—Si te conectabas a MAE-East, tenías Internet en la puerta de tu casa —prosiguió Feldman—. Era la manera, <em>de facto</em>, de acceder al negocio de Internet.</p>
+
+  <p>En cuestión de dos años, MAE-East era el cruce de caminos de la mitad del tráfico mundial de Internet. Era muy probable que un mensaje enviado entre Londres y París circulara a través de MAE-East. Un médico en Tokio que consultara una página web de Estocolmo pasaba por MAE-East —por la quinta planta del número 8100 de Boone Boulevard, en Tysons Corner, Virginia.</p>
+
+  <p>La ubicación era portentosa. La intersección de Leesburg Pike y Chain Bridge Road podía ser, tal vez, el cruce de caminos del mundo digital, pero también quedaba llamativamente cerca de la encrucijada del espionaje estadunidense, lo que rodeaba a MAE-East de un halo de misterio, sospecha e incluso conspiración.</p>
+
+  <p>Tysons Corner es uno de los puntos más elevados del condado de Fairfax, y se encuentra a unos doscientos metros por encima del nivel del mar. Durante la guerra de secesión, el ejército unionista se benefició de su vista sobre Washington y las Montañas Azules, y erigió una torre de vigía y señalización, para lo que saqueó madera de las granjas vecinas. Un siglo después, al inicio de la guerra fría, el ejército estadunidense plantó una antena radiofónica en el mismo lugar, y por los mismos motivos: para establecer comunicaciones entre los cuarteles generales de la capital y puestos militares más remotos. En ese punto, todavía hoy, existe una torre militar, un esqueleto de acero rojo y blanco que se yergue sobre cruces de carreteras suburbanas muy concurridas, protegido por una valla en la que un cartel advierte sin rodeos que está prohibido tomar fotografías. Para potenciar más el misterio del lugar, los radioaficionados de onda corta han denunciado la torre como origen de «emisoras de números» —emisoras radiofónicas que se dedican a leer una ristra interminable de series numéricas—. Si hay que dar crédito a los comentaristas profesionales de fenómenos paranormales, hay espías que, desde lugares muy lejanos, se conectan a horas convenidas para recibir mensajes codificados de sus cuarteles generales. Según Mark Stout, historiador del International Spy Museum, los libros de códigos de un solo uso que utiliza el sistema son indescifrables. «En realidad, desde el punto de vista criptoanalítico, no hay manera de penetrar en un sistema de contraseñas de un solo uso», asegura. «En absoluto».</p>
+
+  <p>Lo cierto es que si el contraespionaje te interesa, el resto de Tysons Corner podría plantear retos similares. MAE-East ya no se encuentra ahí —o, para ser más exactos, si ahí queda algún equipo de telecomunicaciones, ya no supone ningún centro significativo para Internet—, pero el barrio sigue siendo el mismo. Rodeando los estacionamientos, los edificios parecen sellados, con sus fachadas de vidrio perfectamente planas, como si hubieran sido concebidos por los arquitectos para resultar tan anónimos como impenetrables. En su mayoría, no exhiben nombres que los distingan, de acuerdo con los deseos de sus ocupantes, que prefieren la discreción. Y cuando sí los exhiben, revelan la identidad de contratistas militares: Lockheed Martin, Northrop Grumman, BAE. Muchos se construyeron con salas especiales, conocidas como Instalaciones para la Información Sensible Compartimentada, o «esquifes», diseñados para cumplir con las exigencias gubernamentales en materia de información clasificada.</p>
+
+  <p>Los ingenieros de redes más paranoicos —los «tipos del sombrero de papel de plata», como se les conoce, en referencia a su convicción de que la única manera de evitar que el gobierno les lea la mente es llevar un casco hecho con papel aluminio—, consideraron que la ubicación de MAE-East era prueba del control malintencionado que el gobierno ejercía sobre él. ¿Por qué, si no, iban a instalarlo al lado de la CIA? Y si los que escuchaban no eran los de la CIA, entonces debía de ser la supersecreta National Security Agency la que grababa todo lo que pasaba por ella, denuncia que se reiteraba en el éxito de ventas de James Bamford de 2008 sobre la NASA, titulado <em>The Shadow Factory</em>.<a href="#nt33" id="rf33"><sup>[33]</sup></a> Incluso hoy, cualquier búsqueda que hagamos en Google sobre MAE-East para pasar el rato nos aportará una información extrañamente esquemática —escrita en tiempo presente, a pesar de que hace tiempo que su importancia pasó; marcada en rojo sobre fotografías satelitales, subrayando su relación con las cercanas instalaciones de la CIA; en cierto sentido, congelada en el tiempo. MAE-East sigue siendo una mujer —o <em>algo</em> internacional envuelto en el misterio.</p>
+
+  <p>Pero todo se ha exagerado un poco. En un principio es posible que la importancia de MAE-East se diera de manera espontánea, pero después se promovió burocráticamente. En 1991, el Congreso de Estados Unidos había aprobado la Ley de Informática de Alto Rendimiento y Comunicación, más conocida como la Ley Gore, por el nombre de la persona que la planteó originalmente, el entonces senador Al Gore. Por ello se supone que Gore habría afirmado haber «inventado Internet», algo que es, de hecho, tan descabellado como suena.<a href="#nt34" id="rf34"><sup>[34]</sup></a> «Inventar» es, sin duda, un término mal empleado en este caso, pero es cierto que el impulso del gobierno resultó crucial para sacar a Internet de su gueto académico. Entre las provisiones de la ley se incluía una directriz política más conocida por el nombre popular de «autopista de la información». Pero, más que construirla el gobierno con picos y con palas, lo que hizo fue atraer a empresas privadas para que lo hicieran en su nombre, financiando la construcción de «vías de incorporación». Un punto de acceso a la red, o NAP (Network Access Point, por sus siglas en inglés), como lo llamaron, sería «una red de alta velocidad, o conmutador, al que un número de redes puede conectarse a través de enrutadores con el propósito de intercambiar tráfico e interoperaciones». Sería financiado con dinero público, pero operado por empresas privadas. Dicho de otro modo, un punto de acceso sería una red que conectaría redes: una réplica de MAE-East.</p>
+
+  <p>Feldman respondió a la solicitud de ofertas lanzada por el gobierno con una idea de un nuevo y complejo intercambio, pero la National Science Foundation, que se encargaba del proceso, dijo que prefería entregar dinero a MFS para que ésta mantuviera en funcionamiento MAE-East. Finalmente los contratos se concedieron a cuatro puntos de acceso, gestionados por cuatro de los principales protagonistas del mundo de las telecomunicaciones: el NAP de Sprint, que se instalaría en Pennsauken, Nueva Jersey, en la otra orilla del río Delaware, frente a Filadelfia; el NAP de Ameritech, en Chicago; el NAP de Pacific Bell, en San Francisco; y MAE-East. Pero a Feldman le gusta precisar que en realidad sólo fueron tres y medio, «porque nosotros ya existíamos». (Y MFS no tardaría en poner en marcha MAE-West, con sede en el número 55 de South Market Street, en San José, California, con la intención de que compitiera con el NAP de Pacific Bell). Aquella distribución geográfica era deliberada. La National Science Foundation sabía que, para tener éxito, los <em>hubs</em> debían servir a distintos mercados regionales, uniformemente distribuidos por todo el país. La distancia era un factor importante. Así, pues, en la licitación original se especificaba que California, Chicago y la ciudad de Nueva York eran «ubicaciones prioritarias». La decisión de ubicar el NAP de Sprint en un edificio-búnker de Pennauken, a noventa millas de Nueva York, respondía al hecho de que ya existieran instalaciones de conexión con los cables submarinos transatlánticos que llegaban a las costas de Nueva Jersey, que era la puerta de Europa.</p>
+
+  <p>La apertura de los puntos de acceso a la red también supuso un importante cambio de filosofía, que tendría implicaciones en su estructura física. En un alejamiento manifiesto de sus raíces originales, Internet ya no se estructuraba como un ovillo, sino que, más bien, dependía por completo de un puñado de centros. Como ha señalado el teórico del urbanismo Anthony Townsend: «La reestructuración de la topología de Internet que se instauró en 1995 supuso la culminación de una tendencia de largo plazo que se alejaba de una red de distribución idealizada… concebida en la década de 1960».<a href="#nt35" id="rf35"><sup>[35]</sup></a> A medida que el número de redes aumentaba, su autonomía la garantizaban mejor unos puntos de encuentro centralizados.</p>
+
+  <p>Pero Feldman veía aquellos puntos de encuentro más como puntos de asfixia. En 1996, MAE-East estaba sobrecargada de aparatos que resoplaban y parpadeaban y, por más que obtenía beneficios, parecía algo descontrolada. El concepto original había sido que cada red albergara su propio enrutador y se conectara a MAE-East a través de sus líneas de datos. Una máquina de nombre evocador, la FiberMux Magnum, actuaría como la lata que se ata a los extremos de uno de esos teléfonos de cordel, y modificaría las señales que llegaran a través de la línea para darles una forma que el enrutador de MAE-East pudiera comprender. Pero como es de suponer, las FiberMux Magnum ocupaban espacio, y la sala de la quinta planta del 8100 de Boone Boulevard que albergaba MAE-East —o que, podríamos decir, <em>era</em> MAE-East— no tardó en llenarse. La situación se deterioró más aún cuando las redes descubrieron que podían aumentar su eficacia si se deshacían de sus FiberMux e instalaban sus enrutador también en MAE-East, convirtiéndola así, de hecho, en su nueva oficina técnica. Y ésta se llenó aún más cuando, de nuevo, descubrieron que el rendimiento mejoraba si instalaban allí sus servidores, con lo que MAE-East ya no era sólo un punto de tránsito de datos, sino, con frecuencia, su fuente. A los clientes se les cargaban más rápido sus páginas web y se reducían los costos de trasladar los bits de un lado a otro. Pero, con aquellos cambios, MAE-East había dejado de ser un cruce de caminos y se había convertido en una bodega.</p>
+
+  <p>Dependía de Feldman encontrar una manera de expandirse. El casero del 8100 de Boone Boulevard había perdido la paciencia con el inquilino que le chupaba la energía, por lo que, muy pronto, aquel aparato de muchos tentáculos se trasladó a un recinto cerrado, construido con tabiques prefabricados, en el garaje subterráneo del edificio que quedaba justo enfrente, en el número 1919 de Gallows Road. Las paredes blancas, desnudas, estaban rodeadas de aparatos de aire acondicionado, y se sostenían en los pilares del estacionamiento. Sobre la puerta se colgó un cartel genérico, comprado en una ferretería, en el que podía leerse <small>ACCESO RESTRINGIDO</small>. Sin duda, la capital indiscutida de Internet era humilde, uno de esos sitios en los que uno espera encontrar pulidoras de suelo y reservas de papel higiénico, pero no la espina dorsal de una red de información global. La ubicación de MAE-East en un estacionamiento podría parecer sacada de una película de espías —de ésas en las que una discreta puerta situada en un pasillo sórdido conduce a una guarida inmensa, resplandeciente, llena de aparatos de última generación—. Pero aquella guarida tecnológica era un cuchitril.</p>
+
+  <p>Eso llevaba a Feldman a desconcentrarse. Cuando no estaba seleccionando e instalando nuevos equipos, estableciendo conexiones entre redes e intentando adivinar lo que los demás necesitaban, debía dedicarse a ofrecer disculpas. El tráfico se había duplicado cada año, a una velocidad muy superior a la que la tecnología de los enrutadores podía absorber, por no hablar del edificio. Internet estaba saturada. En todas las reuniones del North American Network Operators’ Group, a Feldman le pedían que se pusiera en pie delante de sus colegas y explicara por qué los cruces de Internet, <em>sus</em> cruces, estaban permanentemente colapsados. Y no se trataba de personas de trato fácil.</p>
+
+  <p>—La gente del NANOG dice lo que piensa —comentó Feldman—. No se inhibe.</p>
+
+  <p>Durante una de aquellas reuniones, Feldman se pegó una diana de papel al pecho antes de salir al estrado. Ya no podía esquivarse más la cuestión. El modelo se había roto. Internet necesitaba un tipo de sitio distinto.</p>
+
+  <p>En 1997, veinte por ciento de los adultos estadunidenses usaba Internet —cuando pocos años atrás no llegaban ni a uno por ciento. Internet había demostrado su utilidad. Pero estaba sin terminar, sin culminar. Algunas de las piezas que faltaban eran muy evidentes: debían habilitarse nuevas líneas de larga distancia y alta capacidad entre ciudades; herramientas de software que permitieran el comercio electrónico y recepción de videos en línea; y nuevos dispositivos que permitieran conectarse a Internet más rápido y de manera más flexible. Pero, por debajo de todo ello, existía una necesidad mecánica desatendida, una sala no construida en el sótano de Internet: ¿dónde se conectarían todas las redes? La respuesta la encontraron a la vuelta de la esquina, en el corazón de Silicon Valley —y, de hecho, en un sótano.</p>
+  <br><br><hr>
+  <div class="nota">
+   <p id="nt19"><sup>[19]</sup> Roy Rosenzweig, «Wizards, Bureaucrats, Warriors, and Hackers: Writing the History of the Internet», <em>American Historical Review</em> 103, núm. 5, diciembre 1998, p. 1534. <a href="#rf19">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt20"><sup>[20]</sup> Janet Abbate, <em>Exploring the Internet</em>, MIT Press, Cambridge, p. 2. <a href="#rf20">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt21"><sup>[21]</sup> Wallace Stevens, <em>The Collected Poems of Wallace Stevens</em>, Alfred A. Knopf, Nueva York, 1954. <a href="#rf21">&lt;&lt;</a></p>
+  </div>
+   <div class="nota">
+    <p id="nt22"><sup>[22]</sup> Edward S. Casey, «How to Get from Space to Place in a Fairly Short Stretch of Time: Phenomenological Prolegomena», en <em>Senses of Place</em>, Steven Feld y Keith H. Basso, eds., School of American Research, Santa Fe, 1996. <a href="#rf22">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt23"><sup>[23]</sup> Walter Kirn, <em>Up in the Air</em>, Doubleday, Nueva York, 2001. <a href="#rf23">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt24"><sup>(24)</sup> En Estados Unidos, el primer lunes de septiembre. (<em>N. del E.</em>) <a href="#rf24">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt25"><sup>(25)</sup> Personaje de la saga de <em>Star Wars</em>, conocido como «Arturito» en muchos lugares de Hispanoamérica. (<em>N. del E.</em>) <a href="#rf25">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt26"><sup>(26)</sup> Mansión situada en Memphis, donde Elvis Presley vivió la mayor parte de su vida. (<em>N. del E.</em>) <a href="#rf26">&lt;&lt;</a></p>
+  </div>
+  <br><br>
+
+</body>
+</html>

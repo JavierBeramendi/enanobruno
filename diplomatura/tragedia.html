@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Breve historia de Internet</title>
+   
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    
+body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+a, .normal { font-style:normal; font-weight:normal; text-decoration:none; }
+sup, sub { font-size:0.75em; line-height:normal; }
+
+.cubierta { margin:0; padding:0; border:0; font-size:0; text-align:center; text-indent:0; page-break-before:always; page-break-after:always; }
+  .cubierta img { height:100%; max-height:100%; }
+
+.tlogo, .tautor, .ttitulo, .tsubtitulo, .trevision, .tfirma { margin:0 0.25em; text-align:center; text-indent:0; font-family:sans-serif; font-weight:bold; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  .tlogo span { margin:3em 0 2.5em; display:inline-block; width:8em; }
+  .tautor { margin-bottom:0.5em; font-size:1.2em; font-weight:normal; color:#595959; }
+  .ttitulo { padding:0; border:0; font-size:1.8em; font-style:normal; text-decoration:none; color:black; visibility:visible; }
+  .tsubtitulo { margin-top:0.3em; }
+  .trevision { margin-top:2.5em; font-size:0.8em; color:#595959; }
+  .tfirma { margin-top:0.25em; font-size:0.65em; }
+  .tfecha { font-family:sans-serif; font-weight:normal; color:#595959; }
+
+.sinopsis, .sinopsis p, .autor, .autor p, .nota p { margin-top:0.5em; text-indent:0; }
+  .sinopsis p, .sinopsis em, .sinopsis strong, .sinopsis big, .sinopsis small, .sinopsis span { font-family:sans-serif; }
+.info { margin:3.5em 1.5em 2.5em; font-size:0.8em; width:90%; }
+  .info p { text-align:left; text-indent:0; }
+.vineta { padding:1em 0; text-align:center; text-indent:0; display:block; }
+.nota { padding-top:3%; page-break-before:always; }
+
+
+/* ----- ESTILOS GENERALES (ADAPTABLES) ----- */
+
+/* encabezados */
+h1, h2, h3, h4, h5, h6 { margin:15% 0.25em 1em; text-align:center; text-indent:0; page-break-after:avoid; page-break-inside:avoid; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  h1 { font-size:1.5em; }
+  h2 { font-size:1.5em; }
+  h3 { font-size:1.4em; }
+  h4 { font-size:1.3em; }
+  h5 { font-size:1.2em; }
+  h6 { font-size:1.1em; }
+
+/* dedicatoria */
+.dedicatoria { margin:5em 1em 0 3em; text-align:right; }
+  .dedicatoria p { text-align:right; text-indent:0; }
+
+/* tipografía */
+.sans, .sans p, .sans em, .sans strong, .sans big, .sans small { font-family:sans-serif; }
+.serif, .serif p, .serif em, .serif strong, .serif big, .serif small { font-family:serif; }
+code, kbd, .mono, .mono p, .mono em, .mono strong, .mono big, .mono small { font-family:monospace; }
+
+i, em, cite, dfn, .cursiva { font-style:italic; }
+b, strong, .negrita { font-weight:bold; }
+ins, .subrayado { text-decoration:underline; }
+del, .tachado { text-decoration:line-through; }
+.oculto { display:none; visibility:hidden; }
+
+big, .grande { font-size:1.2em; }
+small, .versalita { font-size:0.8em; }  /* para texto en mayúsculas, de tamaño similar al de las minúsculas */
+
+/* alineación */
+.izquierda, .izquierda p { text-align:left; }
+.derecha, .derecha p { text-align:right; text-indent:0; }
+.centrado, .centrado p { text-align:center; text-indent:0; }
+.justificado, .justificado p { text-align:justify; }
+.asangre, .asangre p { text-indent:0; }
+
+/* saltos */
+.sintop { margin-top:0; }
+.saltoinicio { margin-top:33%; }
+.salto05 { padding-top:0.5em; }
+.salto10 { padding-top:1em; }
+.salto25 { padding-top:2.5em; }
+
+/* bloques */
+.sinmargen { margin:0; }
+blockquote, .cita { margin:1.5em; }
+.bloque { page-break-inside:avoid; }  /* evita dividir un elemento entre páginas */
+.nosep { text-indent:0; display:inline-block; } /* evita dividir una palabra entre líneas */
+.extenso { orphans:0; widows:0; } /* evita división aleatoria de párrafos muy extensos (bug ADE) */
+.banner { margin:1.5em 12%; padding:0.5em 1em; text-align:center; text-indent:0; border:2px solid black; border-left:none; border-right:none; }
+  .banner p { text-align:center; text-indent:0; }
+
+/* listas */
+li { margin:0; text-align:justify; text-indent:0; line-height:1.3em; }
+
+/* imágenes simples */  /* para láminas verticales (página completa), usar el estilo fijo «cubierta» */
+.ilustra { margin:1em 0; text-align:center; text-indent:0; display:block; }
+  .ilustra img { max-height:100%; max-width:100%; }
+
+
+/* ----- ESTILOS PERSONALES ----- */
+
+.capitular { font-size:300%; float: left; margin:-0.1em 0.125em -0.2em 0; text-indent: 0; line-height: 1em; height: 1em; }
+
+.titulocap { text-indent:0em; font-size:1.1em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap2 { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:underline; }
+.titulobib { text-indent:0em; font-size:1.3em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+
+.pinguino { max-width: 66%; max-height: 50%; }
+
+.bibliografia p { text-indent: -1.5em; margin-left: 1.5em; margin-top: 0.5em; }
+.sitiosypag p { text-indent: 0; margin-top: 0.5em; }
+
+.lista, .listasin { margin: 0; }
+.lista li, .listasin li { }
+
+.fuentess { margin-top: 1em; }
+.fuentess p { margin-bottom: 0.5em; text-indent: 0; }
+
+.frase2 { text-indent: 0; margin-left: 2em; }
+.frase3 { text-indent: 0; margin-left: 4em; }
+.frase4 { text-indent: 0; margin-left: 6em; }
+.frase5 { text-indent: 0; margin-left: 8em; }
+.frase6 { text-indent: 0; margin-left: 10em; }
+
+.codigo { margin: 1.5em; }
+.codigo p { text-indent: 0; font-size: 0.8em; text-align: left; }
+.codigo .primera { text-indent: -1.5em; }
+
+  h4 {text-indent:0em; font-size:1.3em; text-align:center;margin-top:2em;margin-bottom:2em;font-style:normal; font-weight:normal; text-decoration:none;}
+
+    h5, h6 {text-indent:0em; font-size:1.2em; text-align:left;margin-top:2em;margin-bottom:1.5em;font-style:normal; font-weight:bold; text-decoration:none;}
+
+  .mini { font-size: 1em;   }
+     code {margin-left: 0.7em ; margin-right:0.4em } 
+
+.bio { font-size:0.9em; width:86%; margin-left:7%; padding: 2.5em 0; } 
+
+cite {margin: 1.1em }
+
+
+.legal { font-size: 0.8em; font-family:"Courier New", Courier, monospace; width:90%; margin-top: 2.5em; }
+
+  
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  </style>
+</head>
+
+<body>
+  <h2 id="II" title="2. Propiedad, apropiación y socialización del pensamiento: génesis, evolución y conflictividad de los derechos de autor">Propiedad, apropiación y socialización del pensamiento: génesis, evolución y conflictividad de los derechos de autor<a href="#nt5" id="rf5"><sup>[5]</sup></a></h2>
+   <p class="asangre cursiva centrado">por Igor Sádaba y Mario Domínguez</p> <br><br>
+
+  <p class="asangre">El modelo de propiedad intelectual (PI) que se forma en torno a la aparición de la imprenta y de ciertos inventos técnicos posteriores, a partir de las primeras revoluciones liberales (la francesa, la inglesa y la americana), y que se vincula posteriormente al capitalismo industrial emergente, sirve como plataforma para el modelo de propiedad intelectual hegemónico hoy en día a nivel mundial —al menos en su esqueleto más fundamental—. La construcción política progresiva de la <small>PI</small> y de una suerte de «paradigma del autor/ inventor» en el mundo occidental representan un caso histórico único y paradigmático. Nos interesa mostrar en este epígrafe que la convergencia de ciertas innovaciones tecnológicas para la reproducción material del conocimiento, en un sistema capitalista que mercantiliza todo lo que encuentra a su paso, y la formación de una «cultura legal» erigida sobre los derechos individuales —liberalismo— dan pie al escenario sobre el que se levanta el edificio histórico de dicha propiedad intelectual.</p>
+
+  <p>Aunque, de manera formal, la figura jurídica de la <small>PI</small> no aparece hasta el siglo <small>XVIII</small>, las restricciones de acceso a los bienes intelectuales —al conocimiento— han existido de forma invariable a lo largo de la historia. Así que la <small>PI</small> es la forma moderna de un tipo de regulación sobre dichos espacios, elementos u objetos. La llegada del mundo moderno capitalista convierte esa estrategia en regulación, normalizando jurídicamente un nuevo derecho económico. En los últimos siglos, se ha institucionalizado, entonces, una propiedad nueva, una posesión que hasta el momento no había sido reconocida, valorada o registrada; y se ha trascendido la simple novedad legal (unas líneas adicionales en los códigos civiles o mercantiles al uso) al propiciar un nuevo escenario político y económico plagado de conflictos y nuevos agentes en pugna. No en vano, una de las conclusiones que uno puede sacar al ojear la historia reciente es que la extensión de las regulaciones económicas del conocimiento, esas nuevas políticas, aunque con menor eco, han teñido de tensiones y roces la misma.</p>
+
+  <p>La aparición decisiva de la imprenta en el siglo <small>XV</small> introduce un tema inadvertido hasta la fecha: la difusión de la información y la cultura entre nuevas capas de la población, que además provee de altavoces o posibilidades de publicidad a un amplio abanico de discursos. En ese sentido, la imprenta, con su éxito fulminante, revolucionó los sistemas de conocimiento e inauguró una auténtica modalidad de existencia cultural. Con la imprenta, el libro comienza a ser un objeto de consumo, producido en serie, que se vende y compra de forma masiva. Para prohibir el uso descontrolado de las imprentas, en el Reino Unido se formó, en 1557, la Stationers Company, la primera asociación de papelerías que contaba con un monopolio total sobre el uso de la imprenta. Con ella comienza lo que podríamos denominar la «fase inglesa» (del <i>copyright</i>), como paradigma de un cierto modelo de construcción jurídica de los derechos de propiedad intelectual, contrapuesto a otros posteriores. Así, autores e impresores se unían para protegerse de las falsificaciones, y las autoridades monárquicas fiscalizaban los contenidos, concediendo de buen grado un monopolio a los libreros. La dinastía de los Tudor evitaba, mediante un acuerdo especial con dicha institución, la necesidad de policías y censores. Estas normas establecían la obligación de depositar en un registro todo nuevo libro publicado y la posibilidad de que las asociaciones requisaran los textos sospechosos de ser hostiles a la Iglesia o al gobierno. Dicha alianza duró casi cien años; la Revolución de 1688 y la victoria del Partido Laborista cambiaron la situación y permitieron la impresión libre, sin previa autorización, gracias a las ideas de ciertos pensadores, padres del liberalismo, como John Locke. En definitiva, el Estado inglés fue el primero en perder, de manera temporal, los derechos de propiedad sobre las ideas en beneficio del mercado: el liberalismo en alza tomó el relevo de un mercantilismo en pleno ocaso.</p>
+
+  <p>La situación en el Reino Unido se volvió confusa debido a la copia indiscriminada, a la impresión sólo de libros rentables y a otras razones. Todo esto llevó a promulgar el famoso <em>Statute of Anne</em> (Estatuto de la Reina Ana, 1710), que restauraba los antiguos modelos y se convertía en el primer ejemplo de regulación directa de documentos culturales, pero que protegía al editor, no al autor. Así pues, la convergencia entre una nueva «técnica de producción cultural», la imprenta, y las tirantes relaciones de la Corona británica con el liberalismo incipiente dio a luz el primer prototipo de <i>copyright</i>, una implementación inaugural de un derecho —norma pública— de <small>PI</small>. El objetivo de dicha ley naciente de <i>copyright</i>, que proporcionaba a los autores un período de protección de 28 años, era salvaguardar única y simplemente las palabras escritas. Esa originaria y arcaica forma moderna de derecho de autor europea derivaba del control que la Iglesia protestante y la monarquía inglesa ejercían sobre la impresión de textos. Ley que, por cierto, reconocía a los autores facultades puramente patrimoniales, de posesión y propiedad, nunca morales (de reconocimiento público sobre la autoría). La ley introducía dos conceptos nuevos: la figura del autor y el principio de una duración fija, aunque no indefinida, para la protección. Es vital indicar también que esta <small>PI</small> todavía primaria tiene lugar, algo nada casual, en el Reino Unido que es, precisamente, la cuna del capitalismo industrial. En conclusión, el primer modelo de <i>copyright</i>, el inglés, surge como forma de censura y monopolio de los monarcas protestantes sobre los textos y los libros, y no como modo de protección de la invención o como fomento de la creación —tal y como esgrimen los discursos más contemporáneos—, ideas que se desarrollan con posterioridad en Francia y Estados Unidos. Es éste un modelo de ordenación económica de lo escrito que ha pervivido durante siglos hasta casi nuestros días. En ese contexto, el principio del <i>copyright</i> se entiende como un método de filtrado de contenidos y de concesión de privilegios para la explotación de los libros, lo que asegura un monopolio para regular el acceso a los objetos culturales y garantizar los efectos positivos, de incremento y mantenimiento del poder, que proporcionan. Con anterioridad a la imprenta no existían apenas problemas para realizar o limitar la copia no consentida o el plagio de libros (ya que muy pocos podían plagiar) y el <em>Statute of Anne</em>, aunque no puede considerarse como una protección del autor en el sentido moderno, sí que implicó una primigenia regulación del comercio cultural.</p>
+
+  <p>Hasta esas fechas, por otro lado, artistas, músicos, escritores, artesanos y técnicos vivían de las aportaciones y pensiones arbitrarias que los príncipes o los coleccionistas caprichosos les otorgaban. Estamos en el filo fronterizo del mecenazgo renacentista y la paulatina entrada en juego del mercado. Por primera vez la producción cultural genera riqueza, lo que se vivirá de manera clara en lo que denominamos la «fase francesa», segundo momento clave en esta construcción temprana, pero esencial, de los primeros paradigmas de <small>PI</small> que son, justamente, los que perduran en gran medida hoy en día. En 1755, se publica la Enciclopedia francesa en la que, en el tomo <small>V</small>, aparece la entrada «Derecho de copia» —artículo cuya redacción, por cierto, es encargada a un librero—. En él se deja claro que tal derecho se desprende del «derecho de propiedad del escritor sobre sus obras», que es lo prioritario. Sin embargo, son personajes como Diderot, Voltaire o Beaumarchais, que proyectaban vivir de su trabajo en plena emergencia de la figura del intelectual, quienes impulsarán un intenso debate en torno a los derechos de autor; debate asociado también a la imagen integral del sujeto social que acompaña a la Ilustración y que viene precedido, o acompañado, de la expansión de un comercio de libros sin precedentes. Ya la Asamblea francesa, en 1789, al redactar los derechos fundamentales del hombre, escribe: «Cada ciudadano puede hablar, escribir e imprimir libremente»; manifestando, en aquellos días, una gradual y progresiva importancia de las cuestiones relacionadas con la comunicación y la transmisión cultural. La reivindicación y demanda de los derechos de los autores se presenta como una postura «revolucionaria» que enarbolaba una bandera donde se exigían los «derechos de los trabajadores» frente a los privilegios estamentales del Antiguo Régimen. La Revolución francesa no inventa la noción legal de autor, pero fue la legislación revolucionaria la que redefinió los privilegios de autor como «propiedad». Le Chapelier, presidente del Comité de Constitución y abogado en el Parlamento de Rennes, proclamaba en la Asamblea Constituyente francesa que la propiedad literaria y artística era la más sagrada, la más inatacable y la más personal de todas las propiedades. Lakanal afirmaba, por aquellos días, que ninguna propiedad está menos sujeta a discusión que la de las producciones del espíritu. La ley preveía ya la posibilidad de ceder o vender tanto la propiedad completa de la creación como sólo una parte. La <small>PI</small> creció gracias al impulso de los nuevos legisladores franceses posrevolucionarios: los filósofos, verdaderos transformadores de la realidad social en aquel momento.</p>
+
+  <p>El paso de la fase inglesa a la fase francesa indica un salto desde la idea penal de autor —como responsable jurídico, como censura y control de lo publicable, como mecanismo de responsabilización, etc.— a la idea laboral de autor —como producto del trabajador intelectual, como creación de un individuo que sobrevive gracias a su esfuerzo intelectual, etc.—. Presenciamos en ese cambio un momento bisagra que irá perfilando un modelo de autoría cada vez más ligado al mundo mercantil y laboral, ya que pasa del dispositivo punitivo al régimen propietario. El modelo inglés es aún muy deudor de la imprenta, de la posibilidad de producir copias exactas y difundirlas. No obstante, hemos de insistir en que la imprenta no sólo hace aflorar la figura del autor, como tantos remarcan, sino también del editor y el impresor —y del público lector—, elementos fundamentales en esta historia. Los derechos de <small>PI</small> articulan un mecanismo jurídico para asegurar a editores e impresores unos beneficios económicos derivados. El modelo francés, en cambio, incorpora la idea de que la sociedad está compuesta por individuos con sus propios derechos, más fuertes que los de la colectividad. Son momentos sucesivos de una construcción encadenada en la que la delimitación jurídica inglesa, basada en el penalismo monárquico, se va abriendo a la conformación jurídica francesa posrevolucionaria, basada en los derechos individuales de los autores/creadores como propietarios. El derecho penal da paso al derecho mercantil y los autores dejan de ser simples perseguidos o vigilados para convertirse en propietarios de obras del intelecto.</p>
+
+  <p>Frente al modelo inglés, la influencia de la Ilustración y del iusnaturalismo francés hace que se construya una noción algo distinta de «propiedad de autor» hasta que es proclamada por primera vez en enero de 1871, en un decreto de la Asamblea Nacional francesa. La Revolución francesa, como hemos mencionado, está íntimamente hermanada con la consolidación de los derechos de <small>PI</small> hasta el punto de influir en el resto de países de su entorno. Visto en perspectiva, el siglo <small>XVIII</small> europeo se dibuja como un vasto campo de debates y cimentaciones ideológicas que empiezan a dar forma a la idea de propiedad intelectual. En general, durante esta época, presenciamos la fabricación de nuevos instrumentos legales que regulan económicamente el conocimiento. Francia, sin embargo, supone un punto de inflexión ya que produce dos tipos de posturas frente a la <small>PI</small>. Por un lado, a la par de Inglaterra y Alemania, refuerza el discurso de las ideas como productos de la mente individual. Pero, por otro, sirve de lanzamiento a una versión más cercana a la idea de intercambio: el autor como deudor y súbdito de la sociedad. La tensión entre la soberanía del creador y el canje con la colectividad terminará desplazándose hacia el primero, pero dejando un sendero trazado.</p>
+
+  <p>A continuación, tiene sentido hablar de una fase americana, un esquema de economización regulada del conocimiento que tiene que ver con el tipo de <i>copyright</i> que se patrocina y promulga tras la revolución de 1775 en EE.UU. Condicionados por las versiones de <small>PI</small> anteriores, los fundadores liberales de la nación norteamericana instituyeron una doctrina más instrumental de la misma. Dicha interpretación estará basada en una idea de equilibrio entre incentivos individuales y beneficios sociales. Si dejamos algo de lado las nociones de autoría como dispositivo de control penal o como mero trabajo intelectual que remunerar, la adaptación de los derechos de propiedad intelectual que hace EE.UU. en el siglo <small>XIX</small> supone un intento de compensar la creación artística a cambio de fomentar el progreso colectivo; un «derecho condicionado», por tanto. El <i>copyright</i> ya no filtra los contenidos ni es un puro mecanismo de retribución laboral. Ahora es una concesión de alcance limitado que estimula o alimenta la actividad creadora y artística. La obra intelectual se crea para disfrute y beneficio del cuerpo social. A pesar de que la libertad individual se proclama como principio sagrado sobre todas las cosas, también debe garantizarse el progreso social<a href="#nt6" id="rf6"><sup>[6]</sup></a>. Es el triunfo de la concepción contractualista y legalista de los derechos de <small>PI</small>. La noción de autor había cruzado el océano, pero se reconvirtió sustancialmente en el trayecto, ya en la temprana Federal Copyright Act de 1790. Aunque los norteamericanos recelaban de los monopolios, accedieron a esta forma limitada a cambio de garantizar el fomento de la innovación. El mismo Jefferson no estaba de acuerdo en conceder derechos naturales a invenciones e ideas, sino una simple protección (<em>statutory</em>, en el vocabulario legalista norteamericano) sin derechos morales o naturales. Se erguía la racionalidad económica de los flamantes estados confederados sobre la moralidad del Viejo Continente.</p>
+
+  <p>Las décadas siguientes son testigos de una cristalización relativamente tranquila de los diferentes sistemas o esquemas anteriores que van amoldándose a las peculiaridades geográficas, culturales y sociales de cada país. La llegada del cine acelera todo este proceso (en 1895, cinco años después del depósito de la patente de los hermanos Lumiére, se crea la primera productora de cine, la Edison-Biograph). Radio, tocadiscos y televisión le van a la zaga y, a cada nuevo invento, un método de replicación o reproducción: magnetófono, magnetoscopio, lector de casetes, lector de vídeo, etc. Las relaciones de los autores con la obra producida comienzan a cambiar a causa de las tecnologías de difusión: la obra de arte entra en la «época de la reproductibilidad técnica»<a href="#nt7" id="rf7"><sup>[7]</sup></a>. Se redefinen entonces los perfiles del autor y su vínculo con lo producido y con las empresas que lo financian. Los discos y las películas tienen que ser regulados de manera novedosa, hay que asegurar una compensación económica a autores y propietarios ante su reproducción masiva, pública o privada. En 1908, se funda en EE.UU. la Motion Pictures Patent Corporation con el fin de proteger derechos de autor en el mundo cinematográfico, mientras que en Francia es la Société Cinématographique des Auteurs et Gens de Lettres la que emerge ese mismo año. En Europa, más cercanos al acuerdo firmado en la Convención de Berna (1923), la propiedad se mantiene todavía ligeramente compartida y repartida entre el productor y el realizador. Poco después, radio y televisión vuelven a hacer complejas las formas de distribución de derechos de autor. En un principio, se copian los modelos de remuneración de espectáculos: el propietario cobra según el número de veces que algo haya sonado o haya sido proyectado. En el ámbito cultural, entre el público y el autor cada vez aparecen más intermediarios: impresores, editores, productores, <em>managers</em>, distribuidores, etc. Los nuevos medios técnicos para replicar, copiar o reproducir, como, por ejemplo, la fotocopiadora, el magnetófono, la grabadora de casetes o los vídeos, no son bien recibidos por la industria cultural. Los «empresarios culturales», auténticos gestores de los derechos de <small>PI</small>, tratan de limitar su venta, imponen tasas, buscan impedir la copia limpia… Si en su momento la imprenta fue clave, no menos importante van a ser la aparición del fonógrafo, el cinematógrafo, la televisión, la radio, el vídeo, la fotocopiadora, Internet y todos los medios a través de los cuales tradicionalmente se han comunicado o transmitido contenidos e información. Son herramientas que permiten fundamentalmente la reproducción. Por ejemplo, con la fotografía, que en realidad no alcanza importancia hasta 1839 —cuando el Estado francés compra a los hermanos Daguerre su invento—, la propiedad de la imagen no es en un principio preocupante para nadie. Lo será cuando despunten y se difundan técnicas para reproducir y copiar de modo masivo (hasta 1880 no es reproducida una fotografía en un periódico, el <em>Daily Herald</em> de Nueva York). En cada una de estas situaciones, el Derecho ha cumplido la función de salir al paso de la tecnología y pelear duramente por integrarla o amoldarla a la versión económico-jurídica imperante. La legislación no va a la par de los avances técnicos, lo que descompensa la función de control que se le supone y pretende; la intervención legal busca el acomodo y ajuste acelerado de lo tecnológico a la norma deseada.</p>
+
+  <p>En los últimos tiempos globalizados, en Europa, podemos detallar una retahíla de micro y macrorregulaciones sucesivas que apuntan al desarrollo de la <small>PI</small>. Desde una primera directiva comunitaria que data de 1986, a dos años más tarde, la edición de un <em>Libro verde sobre los derechos de autor y el desafío tecnológico</em>, seguida, en 1990, de otra comunicación similar. Son todo iniciativas centradas en ampliar el radio de acción de la <small>PI</small> a programas de ordenador, bases de datos, radiodifusión por satélite y retransmisión por cable, derechos de alquiler y préstamo, ciertos derechos afines y duración de la protección. Finalmente, una directiva para armonizar los regímenes nacionales sobre el «derecho de participación» del autor en el beneficio de obras de arte originales tomó cuerpo en 1996 junto con el intento de un segundo libro verde sobre derechos de autor. Este proceso, que contó con consultas «a los medios interesados», acabó con la aprobación de una directiva sobre derechos de autor y derechos afines en la «sociedad de la información», que intentaba adaptar la regulación jurídica a la evolución tecnológica en ciernes. La idea era también concordar la norma europea a dos tratados, aprobados en 1996 por la Organización Mundial de Propiedad Intelectual, que fueron promulgados en marzo de 2000. Los modernos derechos de autor en Europa convergieron y se mimetizaron con los del resto de países, en busca de una ansiada homogeneización de los flujos comerciales mundiales. Al final, la llegada de las tecnologías digitales, con Internet a la cabeza, quebró el equilibrio, ya bastante inestable, que se había ido forjando con anterioridad.</p>
+
+  <p>Las nuevas tecnologías de la información y la comunicación limitan la ley, le hacen frente y colocan a los derechos sobre la <small>PI</small> en situación de franca desventaja con relación a las nuevas culturas del <em>copy &amp; paste</em> o <em>rip, mix &amp; burn</em>. En efecto, antes de Internet, las tecnologías de reproducción eran caras, lo cual significaba que la mayoría eran comerciales y las entidades que las promovían podían soportar el peso de la ley del <i>copyright</i>, que se convertía en un gasto más en el negocio. Pero con Internet todo ha tendido a confundirse y ese límite natural al alcance de la ley ha desaparecido: la ley controla no sólo la creatividad de los creadores comerciales, sino la de todos. Así, para Lessig (2005) el peso de la ley supera ahora con mucho cualquier beneficio original, tanto si es de creatividad comercial como si no, de manera que el papel de la ley tiende a ser cada vez menos el de apoyar la creatividad y cada vez más el de proteger ciertos trabajos contra la competencia.</p>
+
+  <p>La primera serie de mutaciones producidas en el curso de las dos últimas décadas, que es indispensable tener en cuenta, se afirmó en el ámbito de los derechos sobre la <small>PI</small>, a partir de dos directrices nuevas y conjuntas, promovidas por la Administración y las Cortes de Justicia estadounidenses.</p>
+
+  <ol>
+    <li>Por una parte, se introdujeron una serie de cambios de orden legislativo para abrir el ámbito de las patentes —y, más en general, de los derechos de <small>PI</small>— a nuevos actores. A la práctica, esta nueva legislación autorizaba a las universidades y centros de investigación académica a registrar patentes de los productos de sus investigaciones aunque, y esto es notable, esas investigaciones estuvieran financiadas con fondos públicos. Ese paso se dio a partir de 1980, con el voto del Bayh-Dole Act que introdujo una serie de disposiciones nuevas y complementarias. Por un lado, se autorizó el susodicho registro de patentes de los resultados de investigaciones financiadas con fondos públicos. Por otro, se abrió la posibilidad de ceder esas patentes en forma de licencias exclusivas a firmas privadas, o de constituir con ellas <em>joint ventures</em> cuya intención era sacar provecho de los conocimientos así cedidos, ya fuera para comercializarlos o para explotarlos con vistas a lograr productos comercializables. Esta iniciativa fue seguida por la explosión de una cantidad de patentes registradas por los laboratorios universitarios (cf. Jaffé, 2000). A su vez, originó un cambio en la práctica de la investigación académica, con la formación, en todas las grandes universidades estadounidenses, de <em>technological transfer offices</em> (u oficinas de transferencia tecnológica). La Bayh-Dole Act rompe con la práctica y la doctrina públicas que sostenían dos tipos de estímulo a la investigación: la subvención, orientada a la investigación básica, y la asignación de patentes (aunque se trataba de monopolios parciales, eran condicionales a que la invención fuera «útil»). Desde el momento en que instaura la posibilidad de que los resultados de las investigaciones financiadas con fondos públicos se atribuyan bajo la forma de licencias exclusivas a firmas privadas, el fundamento mismo de la incitación a innovar por medio de las subvenciones públicas pierde su sentido y su base en la teoría del bienestar.</li>
+
+    <li>Por otra parte, durante el mismo período, a partir de las decisiones de la justicia, se modificó el derecho de propiedad intelectual en sí mismo, siguiendo una vía «jurisprudencial» en la tradición estadounidense de la <em>common law</em>. Aunque se trata de muchos puntos, sin embargo, el cambio esencial consistía en abrir el ámbito de las patentes a objetos que hasta ese momento no eran patentables, incluso los que estaban proscritos de forma explícita. Dos ámbitos en concreto serán los que resulten afectados de manera principal: el del <i>software</i> y el de la biotecnología.</li>
+  </ol>
+
+  <p>Queda por mencionar, y el punto merece señalarse, que los cambios en la <small>PI</small> se han producido con un vigor muy particular en los dos grandes ámbitos en los cuales se desarrollan hoy potentes olas de innovación. Todo ocurre como si, en efecto, después de la tremenda pérdida de competitividad de la industria estadounidense en la década de 1980, se hubiera organizado una reacción, en ámbitos tecnológicos nuevos, para permitir a las firmas dotarse, a través de un nuevo derecho de <small>PI</small>, de un acceso privilegiado a los conocimientos básicos suministrados por el sistema científico estadounidense.</p>
+
+  <br><br><hr> <div class="nota">
+    <p id="nt5"><sup>[5]</sup> Vamos a seguir aquí, y en el siguiente epígrafe, el mismo recorrido, aunque más corto, que se desarrolla en Igor Sádaba: <em>Propiedad intelectual, ¿bienes públicos o mercancías privadas?</em> Los Libros de la Catarata, Madrid, 2008. <a href="#rf5">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt6"><sup>[6]</sup> No obstante, cabe recordar aquí, y aprovechando el bicentenario, los problemas que tuvo Charles Dickens con la propiedad intelectual de su obra en EE.UU., puesto que las leyes estadounidenses de los derechos de autor sólo protegían a los escritores de dicha nacionalidad. Así pues, los editores tenían libertad para publicar libros de autores británicos sin pagar derechos. Con ello, el novelista inglés perdió una fortuna, pero su fama se extendió en aquel país porque el precio barato de los libros hacía que pudieran comprarlos lectores de todo tipo. <a href="#rf6">&lt;&lt;</a></p>
+  </div>
+
+  <div class="nota">
+    <p id="nt7"><sup>[7]</sup> Walter Benjamin: <em>Discursos interrumpidos <small>I</small>,</em> Madrid, Taurus, 1973, pp. 17-59. <a href="#rf7">&lt;&lt;</a></p>
+  </div>
+<br><br>
+</body>
+</html>

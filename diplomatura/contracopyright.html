@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Breve historia de Internet</title>
+   
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    
+body { margin:0em auto; padding:0; border:0; max-width: 700px; font-size: 1.2em;}
+p { margin:0; text-align:justify; text-indent:1.5em; line-height:1.4em; }
+a, .normal { font-style:normal; font-weight:normal; text-decoration:none; }
+sup, sub { font-size:0.75em; line-height:normal; }
+
+.cubierta { margin:0; padding:0; border:0; font-size:0; text-align:center; text-indent:0; page-break-before:always; page-break-after:always; }
+  .cubierta img { height:100%; max-height:100%; }
+
+.tlogo, .tautor, .ttitulo, .tsubtitulo, .trevision, .tfirma { margin:0 0.25em; text-align:center; text-indent:0; font-family:sans-serif; font-weight:bold; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  .tlogo span { margin:3em 0 2.5em; display:inline-block; width:8em; }
+  .tautor { margin-bottom:0.5em; font-size:1.2em; font-weight:normal; color:#595959; }
+  .ttitulo { padding:0; border:0; font-size:1.8em; font-style:normal; text-decoration:none; color:black; visibility:visible; }
+  .tsubtitulo { margin-top:0.3em; }
+  .trevision { margin-top:2.5em; font-size:0.8em; color:#595959; }
+  .tfirma { margin-top:0.25em; font-size:0.65em; }
+  .tfecha { font-family:sans-serif; font-weight:normal; color:#595959; }
+
+.sinopsis, .sinopsis p, .autor, .autor p, .nota p { margin-top:0.5em; text-indent:0; }
+  .sinopsis p, .sinopsis em, .sinopsis strong, .sinopsis big, .sinopsis small, .sinopsis span { font-family:sans-serif; }
+.info { margin:3.5em 1.5em 2.5em; font-size:0.8em; width:90%; }
+  .info p { text-align:left; text-indent:0; }
+.vineta { padding:1em 0; text-align:center; text-indent:0; display:block; }
+.nota { padding-top:3%; page-break-before:always; }
+
+
+/* ----- ESTILOS GENERALES (ADAPTABLES) ----- */
+
+/* encabezados */
+h1, h2, h3, h4, h5, h6 { margin:15% 0.25em 1em; text-align:center; text-indent:0; page-break-after:avoid; page-break-inside:avoid; adobe-hyphenate:none; hyphenate:none; hyphens:none; -moz-hyphens:none; -webkit-hyphens:none; }
+  h1 { font-size:1.5em; }
+  h2 { font-size:1.5em; }
+  h3 { font-size:1.4em; }
+  h4 { font-size:1.3em; }
+  h5 { font-size:1.2em; }
+  h6 { font-size:1.1em; }
+
+/* dedicatoria */
+.dedicatoria { margin:5em 1em 0 3em; text-align:right; }
+  .dedicatoria p { text-align:right; text-indent:0; }
+
+/* tipografía */
+.sans, .sans p, .sans em, .sans strong, .sans big, .sans small { font-family:sans-serif; }
+.serif, .serif p, .serif em, .serif strong, .serif big, .serif small { font-family:serif; }
+code, kbd, .mono, .mono p, .mono em, .mono strong, .mono big, .mono small { font-family:monospace; }
+
+i, em, cite, dfn, .cursiva { font-style:italic; }
+b, strong, .negrita { font-weight:bold; }
+ins, .subrayado { text-decoration:underline; }
+del, .tachado { text-decoration:line-through; }
+.oculto { display:none; visibility:hidden; }
+
+big, .grande { font-size:1.2em; }
+small, .versalita { font-size:0.8em; }  /* para texto en mayúsculas, de tamaño similar al de las minúsculas */
+
+/* alineación */
+.izquierda, .izquierda p { text-align:left; }
+.derecha, .derecha p { text-align:right; text-indent:0; }
+.centrado, .centrado p { text-align:center; text-indent:0; }
+.justificado, .justificado p { text-align:justify; }
+.asangre, .asangre p { text-indent:0; }
+
+/* saltos */
+.sintop { margin-top:0; }
+.saltoinicio { margin-top:33%; }
+.salto05 { padding-top:0.5em; }
+.salto10 { padding-top:1em; }
+.salto25 { padding-top:2.5em; }
+
+/* bloques */
+.sinmargen { margin:0; }
+blockquote, .cita { margin:1.5em; }
+.bloque { page-break-inside:avoid; }  /* evita dividir un elemento entre páginas */
+.nosep { text-indent:0; display:inline-block; } /* evita dividir una palabra entre líneas */
+.extenso { orphans:0; widows:0; } /* evita división aleatoria de párrafos muy extensos (bug ADE) */
+.banner { margin:1.5em 12%; padding:0.5em 1em; text-align:center; text-indent:0; border:2px solid black; border-left:none; border-right:none; }
+  .banner p { text-align:center; text-indent:0; }
+
+/* listas */
+li { margin:0; text-align:justify; text-indent:0; line-height:1.3em; }
+
+/* imágenes simples */  /* para láminas verticales (página completa), usar el estilo fijo «cubierta» */
+.ilustra { margin:1em 0; text-align:center; text-indent:0; display:block; }
+  .ilustra img { max-height:100%; max-width:100%; }
+
+
+/* ----- ESTILOS PERSONALES ----- */
+
+.capitular { font-size:300%; float: left; margin:-0.1em 0.125em -0.2em 0; text-indent: 0; line-height: 1em; height: 1em; }
+
+.titulocap { text-indent:0em; font-size:1.1em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+.tituloscap2 { text-indent:0em; font-size:1em; text-align:left; margin-top:1.5em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:underline; }
+.titulobib { text-indent:0em; font-size:1.3em; text-align:left; margin-top:2em; margin-bottom:1em; font-style:normal; font-weight:bold; text-decoration:none; }
+
+.pinguino { max-width: 66%; max-height: 50%; }
+
+.bibliografia p { text-indent: -1.5em; margin-left: 1.5em; margin-top: 0.5em; }
+.sitiosypag p { text-indent: 0; margin-top: 0.5em; }
+
+.lista, .listasin { margin: 0; }
+.lista li, .listasin li { }
+
+.fuentess { margin-top: 1em; }
+.fuentess p { margin-bottom: 0.5em; text-indent: 0; }
+
+.frase2 { text-indent: 0; margin-left: 2em; }
+.frase3 { text-indent: 0; margin-left: 4em; }
+.frase4 { text-indent: 0; margin-left: 6em; }
+.frase5 { text-indent: 0; margin-left: 8em; }
+.frase6 { text-indent: 0; margin-left: 10em; }
+
+.codigo { margin: 1.5em; }
+.codigo p { text-indent: 0; font-size: 0.8em; text-align: left; }
+.codigo .primera { text-indent: -1.5em; }
+
+  h4 {text-indent:0em; font-size:1.3em; text-align:center;margin-top:2em;margin-bottom:2em;font-style:normal; font-weight:normal; text-decoration:none;}
+
+    h5, h6 {text-indent:0em; font-size:1.2em; text-align:left;margin-top:2em;margin-bottom:1.5em;font-style:normal; font-weight:bold; text-decoration:none;}
+
+  .mini { font-size: 1em;   }
+     code {margin-left: 0.7em ; margin-right:0.4em } 
+
+.bio { font-size:0.9em; width:86%; margin-left:7%; padding: 2.5em 0; } 
+
+cite {margin: 1.1em }
+
+
+.legal { font-size: 0.8em; font-family:"Courier New", Courier, monospace; width:90%; margin-top: 2.5em; }
+
+  
+                        img {max-width: 80%;}
+
+@media only screen and (max-width:700px)    
+{
+   body {width:90% !important; margin:0 auto !important; padding-left: 0.5em !important; padding-right:0.5em !important; font-size:89%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+  </style>
+</head>
+
+<body>
+  <h1>EL COPYLEFT EXPLICADO A LOS NIÑOS<br/> PARA DESMONTAR ALGUNOS EQUÍVOCOS</h1>
+
+  <p class="centrado">por W<small>U</small> M<small>ING</small> 1</p><br><br>
+  <p class="asangre">“Pero… ¿si cualquiera puede copiar sus libros sin necesidad de comprarlos, de qué comerán ustedes?”. Esta pregunta nos la han planteado a menudo, la mayoría de las veces acompañada de la observación siguiente: “El copyright es necesario, ¡es preciso proteger a los autores!”.</p>
+
+  <p>Esta clase de afirmaciones revela cuánto humo y cuánta arena ha llegado a arrojar la cultura dominante (basada en el principio de propiedad) y la industria del entretenimiento a los ojos del público. Lo mismo en los medios que en nuestros encéfalos se perpetúa una enredada ideología en materia de derechos de autor y propiedad intelectual, pese a que el nuevo auge de los movimientos y las transformaciones en curso la estén poniendo en crisis. Sólo a los parásitos y gorrones de todo género les conviene hacer creer que copyright y derecho de autor son una y la misma cosa, o que exista una contraposición entre derecho de autor y “piratería”. No es así en absoluto.</p>
+
+  <p>Los libros del colectivo Wu Ming se publican con la siguiente leyenda: “Está permitida la reproducción total o parcial de esta obra y su difusión telemática siempre y cuando sea para uso personal de los lectores y no con fines comerciales”. Esta leyenda está basada en el concepto de copyleft inventado en los años ochenta por el “movimiento a favor del software libre” de Richard Stallman y compañía, y está siendo utilizado en muchos sectores de la comunicación y la creatividad, la divulgación científica y las artes. Copyleft (un denso juego de palabras intraducible) es una filosofía que se convierte en diversos tipos de licencias comerciales, la primera de las cuales fue la GPL (GNU General Public License) del software libre, creada para la tutela de este último e impedir que alguien (por ejemplo Microsoft) se adueñe y privatice los resultados del trabajo de comunidades libres de usuarios y programadores. (Para quien no lo sepa, el software libre se caracteriza por tener el “código abierto”, lo que hace que, al menos potencialmente, pueda ser controlado, modificado, mejorado y copiado por los usuarios).</p>
+
+  <p>Si el software libre hubiera permanecido simplemente como de dominio público, tarde o temprano habría caído bajo el control de los buitres de la industria. La solución fue <i>darle la vuelta al copyright, como si se tratara de un calcetín</i>, de manera que en vez de funcionar como un obstáculo para la libre reproducción se convirtiera en su garantía suprema. Dicho en pocas palabras, si yo coloco un signo de copyright a mi obra, soy su propietario, y este acto me otorga poderes suficientes para proclamar que con esa obra tú puedes hacer lo que te plazca. Puedes copiarla, difundirla, modificarla, etc., pero en cambio no tienes derecho a impedir que otro haga lo mismo, es decir, no puedes apropiarte de ella y frenar su libre circulación: no puedes poner a tu vez un copyright en ella, porque ya hay uno y me pertenece, y además si lo haces te romperé la cara.</p>
+
+  <p>En resumen, un ciudadano normal, que no tiene dinero para comprar un libro de Wu Ming o que no quiere comprarlo encuadernado, puede con toda tranquilidad fotocopiarlo, escanearlo usando un software que reconozca caracteres, o bien, lo que nos parece la solución más cómoda, descargarlo gratis de nuestro sitio web: www.wumingfoundation.com. Puesto que esta reproducción no tiene fines de lucro, cuenta con nuestra autorización irrestricta. Ahora bien, si un editor extranjero quiere mandarlo traducir y comercializarlo en su país o si un productor cinematográfico pretende llevarlo a la pantalla grande, entonces se trata de una reproducción con ánimo de lucro y por tanto estos señores deberán ponerse en contacto con nosotros y pagarnos una cantidad (porque es justo que “nos lucremos” también, ya que a fin de cuentas el libro lo escribimos nosotros).</p>
+
+  <p>Volviendo a la pregunta inicial: ¿no estamos perdiendo dinero?</p>
+
+  <p>La respuesta es un rotundo no. Cada vez más experiencias editoriales demuestran que la lógica “copia pirata = ejemplar no vendido” no tiene la menor lógica. Si no fuera así, no se comprendería el hecho de que nuestra novela&nbsp;Q, que se puede descargar gratuitamente de internet desde hace varios años, haya llegado a la duodécima edición impresa y haya superado los doscientos mil ejemplares vendidos.</p>
+
+  <p>En realidad, en el ámbito editorial, cuanto más circula una obra más vende. Otros ejemplos inequívocos de lo anterior provienen de Estados Unidos (un país, por cierto, obsesionado con la propiedad intelectual) y han sido descritos con precisión meridiana por mi colega Wu Ming&nbsp;2 en un artículo que puede leerse en nuestra página web.</p>
+
+  <p>Aun sin necesidad de incomodar al Massachusetts Institute of Technology, basta explicar lo que está pasando con nuestros libros en lo que se refiere a la venta. Un usuario&nbsp;X se conecta a nuestro sitio y descarga, digamos, 54. Si lo hace desde el trabajo o la universidad y lo imprime allí mismo, no gasta ni un centavo. X lo lee y le gusta. Le gusta a tal grado que decide regalarlo y, por supuesto, no puede presentarse a la fiesta de cumpleaños con un engargolado de hojas tamaño carta. De modo que se dirige a la librería y lo compra. Una copia “pirateada” = un ejemplar vendido. Hay quienes tras descargar nuestro libro lo han regalado seis o siete veces. Una copia “pirateada” = varios ejemplares vendidos. Aun aquellos que no cuentan con dinero para hacer regalos pueden comentarle a sus conocidos que han leído el libro y que les ha gustado, con lo cual tarde o temprano alguien lo comprará o seguirá el proceso anteriormente descrito (descarga-lectura-compra-regalo). Si el libro no le gusta a alguno de ellos, por lo menos no habrá malgastado su dinero.</p>
+
+  <p>De este modo, como sucede con el software libre y el código abierto, se reconcilia la exigencia de una recompensa justa por el trabajo realizado por un autor (o con más exactitud, por un trabajador del saber) con la salvaguarda de la reproductibilidad de la obra (es decir, de su <i>uso social</i>). Se exalta el derecho de autor al mismo tiempo que se reprime el copyright en las mismas narices de quienes creen que son la misma cosa.</p>
+
+  <p>Si la mayoría de las editoriales no se han percatado todavía de esta realidad y son conservadoras en materia de copyright es por cuestiones más ideológicas que mercantiles, aunque creemos que no tardarán en abrir los ojos. El mercado editorial no está en riesgo de extinción como la industria discográfica: sus lógicas son distintas, distintos los soportes y los circuitos, también la forma de consumo es diferente y, sobre todo, el mercado editorial no ha perdido todavía la cabeza: no ha reaccionado con redadas en masa, denuncias y procesos penales ante la gran revolución tecnológica que “democratiza” el acceso a los medios de reproducción. Hasta hace unos cuantos años, un quemador de CDs sólo estaba a disposición de los estudios de grabación, mientras que hoy lo tenemos en casa, en nuestra computadora personal. (Por no hablar del <i>peer to peer</i>, las redes informáticas entre iguales, etc.). Esto es un cambio irreversible, frente al cual toda la legislación en materia de propiedad intelectual queda en buena medida obsoleta, en estado de putrefacción.</p>
+
+  <p>Cuando se inventó el copyright, hace cosa de tres siglos, no existía la más remota posibilidad de una “copia privada” o una “reproducción sin ánimo de lucro”, ya que sólo los editores tenían acceso a la imprenta tipográfica. Los demás estaban obligados a renunciar al libro si no podían comprarlo. El copyright no se percibía como antisocial, era más bien el arma de un empresario contra otro, no de un empresario contra el público. Hoy la situación ha cambiado drásticamente: el público ya no está obligado a comprar, tiene acceso a la maquinaria (computadoras, fotocopiadoras y lo que venga) y el copyright es un arma que dispara contra la multitud.</p>
+
+  <p>Quedan muchas cosas por decir, pero debemos volver a lo básico: partimos del reconocimiento de la génesis social del saber. Nadie tiene ideas que no hayan sido directa o indirectamente influidas por las relaciones sociales que mantiene en las comunidades de las que forma parte, y si la génesis es social, el uso y disfrute, a su vez, debe permanecer social. Pero esta es otra larga historia. Espero haberme explicado bien.</p>
+
+  <p class="copyleft">Se permite la libre reproducción de este texto por cualquier medio siempre y cuando sea sin ánimo de lucro y esta nota se mantenga. (Este texto fue publicado en <i>Il Mucchio Selvaggio</i>, número 526, marzo de 2003). Traducción de Carlo Nono.</p> <br><br>
+
+  <p class="apart">M<small>ÁS ACERCA DE</small> W<small>U</small> M<small>ING</small></p>
+
+  <blockquote class="cit">
+    Pese a la declaración de principios que implica el hecho de escribir sin nombre en el contexto de una cultura de masas que fomenta la mitificación del autor, esto no significa que los escritores que forman o formaron parte del colectivo Wu Ming sean anónimos o se esfuercen particularmente porque sus identidades permanezcan secretas. Nada de eso. Quienquiera que entre a la página de este grupo de escritores radicales, de esta turba inclasificable de activistas y defensores del copyleft, puede saber de inmediato que los miembros de la banda son los siguientes: Roberto Bui, alias Wu Ming 1; Giovanni Cattabriga, alias Wu Ming 2; Luca Di Meo, alias Wu Ming 3 (quien hace poco se separó del grupo); Federico Guglielmi, alias Wu Ming 4, y Riccardo Pedrini, alias Wu Ming 5. Además de activistas y magníficos escritores, los integrantes de Wu Ming escribieron el guión de <i>Lavorare con lentezza</i>, cinta dirigida en 2004 por Guido Chiesa. Su novela más reciente, <i>Manituana</i>, obtuvo el premio Sergio Leone 2007 y Emilio Salgari 2008.
+  </blockquote>
+</body></html>
