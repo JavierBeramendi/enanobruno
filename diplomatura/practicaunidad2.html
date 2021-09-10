@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <base target="_blank">
+  <meta name="description" content="Instalación de software" />
+  <title>Instalación de software para bibliotecas, archivos y museos</title> 
+    <meta property="og:title" content="Diplomatura"/>
+  <meta property="og:site_name" content="enanobruno.com"/>
+  <meta property="og:description" content="Material para la primera unidad." />
+  <meta name="viewport" content="width=device-width">
+
+  
+  <style type="text/css">
+  
+    a:link {color:#CE2029; text-decoration:none;}
+    a:visited {color:#CE2029; text-decoration:none;}
+    a:hover {text-decoration:underline;}
+
+    body {margin: 0 auto;}
+    
+    pre, plaintext {
+      font: 1em 'Courier'; line-height: 1.4em;
+      max-width: 650px;
+      margin: 0 auto;
+      /*position: relative;*/
+      white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+      white-space: -pre-wrap; /* Opera */
+      white-space: -o-pre-wrap; /* Opera */
+      white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+      word-wrap: break-word; /* IE 5.5+ */
+    }
+    
+    @media only screen and (max-width:700px)    
+{
+   body {width:95% !important; margin:0em auto !important; padding-left: 0.2em; padding-right:0.2em; font-size:79%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+         
+  </style>
+ 
+  
+
+</head>
+
+<body>
+
+
+  
+<pre>
+<b>---------------------------
+-- Instalación-------------
+------de-------------------
+----------software---------
+---[diplomatura]-----------
+---------------------------</b>
+
+
+<ins>Práctica de unidad 2</ins>
+<b>Sitios web</b> 
+
+<ins>Vamos a ahcer una pequeña página web en Sublime Text 3</ins>
+
+1. Primero ingresaremos a <a href="https://www.sublimetext.com/3">Sublime</a> y descargamos el programa que nos va a servir para escribir código en nuestra computadora.
+2. Seleccionamos el sistema operativo correspondiente, en nuestro caso: Windows.
+3. Vamos a descargas y ejecutamos el archivo. Instalamos y listo.
+4. Creamos un nuevo archivo html y lo nombramos con nuestro apellido en minúsculas, sin tildes ni ñ.
+5. Escribimos la declaración básica de un documento html5: 
+
+<plaintext>
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://enanobruno.com/diplomatura/estilos.css">
+</head>
+<body></body></html>
+
+6. Completamos la etiqueta de <title></title> con el siguiente título: En el principio… fue la línea de comandos. Guardamos y, sin cerrar el editor de códigos, abrimos el archivo en nuestro navegador web. No va a haber nada. Tranquilos.
+7. Dentro del <body></body> vamos a poner nuestro contenido. Primero un <h1></h1> que tenga por título Unidad 2. Luego, una etiqueta <hr> que haga una línea divisoria. (Nótese que no se cierra).
+8. Ahora debajo de la raya, insertamos un <h2></h2> que contenga "En el principio… fue la línea de comandos".
+9. Debajo agregaremos el nombre del autor con una etiqueta de párrafo básica: <p><i>Neal Stephenson</i></p>. (Nótese que la etiqueta <i></i>, de itálica es un elemento en línea, por lo que solo ocupa el ancho de su contenido y no supone un salto de línea, como sí lo hacen los elementos en bloque).
+10. Para jugar y separar al autor del cuerpo, coloquemos dos saltos forzados: <br><br>, que tampoco se cierran.
+11. Bien, ahora creamos otro <p></p> que contiene a una imagen <img src="" alt="">. Dentro del atributo src, source, colocamos una url absoluta (las relativas dependen de donde esté alojado nuestro archivo html): https://lectulandia.to/wp-content/uploads/2020/02/en-el-principio-fue-la-linea-de-comandos-big.jpg
+12. En alt="" completamos algo que describa a la imagen en caso de no visualizarse correctamente.
+13. Seguido a la imagen y antes de la etiqueta de cierre de </p>, colocamos el siguiente texto que describme al libro:
+
+Existe todo un empeño por parte de los fabricantes de software en ocultar cómo funcionan realmente los ordenadores. Las metáforas visuales, las interfaces gráficas simplifican el uso de los PC, pero el precio de que se viva la tecnología como algo mistificado, mágico, sin conexión alguna entre causas y efectos. Por el contrario una corriente que se remonta a los orígenes de la informática personal y a las primeras comunidades de hackers nunca ha dejado de usar la interfaz de la línea de comandos. No por un empeño nostálgico, no por una pretensión elitista, sino por un deseo de libertad, de no renuncia a la creatividad contenida en la producción y modificación de los códigos. El heredero de esta comunidad, que trata de devolver el poder al usuario, es sin duda el movimiento del software libre. Su buque insignia: GNU/Linux. Esta obra es un ensayo sobre el pasado y el futuro de los ordenadores personales, un auténtico manifiesto hacker, una joya de unos de los mejores escritores de ciencia ficción. Constituye un recorrido lleno de humor y de ingenio, personal y subjetivo(pero no por ello menos preciso), a través de la evolución de las interfaces de usuario de los sistemas operativos que Stephenson ha conocido a lo largo del tiempo (MacOs, Windows, GNU/Linux, BeOs); de los modelos de uso y el tipo de usuario que implican y producen. Un punto de vista novedoso para el usuario no especializado, que nos descubre de forma muy ilustrativa un mundo que no es el que nos han contado las revistas informáticas, ni los rutilantes anuncios de las grandes compañías de software propietario (que prometen facilidad a cambio de la entrega incondicional a sus productos): el mundo del hacker y del software libre.
+
+14. Ya casi estamos, solo nos falta unas pocas etiquetas: un <br>, para separar el <p></p> anterior y un nuevo párrafo que contenga un link <p><a href=""></a></p>
+15. Dentro del atributo href="" tenemos que colocar una URL, en este caso la del libro online
+
+https://enanobruno.com/bibi/?book=principio.epub
+
+16. Por último, escribamos antes de la etiqueta de cierre del link el texto que se visualizará. "Leer el libro online</a>
+17. Actualice el navegador y pruebe los enlaces.
+
+Eso es todo amigos
+
+
+
+
+mail: jberamendi@unsam.edu.ar 
+
+
+
+
