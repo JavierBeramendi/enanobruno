@@ -1,183 +1,315 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!doctype html>
+    <html lang="es">
     <head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <base target="_blank">
-  <meta name="description" content="El sitio del Frente de Liberación de Enanos de Croché" />
-  <title>Frente de Liberación de Enanos de Croché</title> 
-    <meta property="og:title" content="Frente de Liberación de Enanos de Croché"/>
-  <meta property="og:site_name" content="enanobruno.com"/>
-  <meta property="og:description" content="Hay quienes dicen que es el nombre artístico de Javier Beramendi; otros creen que se trata de una conspiración encabezada por el doctor Cormillot, Alfredo Casero y Hernán Cattaneo para conquistar el mundo." />
-  <meta name="viewport" content="width=device-width">
-  
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168065246-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="description" content="Herramienta de css para la confección de epubs. Presentación de Javier Beramendi para el tercer foro de la edición universitaria 2020.">
+      <meta name="keywords" content="epub, InDesign, css, html">
+      <meta property="og:image" content="tapas/atalayaTapa.jpg">
+      <meta name="author" content="Frente de Liberación de Enanos de Crochet">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  gtag('config', 'UA-168065246-1');
-</script>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+      <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168065246-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-168065246-1');
+    </script>
 
 
+      <title>Epubs sin código</title>
+      <style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  
-  <style type="text/css">
-    * {
-  margin: 0;
-  padding: 0;
+        body {-webkit-font-smoothing:antialiased;
+          text-rendering: optimizeLegibility;
+        }
+
+        h1, .recomendacion {
+          font-size: 2em;
+          margin-top: 4%;
+          margin-left: 0.2em;
+          margin-bottom: 3%;
+          max-width: 100%;
+          font-family: 'PT Serif', serif;
+          color: #484848;
+          letter-spacing: 1px;
+
+        }
+        h2 {
+          margin-bottom: 2.5%;
+          margin-top: 7%;
+          font-size: 1.3em;
+        }
+        .lead {color:grey; font-family: sans-serif; font-size: 1.1em; margin-top:0%; margin-bottom: 1em;}
+        .audio {width: 90%;}
+
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+        @media (min-width: 768px) {
+          body {font-size: 110%;}
+                  }
+@media (max-width: 768px) {
+          
+           .lead {margin-top: 0.9em; font-size: 1.15em; margin-bottom: 0.7em;}
+          .audio {width: 100%;}
+        .img30 {
+  width: 80% !important;}
+        }
+
+        .centrado {
+          margin: 2em 0 2em 0;
+          text-align: center;
+          text-indent: 0;
+        }
+        .centrado + .centrado {
+          margin-top: -1em;
+        }
+        .derecha {
+          text-align: right;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          widows: 2;
+          orphans: 2;
+        }
+        .espacio {
+          margin-top: 1em;
+        }
+        .derecha + .derecha {
+          margin-top: -1em;
+        }
+
+        a {
+          font-size: 0.9em;
+          font-family: sans-serif;
+          color: #1f69fe;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        /* Figuras y tablas*/
+       /* img {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+        }*/
+
+        /* Estilos de carácter*/
+        span.Bold {
+          font-style: normal;
+          font-weight: bold;
+        }
+        span.Italic {
+          font-style: italic;
+        }
+        /*------------------------*/
+        p {
+          font-family: 'PT Serif', serif;
+          margin-top: 1.3em;
+          line-height: 1.45em;
+          font-size: 115%;
+          margin-left: 0.4em;
+          margin-right: 0.4em;
+        }
+        blockquote > p {
+          margin-left: 1em;
+          font-family: 'Anonymous Pro' !important;
+          font-size: 1em;
+          color: grey;
+        }
+
+        .back-to-top {
+
+          font-size: 0.9em;
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+        }
+        .Inicio {
+
+          font-size: 0.9em;
+          position: fixed;
+          bottom: 70px;
+          right: 25px;
+          display: none;
+        }
+        .linkInterno {
+          font-family: 'PT Serif', serif;
+          color: #f74785;
+          margin-top: 1.3em;
+          line-height: 1.45em;
+          font-size: inherit;
+          margin-left: 0em;
+          margin-right: 0em;
+          text-decoration: none;
+          font-weight: inherit;
+          
+        }
+        a {color:inherit;}
+
+        .jumbotron {
+   background: url(img/SinCodigo2.jpg) no-repeat fixed;
+/*background-size: 100%;*/
+  /* -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+   -o-background-size: cover;*/
+   opacity: 0.95;
+   
+   box-shadow:  0px 2px 15px grey;
 }
-  
-    a:link {color:#CE2029; text-decoration:none;}
-    a:visited {color:#CE2029; text-decoration:none;}
-    a:hover {text-decoration:underline;}
+.fondoNegro { 
+  background-color: rgba(15, 15, 15, 0.65);
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 1.1em;
+  text-align: center;
+  max-width: 600px;
+  }
 
+.display-3, .lead {color:white; opacity: 1; font-family: sans-serif;}
+.my-4, .jumbotron  p {color:white; opacity: 1;}
+.lead {font-size: 1.5em; opacity: 0.8;}
+.navegacion{background-color: rgba(255,255,255,0.5) !important;}
 
-    body {margin: 0 auto; padding: 0; background-color: #fef7e7;}
-    
-    .pre {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0;
-      border: 0;
-      /*position: relative;*/
-      white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
-      white-space: -pre-wrap; /* Opera */
-      white-space: -o-pre-wrap; /* Opera */
-      white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
-      word-wrap: break-word; /* IE 5.5+ */
-    }
-    
-@media only screen and (max-width:800px)    
-{
-   body, .pre {width:99% !important; margin:0em auto !important; padding: 0 !important;}
-   .tapa, .Heaters, .footer, .footertext, .contaudio, .audio {max-width: 98% !important; width: 100% !important; display: block !important; margin: 0 !important; padding: 0 !important;} 
-   .tapa {margin-top: -1em !important; margin-left: 1% !important;}
-   .Heaters {float: none !important;
-    padding-left: 1% !important;
-    margin-top: -1em !important;
-   }
-   .Heaters > p { padding-right: 1% !important;}
-   .logos {margin: 0 0 1% 0 !important;}
-   .raya {display: none;}
-   .footer {margin-top: -20% !important; padding-right: 2% !important;}
-   .footertext {font-size: 1.5em !important; display: block !important; margin: 0 auto !important; text-align: center !important; padding-top: 0.7em !important; padding-bottom: 0.3em !important;}
-   .contaudio { display: block !important; margin: 0 auto !important; text-align: left !important; padding-top: 1.5em !important; padding-bottom: 1.5em !important; width: 100% !important; float:  none;}
-   .audio {width: 100% !important; display: block !important; }
-   .verde {font-size: 0.95em !important;}
+.img30 {
+  width: 55%;
+  height: auto;
+  margin:0 auto;
+  font-size: 1em;
+  opacity: 0.98;
 }
-
-
-@font-face {
-  font-family: "font 120 logos";
-  src: url(font120logos.ttf);
-}
-.logos {font-family: "font 120 logos";
-  font-size: 1.3em;
-  color:  #722d66;
-    margin: 2% 0 1% 0;
-}
-
-@font-face {
-  font-family: "Coluna Rounded";
-  src: url(Coluna_Rounded.otf);
-}
-.Heaters {font-family: "Coluna Rounded";
-  font-size: 1.8em;
-  letter-spacing: 0.9;
-  color:  #722d66;
-  float: right; 
-  max-width: 48%; 
-  margin: -41.4% 0% 0% 0;
-}
-.verde {color: #8ad39c; font-size: 1.1em;}
-         
-.descripcion {
-  color: #e65ccc;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.6em;
-  margin-top: -3.4em;
-}
-
- .audio {
-  width: 24rem;
-  display: inline-block;
-  align:  right;
-
-}
- .contaudio {
-  padding: 2% 0% 2% 2%;  
-  display: inline-block;  
-  align:  right;
-}
- .footer {
-  margin: 0% auto;
-  display: block;
-  padding: 0 0 0 0;
+img {
   width: 100%;
   height: auto;
-  background-color: #8ad39c;
- }
-.footertext {
-  font-family: "Coluna Rounded";
-  font-size: 2.55em;
-  letter-spacing: 0.4;
-  color:  white;
-  display: inline-flex;
-  padding: 3% 0 0% 0;
-  text-align: left;
-
-}
-.centrado {
+  padding-top: 4%;
+  padding-bottom: 0%;
   margin: 0% auto;
-  padding: 0.9%;
-  max-width: 900px;
-  display: flex;
 }
+.ocre {background-color:#f2af3f; margin-top: -0.5em;
+border-color: #f2af3f; opacity: 0.85;}
+.ocre:hover {background-color:black;
+border-color: black;}
+      </style>
+    </head>
+    <body>
+     <!-- <nav class="navbar navbar-light bg-light navegacion">
+        <a class="navbar-brand" a href="index.html"><img src="img/sinCodigoLogo.png" alt="Sin Código" width="200"></a>
 
-.tapa {
-  max-width: 48%; 
-  height: auto; 
-  margin: 1% auto; 
-  display: inline;
-}
+      </nav> -->
 
+<div class="jumbotron">
+  <div class="fondoNegro">
 
- </style>
-
-
- 
-</head>
-
-<body>
-<div class="pre">
-<img class="tapa" src="tapaEstrellas.jpg" alt="cover del Frente de Liberación">
-<div class="Heaters"> <p>Bienvenido al sitio del <br><span class="verde">Frente de Liberación de Enanos de croché</span></p><p class="logos"><a href="https://open.spotify.com/artist/7C0EhkF58ZoqES4TcgRg4z?si=-ZLkmUBJQWKgshqRkupXQw">M</a> <a href="https://www.youtube.com/channel/UCDf0bAR5Csxv-OCwKOcO9Cg">y</a> <a href="https://soundcloud.com/argentinalofi">5</a></p>
-  <p class="descripcion">Sabemos que es un proyecto musical con sede en Buenos Aires y no mucho más. Hay quienes dicen que es el nombre artístico de Javier Beramendi; otros creen que se trata de una conspiración encabezada por el doctor Cormillot, Alfredo Casero y Hernán Cattaneo para conquistar el mundo.</p>
-</div>
- 
-
-</div>
-
-<div class="footer">
-  <div class="centrado"><div class="footertext">Escuchá el nuevo remix del Frente</div>
-<div class="contaudio"><audio class="audio" controls>  
-  <source src="estrellas.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio></div>  </div>
+  <p class="lead">Nunca fue tan fácil hacer epubs. Nosotros te damos los estilos, vos los vinculás.</p>
+  
+  <a class="btn btn-primary btn-lg ocre" target="_blank" href="sinCodv1.css" download="EUAv1.css" role="button">Descargar sinCodv1.css</a></div>
+  
 </div>
 
 
 
 
+    
+
+   
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8" style="margin: 0 auto;">
+            
+       
+<p class="img30"><img src="img/SinCodigoLogo.jpg" alt="Sin Código"></p>
+      
+         
+       
+      
+      <p>En informática es muy común la reutilización de código. Los desarrolladores comparten bibliotecas para no tener que empezar desde cero en cada proyecto.</p>
+      <p>Siguiendo el mismo espíritu, presentamos la primera versión de <b>Sin código</b>, una hoja de estilos todo terreno que hace que los epubs se vean bien en ibooks, ereaders, kindles, smartphones y tablets.</p>
+
+      <p><b>Este es un epub de ejemplo</b></p>
+
+      <a href="https://enanobruno.com/bibi/?book=pianoblanco.epub" data-bibi="embed" data-bibi-style="max-width: 70%; max-height:20em;">Piano Blanco, de Aki Obarrio</a><script src="https://enanobruno.com/bibi/and/jo.js"></script>
+     <br> <br><a class="btn btn-primary btn-lg ocre" target="_blank" href="https://enanobruno.com/bibi/?book=pianoblanco.epub" role="button">Ver epub en navegador</a>
+
+     
+
+
+      <p>Uno de los mayores impedimentos de las editoriales universitarias a la hora de digitalizar sus fondos es la falta de conocimientos de html y css. La realidad es que no es imperativo que confeccionen sus propias hojas de estilos o que contraten un desarrollador externo.</p> 
+      <p>Pueden seguir los pasos del tutorial y vincular sus estilos con los de <b>sinCodv1.css</b>.</p> 
+      <p>Ya no quedan excusas.</p>.
+      <hr>
+        <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7kiT6Bj91u0?playsinline=1" allowfullscreen></iframe>
+  </div>
+  <hr>
+  <br>
+  <a class="btn btn-primary btn-lg ocre" target="_blank" href="https://drive.google.com/drive/folders/10hyj9pb60jNeFK35C2NQmY70ftIlKYMs?usp=sharing" role="button">Descargar materiales y scripts</a>
+     
+       <h1>¿Todavía estás perdido?</h1>
+      
+      
+      <p>No pasa nada, empecemos por el principio y definamos qué es un estilo. Podemos pensarlo como un set de características visuales predefinidas que uno asigna a los párrafos y caracteres de los documentos de forma reiterativa.</p> 
+      <p>En InDesign los diseñadores están acostumbrados a usar estilos para diferenciar párrafos de citas, pero también títulos de primer nivel de otros. El estilo lleva, además de un conjunto de características gráficas, un nombre que permite su reutilización.</p> 
+      <p>El problema a la hora de hacer epubs desde InDesign consiste en que los estilos confeccionados para papel no pueden traducirse de forma automática al epub. Por suerte, sí se puede vincular el nombre del estilo con los de una hoja externa. Por tanto, sin saber css, pueden los diseñadores asociar sus estilos a los de <b>sinCodv1.css</b> y generar epubs profesionales.</p>
+      <p>Imaginemos que estamos en InDesign y que tenemos seleccionado un primer párrafo, que tiene aplicado un estilo llamado "Primer-Párrafo", para poder exportarlo correctamente a un epub, solo tendremos que modificar una pestaña dentro de las propiedades del estilo. La pestaña en cuestión es la de exportación a epub y html. Allí tendremos poner el nombre que queremos que ese estilo tenga en el epub.</p>
+      <p>Habiendo mirado <b>sinCodv1.css</b> con un editor de código, sabremos que el estilo que corresponde es "sinSangria", que presenta las siguientes características:</p>
+      <pre>
+  p.sinSangria {
+  text-indent: 0;
+  font-size: 95%;
+  margin-top: 0em;
+  margin-bottom:0em;
+  }
+</pre>
+      <p>De la misma manera, si quisiéramos vincular un estilo de párrafo normal llamado en InDesign "Cuerpo Central", deberíamos colocar en la casilla de exportación el nombre "conSangria".</p>
+      <pre>
+  p.conSangria {
+  font-size: 95%;
+  page-break-after: auto;
+  page-break-before: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  text-indent: 4%;
+  }
+      </pre>
+      
+      
+      
+     <p><b>Algunas advertencias</b></p> 
+  
+<p>Es muy común que los diseñadores no estilen las itálicas ni las negritas y, desafortunadamente, es necesario que haya una etiqueta a la hora de la exportación a epub. Por suerte, hay muchos scripts que pueden realizar esta tarea por nosotros. En el tutorial se explica con mayor detalle. De la misma manera, es necesario que las imágenes estén dentro de la caja de texto y tengan un estilo de párrafo asociado. Por último, pero no menor, se deben generar índices automáticos. Todo está en el tutorial, así que solo necesitan tiempo y práctica. </p>
+  <br><br> <a class="btn btn-primary btn-lg ocre" target="_blank" href="sinCodv1.css" download="EUAv1.css" role="button">Descargar sinCodv1.css</a>
+      
+           
+      
+     <p>Esperamos poder dar soporte y actualización semestral a <b>Sin código</b>. Sabemos que es perfectible y por eso contamos con el aporte de todos para que día a día se vuelva una mejor hoja de estilo.</p>
+     <p>Por último, si te copás y querés leer unos cuentos, te llevo a la vieja home de <a href="mascuentos.html">enanobruno.com.</a></p>
+    <br>
+    <p><i>Javier Beramendi</i><br>@javier.beramendi <br>jberamendi@unsam.edu.ar</p>
+<hr style="color:grey; margin-bottom: 2em; margin-top: 1em;">
+            <br>
+            <a id="back-to-top" href="https://enanobruno.com/bibi/" target="_blank" class="btn btn-light btn-lg back-to-top" role="button">Visor de epub online</a>
+            <a id="" href="index.html" class="btn btn-light btn-lg Inicio" role="button">Inicio</a>
+            <br><br>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
-</body>
-</html>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+    </html>
