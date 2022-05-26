@@ -6,18 +6,10 @@
 }
 .logo {
 	font-variant: small-caps;
-	font-size: 120%;
-	border: solid gray 1.5px;
-	padding: 0.1em 0.6em;
-}
-
-ul {
-	list-style: none;
-	display: flex;
-}
-
-li {
-	margin-left: 1rem;
+	font-size: 130%;
+	/*border: solid gray 1.5px;*/
+	padding: 0.1em 0em;
+	margin: 0;
 }
 
 .right {
@@ -28,7 +20,7 @@ li {
 	max-height: 35rem;
 }
 .left {
-	padding-top: 8rem;
+	padding-top: 5rem;
 }
 .entrada {
 	width: 100%;
@@ -55,6 +47,16 @@ li {
 	text-align: center;
 	text-transform: uppercase;
 	padding-top: 2rem;
+}
+.hero {
+  margin-top: 0em;
+  padding-top: 5rem;
+  background-image: url("papel2.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 300px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 @media(max-width: 600px) {
