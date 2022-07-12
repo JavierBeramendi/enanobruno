@@ -1,0 +1,521 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="generator" content="pandoc">
+      <meta name="author" content="E. H. Gombrich" />
+  <meta name="description" content="«La historia del arte» es una de las obras sobre arte más famosas jamás publicadas. Durante cuarenta y seis años, ninguna otra ha rivalizado con ella en tanto que introducción al tema en su totalidad, desde las primeras pinturas de «las cuevas» hasta el arte experimental contemporáneo. Lectores de todas las edades y procedencias supieron hallar en el profesor Gombrich a un auténtico maestro, en quien se combinan el conocimiento y la sabiduría con un don único para comunicar de manera directa su profundo fervor por las obras de arte objeto de su estudio. «La historia del arte» debe su amplia difusión a lo directo y espontáneo de su estilo, así como a la clara exposición del autor, quien afirma que su propósito es «ordenar inteligiblemente el caudal de nombres, períodos y estilos que colman las páginas de obras más ambiciosas». Esto, unido a su perspicacia en cuanto a la psicología de las artes visivas, nos permite contemplar la historia del arte como «un continuo fluir e intercambio de tradiciones, en los que cada obra refiere al pasado y apunta hacia el futuro en una vívida cadena que vincula, incluso, a nuestra época con la de las pirámides». En su nuevo formato, la 16.ª edición de esta obra, ya clásica, ahora ampliada en 141 páginas, mantiene su criterio progresivo ante las generaciones venideras, a la vez que sigue siendo la primera fuente de información para los recién llegados al mundo del arte." />
+  <title>La historia del arte</title>
+      
+      
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <!-- Font-awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Styles 
+      <link rel="stylesheet" href="https://ashki23.github.io/styles.css">-->
+      <link rel="stylesheet" href="estilosPo2.css">
+      <link rel="stylesheet" type="text/css" href="estilos.css">
+
+            <!-- Add favicon here -->
+            <!-- Add site-verifications here -->
+         </head>
+   <body>
+            <!-- From https://getbootstrap.com/docs/4.5/components/navbar/ -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+               <a class="navbar-brand" style="max-width: 5.5em; margin: 0.4em 1.5em 0 1.5em;" href="#"><img src="unsamlogo.png" alt=""></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">La historia del arte <span class="sr-only">(current)</span></a>
+                     </li>
+                     <!--<li class="nav-item"> 
+                        <a class="nav-link" href="#">Link</a>
+                     </li>-->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Índice
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="dropdown-item" href="0.html">Introducción</a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="1.html">1 EXTRAÑOS COMIENZOS</a>
+                           <a class="dropdown-item" href="2.html">2 ARTE PARA LA ETERNIDAD</a>
+                           <a class="dropdown-item" href="3.html">3 EL GRAN DESPERTAR</a>
+                           <a class="dropdown-item" href="4.html">4 EL REINO DE LA BELLEZA</a>
+                           <a class="dropdown-item" href="5.html">5 CONQUISTADORES DEL MUNDO</a>
+                           <a class="dropdown-item" href="6.html">6 UNA DIVISIÓN DE CAMINOS</a>
+                           <a class="dropdown-item" href="7.html">7 MIRANDO A ORIENTE</a>
+                           <a class="dropdown-item" href="8.html">8 EL ARTE OCCIDENTAL EN EL CRISOL</a>
+                           <a class="dropdown-item" href="9.html">9 LA IGLESIA MILITANTE</a>
+                           <a class="dropdown-item" href="10.html">10 LA IGLESIA TRIUNFANTE</a>
+                           <a class="dropdown-item" href="11.html">11 CORTESANOS Y BURGUESES</a>
+                           <a class="dropdown-item" href="12.html">12 LA CONQUISTA DE LA REALIDAD</a>
+                           <a class="dropdown-item" href="13.html">13 TRADICIÓN E INNOVACIÓN, I</a>
+                           <a class="dropdown-item" href="14.html">14 TRADICIÓN E INNOVACIÓN, II</a>
+                           <a class="dropdown-item" href="15.html">15 LA CONSECUCIÓN DE LA ARMONÍA</a>
+                           <a class="dropdown-item" href="16.html">16 LUZ Y COLOR</a>
+                           <a class="dropdown-item" href="17.html">17 EL CURSO DEL NUEVO APRENDIZAJE</a>
+                           <a class="dropdown-item" href="18.html">18 UNA CRISIS EN EL ARTE</a>
+                           <a class="dropdown-item" href="19.html">19 VISIÓN Y VISIONES</a>
+                           <a class="dropdown-item" href="20.html">20 EL ESPEJO DE LA NATURALEZA</a>
+                           <a class="dropdown-item" href="21.html">21 EL PODER Y LA GLORIA, I</a>
+                           <a class="dropdown-item" href="22.html">22 EL PODER Y LA GLORIA, II</a>
+                           <a class="dropdown-item" href="23.html">23 LA EDAD DE LA RAZÓN</a>
+                           <a class="dropdown-item" href="24.html">24 LA RUPTURA DE LA TRADICIÓN</a>
+                           <a class="dropdown-item" href="25.html">25 REVOLUCIÓN PERMANENTE</a>
+                           <a class="dropdown-item" href="26.html">26 EN BUSCA DE NUEVAS CONCEPCIONES</a>
+                           <a class="dropdown-item" href="27.html">27 ARTE EXPERIMENTAL</a>
+                           <a class="dropdown-item" href="28.html">28 UNA HISTORIA SIN FIN</a>
+                          
+                           
+                        </div>
+                     </li>
+                     <!--<li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                     </li> -->
+                  </ul>
+                  <!--<form class="form-inline my-2 my-lg-0" method="get" action="Teoria_Organizaciones_2da_edicion_PRESS.pdf"> -->
+                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" onclick="window.open('arte.epub')"><i class="fa fa-download" ></i> Descargar EPUB</button>
+                    
+                     <!--<button class="btn btn-outline-info my-2 my-sm-0" type="download">Descargar PDF</button> 
+                  </form>-->
+               </div>
+            </nav>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-10">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 class="numero" title="9 LA IGLESIA MILITANTE. El siglo XII">9</h1>
+<p>LA IGLESIA MILITANTE</p>
+<p class="subtituloCapitulo">El siglo XII</p>
+<p>Las fechas son clavos indispensables para colgar el tapiz de la
+historia. Ya conocida la fecha de 1066, hagamos uso de ella en tal
+sentido. Ningún edificio completo ha sobrevivido en Inglaterra del
+período sajón, y existen muy pocas iglesias de la época anterior en
+otras partes de Europa. Pero los normandos que desembarcaron en
+Inglaterra llevaron consigo un estilo arquitectónico ya desarrollado,
+que se conformó en Normandía y en otros lugares durante su generación.
+Los obispos y los nobles, que eran los nuevos señores feudales de
+Inglaterra, comenzaron pronto a ejercer su poder fundando abadías y
+monasterios. El estilo en que se erigieron esas construcciones se conoce
+con el nombre de estilo normando en Inglaterra, y estilo románico en el
+continente. Floreció durante más de un siglo después de la invasión
+normanda.</p>
+<p>No es fácil imaginar hoy lo que significaba una iglesia para la gente
+de aquella época. Tan sólo en algunas antiguas villas de regiones
+agrícolas podemos vislumbrar algo de su importancia. La iglesia era a
+menudo el único edificio de piedra de los alrededores, la única
+estructura considerable en varios kilómetros a la redonda, y su
+campanario era un hito o señal para todos los que se acercaban desde
+lejos. En los domingos y durante los servicios divinos, todos los
+habitantes de la ciudad podían congregarse allí, y el contraste entre el
+elevado edificio con sus pinturas y sus tallas y las moradas humildes y
+primitivas en las que transcurrían las vidas de aquellas gentes debió
+ser abrumador. No es de extrañar que la comunidad entera se interesase
+en la construcción de estas iglesias y se enorgulleciera de su
+ornamentación. Hasta desde el punto de vista económico, la construcción
+de un monasterio, que exigía años, debió transformar a toda una ciudad.
+Extraer piedras de las canteras y transportarlas, levantar andamios
+adecuados, emplear artesanos ambulantes que traían consigo relatos de
+lejanos países, todo esto constituía un verdadero acontecimiento en días
+tan remotos.</p>
+<p>La edad de las tinieblas no había borrado en modo alguno de su
+memoria el recuerdo de las primeras iglesias, las basílicas y las formas
+que utilizaron los romanos en sus construcciones. La planta,
+generalmente, era la misma: una nave central que conducía a un ábside o
+coro y dos o cuatro alas laterales. A veces, este simple plano se
+enriquecía con cierto número de adiciones. Algunos arquitectos preferían
+la idea de construir iglesias en forma de cruz y, así, agregaron lo que
+recibe el nombre de crucero entre el coro y la nave. La impresión
+general que producen estas iglesias normandas o románicas es, sin
+embargo, muy distinta de la de las antiguas basílicas. En las más
+primitivas de éstas se emplearon columnas clásicas que sostenían rectas
+cornisas. En las iglesias románicas y normandas hallamos por lo general
+arcos semicirculares que descansan sobre pilares macizos. La impresión
+de conjunto que estas iglesias producen, tanto desde dentro como desde
+fuera, es de compacta solidez. Hay en ellas escasa ornamentación,
+incluso escasos vanos, pero sí firmes y continuas paredes y torres, que
+nos recuerdan las fortalezas medievales (ilustración 111). Estos
+poderosos y casi retadores cúmulos de piedra erigidos por la Iglesia en
+tierras de campesinos y de guerreros que acababan de emanciparse de la
+forma de vida que habían odiado, parecen expresar la idea misma de la
+Iglesia militante, esto es, la idea de que aquí, sobre la tierra, misión
+de la Iglesia es combatir las fuerzas oscuras hasta que la hora del
+triunfo suene en el día del juicio final (ilustración 112).</p>
+<p><img src="img2/Images/111.jpg" style="height:90.0%"
+alt="Iglesia benedictina de Murbach" /></p>
+<p class="epigrafe">111 Iglesia benedictina de Murbach, Alsacia, h. 1160. Iglesia
+románica.</p>
+<div class="centrado">
+<div class="contenedorpie2">
+<p><img src="img2/Images/112.jpg" alt="Catedral de Tournai" /></p>
+<p class="epigrafe">112 Catedral de Tournai, Bélgica, h. 1171-1213. La iglesia en la
+ciudad medieval.</p>
+</div>
+</div>
+<p>Hubo un problema relacionado con la construcción de iglesias que
+preocupó a todos los buenos arquitectos. Fue la tarea de dar a esos
+impresionantes edificios de piedra el digno remate de un techo también
+pétreo. Los techos de madera, que habían sido los usuales en las
+basílicas, carecían de dignidad y habían sido peligrosos por incendiarse
+fácilmente. El arte romano de abovedar tan espaciosas construcciones
+requería gran cantidad de conocimientos técnicos y de cálculos que, en
+gran parte, se habían perdido. Por ello, los siglos XI y XII se
+convirtieron en un período de experimentos incesantes. No era asunto de
+poca monta cubrir todo el vano de la nave principal con una bóveda. La
+solución más sencilla se diría que consistía en salvar la distancia a la
+manera de un puente sobre un río. Se construían enormes pilares a ambos
+lados para sostener las vigas de esos puentes. Pero pronto se vio claro
+que una bóveda de esta suerte tenía que quedar firmemente unida si no se
+quería que se hundiese, ya que el peso de las piedras era extremadamente
+grande. Para soportar esos pesos enormes, las paredes y los pilares
+tenían que ser construidos más fuertes y macizos todavía. Se necesitaban
+grandes masas de piedra para esas primitivas bóvedas de túnel o de
+cañón.</p>
+<p>Por ello, los arquitectos normandos comenzaron a intentar otro
+sistema. Vieron que realmente no era necesario hacer tan pesado todo el
+techo, pues bastaba con tener un cierto número de sólidas vigas que
+cubriesen la distancia para rellenar luego los intersticios con
+materiales más ligeros. Se advirtió que el mejor método para proceder
+así era extender las vigas o nervios cruzados entre los pilares,
+rellenando después los intersticios triangulares resultantes. Esta idea,
+que prontamente revolucionaría los sistemas de edificación, puede ser
+seguida retrocediendo hasta la catedral normanda de Durham (ilustración
+114), aunque el arquitecto que planeó la primera bóveda con nervios para
+su sólido recinto interior (ilustración 113) apenas se dio cuenta de sus
+posibilidades técnicas.</p>
+<p><img src="img2/Images/113.jpg" style="height:90.0%"
+alt="Catedral de Durham" /></p>
+<p class="epigrafe">113, 114 Nave y pórtico oeste de la catedral de Durham, 1093-1128.
+Catedral normanda.</p>
+<p><img src="img2/Images/114.jpg" style="width:50.0%"
+alt="Catedral de Durham" /></p>
+<p>Donde se empezaron a decorar las iglesias con esculturas fue en
+Francia. La palabra actual decorar es un tanto engañosa. Todo cuanto
+perteneciera a la Iglesia tenía su función específica y debía responder
+a una idea concreta relacionada con el adoctrinamiento de la fe. El
+pórtico de finales del siglo XII de la iglesia de St.-Trophime en Arlés
+(sur de Francia) es uno de los ejemplos más completos de este estilo
+(ilustración 115). Su forma recuerda el principio del arco de triunfo
+romano (ilustración 74). Encima del dintel —llamado tímpano (ilustración
+116)— muestra al Cristo en gloria, rodeado de los símbolos de los cuatro
+evangelistas. Esos símbolos, el león para san Marcos, el ángel para san
+Mateo, el toro para san Lucas y el águila para san Juan, proceden de la
+Biblia. En el Antiguo Testamento leemos la visión de Ezequiel (1, 4-12),
+en la que se describe el trono del Dios sostenido por cuatro criaturas
+con las cabezas de un hombre, un león, un toro y un águila.</p>
+<div class="centrado">
+<div class="contenedorpie2">
+<p><img src="img2/Images/115.jpg" alt="Iglesia de St-Trophime" /></p>
+<p class="epigrafe">115 Fachada de la iglesia de St-Trophime, Arlés, h. 1180.</p>
+</div>
+</div>
+<div class="centrado">
+<div class="contenedorpie2">
+<p><img src="img2/Images/116.jpg" alt="El Cristo en gloria" /></p>
+<p class="epigrafe">116 <cite>El Cristo en gloria</cite>. Detalle de la ilustración
+115.</p>
+</div>
+</div>
+<p>Los teólogos cristianos creyeron que este pasaje se refería a los
+cuatro evangelistas, y que una visión semejante era oportuna a la
+entrada de una iglesia. En la parte baja del dintel vemos doce figuras
+sentadas, los doce apóstoles, y podemos distinguir, a la izquierda del
+Cristo, una hilera de personajes desnudos y encadenados: son los que han
+perdido sus almas y son conducidos al infierno. A la derecha del Cristo
+vemos a los bienaventurados con sus rostros vueltos hacia él, en
+glorificación eterna. Debajo observamos las rígidas figuras de los
+santos, cada uno de ellos señalado por su emblema, recordando a los
+fieles que pueden ser sus intercesores cuando sus almas se encuentren
+delante del último juez. De este modo, las enseñanzas de la Iglesia
+acerca del destino final de las vidas humanas, aquí abajo, tomaban
+cuerpo en esas esculturas sobre el pórtico de una iglesia. Esas imágenes
+vivían en el espíritu de las gentes con mayor intensidad que las
+palabras del sermón pronunciado por el cura. Un poeta francés de finales
+del medievo, François Villon, ha descrito este efecto en los emotivos
+versos que escribió pensando en su madre:</p>
+<div class="verso">
+<p>Soy una mujer, vieja y pobre,</p>
+<p>ignorante de todo; no puedo leer;</p>
+<p>en la iglesia de mi pueblo me muestran</p>
+<p>un Paraíso pintado, con arpas,</p>
+<p>y un Infierno, en el que hierven las almas de los condenados;</p>
+<p>uno me alegra, me horroriza el otro.</p>
+</div>
+<p>No debemos esperar que tales esculturas parezcan tan naturales,
+ágiles y graciosas como las obras clásicas. Son más intensas, por su
+maciza solemnidad. Es mucho más fácil saber de un golpe de vista qué
+representan, y se ajustan mucho mejor a la grandiosidad del
+edificio.</p>
+
+<div class="ilustraizda">
+<img src="img2/Images/117.jpg" alt="Candelabro de Gloucester" />
+</div>
+<p class="epigrafe">117 Candelabro de Gloucester, h. 1104-1113. Bronce dorado, 58,4 cm de
+altura; Victoria and Albert Museum, Londres.</p>
+<p>Cada detalle, en el interior de la iglesia, era cuidadosamente
+estudiado en relación con su mensaje y su sentido. La ilustración 117
+presenta un candelabro hecho para la catedral de Gloucester hacia 1110.
+Los monstruos y dragones entrelazados de que se compone nos recuerdan
+las obras de la edad de las tinieblas (ilustraciones 101 y 103). Pero
+ahora se confiere un sentido más definido a esas formas misteriosas. Una
+inscripción latina en torno a su remate dice aproximadamente: «Este
+portador de luz es obra de la virtud; con su brillo predica la doctrina,
+para que el hombre no se entenebrezca en el vicio.» Y, en efecto, cuando
+penetramos con nuestros ojos en la selva de extrañas criaturas, no sólo
+encontramos otra vez (en la protuberancia del centro) los símbolos de
+los evangelistas que representan la doctrina, sino también figuras de
+hombres desnudos. Como Laocoonte y sus hijos (ilustración 69), son
+asaltados por monstruos y serpientes; pero su lucha no es desesperada.
+«La luz que brilla en las sombras» puede hacerles triunfar sobre los
+poderes maléficos.</p>
+<p>La pila bautismal de una iglesia en Lieja (Bélgica), labrada hacia
+1113, nos proporciona otro ejemplo de la intervención de los teólogos
+aconsejando a los artistas (ilustración 118). Es de bronce y tiene en la
+parte central un relieve con el bautismo del Cristo, tema el más
+adecuado para una pila bautismal. Contiene inscripciones latinas que
+explican el sentido de cada figura; por ejemplo, leemos <em>Angelis
+ministrantes</em> (ministros angélicos) sobre las dos figuras que
+aguardan en la orilla del río Jordán para recibir al Cristo. Pero no
+solamente estas inscripciones subrayan la importancia conferida a la
+significación de cada detalle. También al conjunto de la pila se le ha
+dado un sentido semejante. Hasta los toros sobre los que descansa no
+están ahí simplemente con fines ornamentales o decorativos. Leemos en la
+Biblia (2 Crónicas, 4) cómo el rey Salomón contrató a un hábil artesano
+de Tiro, en Fenicia, experto en la fundición del bronce. Entre las
+diferentes cosas que le encargó destinadas al Templo de Jerusalén, la
+Biblia describe:</p>
+<blockquote>
+<p>Hizo el Mar de metal fundido, de diez codos de borde a borde. Era
+enteramente redondo… Se apoyaba sobre doce bueyes; tres mirando al
+norte, tres mirando al oeste, tres mirando al sur y tres mirando al
+este. El Mar estaba sobre ellos, quedando sus partes traseras hacia el
+interior.</p>
+</blockquote>
+<p>Este modelo sagrado fue, por consiguiente, el que el artista de
+Lieja, que también era gran experto en la fundición, se vio obligado a
+tener presente dos mil años o más después de la época de Salomón.</p>
+<div class="centrado">
+<div class="contenedorpie2">
+<p><img src="img2/Images/118.jpg" alt="Pila bautismal" /></p>
+<p class="epigrafe">118 Reiner van Huy, <cite>Pila bautismal</cite>, 1107-1118. Latón, 87
+cm de altura; iglesia de St.-Barthélemy, Lieja.</p>
+</div>
+</div>
+<p>Las formas empleadas por el artista para las imágenes del Cristo, de
+los ángeles y de san Juan Bautista parecen más naturales y, al propio
+tiempo, más serenas y majestuosas que las de las puertas de bronce de la
+catedral de Hildesheim (ilustración 108). Recordemos que el siglo XII es
+el de las cruzadas. Existía por consiguiente un contacto mayor que antes
+con el arte de Bizancio, y muchos artistas de ese siglo trataron de
+imitar y de emular las majestuosas imágenes sagradas de la Iglesia de
+Oriente (ilustraciones 88 y 89).</p>
+<p>En ninguna otra época, en efecto, se aproximó tanto el arte europeo a
+estos ideales del arte oriental como en la plenitud del estilo románico.
+Hemos visto la disposición rígida y solemne de las esculturas de Arlés
+(ilustraciones 115 y 116), y observamos el mismo espíritu en muchos
+manuscritos iluminados del siglo XII. La ilustración 119, por ejemplo,
+representa la anunciación. Parece casi tan rígida e inexpresiva como un
+relieve egipcio. La Virgen está vista de frente, con las manos
+levantadas en actitud de sorpresa, mientras la paloma del Espíritu Santo
+desciende sobre ella. El ángel está visto de medio perfil, con su mano
+derecha extendida en un ademán que en el arte del medievo significa el
+acto de hablar. Si al contemplar una página semejante esperamos una
+vívida ilustración de una escena real, experimentamos un desencanto.
+Pero si recordamos una vez más que el artista no se proponía una
+imitación de formas naturales, sino más bien una distribución de
+símbolos sagrados tradicionales, todos los cuales eran necesarios para
+ilustrar el misterio de la anunciación, ya no echaremos en falta lo que
+nunca se propuso ofrecernos.</p>
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/119.jpg" alt="La anunciación" /></p>
+<p class="epigrafe">119 <cite>La anunciación</cite>, h. 1150. De un incunable suabo;
+Biblioteca Comarcal de Württemberg, Stuttgart.</p>
+</div>
+</div>
+<p>Debemos darnos cuenta de cuán grandes eran las posibilidades que se
+abrían ante los artistas tan pronto como, decisivamente, descartaban
+toda ambición de representar las cosas tal como las vemos. La
+ilustración 120 ofrece una página de un calendario destinado a un
+monasterio alemán. Señala las principales festividades de los santos que
+tenían que ser celebradas en el mes de octubre, pero, a diferencia de
+nuestros almanaques, no las señala solamente con palabras sino también
+por medio de ilustraciones. En el centro, debajo de los arcos, vemos a
+san Vilimaro, el sacerdote, y a san Gall con el báculo de obispo y un
+compañero que lleva la impedimenta de un misionero. Los curiosos dibujos
+de las partes superior e inferior ilustran la narración de los dos
+martirios evocados en octubre. Posteriormente, cuando el arte volvió a
+la pormenorizada representación de la naturaleza, tan crueles escenas
+eran a menudo pintadas con gran profusión de detalles horribles. Nuestro
+artista era capaz de soslayar todo esto. Para evocarnos a san Gereón y a
+sus compañeros, cuyas cabezas fueron cortadas y echadas a un pozo,
+distribuyó los troncos descabezados dentro de un claro círculo en torno
+al pozo. Santa Úrsula, quien, según la leyenda, fue martirizada en unión
+de sus once mil vírgenes por los verdugos, aparece en un trono,
+literalmente rodeada por sus seguidoras. Un desagradable salvaje, con
+arco y flechas, y un hombre blandiendo su espada son situados a los
+lados y amenazan a la santa. Podemos leer el asunto en la página sin
+vernos obligados a representarnos cómo pudo producirse. Y apreciar cómo
+el artista podía prescindir de cualquier ilusión espacial o de cualquier
+acción dramática, cómo podía distribuir sus figuras y sus formas de
+acuerdo con líneas puramente ornamentales. La pintura se hallaba
+realmente en camino de convertirse en una forma de escribir mediante
+imágenes; pero este retorno a métodos de representación más
+simplificados confirió al artista del medievo una nueva libertad para
+hacer experiencias con más complejas formas de composición (com-posición
+= poner junto). Sin esos métodos, las enseñanzas de la Iglesia no
+habrían podido ser traducidas nunca a formas visibles.</p>
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/120.jpg" alt="Santos" /></p>
+<p class="epigrafe">120 <cite>Santos Gereón, Vilimaro, Gall y el martirio de santa Úrsula
+con sus 11.000 vírgenes</cite>, 1137-1147. De un calendario manuscrito;
+Biblioteca Comarcal de Württemberg, Stuttgart.</p>
+</div>
+</div>
+<p>Y lo mismo que con las formas sucede con los colores. Dado que los
+artistas ya no se sentían obligados a estudiar e imitar las gradaciones
+reales de las manchas que aparecen en la naturaleza, pudieron elegir
+libremente cualquier color que les gustara para sus ilustraciones. El
+oro brillante y los luminosos azules de sus obras de orfebrería, los
+colores intensos de sus libros iluminados, el rojo encendido y los
+verdes profundos de sus vidrieras (ilustración 121) muestran que esos
+maestros hicieron buen uso de su independización de la naturaleza. El
+verse libres de la necesidad de imitar el mundo de las cosas visibles
+fue lo que les permitió transmitir la idea de lo sobrenatural.</p>
+<div class="centrado">
+<div class="contenedorpie2">
+<p><img src="img2/Images/121.jpg" alt="La anunciación" /></p>
+<p class="epigrafe">121 <cite>La anunciación</cite>, mediados del siglo XII. Vidriera;
+catedral de Chartres.</p>
+</div>
+</div>
+<hr />
+<p><img src="img2/Images/fin09.jpg" style="width:50.0%"
+alt="Artistas trabajando" /></p>
+<p class="epigrafe"><em>Artistas trabajando en un manuscrito y en una pintura sobre
+tabla</em>, h. 1200. Del libro de copias del monasterio de Reun;
+Biblioteca Nacional de Austria, Viena.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+               </div>
+            </div>
+               
+                              <div class="d-none d-xl-block col-xl-2 bd-toc">
+               <ul class="section-nav">
+                  <li class="toc-entry"> <ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="0.html">Introducción</a></li>
+<li><a href="1.html">01 EXTRAÑOS COMIENZOS</a></li>
+<li><a href="2.html">02 ARTE PARA LA ETERNIDAD</a></li>
+<li><a href="3.html">03 EL GRAN DESPERTAR</a></li>
+<li><a href="4.html">04 EL REINO DE LA BELLEZA</a></li>
+<li><a href="5.html">05 CONQUISTADORES DEL MUNDO</a></li>
+<li><a href="6.html">06 UNA DIVISIÓN DE CAMINOS</a></li>
+<li><a href="7.html">07 MIRANDO A ORIENTE</a></li>
+<li><a href="8.html">08 EL ARTE OCCIDENTAL EN EL CRISOL</a></li>
+<li><a href="9.html">09 LA IGLESIA MILITANTE</a></li>
+<li><a href="10.html">10 LA IGLESIA TRIUNFANTE</a></li>
+<li><a href="11.html">11 CORTESANOS Y BURGUESES</a></li>
+<li><a href="12.html">12 LA CONQUISTA DE LA REALIDAD</a></li>
+<li><a href="13.html">13 TRADICIÓN E INNOVACIÓN, I</a></li>
+<li><a href="14.html">14 TRADICIÓN E INNOVACIÓN, II</a></li>
+<li><a href="15.html">15 LA CONSECUCIÓN DE LA ARMONÍA</a></li>
+<li><a href="16.html">16 LUZ Y COLOR</a></li>
+<li><a href="17.html">17 EL CURSO DEL NUEVO APRENDIZAJE</a></li>
+<li><a href="18.html">18 UNA CRISIS EN EL ARTE</a></li>
+<li><a href="19.html">19 VISIÓN Y VISIONES</a></li>
+<li><a href="20.html">20 EL ESPEJO DE LA NATURALEZA</a></li>
+<li><a href="21.html">21 EL PODER Y LA GLORIA, I</a></li>
+<li><a href="22.html">22 EL PODER Y LA GLORIA, II</a></li>
+<li><a href="23.html">23 LA EDAD DE LA RAZÓN</a></li>
+<li><a href="24.html">24 LA RUPTURA DE LA TRADICIÓN</a></li>
+<li><a href="25.html">25 REVOLUCIÓN PERMANENTE</a></li>
+<li><a href="26.html">26 EN BUSCA DE NUEVAS CONCEPCIONES</a></li>
+<li><a href="27.html">27 ARTE EXPERIMENTAL</a></li>
+<li><a href="28.html">28 UNA HISTORIA SIN FIN</a></li>
+</li>
+</ul> </li> </ul>
+</li>
+            </div>
+
+            <!-- Add comment hosting service here -->
+            <!-- Footer -->
+            <footer class="footer text-muted">
+               <div align="center">
+                  <!-- Update licences -->
+                  Universidad Nacional de San Martín
+                  &nbsp;|&nbsp;
+                  
+                  <br />
+                  <!-- Please keep the following line -->
+                  Desarrollado por Javier Beramendi con <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a> 
+                  y <a href="https://github.com/ashki23/pandoc-bootstrap" target="_blank" rel="noopener">pandoc-bootstrap</a> theme
+                  <br />
+                  <!-- Update copyright 
+                  Copyright, Author Name-->
+               </div>
+
+
+
+            </footer>
+            <!-- Add global site tag (gtag.js) and site analytics here -->
+            <!-- JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <!-- Mathjax -->
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script>
+         /* Bootstrap styles to tables */
+         function bootstrapStylePandocTables() {
+         $('tr.header').parent('thead').parent('table').addClass('table table-condensed'); }
+         $(document).ready(function () { bootstrapStylePandocTables(); });
+         /* Adjust the height when click the toc */
+         var shiftWindow = function() { scrollBy(0, -60) };
+         window.addEventListener("hashchange", shiftWindow);
+         function load() { if (window.location.hash) shiftWindow(); }
+      </script>
+   </body>
+</html>

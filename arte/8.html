@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="generator" content="pandoc">
+      <meta name="author" content="E. H. Gombrich" />
+  <meta name="description" content="«La historia del arte» es una de las obras sobre arte más famosas jamás publicadas. Durante cuarenta y seis años, ninguna otra ha rivalizado con ella en tanto que introducción al tema en su totalidad, desde las primeras pinturas de «las cuevas» hasta el arte experimental contemporáneo. Lectores de todas las edades y procedencias supieron hallar en el profesor Gombrich a un auténtico maestro, en quien se combinan el conocimiento y la sabiduría con un don único para comunicar de manera directa su profundo fervor por las obras de arte objeto de su estudio. «La historia del arte» debe su amplia difusión a lo directo y espontáneo de su estilo, así como a la clara exposición del autor, quien afirma que su propósito es «ordenar inteligiblemente el caudal de nombres, períodos y estilos que colman las páginas de obras más ambiciosas». Esto, unido a su perspicacia en cuanto a la psicología de las artes visivas, nos permite contemplar la historia del arte como «un continuo fluir e intercambio de tradiciones, en los que cada obra refiere al pasado y apunta hacia el futuro en una vívida cadena que vincula, incluso, a nuestra época con la de las pirámides». En su nuevo formato, la 16.ª edición de esta obra, ya clásica, ahora ampliada en 141 páginas, mantiene su criterio progresivo ante las generaciones venideras, a la vez que sigue siendo la primera fuente de información para los recién llegados al mundo del arte." />
+  <title>La historia del arte</title>
+      
+      
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <!-- Font-awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Styles 
+      <link rel="stylesheet" href="https://ashki23.github.io/styles.css">-->
+      <link rel="stylesheet" href="estilosPo2.css">
+      <link rel="stylesheet" type="text/css" href="estilos.css">
+
+            <!-- Add favicon here -->
+            <!-- Add site-verifications here -->
+         </head>
+   <body>
+            <!-- From https://getbootstrap.com/docs/4.5/components/navbar/ -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+               <a class="navbar-brand" style="max-width: 5.5em; margin: 0.4em 1.5em 0 1.5em;" href="#"><img src="unsamlogo.png" alt=""></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">La historia del arte <span class="sr-only">(current)</span></a>
+                     </li>
+                     <!--<li class="nav-item"> 
+                        <a class="nav-link" href="#">Link</a>
+                     </li>-->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Índice
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="dropdown-item" href="0.html">Introducción</a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="1.html">1 EXTRAÑOS COMIENZOS</a>
+                           <a class="dropdown-item" href="2.html">2 ARTE PARA LA ETERNIDAD</a>
+                           <a class="dropdown-item" href="3.html">3 EL GRAN DESPERTAR</a>
+                           <a class="dropdown-item" href="4.html">4 EL REINO DE LA BELLEZA</a>
+                           <a class="dropdown-item" href="5.html">5 CONQUISTADORES DEL MUNDO</a>
+                           <a class="dropdown-item" href="6.html">6 UNA DIVISIÓN DE CAMINOS</a>
+                           <a class="dropdown-item" href="7.html">7 MIRANDO A ORIENTE</a>
+                           <a class="dropdown-item" href="8.html">8 EL ARTE OCCIDENTAL EN EL CRISOL</a>
+                           <a class="dropdown-item" href="9.html">9 LA IGLESIA MILITANTE</a>
+                           <a class="dropdown-item" href="10.html">10 LA IGLESIA TRIUNFANTE</a>
+                           <a class="dropdown-item" href="11.html">11 CORTESANOS Y BURGUESES</a>
+                           <a class="dropdown-item" href="12.html">12 LA CONQUISTA DE LA REALIDAD</a>
+                           <a class="dropdown-item" href="13.html">13 TRADICIÓN E INNOVACIÓN, I</a>
+                           <a class="dropdown-item" href="14.html">14 TRADICIÓN E INNOVACIÓN, II</a>
+                           <a class="dropdown-item" href="15.html">15 LA CONSECUCIÓN DE LA ARMONÍA</a>
+                           <a class="dropdown-item" href="16.html">16 LUZ Y COLOR</a>
+                           <a class="dropdown-item" href="17.html">17 EL CURSO DEL NUEVO APRENDIZAJE</a>
+                           <a class="dropdown-item" href="18.html">18 UNA CRISIS EN EL ARTE</a>
+                           <a class="dropdown-item" href="19.html">19 VISIÓN Y VISIONES</a>
+                           <a class="dropdown-item" href="20.html">20 EL ESPEJO DE LA NATURALEZA</a>
+                           <a class="dropdown-item" href="21.html">21 EL PODER Y LA GLORIA, I</a>
+                           <a class="dropdown-item" href="22.html">22 EL PODER Y LA GLORIA, II</a>
+                           <a class="dropdown-item" href="23.html">23 LA EDAD DE LA RAZÓN</a>
+                           <a class="dropdown-item" href="24.html">24 LA RUPTURA DE LA TRADICIÓN</a>
+                           <a class="dropdown-item" href="25.html">25 REVOLUCIÓN PERMANENTE</a>
+                           <a class="dropdown-item" href="26.html">26 EN BUSCA DE NUEVAS CONCEPCIONES</a>
+                           <a class="dropdown-item" href="27.html">27 ARTE EXPERIMENTAL</a>
+                           <a class="dropdown-item" href="28.html">28 UNA HISTORIA SIN FIN</a>
+                          
+                           
+                        </div>
+                     </li>
+                     <!--<li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                     </li> -->
+                  </ul>
+                  <!--<form class="form-inline my-2 my-lg-0" method="get" action="Teoria_Organizaciones_2da_edicion_PRESS.pdf"> -->
+                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" onclick="window.open('arte.epub')"><i class="fa fa-download" ></i> Descargar EPUB</button>
+                    
+                     <!--<button class="btn btn-outline-info my-2 my-sm-0" type="download">Descargar PDF</button> 
+                  </form>-->
+               </div>
+            </nav>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-10">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 class="numero"
+title="8 EL ARTE OCCIDENTAL EN EL CRISOL. Europa, del siglo VI al XI">8</h1>
+<p>EL ARTE OCCIDENTAL EN EL CRISOL</p>
+<p class="subtituloCapitulo">Europa, del siglo VI al XI</p>
+<p>Habíamos dejado la historia del arte occidental en el período de
+Constantino y en los siglos en que fue amoldado al precepto del papa
+Gregorio el Grande, el cual declaró que las imágenes eran útiles para
+enseñar a los seglares la palabra sagrada. El período que viene a
+continuación de esta primitiva época cristiana, tras el colapso del
+Imperio romano, es conocido generalmente con el poco halagüeño nombre de
+edad de las tinieblas. Llamamos tenebrosa a esta época, en parte para
+dar a entender que las gentes que vivieron durante esos siglos de
+migraciones, guerras y cataclismos estuvieron sumergidas en la oscuridad
+y poseyeron muy pocos conocimientos que las guiaran; pero dicha
+designación también implica que, en cuanto a nosotros, es más bien
+escaso el conocimiento que poseemos acerca de esos siglos confusos que
+siguieron a la caída del mundo antiguo, y precedieron el nacimiento de
+los países europeos en forma aproximada a como actualmente los
+conocemos. No existen, claro está, límites fijos de tal período, pero
+para nuestros propósitos podemos decir que duró casi cinco siglos,
+aproximadamente desde 500 hasta 1000. Quinientos años suponen un
+dilatado lapso en el cual pudieron ocurrir muchas cosas, como
+efectivamente ocurrieron.</p>
+<p>Pero lo más interesante es que esos años no vieron la aparición de
+ningún estilo claro y uniforme, sino más bien el conflicto de un gran
+número de estilos diferentes que sólo empezaron a conciliarse hacia
+final de dicha época. A quienes conocen algo de la historia de la edad
+de las tinieblas esto apenas podrá sorprenderles. No fue solamente
+oscuro este período, sino hecho a retazos, con tremendas diferencias
+entre las gentes y los estamentos sociales. Durante esos cinco siglos
+existieron hombres y mujeres, particularmente en monasterios y
+conventos, que amaron el saber y el arte, y que sintieron gran
+admiración por aquellas obras del mundo antiguo que habían sido
+conservadas en bibliotecas y tesorerías. A veces, esos monjes o clérigos
+ilustrados ocuparon posiciones influyentes en las cortes de los
+poderosos y trataron de hacer revivir las artes que admiraban. Pero con
+frecuencia su tarea resultaba inutilizada por las nuevas guerras e
+invasiones de los asaltantes armados del norte, cuyas opiniones acerca
+del arte eran muy distintas. Las diversas tribus teutónicas, godos,
+vándalos, sajones, daneses y vikingos, que recorrieron en incursiones y
+pillajes continuos toda Europa, eran consideradas bárbaras por cuantos
+apreciaban las producciones literarias y artísticas de griegos y
+romanos. En cierto modo, eran bárbaras en realidad; pero esto no quiere
+decir que carecieran del sentido de la belleza y de un arte propio.
+Contaban con hábiles artesanos expertos en labrar los metales y con
+tallistas excelentes comparables a los de los maoríes de Nueva Zelanda
+(ilustración 22). Gustaban de los esquemas complicados en los que
+insertaban retorcidos cuerpos de dragones o pájaros entrelazados
+misteriosamente. Ignoramos dónde surgieron con exactitud esos esquemas
+del siglo VII ni qué significaban, pero no es improbable que las ideas
+de esas tribus teutónicas acerca del arte se asemejasen a las de las
+tribus primitivas de cualquier otra parte. Existen razones para creer
+que también ellas consideraban esas imágenes como medio de producir
+efectos mágicos y exorcizar los espíritus malignos. Las figuras de
+dragones talladas en los trineos y barcos vikingos dan buena idea del
+carácter de este arte (ilustración 101). Es fácil imaginar que esas
+amenazadoras cabezas de monstruos eran algo más que decoraciones
+inocentes. En efecto, sabemos que existieron leyes entre los vikingos
+noruegos que exigían del capitán del barco que quitara esas figuras
+antes de regresar a su puerto «para que no asusten a los espíritus del
+país».</p>
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/101.jpg" alt="Cabeza de dragón" /></p>
+<p class="epigrafe">101 Cabeza de dragón, h. 820. Talla en madera hallada en Oseberg,
+Noruega; 51 cm de altura; colección de la Universidad, Oslo.</p>
+</div>
+</div>
+<p>Los monjes y misioneros en la céltica Irlanda y la sajona Inglaterra
+procuraron adaptar las tradiciones de esos artesanos nórdicos a las
+tareas del arte cristiano. Construyeron en piedra iglesias y campanarios
+imitando las estructuras de madera utilizadas por los artesanos locales
+(ilustración 100), pero los más maravillosos monumentos de la
+consecución de tal propósito son algunos de los manuscritos realizados
+en Inglaterra e Irlanda durante los siglos VII y VIII.</p>
+<p><img src="img2/Images/100.jpg" style="height:85.0%"
+alt="Iglesia de Todos los Santos" /></p>
+<p class="epigrafe">100 Iglesia de Todos los Santos, Earls Barton, Northamptonshire, h.
+1000. Torre sajona que imita una construcción de madera.</p>
+<p>La ilustración 103 es una página del <cite>Evangeliario de
+Lindisfarne</cite>, compuesto en Northumbria poco antes de 700. Muestra
+una cruz que incluye un encaje increíblemente rico en dragones o
+serpientes destacándose sobre un fondo aún más complicado. Resulta
+tentador tratar de descubrir la continuidad a través de este enrevesado
+laberinto de formas retorcidas y seguir las colas de esos cuerpos
+entrelazados. Aún más sorprendente es observar que el resultado no es
+confuso, sino que los diversos esquemas se corresponden entre sí y
+forman una completa armonía de dibujo y de color. Cuesta trabajo creer
+que haya podido haber alguien capaz de concebir un esquema semejante y
+de tener la paciencia y la perseverancia de realizarlo. Esto
+demostraría, si fuera preciso, que los artistas que cultivaron su
+tradición nativa no carecían de habilidad o de técnica.</p>
+<p><img src="img2/Images/103.jpg" style="height:85.0%"
+alt="Evangelario de Lindisfarne" /></p>
+<p class="epigrafe">103 Página del <cite>Evangelario de Lindisfarne</cite>, h. 698.
+Biblioteca Británica, Londres.</p>
+<p>Uno de los aspectos más sorprendentes surge de observar de qué modo
+han sido representadas las figuras humanas por esos artistas en los
+manuscritos ilustrados de Inglaterra e Irlanda. No parecen, en realidad,
+figuras humanas, sino más bien un conjunto de esquemas lineales
+obtenidos de formas humanas (ilustración 102). Puede verse que el
+artista ha utilizado algún modelo que halló en una vieja Biblia,
+trasformándolo de acuerdo con sus gustos. Cambió los pliegues del
+vestido por algo semejante a cintas entrelazadas, los bucles del pelo y
+hasta las orejas en volutas, y convirtió el conjunto del rostro en una
+máscara rígida. Estas figuras de evangelistas y de santos parecen casi
+tan rígidas y extrañas como ídolos primitivos, revelando que los
+artistas que se educaron en la tradición de su arte nativo hallaron
+difícil adaptarse a las nuevas exigencias de los libros cristianos.
+Pero, no obstante, sería equivocado considerar tales pinturas como
+meramente rudimentarias. El adiestramiento de la mano y de los ojos que
+los artistas habían heredado, y que les permitía realizar un hermoso
+esquema sobre la página, les ayudó a introducir un nuevo elemento en el
+arte occidental. Sin esta influencia, dicho arte pudo haberse
+desarrollado en una dirección similar a la del arte bizantino. Gracias
+al encuentro de dos tradiciones, la clásica y la de los artistas
+nórdicos, algo enteramente nuevo comenzó a pergeñarse en la Europa
+occidental.</p>
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/102.jpg" alt="San Lucas" /></p>
+<p class="epigrafe">102 San Lucas, h. 750. Del manuscrito de un evangelio;
+Stiftsbibliothek, St. Gallen.</p>
+</div>
+</div>
+<p>El conocimiento de las antiguas producciones del arte clásico no se
+perdió del todo. En la corte de Carlomagno, quien se consideraba como el
+sucesor de los emperadores romanos, la tradición del arte romano fue
+afanosamente revivida. La iglesia que Carlomagno hizo construir
+alrededor de 800 en Aquisgrán (ilustración 104) es como una fiel copia
+de una iglesia famosa que se había edificado en Rávena unos tres siglos
+antes.</p>
+<p><img src="img2/Images/104.jpg" style="height:90.0%"
+alt="Catedral de Aquisgrán" /></p>
+<p class="epigrafe">104 Catedral de Aquisgrán, consagrada en 805.</p>
+<p>Ya hemos visto que nuestra moderna noción de que un artista debe ser
+original no fue en modo alguno compartida por la mayoría de los pueblos
+del pasado. Un maestro egipcio, chino o bizantino se habría asombrado
+ante tal exigencia. Ningún artista medieval del Occidente europeo habría
+comprendido por qué tenía que crear nuevos modos de planear una iglesia,
+dibujar un cáliz o representar escenas de la historia sagrada cuando tan
+bien habían servido a tal propósito los modos antiguos. El piadoso
+donante que deseaba dedicar un nuevo altar a una reliquia sagrada de un
+santo patrón, no sólo intentaba procurarse los materiales más preciosos
+que se hallaran a su alcance, sino que intentaba suministrar también al
+maestro que había de ejecutar su encargo un antiguo y venerado ejemplo
+de cómo debía ser interpretada correctamente la leyenda del santo. El
+artista no tenía por qué sentirse cohibido por encargos de tal índole,
+pues le quedaba campo de acción suficiente para demostrar que era un
+verdadero maestro y no un chapucero.</p>
+<p>Tal vez podamos comprender mejor esta actitud si pensamos en nuestro
+propio criterio respecto a la música. Si le pedimos a un músico que
+toque en una boda, no esperamos de él que componga algo nuevo para tal
+ocasión, ni más ni menos que el cliente medieval tampoco esperaba una
+nueva creación cuando encargaba un cuadro que representase la natividad.
+Nosotros indicamos el tipo de música que deseamos y el alcance de la
+orquesta o del coro que podemos permitirnos, con lo que aún queda por
+cuenta del músico producir una interpretación maravillosa de una obra
+maestra antigua o una mezcolanza de motivos. Y exactamente lo mismo que
+dos músicos igualmente grandes pueden interpretar la misma pieza de modo
+muy distinto, así también dos grandes maestros medievales podían
+realizar obras de arte muy diferentes con el mismo tema, e incluso con
+el mismo antiguo modelo. Un ejemplo aclarará el caso más todavía.</p>
+<p>La ilustración 105 muestra una página de la Biblia realizada en la
+corte de Carlomagno. Representa la figura de san Mateo escribiendo el
+evangelio. Ha sido costumbre en los libros griegos y romanos incluir el
+retrato del autor en la primera página, y éste del evangelista
+escribiendo debe ser una copia extraordinariamente fidedigna de ese tipo
+de retratos. La manera en que el santo está envuelto en su toga, al
+estilo clásico, así como el modo en que se halla modelada su cabeza con
+diversas manchas de luz y de color, nos convencen de que el artista
+medieval hizo cuanto pudo para reproducir un venerado modelo.</p>
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/105.jpg" alt="San Mateo" /></p>
+<p class="epigrafe">105 <cite>San Mateo</cite>, h. 800. De un evangelio manuscrito,
+probablemente pintado en Aquisgrán; Museo de Arte Histórico, Viena.</p>
+</div>
+</div>
+<p>El pintor de otro manuscrito del siglo IX (ilustración 106)
+probablemente tuvo delante el mismo o un muy similar ejemplo de la
+primitiva época cristiana. Podemos comparar las manos: la izquierda,
+sosteniendo un cuerno de tinta y apoyada sobre el facistol; la derecha,
+cogiendo la pluma; podemos comparar los pies y hasta el ropaje en torno
+a las rodillas. Pero mientras que el artista de la ilustración 105 se ha
+esforzado en copiar el original tan fielmente como le fue posible, el
+artista de la ilustración 106 debió preferir una interpretación
+distinta. Tal vez no quiso representar al evangelista como un apacible
+erudito sentado tranquilamente en su estudio. Para él, san Mateo era un
+hombre inspirado, que ponía por escrito la palabra del Dios. Fue un
+acontecimiento extraordinariamente importante y significativo en la
+historia de la humanidad que él quisiera reflejar, y que lograra
+transmitir, algo de su propia sensación de temor y excitación a través
+de esta figura de un hombre escribiendo. No son simples tosquedad e
+ignorancia las que le hicieron dibujar al santo con ojos desorbitados y
+salientes, y con manos enormes. Se propuso comunicarle una expresión de
+concentración intensa. Las mismas pinceladas de los ropajes y del fondo
+parece como si hubieran sido sumidas en una especie de agitación
+profunda. Considero que esta impresión se debe en parte al placer que
+evidentemente sentía el artista al aprovechar cualquier oportunidad para
+dibujar líneas ensortijadas y pliegues zigzagueantes. Pudo haber
+existido algo en el original que le sugiriera este procedimiento, pero
+probablemente atraía esto al artista medieval porque le recordaba
+aquellas cintas y rasgos entrelazados que habían sido la mayor conquista
+del arte nórdico. En pinturas como ésta, observamos el nacimiento de un
+nuevo estilo medieval, que hizo posible para el arte algo que ni el
+antiguo oriental ni el clásico habían realizado: los egipcios plasmaron
+lo que <em>sabían</em> que existía; los griegos, lo que <em>veían</em>;
+los artistas del medievo aprendieron a expresar lo que
+<em>sentían</em>.</p>
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/106.jpg" alt="San Mateo" /></p>
+<p class="epigrafe">106 <cite>San Mateo</cite>, h. 830. De un evangelio manuscrito,
+probablemente pintado en Reims; Biblioteca Municipal, Épernay.</p>
+</div>
+</div>
+<p>No se puede hacer justicia a ninguna obra de arte medieval sin tener
+presente este propósito, pues esos artistas no se proponían crear una
+imagen convincente de la naturaleza o realizar obras bellas, sino que
+deseaban comunicar a sus hermanos en la fe el contenido y el mensaje de
+la historia sagrada. Y en esto acaso fueron más afortunados que muchos
+de los artistas anteriores o posteriores. La ilustración 107 pertenece a
+un <cite>Libro de los evangelios</cite> que fue ilustrado (o iluminado)
+en Alemania más de un siglo después, alrededor de 1000. Representa el
+incidente relatado en el evangelio de Juan (13, 8-9), cuando el Cristo
+lavó los pies a sus discípulos tras la última cena:</p>
+<blockquote>
+<p>Le dice Pedro: «No me lavarás los pies jamás.» Jesús le respondió:
+«Si no te lavo, no tienes parte conmigo.» Le dice Simón Pedro: «Señor,
+no sólo los pies, sino hasta las manos y la cabeza.»</p>
+</blockquote>
+<p>Esta conversación era lo único que le importaba al artista.
+Representar la habitación en donde la escena tenía lugar era irrelevante
+para él; incluso podría ser que ella desviara la atención del
+significado interno del acontecimiento. En cambio, situó las figuras
+principales contra un fondo dorado, luminoso y plano, sobre el que los
+gestos de los protagonistas resaltan como una inscripción solemne: la
+actitud implorante de san Pedro, el gesto calmado con que el Cristo
+imparte su enseñanza. A la derecha un discípulo se saca las sandalias,
+otro acerca un recipiente, los demás se apiñan detrás de san Pedro.
+Todas las miradas se dirigen al centro de la escena con rigidez,
+dándonos así la sensación de que allí está sucediendo algo de infinita
+importancia. ¿Qué más da si la redondez de la jofaina no es regular o
+que el pintor tuviera que dislocar la pierna de san Pedro y adelantar un
+poco la rodilla para que su pie apareciese claramente en el agua? Lo que
+le interesaba expresar era el mensaje de la humildad divina, y esto fue
+lo que transmitió.</p>
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/107.jpg"
+alt="El Cristo lavando los pies a los apóstoles" /></p>
+<p class="epigrafe">107 <cite>El Cristo lavando los pies a los apóstoles</cite>, h. 1000.
+Del <cite>Libro de los evangelios</cite>, de Otto III; Biblioteca
+Nacional Bávara, Munich.</p>
+</div>
+</div>
+<p>Resulta interesante detenernos por un instante para mirar hacia
+atrás, en el tiempo, otra escena que también representa un lavado de
+pies: el vaso griego pintado en el siglo V a.C. (ilustración 58). Fue en
+Grecia donde se descubrió el arte de mostrar «los movimientos del alma»,
+y aunque el artista medieval interpretó su propósito de modo muy
+distinto, sin la herencia griega la Iglesia nunca habría podido hacer
+uso de las pinturas para sus propios fines.</p>
+<p>Recordemos las palabras del papa Gregorio el Grande: «La pintura
+puede ser para los iletrados lo mismo que la escritura para los que
+saben leer». Esta búsqueda de claridad aparece no sólo en las
+ilustraciones pintadas, sino también en esculturas como las del panel de
+una puerta de bronce que fue encargada para la iglesia alemana de
+Hildesheim poco después de 1000 (ilustración 108). Presenta al Dios
+acercándose a Adán y Eva después del pecado original. No hay nada en
+este relieve que no pertenezca estrictamente al relato bíblico; pero
+esta concentración de los objetos tratados hace que las figuras se
+destaquen con la mayor nitidez sobre la lisura del fondo, y casi leemos
+lo que dicen sus actitudes: el Dios señala a Adán, Adán a Eva, y Eva a
+la serpiente que está en el suelo. La traslación de la culpa y el origen
+del pecado están expresados con tanta claridad y tan intensamente que de
+inmediato olvidamos que las proporciones de las figuras tal vez no sean
+muy correctas, ni los cuerpos de Adán y Eva bellos según nuestra
+concepción.</p>
+<div class="centrado">
+<div class="contenedorpie2">
+<p><img src="img2/Images/108.jpg"
+alt="Adán y Eva después de la caída" /></p>
+<p class="epigrafe">108 <cite>Adán y Eva después de la caída</cite>, h. 1015. De las
+puertas de bronce de la catedral de Hildesheim.</p>
+</div>
+</div>
+<p>No hay que suponer, sin embargo, que todo el arte de este período
+existiera exclusivamente para servir a ideas religiosas. No sólo se
+construyeron iglesias en el medievo, sino también castillos, y los
+barones y señores feudales a quienes pertenecían los castillos también
+contrataban a artistas de vez en cuando. El motivo por el que somos
+propensos a olvidar estas obras cuando hablamos del arte del alto
+medievo es simple: los castillos eran destruidos a menudo, mientras que
+las iglesias eran conservadas. El arte religioso era tratado, en su
+conjunto, con mayor respeto, y cuidado con más esmero que las simples
+decoraciones de las estancias privadas. Cuando éstas quedaban
+anticuadas, eran retiradas y destruidas, al igual que sucede hoy día.
+Pero, afortunadamente, un gran ejemplo de este último tipo de arte ha
+llegado hasta nosotros, porque se conservó en una iglesia. Es el famoso
+<cite>Tapiz de Bayeux</cite>, ilustrado con la historia de la conquista
+normanda. Ignoramos cuándo se ejecutó exactamente este tapiz, pero
+muchos especialistas están de acuerdo en que fue mientras estuvo vivo el
+recuerdo de las escenas que en él se reproducen, acaso alrededor de
+1080. El tapiz es una crónica gráfica del tipo de las que ya conocemos
+del arte romano y del antiguo Oriente (la Columna de Trajano, por
+ejemplo, ilustraciones 77 y 78), esto es, la narración de una campaña y
+una victoria, la cual fue plasmada con maravillosa vivacidad. En la
+ilustración 109 podemos ver, según nos dice la inscripción, cómo prestó
+Harold su juramento a Guillermo, y en la ilustración 110 cómo regresa a
+Inglaterra. El modo de contar la historia no podía ser más claro: vemos
+a Guillermo sentado en su trono contemplando cómo pone Harold su mano
+sobre las reliquias santas para prestar juramento de fidelidad,
+juramento del cual se sirvió Guillermo como pretexto para sus
+aspiraciones sobre Inglaterra. Mis preferencias particulares son para la
+figura de hombre que se halla en el balcón de la escena siguiente, el
+cual coloca su mano sobre los ojos para otear la llegada del barco de
+Harold. Ciertamente, sus brazos y sus dedos parecen un tanto extraños, y
+todas las figuras de la escena como insólitos y pequeños muñecos, que no
+están dibujados con la seguridad de los asirios y romanos. Cuando el
+artista medieval de esa época carecía de modelo que copiar, dibujaba en
+cierto modo como un niño, pero hacer lo que él hacía no resulta fácil en
+absoluto. Refiere la narración épica con una economía de medios y con
+tal concentración en lo que a él le parecía importante, que el resultado
+final resulta más impactante que los reportajes actuales en prensa o
+televisión.</p>
+<p><img src="img2/Images/109-110.jpg" style="height:80.0%"
+alt="Tapiz de Bayeux" /></p>
+<p class="epigrafe">109, 110 <cite>Tapiz de Bayeux</cite>, h. 1080. El rey Harold
+prestando juramento al duque Guillermo de Normandía y, luego, regresando
+a Inglaterra; friso, 50 cm de altura; Museo de Tapices, Bayeux.</p>
+<hr />
+<div class="centrado">
+<div class="contenedorpie">
+<p><img src="img2/Images/fin08.jpg" alt="El hermano Rufillus" /></p>
+<p class="epigrafe"><cite>El hermano Rufillus trazando la letra R</cite>, siglo XIII.
+Detalle de un manuscrito iluminado; Fundación Martin Bodmer,
+Ginebra.</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+               </div>
+            </div>
+               
+                              <div class="d-none d-xl-block col-xl-2 bd-toc">
+               <ul class="section-nav">
+                  <li class="toc-entry"> <ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="0.html">Introducción</a></li>
+<li><a href="1.html">01 EXTRAÑOS COMIENZOS</a></li>
+<li><a href="2.html">02 ARTE PARA LA ETERNIDAD</a></li>
+<li><a href="3.html">03 EL GRAN DESPERTAR</a></li>
+<li><a href="4.html">04 EL REINO DE LA BELLEZA</a></li>
+<li><a href="5.html">05 CONQUISTADORES DEL MUNDO</a></li>
+<li><a href="6.html">06 UNA DIVISIÓN DE CAMINOS</a></li>
+<li><a href="7.html">07 MIRANDO A ORIENTE</a></li>
+<li><a href="8.html">08 EL ARTE OCCIDENTAL EN EL CRISOL</a></li>
+<li><a href="9.html">09 LA IGLESIA MILITANTE</a></li>
+<li><a href="10.html">10 LA IGLESIA TRIUNFANTE</a></li>
+<li><a href="11.html">11 CORTESANOS Y BURGUESES</a></li>
+<li><a href="12.html">12 LA CONQUISTA DE LA REALIDAD</a></li>
+<li><a href="13.html">13 TRADICIÓN E INNOVACIÓN, I</a></li>
+<li><a href="14.html">14 TRADICIÓN E INNOVACIÓN, II</a></li>
+<li><a href="15.html">15 LA CONSECUCIÓN DE LA ARMONÍA</a></li>
+<li><a href="16.html">16 LUZ Y COLOR</a></li>
+<li><a href="17.html">17 EL CURSO DEL NUEVO APRENDIZAJE</a></li>
+<li><a href="18.html">18 UNA CRISIS EN EL ARTE</a></li>
+<li><a href="19.html">19 VISIÓN Y VISIONES</a></li>
+<li><a href="20.html">20 EL ESPEJO DE LA NATURALEZA</a></li>
+<li><a href="21.html">21 EL PODER Y LA GLORIA, I</a></li>
+<li><a href="22.html">22 EL PODER Y LA GLORIA, II</a></li>
+<li><a href="23.html">23 LA EDAD DE LA RAZÓN</a></li>
+<li><a href="24.html">24 LA RUPTURA DE LA TRADICIÓN</a></li>
+<li><a href="25.html">25 REVOLUCIÓN PERMANENTE</a></li>
+<li><a href="26.html">26 EN BUSCA DE NUEVAS CONCEPCIONES</a></li>
+<li><a href="27.html">27 ARTE EXPERIMENTAL</a></li>
+<li><a href="28.html">28 UNA HISTORIA SIN FIN</a></li>
+</li>
+</ul> </li> </ul>
+</li>
+            </div>
+
+            <!-- Add comment hosting service here -->
+            <!-- Footer -->
+            <footer class="footer text-muted">
+               <div align="center">
+                  <!-- Update licences -->
+                  Universidad Nacional de San Martín
+                  &nbsp;|&nbsp;
+                  
+                  <br />
+                  <!-- Please keep the following line -->
+                  Desarrollado por Javier Beramendi con <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a> 
+                  y <a href="https://github.com/ashki23/pandoc-bootstrap" target="_blank" rel="noopener">pandoc-bootstrap</a> theme
+                  <br />
+                  <!-- Update copyright 
+                  Copyright, Author Name-->
+               </div>
+
+
+
+            </footer>
+            <!-- Add global site tag (gtag.js) and site analytics here -->
+            <!-- JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <!-- Mathjax -->
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script>
+         /* Bootstrap styles to tables */
+         function bootstrapStylePandocTables() {
+         $('tr.header').parent('thead').parent('table').addClass('table table-condensed'); }
+         $(document).ready(function () { bootstrapStylePandocTables(); });
+         /* Adjust the height when click the toc */
+         var shiftWindow = function() { scrollBy(0, -60) };
+         window.addEventListener("hashchange", shiftWindow);
+         function load() { if (window.location.hash) shiftWindow(); }
+      </script>
+   </body>
+</html>
