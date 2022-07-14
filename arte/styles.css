@@ -56,7 +56,7 @@
   margin-top: 0em;
   color:  white;
   padding-top: 5rem;
-  background-image: url("img2/images/tapa.jpg"); /* The image used */
+  background-image: url("img2/Images/tapa.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 300px; /* You must set a specified height */
   opacity: 0.7;
