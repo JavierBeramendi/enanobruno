@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -20,7 +20,7 @@
 
     body {margin: 0 auto;}
     
-    pre {
+    pre, plaintext {
       font: 1em 'Courier'; line-height: 1.4em;
       max-width: 650px;
       margin: 0 auto;
@@ -60,61 +60,30 @@
 
 
 <ins>Práctica de unidad 1</ins>
-<b>Internet y servidores: 
-tipos, modelos, ventajas y desventajas</b>
+<b>Sitios web</b> 
 
-<ins>Vamos a instalar XAMPP y Omeka en Microsoft Windows</ins>
+<ins>Vamos a hacer una página web de <i>La historia del arte</i>, de E. H. Gombrich</ins>
 
-1. Primero ingresaremos a <a href="https://www.apachefriends.org/es/index.html">Apache fiends</a> y descargamos el programa que va a simular un servidor en nuestra computadora.
+<b>El modelo lo pueden encontrar <a href="../arte/index.html">aquí</a></b>
+
+A cada alumno se le asignará un capítulo de MS Word (.docx)
+Las entregas y los materiales están en <b><a href="https://drive.google.com/drive/folders/1jV1jnXiY-46uVF3zvg6H-ZxkUrMm3l6r?usp=sharing">este Drive</a></b>. Allí también están alojados las imágenes que hay que vincular y el archivo html base.
+
+1. Van a necesitar algún editor de código, pueden descargar el Sublime Text ingresando en <a href="https://www.sublimetext.com/3">Sublime</a>.
 2. Seleccionamos el sistema operativo correspondiente, en nuestro caso: Windows.
-3. Vamos a descargas y ejecutamos el archivo.
-4. Es probable que aparezca una notificación sobre un posible problema con el control de las cuentas de usuarios. A no desesperar, es cuestión de no instalar en program files.
-5. Nos da la bienvenida al setup, y hacemos clic en Next dos veces.
-6. Acá nos pregunta por el directorio de instalación. Por defecto se instala en el disco C:, no debemos cambiar esa configuración. Luego, elegimos English y damos inicio a la instalación y descarga de archivos.
-7. Instalado el programa, le damos Start a Apache y MySQL. (No tenemos que cerrar el programa).
-8. Instalamos Omeka. Para ello, entramos en el <a href="https://omeka.org/">sitio</a> y descargamos la última versión.
-9. Una vez descargado el fichero zip, cambiamos el nombre a omeka, y omitimos la versión. Descomprimimos y colocamos el directorio en el disco C:, más específicamente, en "C:\xampp\htdocs".
-10. Acá es donde se pone un poco más turbio. Que no cunda el pánico. Vayamos despacio. Abrimos el notepad de Windows. Tocamos en File/Archivo y le damos en open o abrir y buscamos la siguiente ruta "C:\xampp\htdocs\omeka\application\config", como no visualizamos ningún archivo, tocamlos donde dice ver o permitir todas las extensiones. Recién entonces, seleccionamos el fichero "config.ini".
-11. Buscamos la línea locale.name = "", y escribimos <b>es</b> dentro de las comillas. Guardamos.
-12. Ahora hacemos algo parecido pero con el archivo "db.ini", dentro de "omeka". El propósito es configurar la base de datos. No se olviden de tildar ver todos los archivos, si no, no lo van a encontrar.
-13. Tiene que quedar así:
-    [database]
-    host     = "localhost"
-    username = "root"
-    password = ""
-    dbname   = "omeka"
-    prefix   = "omeka_"
-    charset  = "utf8"
-    ;port     = ""
+3. Vamos a descargas y ejecutamos el archivo. Instalamos y listo.
+4. Abrimos el archivo base.html y lo guardamos como el número de capítulo que corresponda.
+<plaintext>
 
-14. Guardamos el archivo y vamos a nuestro mavegador y escribimos "localhost".
-15. Cargada la página, hacemos clic en "phpMyadmin".
-16. Clic en "Nueva", a la izquierda.
-17. En el menú que se abre, donde dice "Nombre de la base de datos", escribimos "omeka" en minúscula y tocamos la opción de "Crear".
-18. Escribimos en el buscador de url del navegador la siguiente dirección: http://localhost/omeka/install/.
-19. Completamos los campos obligatorios:  usuario, contraseña, correo electrónico y título del sitio. E instalamos.
-20. Borramos el directorio "Install" dentro de Omeka, porque si no tendríamos qu instalarlo cada vez que lo usemos.
-
-<b>Fin</b>
+5. Dentro del <body></body>, más específicamente en el <div></div> con clase "col-xl-10" de la línea 93, vamos a poner nuestro contenido. Trabajaremos con las siguientes  etiquetas: <h1></h1>, <p></p>, <blockquote></blockquote>, <i></i> y <b></b>. El subtítulo del capítulo tiene que llevar una clase, "subtituloCapitulo"; lo mismo los párrafos de epígrafe, cuya clase es "epigrafe". Por último, las etiquetas de imágenes deberan referenciara la ruta relativa <img src="img2/Images/xxxx.jpg" alt="">. Dentro del atributo src, tienen que modificar las xxxx por el nombre del archivo que corresponda. En alt="" completamos algo que describa a la imagen en caso de no visualizarse correctamente.
 
 
+Eso es todo amigos
 
-
-
-
-
-
-
-<hr>
-
+Fecha de entrega: 24/8
 
 mail: jberamendi@unsam.edu.ar 
 
 
-</pre>
 
 
-
-
-</body>
-</html>

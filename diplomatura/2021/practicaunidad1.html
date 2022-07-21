@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <base target="_blank">
+  <meta name="description" content="Instalación de software" />
+  <title>Instalación de software para bibliotecas, archivos y museos</title> 
+    <meta property="og:title" content="Diplomatura"/>
+  <meta property="og:site_name" content="enanobruno.com"/>
+  <meta property="og:description" content="Material para la primera unidad." />
+  <meta name="viewport" content="width=device-width">
+
+  
+  <style type="text/css">
+  
+    a:link {color:#CE2029; text-decoration:none;}
+    a:visited {color:#CE2029; text-decoration:none;}
+    a:hover {text-decoration:underline;}
+
+    body {margin: 0 auto;}
+    
+    pre {
+      font: 1em 'Courier'; line-height: 1.4em;
+      max-width: 650px;
+      margin: 0 auto;
+      /*position: relative;*/
+      white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+      white-space: -pre-wrap; /* Opera */
+      white-space: -o-pre-wrap; /* Opera */
+      white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+      word-wrap: break-word; /* IE 5.5+ */
+    }
+    
+    @media only screen and (max-width:700px)    
+{
+   body {width:95% !important; margin:0em auto !important; padding-left: 0.2em; padding-right:0.2em; font-size:79%; -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;} }
+         
+  </style>
+ 
+  
+
+</head>
+
+<body>
+
+
+  
+<pre>
+<b>---------------------------
+-- Instalación-------------
+------de-------------------
+----------software---------
+---[diplomatura]-----------
+---------------------------</b>
+
+
+<ins>Práctica de unidad 1</ins>
+<b>Internet y servidores: 
+tipos, modelos, ventajas y desventajas</b>
+
+<ins>Vamos a instalar XAMPP y Omeka en Microsoft Windows</ins>
+
+1. Primero ingresaremos a <a href="https://www.apachefriends.org/es/index.html">Apache fiends</a> y descargamos el programa que va a simular un servidor en nuestra computadora.
+2. Seleccionamos el sistema operativo correspondiente, en nuestro caso: Windows.
+3. Vamos a descargas y ejecutamos el archivo.
+4. Es probable que aparezca una notificación sobre un posible problema con el control de las cuentas de usuarios. A no desesperar, es cuestión de no instalar en program files.
+5. Nos da la bienvenida al setup, y hacemos clic en Next dos veces.
+6. Acá nos pregunta por el directorio de instalación. Por defecto se instala en el disco C:, no debemos cambiar esa configuración. Luego, elegimos English y damos inicio a la instalación y descarga de archivos.
+7. Instalado el programa, le damos Start a Apache y MySQL. (No tenemos que cerrar el programa).
+8. Instalamos Omeka. Para ello, entramos en el <a href="https://omeka.org/">sitio</a> y descargamos la última versión.
+9. Una vez descargado el fichero zip, cambiamos el nombre a omeka, y omitimos la versión. Descomprimimos y colocamos el directorio en el disco C:, más específicamente, en "C:\xampp\htdocs".
+10. Acá es donde se pone un poco más turbio. Que no cunda el pánico. Vayamos despacio. Abrimos el notepad de Windows. Tocamos en File/Archivo y le damos en open o abrir y buscamos la siguiente ruta "C:\xampp\htdocs\omeka\application\config", como no visualizamos ningún archivo, tocamlos donde dice ver o permitir todas las extensiones. Recién entonces, seleccionamos el fichero "config.ini".
+11. Buscamos la línea locale.name = "", y escribimos <b>es</b> dentro de las comillas. Guardamos.
+12. Ahora hacemos algo parecido pero con el archivo "db.ini", dentro de "omeka". El propósito es configurar la base de datos. No se olviden de tildar ver todos los archivos, si no, no lo van a encontrar.
+13. Tiene que quedar así:
+    [database]
+    host     = "localhost"
+    username = "root"
+    password = ""
+    dbname   = "omeka"
+    prefix   = "omeka_"
+    charset  = "utf8"
+    ;port     = ""
+
+14. Guardamos el archivo y vamos a nuestro mavegador y escribimos "localhost".
+15. Cargada la página, hacemos clic en "phpMyadmin".
+16. Clic en "Nueva", a la izquierda.
+17. En el menú que se abre, donde dice "Nombre de la base de datos", escribimos "omeka" en minúscula y tocamos la opción de "Crear".
+18. Escribimos en el buscador de url del navegador la siguiente dirección: http://localhost/omeka/install/.
+19. Completamos los campos obligatorios:  usuario, contraseña, correo electrónico y título del sitio. E instalamos.
+20. Borramos el directorio "Install" dentro de Omeka, porque si no tendríamos qu instalarlo cada vez que lo usemos.
+
+<b>Fin</b>
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+mail: jberamendi@unsam.edu.ar 
+
+
+</pre>
+
+
+
+
+</body>
+</html>
