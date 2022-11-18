@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital@0;1&family=Saira:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+
+ html {
+      line-height: 1.5;
+      font-family: 'Faustina', serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: none;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    h1 {
+      font-size: 1.6rem;
+      line-height: 1.7rem;
+      font-family: 'Saira', sans-serif;
+      color: #a54bed;
+    }
+    h2 {
+      font-size: 1.2em;
+      font-family: 'Saira', sans-serif;
+      color: #a54bed;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
+      blockquote {
+        margin-left: 0.4em !important;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 3em 0 -0.5em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 3px solid #70ffeb;
+      border-bottom: 3px solid #70ffeb;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+
+    a {
+      color: #a54bed;
+    }
+
+     h1 a, .autor a {
+      vertical-align:super;  
+      font-size: medium;  
+     }
+
+
+/*----Propios----*/
+
+.sub {
+   color: #a54bed;
+   font-family: 'Saira', sans-serif;
+   font-weight: 300;
+   font-size: 1.5rem;
+   margin: -1rem 0.8rem 1rem 0rem;
+   line-height: 1.6rem;   
+}
+.autor {
+   font-family: 'Saira', sans-serif;
+   font-weight: 300;
+   font-size: 1.2rem;
+   margin: 0rem 1.5rem 3rem 0rem;
+   line-height: 1.2rem; 
+}
+.autorRes {
+   font-family: 'Saira', sans-serif;
+   color: #a54bed;
+   font-weight: 300;
+   font-size: 1.2rem;
+   margin: -1.5rem 1.5rem 3rem 0rem;
+   line-height: 1.2rem; 
+}
+.antetitulo {
+   font-family: 'Saira', sans-serif;
+   font-weight: 300;
+   font-size: 1.2rem;
+   margin: 1rem 1.5rem -2rem 0rem;
+   line-height: 1.2rem; 
+} 
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: -0.8rem;
+}
+h4 {
+   font-family: 'Saira', sans-serif;
+   font-weight: 300;
+   font-size: 0.9rem;
+   margin: 0rem 0.8rem 1.5rem 0rem;
+   line-height: 1.2rem; 
+} 
+h3 {
+   font-family: 'Saira', sans-serif;
+   font-weight: 300;
+   font-size: 1.2rem;
+   color: #a54bed;
+   margin: 2rem 0.8rem -0.5rem 0rem;
+   line-height: 1.2rem; 
+} 
+
+.epigrafe {
+   font-family: 'Saira', sans-serif;
+   font-weight: 300;
+   font-size: 0.8rem;
+   color: #a54bed;
+   margin: 2rem 0rem 1.5rem 3rem;
+   line-height: 1.2rem; 
+}
+.epigrafe + .epigrafe {
+  margin-top: -1rem;
+}
+.res {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  color: grey;
+  font-size: 0.7em;
+  margin: 2em 0 2em 0;
+}
+hr {
+  border: #70ffeb solid 1px;
+  background-color: #70ffeb;
+  margin: 4rem 0rem 2rem 0rem;
+}
+table {
+  font-family: 'Saira', sans-serif;
+  font-size: 0.8rem;
+  color: grey;
+}
+.small {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin: 1rem 0 2rem 0;
+  padding-left: 0.5rem;
+  border-left: #70ffeb solid 3px;
+}
