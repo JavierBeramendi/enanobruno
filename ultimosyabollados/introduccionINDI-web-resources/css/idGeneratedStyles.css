@@ -1,0 +1,217 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+a._idGenColorInherit {
+	color:inherit;
+}
+img.Marco-gr-fico-b-sico {
+	border-color:#000000;
+	border-width:1px;
+	border-style:solid;
+}
+p.notas {
+	color:#000000;
+	font-family:"Karmina Sans Rg", sans-serif;
+	font-size:8px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.267;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:2;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:2;
+}
+h2.Header2 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:"Karmina Rg", serif;
+	font-size:10px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.3;
+	margin-bottom:12px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:20px;
+	orphans:2;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:2;
+}
+p.Paragraph {
+	color:#000000;
+	font-family:"Karmina Rg", serif;
+	font-size:10px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.3;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:14px;
+	text-transform:none;
+	widows:1;
+}
+p.antetitulo {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:"Karmina Sans Rg", sans-serif;
+	font-size:15px;
+	font-style:normal;
+	font-variant:small-caps;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:10px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.autor {
+	color:#000000;
+	font-family:"Karmina Sans Rg", sans-serif;
+	font-size:10px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4;
+	margin-bottom:57px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:12px;
+	orphans:2;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:2;
+}
+p.imagen {
+	color:#000000;
+	font-family:"Karmina Sans Rg", sans-serif;
+	font-size:8px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.sinSangria {
+	color:#000000;
+	font-family:"Karmina Rg", serif;
+	font-size:10px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.3;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.Bold {
+	font-style:normal;
+	font-weight:bold;
+}
+em.Italic {
+	font-style:italic;
+	font-weight:normal;
+}
+sup.Super {
+	vertical-align:super;
+}
+span.Vers {
+	font-variant:small-caps;
+	text-transform:none;
+}
+sup._idGenCharOverride-1 {
+	font-size:58%;
+}
+img._idGenObjectAttribute-1 {
+	height:216px;
+	width:305px;
+}
+img._idGenObjectAttribute-2 {
+	height:162px;
+	width:302px;
+}
+img._idGenObjectAttribute-3 {
+	height:172px;
+	width:283px;
+}
+img._idGenObjectAttribute-4 {
+	height:217px;
+	width:306px;
+}
+img._idGenObjectAttribute-5 {
+	height:217px;
+	width:307px;
+}
+img._idGenObjectAttribute-6 {
+	height:216px;
+	width:306px;
+}
+hr.HorizontalRule-1 {
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	border-top:solid #000000 1px;
+}

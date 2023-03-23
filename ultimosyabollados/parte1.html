@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Últimos y abollados</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+      <link rel="stylesheet" href="stylesParte.css">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Saira:ital@0;1&display=swap');
+      body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Saira', sans-serif;
+      }
+      h5{
+      margin: 0;
+      line-height: 2;
+      font-size: 24px;
+      }
+      ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: right;
+      }
+      li{
+      padding: 10px 0px 10px 15px;
+      margin: 0;
+      text-align: right;
+      }
+      a,a:hover{
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+      }
+
+      .fa{
+      display: none;
+      }
+      .navbar{
+      background: white;
+      padding: 3rem 0 2rem 0;
+       box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+      }
+      @media(max-width: 768px){
+            .two.columns,.ten.columns{
+                  width: 100%;
+            }
+      ul{
+      flex-wrap: wrap;
+      text-align: right;
+      }
+      .logo{
+      height: 70px;
+      margin-top: 0.5rem;
+      font-size: 160%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      }
+      li{
+      width: 100%;
+      padding: 10px 15px;
+      }
+      #mobMenu{
+      display: none;
+      transition: .2s;
+      }
+      .fa{
+      display: block;
+      font-size: 38px;
+      position: absolute;
+      top: 0.5rem;
+      right: 0px;
+      margin-top: 15px;
+      color: black ;
+      cursor: pointer;
+      }
+     
+      .navbar{
+      padding: 0;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+       <div class="container">
+      <div class="row">
+        <div class="four columns">
+          
+            <p class="logo">últimos y abollados</p>
+          
+          <i class="fa fa-bars" onclick="myFunction()"></i>
+        </div>
+        <div class="eight columns">
+          <div id="mobMenu">
+            <ul>
+              <li><a href="https://www.unsam.edu.ar/"><img style="max-width: 16em; margin: -1em 1em 0 0em;" src="https://www.unsam.edu.ar/img/logo-UNSAM-40-democracia.jpg" alt=""></a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+  
+    
+      <div class="row hero">
+          <div class="container">
+       <!-- <div class="one-half column left">
+          <b>Evangelina Caravaca, <br>José Garriga Zucal e Inés Mancini (Comps.)</b>
+          <h2>Violencias y vulnerabilidades <br>en San Martín</h2>
+         
+        </div> -->
+        <div class="one-half column right">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <div class="row">
+          <div class="four colums sinopsis">
+        <h2><b>Primera parte</b> <br>
+              Actores y roles comunitarios</h2>
+</div></div>
+      <hr>
+     <!-- <div class="row"><h4 class="derecha">partes</h4></div> -->
+
+      <div class="row">
+      
+        <p class="caps"><a href="cap1.html">CAPÍTULO 1 <br>
+                                Quedate en tu barrio. Actores, espacios y roles comunitarios frente a las violencias en pandemia <br>
+                           <i>Inés Mancini, Evangelina Caravaca y Lola González Plaza</i></a></p>
+        <p class="caps"><a href="cap2.html">CAPÍTULO 2 <br>
+                                “Nos ganaron la calle”. Transas y chorros en los barrios en contexto de pandemia <br>
+                           <i>Ana Beraldo</i></a></p> 
+      
+
+
+
+
+
+
+
+
+
+     
+      <hr>
+      <p class="footer">© UNSAM EDITA, 2023</p>
+  </div>
+    <script type="text/javascript">
+      function myFunction() {
+        var mobMenu = document.getElementById("mobMenu");
+        if (mobMenu.style.display === "block") {
+          mobMenu.style.display = "none";
+        } else {
+          mobMenu.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
